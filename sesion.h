@@ -3,7 +3,7 @@
 
 typedef struct 
 {
-
+    char horario[15];
 }Sesion;
 
 
