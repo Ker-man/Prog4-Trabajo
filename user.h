@@ -6,7 +6,7 @@ typedef struct
     int id_User;
     char nom_User[30];
     char password[30];
-    char tipo[10];
+    int tipo;
 }User;
 
 void imprimirUser(User user);

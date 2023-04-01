@@ -4,6 +4,8 @@
 typedef struct 
 {
     char horario[15];
+    int id_Peli;
+    int id_Sala;
 }Sesion;
 
 
