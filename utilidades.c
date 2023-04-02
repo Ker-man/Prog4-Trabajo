@@ -30,16 +30,18 @@ int opcion(const char *pregunta, int num_opciones, const char **opciones)
 
 void mascara(char password[30])
 {
-int i=0;
-char ch;
-
-printf("Introduce tu contrasenya: ");
-while(ch=getch()!=13){
-        password[i]=ch;
-        i++;
-        printf("*");
-
-}
-password[i]='\0';
-
+    int i=0;
+    char ch;
+    while(ch=getch()){
+        if (ch==13)
+        {
+            password[i]='\0';
+            break;
+        }else{
+            printf("*");
+            password[i]=ch;
+            i++;
+        }
+    }
+    //printf("clave: %s",password); DESCOMENTAR PARA COMPROBAR QUE EL METODO FUNCIONA
 }
