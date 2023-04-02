@@ -2,7 +2,7 @@
 #include <string.h>
 #include <stdlib.h>
 //#include <unistd.h>
-#include <io.h>
+//#include <io.h>
 #include "cine.h"
 #include "sala.h"
 #include "sesion.h"
@@ -43,7 +43,7 @@ int main(void){
 
             printf("Introduzca el nombre de usuario:\n");
             sscanf("%29s", usuario);
-            getpass("Introduce tu contraseña: \n", password);
+            //getpass("Introduce tu contraseña: \n", password);
             //IMPLEMENTAR COMPROBACION BBDD
             User usuarioLogged = getUsuario(usuario, password, db); 
         }
@@ -59,7 +59,7 @@ int main(void){
             sscanf("%29s", usuario);
             printf("Introduzca el correo de usuario:\n");
             sscanf("%39s", email);
-            getpass("Introduce tu contraseña: \n", password);
+            //getpass("Introduce tu contraseña: \n", password);
             printf("\n");
             //IMPLEMENTAR REGISTRO BBDD
             addUsuario(usuario, password,1, db);
