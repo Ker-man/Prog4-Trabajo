@@ -10,7 +10,7 @@ typedef struct
 typedef struct
 {
     int tamanyo;
-    Sala* sala;
+    Sala* salas;
 }ListaSalas;
 
 

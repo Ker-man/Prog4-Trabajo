@@ -5,6 +5,7 @@
 
 void imprimirCine(Cine cine)
 {
+    printf("Cine:\n");
     printf("ID: %i  Nombre: %s  Ubicacion: %s\n", cine.id_Cine, cine.nom_Cine, cine.ubi_Cine);
     printf("Salas:\n");
     imprimirListaSalas(cine.listaSalas);
