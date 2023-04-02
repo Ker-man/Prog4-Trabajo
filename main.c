@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <string.h>
 #include <stdlib.h>
+#include <conio.h>
 //#include <unistd.h>
 //#include <io.h>
 #include "cine.h"
@@ -11,6 +12,7 @@
 #include "utilidades.h"
 #include "funcionesBD.h"
 #include "sqlite3.h"
+
 
 
 int main(void){

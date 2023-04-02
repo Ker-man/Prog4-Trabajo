@@ -26,3 +26,19 @@ int opcion(const char *pregunta, int num_opciones, const char **opciones)
     } while (eleccion < 1 || eleccion > num_opciones);
     return eleccion - 1;
     }
+
+void mascara(char password[30])
+{
+int i=0;
+char ch;
+
+printf("Introduce tu contrasenya: ");
+while(ch=getch()!=13){
+        password[i]=ch;
+        i++;
+        printf("*");
+
+}
+password[i]='\0';
+
+}
