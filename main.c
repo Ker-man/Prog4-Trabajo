@@ -13,7 +13,6 @@
 
 
 int main(void){
-    /*
     //Inicialización de datos BBDD
     sqlite3 *db;
     conectarBD("bbdd.bd", db);   
@@ -49,6 +48,7 @@ int main(void){
             sscanf("%29s", usuario);
             getpass("Introduce tu contraseña: \n", password);
             //IMPLEMENTAR COMPROBACION BBDD
+            User usuarioLogged = getUsuario(usuario, password, db);
         }
         case '2':;
         {
@@ -65,16 +65,16 @@ int main(void){
             getpass("Introduce tu contraseña: \n", password);
             printf("\n");
             //IMPLEMENTAR REGISTRO BBDD
+            addUsuario(usuario, password, db);
             printf("Usuario creado correctamente, pulse cualquier tecla para continuar\n");
         }
         case '3':;
         {
+            printf("¡Hasta pronto!:\n");
             break;
         }
     }
-    return 0;
-    
-    */
+ 
     Sala s1;
     s1.id_Sala = 1;
     s1.capacidad = 10;
@@ -99,9 +99,5 @@ int main(void){
     c1.listaSalas = ls;
 
     imprimirCine(c1);
-
-
-
-
    return 0;
 }
