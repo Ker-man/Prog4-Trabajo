@@ -8,9 +8,11 @@ typedef struct
     char horario[15];
     Pelicula* pelicula;
     Sala* sala;
+    float precio;
 }Sesion;
 
 
 void imprimirSesion(Sesion sesion);
+void imprimirTicket(Sesion sesion);
 
 #endif

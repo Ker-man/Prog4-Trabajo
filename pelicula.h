@@ -6,6 +6,7 @@ typedef struct
     int id_Peli;
     char titulo[30];
     int duracion;
+    char genero[30];
 }Pelicula;
 
 void imprimirPelicula(Pelicula pelicula);

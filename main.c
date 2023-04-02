@@ -48,6 +48,7 @@ int main(void){
             sscanf("%29s", usuario);
             getpass("Introduce tu contraseña: \n", password);
             //IMPLEMENTAR COMPROBACION BBDD
+            User usuarioLogged = getUsuario(usuario, password, db);
         }
         case '2':;
         {
@@ -64,14 +65,39 @@ int main(void){
             getpass("Introduce tu contraseña: \n", password);
             printf("\n");
             //IMPLEMENTAR REGISTRO BBDD
+            addUsuario(usuario, password, db);
             printf("Usuario creado correctamente, pulse cualquier tecla para continuar\n");
         }
         case '3':;
         {
+            printf("¡Hasta pronto!:\n");
             break;
         }
     }
-    return 0;
-    
+ 
+    Sala s1;
+    s1.id_Sala = 1;
+    s1.capacidad = 10;
+    imprimirSala(s1);
+    Sala s2;
+    s2.id_Sala = 2;
+    s2.capacidad = 6;
+    imprimirSala(s2);
 
+    ListaSalas ls;
+    ls.tamanyo =2;
+    ls.salas = (Sala*)malloc(sizeof(Sala) * ls.tamanyo);
+    ls.salas[0] = s1;
+    ls.salas[1] = s2;
+
+    imprimirListaSalas(ls);
+
+    Cine c1;
+    c1.id_Cine = 1;
+    strcpy(c1.nom_Cine, "Ale");
+    strcpy(c1.ubi_Cine, "Ole");
+    c1.listaSalas = ls;
+
+    imprimirCine(c1);
+   return 0;
 }
