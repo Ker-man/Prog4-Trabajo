@@ -8,6 +8,7 @@
 #include "sesion.h"
 #include "pelicula.h"
 #include "user.h"
+#include "utilidades.h"
 #include "funcionesBD.h"
 #include "sqlite3.h"
 
@@ -19,7 +20,6 @@ int main(void){
     crearTablas(db);
 
     //Primer menú al iniciar la app
-    char opcion;
     char usuario[30];
     char email[40];
     char password[30];
@@ -27,17 +27,14 @@ int main(void){
     printf("MENU PRINCIPAL DEUSTOCINES\n");
     printf("==========================\n");
     printf("\n");
-    printf("Bienvenido al programa de administracion de DeustoCines. Eliga una opcion\n");
 
-    printf("1. Iniciar sesion\n");
-    printf("2. Registrar usuario\n");
-    printf("3. Salir\n");
+    const char *opciones[] = {"Iniciar Sesion", "Registrar usuario", "Salir"};
 
-    sscanf("%i", opcion);
+    o = opcion("Bienvenido al programa de administracion de DeustoCines. Eliga una opcion", 3, opciones);
 
-    switch (opcion)
+    switch (o)
     {
-        case '1':;
+        case 0:
         {
             printf("================\n");
             printf("INICIO DE SESION\n");
@@ -50,7 +47,7 @@ int main(void){
             //IMPLEMENTAR COMPROBACION BBDD
             User usuarioLogged = getUsuario(usuario, password, db);
         }
-        case '2':;
+        case 1:
         {
 
             printf("================\n");
@@ -68,7 +65,7 @@ int main(void){
             addUsuario(usuario, password, db);
             printf("Usuario creado correctamente, pulse cualquier tecla para continuar\n");
         }
-        case '3':;
+        case 2:
         {
             printf("¡Hasta pronto!:\n");
             break;
