@@ -30,7 +30,7 @@ int main(void){
 
     const char *opciones[] = {"Iniciar Sesion", "Registrar usuario", "Salir"};
 
-    o = opcion("Bienvenido al programa de administracion de DeustoCines. Eliga una opcion", 3, opciones);
+    int o = opcion("Bienvenido al programa de administracion de DeustoCines. Eliga una opcion", 3, opciones);
 
     switch (o)
     {
@@ -45,7 +45,7 @@ int main(void){
             sscanf("%29s", usuario);
             getpass("Introduce tu contraseña: \n", password);
             //IMPLEMENTAR COMPROBACION BBDD
-            User usuarioLogged = getUsuario(usuario, password, db);
+            User usuarioLogged = getUsuario(usuario, password, db); 
         }
         case 1:
         {
@@ -62,7 +62,7 @@ int main(void){
             getpass("Introduce tu contraseña: \n", password);
             printf("\n");
             //IMPLEMENTAR REGISTRO BBDD
-            addUsuario(usuario, password, db);
+            addUsuario(usuario, password,1, db);
             printf("Usuario creado correctamente, pulse cualquier tecla para continuar\n");
         }
         case 2:

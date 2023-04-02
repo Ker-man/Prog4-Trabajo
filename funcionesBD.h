@@ -7,7 +7,7 @@ int conectarBD(char base[],sqlite3* db);
 int crearTablas(sqlite3* db);
 
 
-User getUsuario(char* nombre, char* contrasena);
-void addUsuario(char* nombre, char* contrasena, int admin);
+User getUsuario(char* nombre, char* contrasena, sqlite3* db);
+void addUsuario(char* nombre, char* contrasena, int admin, sqlite3* db);
 
 #endif  /* _FUNCIONESBD_H_ */
