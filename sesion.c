@@ -6,5 +6,7 @@
 
 void imprimirSesion(Sesion sesion)
 {
-    
+    printf("Sesion con horario: %s\n", sesion.horario);
+    imprimirPelicula(sesion.pelicula[0]);
+    imprimirSala(sesion.sala[0]);
 }
