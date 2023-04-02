@@ -13,5 +13,6 @@ typedef struct
 
 
 void imprimirSesion(Sesion sesion);
+void imprimirTicket(Sesion sesion);
 
 #endif
