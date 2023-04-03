@@ -1,12 +1,12 @@
 #ifndef _SESION_H_
 #define _SESION_H_
-#include "pelicula.h"
+#include "peli.h"
 #include "sala.h"
 
 typedef struct 
 {
     char horario[15];
-    Pelicula* pelicula;
+    Peli* pelicula;
     Sala* sala;
     float precio;
 }Sesion;

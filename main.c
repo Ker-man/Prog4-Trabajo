@@ -7,7 +7,7 @@
 #include "cine.h"
 #include "sala.h"
 #include "sesion.h"
-#include "pelicula.h"
+#include "peli.h"
 #include "user.h"
 #include "utilidades.h"
 #include "funcionesBD.h"
