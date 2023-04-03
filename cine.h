@@ -5,19 +5,15 @@
 typedef struct 
 {
     int id_Cine;
+    int numSalas;
     char nom_Cine[20];
     char ubi_Cine[30];
-    ListaSalas listaSalas;
+    Sala* salas;
 }Cine;
 
-/*
-typedef struct
-{
-    int tamanyo;
-    Cine* cine;
-}ListaCines;
-*/
 
 void imprimirCine(Cine cine);
+void imprimirSalas(Cine* cine);
+void imprimirTicket(Cine* cine);
 
 #endif

@@ -74,28 +74,29 @@ int main(void){
         }
     }
  
+    Cine c1;
+    c1.id_Cine = 1;
+    strcpy(c1.nom_Cine, "Ale");
+    strcpy(c1.ubi_Cine, "Ole");
+    c1.numSalas = 2;
+
     Sala s1;
     s1.id_Sala = 1;
     s1.capacidad = 10;
     imprimirSala(s1);
+
     Sala s2;
     s2.id_Sala = 2;
     s2.capacidad = 6;
     imprimirSala(s2);
 
-    ListaSalas ls;
-    ls.tamanyo =2;
-    ls.salas = (Sala*)malloc(sizeof(Sala) * ls.tamanyo);
-    ls.salas[0] = s1;
-    ls.salas[1] = s2;
+    Sala *ls;
+    ls= (Sala*)malloc(sizeof(Sala) *c1.numSalas);
+    ls[0] = s1;
+    ls[1] = s2;
 
-    imprimirListaSalas(ls);
-
-    Cine c1;
-    c1.id_Cine = 1;
-    strcpy(c1.nom_Cine, "Ale");
-    strcpy(c1.ubi_Cine, "Ole");
-    c1.listaSalas = ls;
+    c1.salas = ls;
+    imprimirSalas(c1.salas, c1.numSalas);
 
     imprimirCine(c1);
    return 0;

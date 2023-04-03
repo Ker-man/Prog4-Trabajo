@@ -5,14 +5,14 @@
 
 typedef struct 
 {
-    char horario[15];
-    Peli* pelicula;
-    Sala* sala;
     float precio;
+    char horario[15];
+    int numPelis;
+    Peli* pelis;
 }Sesion;
 
 
 void imprimirSesion(Sesion sesion);
-void imprimirTicket(Sesion sesion);
+void imprimirPelis(Sesion sesion);
 
 #endif

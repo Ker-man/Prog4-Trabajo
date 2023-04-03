@@ -7,6 +7,7 @@ void imprimirPelicula(Peli peli)
 {
     printf("ID: %i  Titulo: %s  Duracion: %i\n", peli.id_Peli, peli.titulo, peli.duracion);
 }
+
 Peli maxPelicula(Peli *pelis, int tamanyo)
 {
     Peli result;
