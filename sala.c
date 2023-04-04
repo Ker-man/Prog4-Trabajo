@@ -19,8 +19,9 @@ void inicializarSala(Sala sala, int numSesiones)
     sala.sesiones = (Sesion*)malloc(sizeof(Sesion) * numSesiones);
 }
 
-void anadirSala(Sala sala, int id_Sala, int capacidad, int numSesiones, Sesion* sesiones, Sala** listaSalas, int tamSalas)
+void anadirSala( int id_Sala, int capacidad, int numSesiones, Sesion* sesiones, Sala** listaSalas, int tamSalas)
 {
+    Sala sala;
     sala.id_Sala = id_Sala;
     sala.capacidad = capacidad;
     sala.numSesiones = numSesiones;

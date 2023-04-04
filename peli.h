@@ -11,7 +11,7 @@ typedef struct
 
 void imprimirPelicula(Peli peli);
 
-void anadirPeli(Peli peli, int id, int duracion, char titulo[30], char genero[30], Peli* listaPelis, int tamPelis);
+void anadirPeli(int id, int duracion, char titulo[30], char genero[30], Peli* listaPelis, int tamPelis);
 
 
 Peli maxPelicula(Peli *pelis, int tamanyo);

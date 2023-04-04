@@ -20,8 +20,9 @@ void inicializarSesion(Sesion sesion)
 }
 */
 
-void anadirSesion(Sesion sesion, float precio, char horario[15], Peli peli, Sesion** listaSesiones, int tamSesiones)
+void anadirSesion(float precio, char horario[15], Peli peli, Sesion** listaSesiones, int tamSesiones)
 {
+    Sesion sesion;
     sesion.precio = precio;
     strcpy(sesion.horario, horario);
     sesion.peli = peli; //

@@ -33,8 +33,9 @@ void inicializarCine(Cine cine, int numSalas)
     cine.salas = (Sala*)malloc(sizeof(Sala)*numSalas);
 }
 
-void anadirCine(Cine cine, int id_Cine, int numSalas, char nom_Cine[20], char ubi_Cine[30], Sala* salas, Cine** listaCines, int tamNewLista)
+void anadirCine(int id_Cine, int numSalas, char nom_Cine[20], char ubi_Cine[30], Sala* salas, Cine** listaCines, int tamNewLista)
 {
+    Cine cine;
     cine.id_Cine = id_Cine;
     cine.numSalas = numSalas;
     strcpy(cine.nom_Cine, nom_Cine);

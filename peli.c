@@ -9,8 +9,9 @@ void imprimirPelicula(Peli peli)
 }
 
 
-void anadirPeli(Peli peli, int id, int duracion, char titulo[30], char genero[30], Peli* listaPelis, int tamPelis)
+void anadirPeli(int id, int duracion, char titulo[30], char genero[30], Peli* listaPelis, int tamPelis)
 {
+    Peli peli;
     peli.id_Peli = id;
     peli.duracion = duracion;
     strcpy(peli.titulo, titulo);
