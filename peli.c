@@ -8,6 +8,25 @@ void imprimirPelicula(Peli peli)
     printf("ID: %i  Titulo: %s  Duracion: %i\n", peli.id_Peli, peli.titulo, peli.duracion);
 }
 
+
+void anadirPeli(Peli peli, int id, int duracion, char titulo[30], char genero[30], Peli* listaPelis, int tamPelis)
+{
+    peli.id_Peli = id;
+    peli.duracion = duracion;
+    strcpy(peli.titulo, titulo);
+    strcpy(peli.genero, genero);
+
+    Peli* listaVieja = listaPelis;
+    tamPelis++;
+    for(int i=0; i<tamPelis-1; i++)
+    {
+        listaPelis[i] = listaVieja[i];
+    }
+    listaPelis[tamPelis-1] = peli;
+    free(listaVieja);
+}
+
+
 Peli maxPelicula(Peli *pelis, int tamanyo)
 {
     Peli result;
