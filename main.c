@@ -73,7 +73,8 @@ int main(void){
             break;
         }
     }
- 
+
+
     Cine c1;
     c1.id_Cine = 1;
     strcpy(c1.nom_Cine, "Ale");
@@ -99,5 +100,22 @@ int main(void){
     imprimirSalas(c1.salas, c1.numSalas);
 
     imprimirCine(c1);
-   return 0;
+
+    Cine c2;
+    Cine c3;
+
+    Cine* listaCines;
+    listaCines = (Cine*)malloc(sizeof(Cine)*3);
+    int tamLista = 3;
+    listaCines[0] = c1;
+    listaCines[1] = c2;
+    listaCines[2] = c3;
+
+    //El administrador quiere abrir otro cine pulsa la opcion "Crear otro cine"
+    tamLista++;
+    //añadirCine();
+
+
+    
+    return 0;
 }

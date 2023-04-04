@@ -10,6 +10,9 @@ typedef struct
 }Peli;
 
 void imprimirPelicula(Peli peli);
+
+void inicializarPeli(Peli peli);
+
 Peli maxPelicula(Peli *pelis, int tamanyo);
 Peli minPelicula(Peli *pelis, int tamanyo);
 Peli* buscarGenero(Peli *peliculas, int tamanyo, char* genero);

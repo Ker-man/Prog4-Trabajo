@@ -3,6 +3,7 @@
 #include <string.h>
 #include <stdlib.h>
 
+//Metodos de IMPRIMIR
 void imprimirCine(Cine cine)
 {
     printf("Cine:\n");
@@ -24,4 +25,31 @@ void imprimirTicket(Cine cine)
     f = fopen("recibo.txt", "w");
     fprintf(f, "Entrada para la pelicula %s para la sala %i (sesion de las: %s)\n Precio: %f", cine.salas->sesiones->pelis->titulo, cine.salas->id_Sala, cine.salas->sesiones->horario, cine.salas->sesiones->precio);
     fclose(f);
+}
+
+//Metodos de crear
+inicializarCine(Cine cine, int numSalas)
+{
+    cine.salas = (Sala*)malloc(sizeof(Sala)*numSalas);
+}
+
+añadirCine(Cine cine, int id_Cine, int numSalas, char nom_Cine[20], char ubi_Cine[30], Sala* salas, Cine** listaCines, int tamNewLista)
+{
+    cine.id_Cine = id_Cine;
+    cine.numSalas = numSalas;
+    strcpy(cine.nom_Cine, nom_Cine);
+    strcpy(cine.ubi_Cine, ubi_Cine);
+    cine.salas = (Sala*)malloc(sizeof(Sala)*numSalas);
+    cine.salas = salas;
+    Cine* listaVieja = listaCines;
+    listaCines = (Cine*)malloc(sizeof(Cine) * tamNewLista);
+
+    for(int i=0; i<tamNewLista-1;i++)
+	{
+		listaCines[0][i] = listaVieja[i];
+	}
+	listaCines[0][tamNewLista] = cine;
+
+	free(listaVieja);
+
 }
