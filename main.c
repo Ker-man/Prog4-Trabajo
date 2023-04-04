@@ -44,10 +44,12 @@ int main(void){
             printf("\n");
 
             printf("Introduzca el nombre de usuario:\n");
-            sscanf("%29s", usuario);
+            char linea[30];
+            fgets(linea, 30, stdin);
+            sscanf(linea, "%s", usuario);
             //getpass("Introduce tu contraseña: \n", password);
-            //IMPLEMENTAR COMPROBACION BBDD
-            User usuarioLogged = getUsuario(usuario, password, db); 
+            //IMPLEMENTAR COMPROBACION CONTRASEÑA
+            User usuarioLogged = getUsuario(usuario, db); 
         }
         case 1:
         {
@@ -58,14 +60,17 @@ int main(void){
             printf("\n");
 
             printf("Introduzca el nombre de usuario:\n");
-            sscanf("%29s", usuario);
+            char linea[30];
+            fgets(linea, 30, stdin);
+            sscanf(linea, "%s", usuario);
             printf("Introduzca el correo de usuario:\n");
-            sscanf("%39s", email);
+            char linea[30];
+            fgets(linea, 30, stdin);
+            sscanf(linea, "%s", email);
             //getpass("Introduce tu contraseña: \n", password);
             printf("\n");
             //IMPLEMENTAR REGISTRO BBDD
-            addUsuario(usuario, password,1, db);
-            printf("Usuario creado correctamente, pulse cualquier tecla para continuar\n");
+            //addUsuario(usuario, password,1, db);
         }
         case 2:
         {
@@ -74,7 +79,7 @@ int main(void){
         }
     }
 
-
+/*
     Cine c1;
     c1.id_Cine = 1;
     strcpy(c1.nom_Cine, "Ale");
@@ -110,7 +115,7 @@ int main(void){
     listaCines[0] = c1;
     listaCines[1] = c2;
     listaCines[2] = c3;
-
+*/
     //El administrador quiere abrir otro cine pulsa la opcion "Crear otro cine"
     //tamLista++;
     //añadirCine();
