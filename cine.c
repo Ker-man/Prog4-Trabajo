@@ -23,7 +23,7 @@ void imprimirTicket(Cine cine)
 {
     FILE* f;
     f = fopen("recibo.txt", "w");
-    fprintf(f, "Entrada para la pelicula %s para la sala %i (sesion de las: %s)\n Precio: %f", cine.salas->sesiones->peli->titulo, cine.salas->id_Sala, cine.salas->sesiones->horario, cine.salas->sesiones->precio);
+    fprintf(f, "Entrada para la pelicula %s para la sala %i (sesion de las: %s)\n Precio: %f", cine.salas->sesiones->peli.titulo, cine.salas->id_Sala, cine.salas->sesiones->horario, cine.salas->sesiones->precio);
     fclose(f);
 }
 
@@ -41,8 +41,8 @@ void anadirCine(Cine cine, int id_Cine, int numSalas, char nom_Cine[20], char ub
     strcpy(cine.ubi_Cine, ubi_Cine);
     cine.salas = (Sala*)malloc(sizeof(Sala)*numSalas);
     cine.salas = salas;
-    Cine* listaVieja = listaCines;
-    listaCines = (Cine*)malloc(sizeof(Cine) * tamNewLista);
+    Cine* listaVieja = *listaCines;
+    *listaCines = (Cine*)malloc(sizeof(Cine) * tamNewLista);
 
     for(int i=0; i<tamNewLista-1;i++)
 	{

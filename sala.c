@@ -24,12 +24,12 @@ void anadirSala(Sala sala, int id_Sala, int capacidad, int numSesiones, Sesion* 
     sala.id_Sala = id_Sala;
     sala.capacidad = capacidad;
     sala.numSesiones = numSesiones;
-    sala.sesiones = (Sala*)malloc(sizeof(Sala)*numSesiones);
-    sala.sesiones = sesiones;
+    sala.sesiones = (Sesion*)malloc(sizeof(Sesion)*numSesiones);
+    sala.sesiones = sesiones; //Revisar tanto en esta clase como en todas
 
-    Sala* listaVieja = listaSalas;
+    Sala* listaVieja = *listaSalas;
     tamSalas++;
-    listaSalas = (Sala*)malloc(sizeof(Sala) * tamSalas);
+    *listaSalas = (Sala*)malloc(sizeof(Sala) * tamSalas);
     for(int i=0; i<tamSalas-1; i++)
     {
         listaSalas[0][i] = listaVieja[i];

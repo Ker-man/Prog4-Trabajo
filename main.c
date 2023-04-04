@@ -18,8 +18,9 @@
 int main(void){
     //Inicialización de datos BBDD
     sqlite3 *db;
-    conectarBD("bbdd.db", db);   
+    conectarBD("bbdd.db", &db);  
     crearTablas(db);
+    printf("Funciono"); 
 
     //Primer menú al iniciar la app
     char usuario[30];

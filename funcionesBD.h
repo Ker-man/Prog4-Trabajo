@@ -4,7 +4,7 @@
 #include "user.h"
 #include "peli.h"
 
-int conectarBD(char base[],sqlite3* db);
+int conectarBD(char base[],sqlite3** db);
 int crearTablas(sqlite3* db);
 
 void borrar(char* tabla, int id);

@@ -4,8 +4,8 @@
 #include <stdlib.h>
 #include "sqlite3.h"
 
-int conectarBD(char base[],sqlite3 *db){
-    int result = sqlite3_open(base, &db);
+int conectarBD(char base[],sqlite3 **db){
+    int result = sqlite3_open(base, db);
 	if (result != SQLITE_OK) {
 		printf("Error opening database\n");
 		return result;
@@ -41,8 +41,7 @@ int crearTablas(sqlite3* db) {
 
 	char sql4[] = "CREATE TABLE IF NOT EXISTS SESION (\
 	HORARIO	TEXT NOT NULL,\
-	ID_SALA	INTEGER NOT NULL,\
-	ID_PELI	INTEGER NOT NULL\
+	ID_PELI	INTEGER NOT NULL,\
 	PRECIO	INTEGER NOT NULL\
 	);";
 
@@ -56,6 +55,7 @@ int crearTablas(sqlite3* db) {
 	
 	int result;
 	result = sqlite3_prepare_v2(db, sql1, -1, &stmt, NULL);
+
 
 	if (result != SQLITE_OK) {
 		printf("Error al introducir cine\n");

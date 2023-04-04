@@ -13,23 +13,23 @@ void imprimirPelis(Sesion sesion)
 {
     printf("aaaaaa");
 }
-
+/*
 void inicializarSesion(Sesion sesion)
 {
     sesion.peli = (Peli*)malloc(sizeof(Peli));
 }
+*/
 
-void anadirSesion(Sesion sesion, float precio, char horario[15], Peli* peli, Sesion** listaSesiones, int tamSesiones)
+void anadirSesion(Sesion sesion, float precio, char horario[15], Peli peli, Sesion** listaSesiones, int tamSesiones)
 {
     sesion.precio = precio;
     strcpy(sesion.horario, horario);
-    sesion.peli = (Peli*)malloc(sizeof(Peli));
-    sesion.peli = peli;
+    sesion.peli = peli; //
 
-    Sesion* listaVieja = listaSesiones;
+    Sesion* listaVieja = *listaSesiones;
     tamSesiones++;
 
-    listaSesiones = (Sesion*)malloc(sizeof(Sesion) * tamSesiones);
+    *listaSesiones = (Sesion*)malloc(sizeof(Sesion) * tamSesiones);
     for (int i=0; i<tamSesiones-1; i++)
     {
         listaSesiones[0][i] = listaVieja[i];

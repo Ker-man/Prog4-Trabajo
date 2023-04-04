@@ -43,7 +43,7 @@ menuRegistro(sqlite3 *db)
             sscanf("%29s", usuario);
             // getpass("Introduce tu contraseña: \n", password);
             // IMPLEMENTAR COMPROBACION BBDD
-            User usuarioLogged = getUsuario(usuario, password, db);
+            User usuarioLogged = getUsuario(usuario,db);
             menuPrincipal(db);
         }
         case 1:

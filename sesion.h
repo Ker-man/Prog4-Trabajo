@@ -6,14 +6,14 @@ typedef struct
 {
     float precio;
     char horario[15];
-    Peli* peli;
+    Peli peli;
 }Sesion;
 
 
 void imprimirSesion(Sesion sesion);
 void imprimirPelis(Sesion sesion);
 
-void inicializarSesion(Sesion sesion);
-void anadirSesion(Sesion sesion, float precio, char horario[15], Peli* peli, Sesion** listaSesiones, int tamSesiones);
+//void inicializarSesion(Sesion sesion);
+void anadirSesion(Sesion sesion, float precio, char horario[15], Peli peli, Sesion** listaSesiones, int tamSesiones);
 
 #endif
