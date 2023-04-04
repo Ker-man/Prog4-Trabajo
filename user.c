@@ -8,13 +8,13 @@ void imprimirUser(User user)
     printf("ID: %i  Nombre: %s\n", user.id_User, user.nom_User);
 }
 
-void copiaSeguridad(User user){
+void escribirCopiaSeguridad(User user){
 
     FILE* f;
-    f = fopen("UserBackup.txt", "w");
-    fprintf(f,"%i;%s;%s;%i",user.id_User,user.nom_User,user.password,user.tipo);
+    f = fopen("UserBackup.txt", "a");
+    fprintf(f,"%i;%s;%s;%i;",user.id_User,user.nom_User,user.password,user.tipo);
+    fprintf(f,"\n");
     fclose(f);
-
 }
 
 void leerCopiaSeguridad(){
@@ -32,8 +32,8 @@ void leerCopiaSeguridad(){
     while(c!=EOF)
     {
         c=fgetc(f);
-        //printf("%c",c);
+        printf("%c",c);
     }
-    //printf("\n");
+    printf("\n");
     fclose(f);
 }
