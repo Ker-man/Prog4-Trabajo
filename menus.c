@@ -11,9 +11,12 @@
 #include "user.h"
 #include "utilidades.h"
 #include "funcionesBD.h"
+#include "sqlite3.h"
+
 
 // Primer menú al iniciar la app
-menuRegistro() {
+menuRegistro(sqlite3 *db)
+{
 
     char usuario[30];
     char email[40];
@@ -38,10 +41,10 @@ menuRegistro() {
 
             printf("Introduzca el nombre de usuario:\n");
             sscanf("%29s", usuario);
-            //getpass("Introduce tu contraseña: \n", password);
-            //IMPLEMENTAR COMPROBACION BBDD
-            //User usuarioLogged = getUsuario(usuario, password, db); 
-            menuPrincipal();
+            // getpass("Introduce tu contraseña: \n", password);
+            // IMPLEMENTAR COMPROBACION BBDD
+            User usuarioLogged = getUsuario(usuario, password, db);
+            menuPrincipal(db);
         }
         case 1:
         {
@@ -58,9 +61,9 @@ menuRegistro() {
             //getpass("Introduce tu contraseña: \n", password);
             printf("\n");
             //IMPLEMENTAR REGISTRO BBDD
-            //addUsuario(usuario, password,1, db);
+            addUsuario(usuario, password,1, db);
             printf("Usuario creado correctamente, pulse cualquier tecla para continuar\n");
-            menuPrincipal();
+            menuPrincipal(db);
         }
         case 2:
         {
@@ -70,8 +73,8 @@ menuRegistro() {
     }
 }
 
-
-menuPrincipal() {
+menuPrincipal(sqlite3 *db)
+{
     printf("==========================\n");
     printf("MENU PRINCIPAL DEUSTOCINES\n");
     printf("==========================\n");
@@ -85,7 +88,51 @@ menuPrincipal() {
     {
         case 0:
         {
-            //CODIGO
+            menuCines(db);
+            break;
+        }
+        case 1:
+        {
+            menuPeliculas(db);
+            break;
+        }
+        case 2:
+        {
+            // CODIGO
+            break;
+        }
+        case 3:
+        {
+            // CODIGO
+            break;
+        }
+        case 4:
+        {
+            printf("¡Hasta pronto!:\n");
+            break;
+        }
+    }
+}
+
+void menuCines(sqlite3 *db)
+{
+    printf("=============\n");
+    printf("MENU DE CINES\n");
+    printf("=============\n");
+    printf("\n");
+
+
+    //funcion de ver cines
+
+    const char *opciones[] = {"Ver mas cines", "Anadir cine?", "Eliminar cine?", "Volver al menu",};
+
+    int o = opcion("Estos son los cines ¿Que desea hacer?", 4, opciones);
+
+        switch (o)
+        {
+        case 0:
+        {
+            // CODIGO
             break;
         }
         case 1:
@@ -105,18 +152,52 @@ menuPrincipal() {
         }
         case 4:
         {
-            // CODIGO
+            menuPrincipal(db);
             break;
         }
     }
 }
 
-void menuCines() {
-    // TODO
-}
+void menuPeliculas(sqlite3 *db) {
+    printf("=================\n");
+    printf("MENU DE PELICULAS\n");
+    printf("=================\n");
+    printf("\n");
 
-void menuPeliculas() {
-    // TODO
+    // funcion de ver cines
+
+    const char *opciones[] = {"Ver mas pelculas", "Anadir pelicula?", "Eliminar peliculas?", "Volver al menu"};
+
+    int o = opcion("Estos son los cines ¿Que desea hacer?", 4, opciones);
+
+    switch (o)
+    {
+    case 0:
+    {
+            // CODIGO
+            break;
+    }
+    case 1:
+    {
+            // CODIGO
+            break;
+    }
+    case 2:
+    {
+            // CODIGO
+            break;
+    }
+    case 3:
+    {
+            // CODIGO
+            break;
+    }
+    case 4:
+    {
+            menuPrincipal(db);
+            break;
+    }
+    }
 }
 
 void menuOpciones() {
