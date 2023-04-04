@@ -18,7 +18,7 @@
 int main(void){
     //Inicialización de datos BBDD
     sqlite3 *db;
-    conectarBD("bbdd.bd", db);   
+    conectarBD("bbdd.db", db);   
     crearTablas(db);
 
     //Primer menú al iniciar la app
@@ -64,15 +64,15 @@ int main(void){
             fgets(linea, 30, stdin);
             sscanf(linea, "%s", usuario);
             printf("Introduzca el correo de usuario:\n");
-            char linea[30];
-            fgets(linea, 30, stdin);
-            sscanf(linea, "%s", email);
+            char linea2[30];
+            fgets(linea2, 30, stdin);
+            sscanf(linea2, "%s", email);
             //getpass("Introduce tu contraseña: \n", password);
             printf("\n");
             //IMPLEMENTAR REGISTRO BBDD
-            //addUsuario(usuario, password,1, db);
+            addUsuario(usuario, password,1, db);
         }
-        case 2:
+         case 2:
         {
             printf("¡Hasta pronto!:\n");
             break;

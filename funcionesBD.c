@@ -18,22 +18,22 @@ int crearTablas(sqlite3* db) {
 	sqlite3_stmt *stmt;
 
 	char sql1[] = "CREATE TABLE IF NOT EXISTS CINE (\
-		ID	INTEGER NOT NULL UNIQUE,\
+		ID INTEGER NOT NULL UNIQUE,\
 		NOM_CINE	TEXT NOT NULL,\
 		UBI_CINE	TEXT NOT NULL,\
 		PRIMARY KEY(ID_CINE)\
 	);";
 
 	char sql2[] = "CREATE TABLE IF NOT EXISTS PELICULA (\
-	ID	INTEGER NOT NULL UNIQUE,\
+	ID INTEGER NOT NULL UNIQUE,\
 	TITULO_PELI	TEXT NOT NULL,\
-	DURACION_PELI	INTEGER NOT NULL,\
+	DURACION_PELI INTEGER NOT NULL,\
 	GENERO_PELI	TEXT NOT NULL,\
 	PRIMARY KEY(ID_PELI)\
 );";
 
 	char sql3[] = "CREATE TABLE IF NOT EXISTS SALA (\
-	ID	INTEGER NOT NULL UNIQUE,\
+	ID INTEGER NOT NULL UNIQUE,\
 	CAPACIDAD_SALA	INTEGER NOT NULL,\
 	CINE_SALA	INTEGER NOT NULL,\
 	PRIMARY KEY(ID_SALA)\
@@ -46,7 +46,7 @@ int crearTablas(sqlite3* db) {
 	PRECIO	INTEGER NOT NULL\
 	);";
 
-	char sql5[] = "CREATE TABLE USUARIO (\
+	char sql5[] = "CREATE TABLE IF NOT EXISTS USUARIO (\
 	ID	INTEGER NOT NULL UNIQUE,\
 	NOM_USER	TEXT NOT NULL,\
 	PASSWORD_USER	TEXT NOT NULL,\
@@ -75,90 +75,93 @@ int crearTablas(sqlite3* db) {
 		printf("%s\n", sqlite3_errmsg(db));
 		return result;
 	}
+	int result2;
+	result2 = sqlite3_prepare_v2(db, sql2, -1, &stmt, NULL);
 
-	result = sqlite3_prepare_v2(db, sql2, -1, &stmt, NULL);
-
-	if (result != SQLITE_OK) {
+	if (result2 != SQLITE_OK) {
 		printf("Error al introducir pelicula\n");
 		printf("%s\n", sqlite3_errmsg(db));
-		return result;
+		return result2;
 	}
 
-	result = sqlite3_step(stmt);
-	if (result != SQLITE_DONE) {
+	result2 = sqlite3_step(stmt);
+	if (result2 != SQLITE_DONE) {
 		printf("Error deleting data\n");
 		printf("%s\n", sqlite3_errmsg(db));
-		return result;
+		return result2;
 	}
 
-	result = sqlite3_finalize(stmt);
-	if (result != SQLITE_OK) {
+	result2 = sqlite3_finalize(stmt);
+	if (result2 != SQLITE_OK) {
 		printf("Error finalizing statement (SELECT)\n");
 		printf("%s\n", sqlite3_errmsg(db));
-		return result;
+		return result2;
 	}
 
-	result = sqlite3_prepare_v2(db, sql3, -1, &stmt, NULL);
+	int result3;
+	result3 = sqlite3_prepare_v2(db, sql3, -1, &stmt, NULL);
 
-	if (result != SQLITE_OK) {
+	if (result3 != SQLITE_OK) {
 		printf("Error al introducir sala\n");
 		printf("%s\n", sqlite3_errmsg(db));
-		return result;
+		return result3;
 	}
 
-	result = sqlite3_step(stmt);
-	if (result != SQLITE_DONE) {
+	result3 = sqlite3_step(stmt);
+	if (result3 != SQLITE_DONE) {
 		printf("Error deleting data\n");
 		printf("%s\n", sqlite3_errmsg(db));
-		return result;
+		return result3;
 	}
-	result = sqlite3_finalize(stmt);
-	if (result != SQLITE_OK) {
+	result3 = sqlite3_finalize(stmt);
+	if (result3 != SQLITE_OK) {
 		printf("Error finalizing statement (SELECT)\n");
 		printf("%s\n", sqlite3_errmsg(db));
-		return result;
+		return result3;
 	}
 
-	result = sqlite3_prepare_v2(db, sql4, -1, &stmt, NULL);
+	int result4;
+	result4 = sqlite3_prepare_v2(db, sql4, -1, &stmt, NULL);
 
-	if (result != SQLITE_OK) {
+	if (result4 != SQLITE_OK) {
 		printf("Error al introducir sesion\n");
 		printf("%s\n", sqlite3_errmsg(db));
-		return result;
+		return result4;
 	}
 
-	result = sqlite3_step(stmt);
-	if (result != SQLITE_DONE) {
+	result4 = sqlite3_step(stmt);
+	if (result4 != SQLITE_DONE) {
 		printf("Error deleting data\n");
 		printf("%s\n", sqlite3_errmsg(db));
-		return result;
+		return result4;
 	}
-	result = sqlite3_finalize(stmt);
-	if (result != SQLITE_OK) {
+	result4 = sqlite3_finalize(stmt);
+	if (result4 != SQLITE_OK) {
 		printf("Error finalizing statement (SELECT)\n");
 		printf("%s\n", sqlite3_errmsg(db));
-		return result;
+		return result4;
 	}
 
-	result = sqlite3_prepare_v2(db, sql5, -1, &stmt, NULL);
+	int result5;
+	result5 = sqlite3_prepare_v2(db, sql5, -1, &stmt, NULL);
 
-	if (result != SQLITE_OK) {
+	if (result5 != SQLITE_OK) {
 		printf("Error al introducir usuario\n");
 		printf("%s\n", sqlite3_errmsg(db));
-		return result;
+		return result5;
 	}
 
-	result = sqlite3_step(stmt);
-	if (result != SQLITE_DONE) {
+	result5 = sqlite3_step(stmt);
+	if (result5 != SQLITE_DONE) {
 		printf("Error deleting data\n");
 		printf("%s\n", sqlite3_errmsg(db));
-		return result;
+		return result5;
 	}
-	result = sqlite3_finalize(stmt);
-	if (result != SQLITE_OK) {
+	result5 = sqlite3_finalize(stmt);
+	if (result5 != SQLITE_OK) {
 		printf("Error finalizing statement (SELECT)\n");
 		printf("%s\n", sqlite3_errmsg(db));
-		return result;
+		return result5;
 	}
 	
 	return SQLITE_OK;
@@ -171,8 +174,10 @@ void borrar(char* tabla, int id){
 
 int getUsuarioCount(sqlite3* db){
 	sqlite3_stmt *stmt;
+	printf("heyo");
 		if (sqlite3_prepare_v2(db, "SELECT COUNT(*) FROM USUARIO", -1, &stmt, NULL) != SQLITE_OK) {
 			printf("Error al cargar el usuario\n");
+			printf("cualquier cosa");
 			printf("%s\n", sqlite3_errmsg(db));
 			return 0;
 		}
@@ -236,7 +241,10 @@ User getUsuarioFromID(int id, sqlite3* db){
 }
 
 void addUsuario(char* nombre, char* contrasena, int admin, sqlite3* db){
-	for (int i = 0; i<getUsuarioCount(db); i++){
+	int cont = getUsuarioCount(db);
+	printf("no llego %i\n", cont);
+	for (int i = 0; i<cont; i++){
+		printf("HOLA\n");
 		if (getAllUsers(db)[i].nom_User == nombre){
 			printf("Usuario ya registrado\n");
 			printf("%s\n", sqlite3_errmsg(db)); //comprobar y sino comentar
