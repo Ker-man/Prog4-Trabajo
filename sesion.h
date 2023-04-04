@@ -1,7 +1,6 @@
 #ifndef _SESION_H_
 #define _SESION_H_
 #include "peli.h"
-#include "sala.h"
 
 typedef struct 
 {
