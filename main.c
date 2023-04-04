@@ -112,10 +112,13 @@ int main(void){
     listaCines[2] = c3;
 
     //El administrador quiere abrir otro cine pulsa la opcion "Crear otro cine"
-    tamLista++;
+    //tamLista++;
     //añadirCine();
 
+    //El administrador quiere abrir otra sala en un cine elige el cine y pulsa la opcion "Crear otra sala"
+    //a
 
-    
+
+
     return 0;
 }

@@ -14,12 +14,12 @@ void imprimirSesiones(Sala sala)
     printf("eeeeee");
 }
 
-inicializarSala(Sala sala, int numSesiones)
+void inicializarSala(Sala sala, int numSesiones)
 {
     sala.sesiones = (Sesion*)malloc(sizeof(Sesion) * numSesiones);
 }
 
-añadirCine(Sala sala, int id_Sala, int capacidad, int numSesiones, Sesion* sesiones, Sala** listaSalas, int tamSalas)
+void anadirSala(Sala sala, int id_Sala, int capacidad, int numSesiones, Sesion* sesiones, Sala** listaSalas, int tamSalas)
 {
     sala.id_Sala = id_Sala;
     sala.capacidad = capacidad;
@@ -34,7 +34,7 @@ añadirCine(Sala sala, int id_Sala, int capacidad, int numSesiones, Sesion* sesi
     {
         listaSalas[0][i] = listaVieja[i];
     }
-    listaSalas[0][tamSalas] = sala;
+    listaSalas[0][tamSalas-1] = sala;
 
     free(listaVieja);
 
