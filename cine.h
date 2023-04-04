@@ -13,7 +13,7 @@ typedef struct
 
 
 void imprimirCine(Cine cine);
-void imprimirSalas(Cine* cine);
+void imprimirSalas(Cine* cine, int numSalas);
 void imprimirTicket(Cine* cine);
 
 #endif

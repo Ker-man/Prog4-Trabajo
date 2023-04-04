@@ -10,7 +10,7 @@ void imprimirCine(Cine cine)
     printf("Salas:\n");
 }
 
-void imprimirSalas(Cine *cine)
+void imprimirSalas(Cine *cine, int numSalas)
 {
     for(int i = 0; i<cine->numSalas; i++)
     {
