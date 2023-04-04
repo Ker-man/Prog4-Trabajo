@@ -32,6 +32,7 @@ void mascara(char password[30])
 {
     int i=0;
     char ch;
+    printf("Introduzca la contrasena: ");
     while(ch=getch()){
         if (ch==13)
         {
@@ -43,5 +44,5 @@ void mascara(char password[30])
             i++;
         }
     }
-    //printf("clave: %s",password); DESCOMENTAR PARA COMPROBAR QUE EL METODO FUNCIONA
+    //printf("\nclave: %s",password);
 }
