@@ -10,11 +10,11 @@ void imprimirCine(Cine cine)
     printf("Salas:\n");
 }
 
-void imprimirSalas(Cine *cine, int numSalas)
+void imprimirSalas(Sala *salas, int numSalas)
 {
-    for(int i = 0; i<cine->numSalas; i++)
+    for(int i = 0; i<numSalas; i++)
     {
-        printf("Sala %i- Codigo: %i    Capacidad: %i\n",i+1, cine->salas[i].id_Sala, cine->salas[i].capacidad);
+        printf("Sala %i- Codigo: %i    Capacidad: %i\n",i+1, salas[i].id_Sala, salas[i].capacidad);
     }
 }
 
