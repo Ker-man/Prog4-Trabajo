@@ -7,6 +7,7 @@
 int conectarBD(char base[],sqlite3** db);
 int crearTablas(sqlite3* db);
 
+int update(char* query, sqlite3* db);
 void borrar(char* tabla, int id);
 int getUsuarioCount(sqlite3* db);
 User* getAllUsers(sqlite3* db);

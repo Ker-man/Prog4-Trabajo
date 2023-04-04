@@ -51,6 +51,7 @@ int main(void){
             //getpass("Introduce tu contraseña: \n", password);
             //IMPLEMENTAR COMPROBACION CONTRASEÑA
             User usuarioLogged = getUsuario(usuario, db); 
+            printf(usuarioLogged.nom_User);
         }
         case 1:
         {
@@ -67,7 +68,7 @@ int main(void){
             printf("Introduzca el correo de usuario:\n");
             char linea2[30];
             fgets(linea2, 30, stdin);
-            sscanf(linea2, "%s", email);
+            sscanf(linea2, "%s", password);
             //getpass("Introduce tu contraseña: \n", password);
             printf("\n");
             //IMPLEMENTAR REGISTRO BBDD

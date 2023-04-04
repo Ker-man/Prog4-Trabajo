@@ -5,6 +5,7 @@
 #include "sqlite3.h"
 
 int conectarBD(char base[],sqlite3 **db){
+	printf(base);
     int result = sqlite3_open(base, db);
 	if (result != SQLITE_OK) {
 		printf("Error opening database\n");
@@ -167,6 +168,16 @@ int crearTablas(sqlite3* db) {
 	return SQLITE_OK;
 }
 
+int update(char* query, sqlite3* db){
+	sqlite3_stmt *stmt;
+	int i = sqlite3_prepare_v2(db, query, strlen(query), &stmt, NULL) ;
+	if(i != SQLITE_OK)
+		printf("%s\n", sqlite3_errmsg(db));
+	sqlite3_step(stmt);
+	sqlite3_finalize(stmt);
+	return i;
+}
+
 void borrar(char* tabla, int id){
 	char seq[100];
 	sprintf(seq, "DELETE FROM '%s' WHERE ID = %i", tabla, id);
@@ -174,7 +185,6 @@ void borrar(char* tabla, int id){
 
 int getUsuarioCount(sqlite3* db){
 	sqlite3_stmt *stmt;
-	printf("heyo");
 		if (sqlite3_prepare_v2(db, "SELECT COUNT(*) FROM USUARIO", -1, &stmt, NULL) != SQLITE_OK) {
 			printf("Error al cargar el usuario\n");
 			printf("cualquier cosa");
@@ -242,20 +252,20 @@ User getUsuarioFromID(int id, sqlite3* db){
 
 void addUsuario(char* nombre, char* contrasena, int admin, sqlite3* db){
 	int cont = getUsuarioCount(db);
-	printf("no llego %i\n", cont);
-	for (int i = 0; i<cont; i++){
-		printf("HOLA\n");
-		if (getAllUsers(db)[i].nom_User == nombre){
+	printf("no llego %i\n", cont);		
+		if (strcmp(getUsuario(nombre, db).nom_User,nombre) == 0){
 			printf("Usuario ya registrado\n");
 			printf("%s\n", sqlite3_errmsg(db)); //comprobar y sino comentar
 		}else{
 			char seq[200];
-			sprintf(seq, "INSERT INTO USUARIO(ID, NOM_USER, PASSWORD_USER, TIPO_USER) VALUES (%i, '%s', '%s', %i)",getUsuarioCount(db), nombre, contrasena, admin);
-			//update(seq);
+			sprintf(seq, "INSERT INTO USUARIO(ID, NOM_USER, PASSWORD_USER, TIPO_USER) VALUES (%i, '%s', '%s', %i)",cont+1, nombre, contrasena, admin);
+			printf(seq);
+			update(seq, db);
+			if (update(seq, db) == SQLITE_OK){
+				printf("somo sbuenisimos");
+			}
 			printf("Usuario creado correctamente, pulse cualquier tecla para continuar\n");
 		}
-	}	
-	free(getAllUsers(db));
 }
 
 Peli getPelicula(char* titulo, sqlite3* db){
