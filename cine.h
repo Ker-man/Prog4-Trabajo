@@ -14,6 +14,6 @@ typedef struct
 
 void imprimirCine(Cine cine);
 void imprimirSalas(Sala *salas, int numSalas);
-void imprimirTicket(Cine* cine);
+void imprimirTicket(Cine cine);
 
 #endif
