@@ -18,14 +18,14 @@ int crearTablas(sqlite3* db) {
 	sqlite3_stmt *stmt;
 
 	char sql1[] = "CREATE TABLE IF NOT EXISTS CINE (\
-		ID_CINE	INTEGER NOT NULL UNIQUE,\
+		ID	INTEGER NOT NULL UNIQUE,\
 		NOM_CINE	TEXT NOT NULL,\
 		UBI_CINE	TEXT NOT NULL,\
 		PRIMARY KEY(ID_CINE)\
 	);";
 
 	char sql2[] = "CREATE TABLE IF NOT EXISTS PELICULA (\
-	ID_PELI	INTEGER NOT NULL UNIQUE,\
+	ID	INTEGER NOT NULL UNIQUE,\
 	TITULO_PELI	TEXT NOT NULL,\
 	DURACION_PELI	INTEGER NOT NULL,\
 	GENERO_PELI	TEXT NOT NULL,\
@@ -33,7 +33,7 @@ int crearTablas(sqlite3* db) {
 );";
 
 	char sql3[] = "CREATE TABLE IF NOT EXISTS SALA (\
-	ID_SALA	INTEGER NOT NULL UNIQUE,\
+	ID	INTEGER NOT NULL UNIQUE,\
 	CAPACIDAD_SALA	INTEGER NOT NULL,\
 	CINE_SALA	INTEGER NOT NULL,\
 	PRIMARY KEY(ID_SALA)\
@@ -47,7 +47,7 @@ int crearTablas(sqlite3* db) {
 	);";
 
 	char sql5[] = "CREATE TABLE USUARIO (\
-	ID_USER	INTEGER NOT NULL UNIQUE,\
+	ID	INTEGER NOT NULL UNIQUE,\
 	NOM_USER	TEXT NOT NULL,\
 	PASSWORD_USER	TEXT NOT NULL,\
 	TIPO_USER	INTEGER NOT NULL,\
@@ -164,11 +164,60 @@ int crearTablas(sqlite3* db) {
 	return SQLITE_OK;
 }
 
-User getUsuario(char* nombre, char* contrasena, sqlite3* db){
+void borrar(char* tabla, int id){
+	char seq[100];
+	sprintf(seq, "DELETE FROM '%s' WHERE ID = %i", tabla, id);
+}
+
+int getUsuarioCount(sqlite3* db){
+	sqlite3_stmt *stmt;
+		if (sqlite3_prepare_v2(db, "SELECT COUNT(*) FROM USUARIO", -1, &stmt, NULL) != SQLITE_OK) {
+			printf("Error al cargar el usuario\n");
+			printf("%s\n", sqlite3_errmsg(db));
+			return 0;
+		}
+		int i =sqlite3_step(stmt);
+		if(i != SQLITE_ROW){
+			printf("Aún no hay datos generados\n");
+			return 0;
+		}
+		return sqlite3_column_int(stmt, 0);
+}
+
+User* getAllUsers(sqlite3* db){
+	User* allUsers = (User*)malloc(sizeof(User)* getUsuarioCount(db));
+	for (int i = 0; i<getUsuarioCount(db); i++){
+		allUsers[i] = getUsuarioFromID(i, db);
+	}
+	return allUsers;
+}
+User getUsuario(char* nombre, sqlite3* db){
 	sqlite3_stmt *stmt;
     User usu;
 	char seq[100];
-	sprintf(seq, "SELECT * FROM USUARIO WHERE NOM_USER = '%s' AND PASSWORD_USER = '%s'", nombre, encrypt(contrasena));
+	sprintf(seq, "SELECT * FROM USUARIO WHERE NOM_USER = '%s'", nombre);
+
+	if (sqlite3_prepare_v2(db, seq, -1, &stmt, NULL) != SQLITE_OK) {
+		printf("Error al cargar el usuario\n");
+		printf("%s\n", sqlite3_errmsg(db));
+		return (User){'\0', 0, 0};
+	}
+	int i =sqlite3_step(stmt);
+	if(i != SQLITE_ROW){
+		return (User){'\0', 0, 0};
+	}
+	usu.id_User = sqlite3_column_int(stmt, 0);
+	strcpy(usu.nom_User, (char *) sqlite3_column_text(stmt, 1));
+	strcpy(usu.password, (char *) sqlite3_column_text(stmt, 2));
+	usu.tipo = sqlite3_column_int(stmt, 3);
+	return usu;
+}
+
+User getUsuarioFromID(int id, sqlite3* db){
+	sqlite3_stmt *stmt;
+    User usu;
+	char seq[100];
+	sprintf(seq, "SELECT * FROM USUARIO WHERE ID = %i", id);
 
 	if (sqlite3_prepare_v2(db, seq, -1, &stmt, NULL) != SQLITE_OK) {
 		printf("Error al cargar el usuario\n");
@@ -187,8 +236,45 @@ User getUsuario(char* nombre, char* contrasena, sqlite3* db){
 }
 
 void addUsuario(char* nombre, char* contrasena, int admin, sqlite3* db){
+	for (int i = 0; i<getUsuarioCount(db); i++){
+		if (getAllUsers(db)[i].nom_User == nombre){
+			printf("Usuario ya registrado\n");
+			printf("%s\n", sqlite3_errmsg(db)); //comprobar y sino comentar
+		}else{
+			char seq[200];
+			sprintf(seq, "INSERT INTO USUARIO(ID, NOM_USER, PASSWORD_USER, TIPO_USER) VALUES (%i, '%s', '%s', %i)",getUsuarioCount(db), nombre, contrasena, admin);
+			//update(seq);
+			printf("Usuario creado correctamente, pulse cualquier tecla para continuar\n");
+		}
+	}	
+	free(getAllUsers(db));
+}
+
+Peli getPelicula(char* titulo, sqlite3* db){
+	sqlite3_stmt *stmt;
+    Peli peli;
+	char seq[100];
+	sprintf(seq, "SELECT * FROM PELICULA WHERE TITULO_PELI = '%s'", titulo);
+
+	if (sqlite3_prepare_v2(db, seq, -1, &stmt, NULL) != SQLITE_OK) {
+		printf("Error al cargar la pelicula\n");
+		printf("%s\n", sqlite3_errmsg(db));
+		return (Peli){'\0', 0, 0};
+	}
+	int i =sqlite3_step(stmt);
+	if(i != SQLITE_ROW){
+		return (Peli){'\0', 0, 0};
+	}
+	peli.id_Peli = sqlite3_column_int(stmt, 0);
+	strcpy(peli.titulo, (char *) sqlite3_column_text(stmt, 1));
+	peli.duracion = sqlite3_column_int(stmt, 2);
+	strcpy(peli.genero, (char *) sqlite3_column_text(stmt, 3));
+	return peli;
+}
+
+void addPelicula(char* titulo, char* genero, int duracion , sqlite3* db){
 	char seq[200];
-	sprintf(seq, "INSERT INTO USUARIO(ID_USER, NOM_USER, PASSWORD_USER, TIPO_USER) VALUES (%i, '%s', '%s', %d)",getUsuarioCount(), nombre, encrypt(contrasena), admin);
-	update(seq);
+	sprintf(seq, "INSERT INTO PELICULA(ID, TITULO_PELI, DURACION_PELI, GENERO_PELI) VALUES ('%s', '%s', %i, %d)",getUsuarioCount(db), titulo, duracion, genero);
+	//update(seq);
 }
 
