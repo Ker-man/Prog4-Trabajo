@@ -215,11 +215,12 @@ User getUsuario(char* nombre, sqlite3* db){
 	if (sqlite3_prepare_v2(db, seq, -1, &stmt, NULL) != SQLITE_OK) {
 		printf("Error al cargar el usuario\n");
 		printf("%s\n", sqlite3_errmsg(db));
-		return (User){'\0', 0, 0};
+		return (User){0,'\0', 0, 0};
 	}
-	int i =sqlite3_step(stmt);
+	int i = sqlite3_step(stmt);
 	if(i != SQLITE_ROW){
-		return (User){'\0', 0, 0};
+		printf("Este usuario no se encuentra registrado\n");
+		return (User){-1,"USER_ERROR", "ERROR"};
 	}
 	usu.id_User = sqlite3_column_int(stmt, 0);
 	strcpy(usu.nom_User, (char *) sqlite3_column_text(stmt, 1));

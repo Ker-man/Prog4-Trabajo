@@ -21,12 +21,17 @@ int main(void){
     sqlite3 *db;
     conectarBD("bbdd.db", &db);  
     crearTablas(db);
+    int salir = 0;
     printf("Funciono"); 
-    if (menuRegistro(db)) {
-        menuPrincipal(db);
-    } else {
-        printf("Adios");
-    }
+    do{
+        int i = menuRegistro(db);
+        if (i == 1) {
+            menuPrincipal(db);
+        }else if (i == 2 || i == 0){
+            salir = 1;
+        }
+    }while (salir == 0);
+    printf("Adios");
 
 
 /*

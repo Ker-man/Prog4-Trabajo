@@ -5,7 +5,7 @@
 
 void imprimirUser(User user)
 {
-    printf("ID: %i  Nombre: %s\n", user.id_User, user.nom_User);
+    printf("ID: %i  Nombre: %s Tipo: %i\n", user.id_User, user.nom_User, user.id_User);
 }
 
 void escribirCopiaSeguridad(User user){

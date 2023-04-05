@@ -24,6 +24,7 @@ int menuPrincipal(sqlite3 *db);
     char usuario[30];
     char email[40];
     char password[30];
+    User usuarioLogged;
     printf("==========================\n");
     printf("MENU PRINCIPAL DEUSTOCINES\n");
     printf("==========================\n");
@@ -37,6 +38,8 @@ int menuPrincipal(sqlite3 *db);
     {
         case 0:
         {
+            printf("PRUEBA: \n");
+            imprimirUser(usuarioLogged);
             printf("================\n");
             printf("INICIO DE SESION\n");
             printf("================\n");
@@ -46,11 +49,20 @@ int menuPrincipal(sqlite3 *db);
             char linea[30];
             fgets(linea, 30, stdin);
             sscanf(linea, "%s", usuario);
+            mascara(password);   
             // getpass("Introduce tu contraseña: \n", password);
             // IMPLEMENTAR COMPROBACION CONTRASEÑA
-            User usuarioLogged = getUsuario(usuario, db);
-            printf(usuarioLogged.nom_User);
-            return 1;
+            usuarioLogged = getUsuario(usuario, db);
+            if (usuarioLogged.id_User == -1){
+                return 2;
+            }else{
+                if (strcmp(usuarioLogged.password, password) == 0){
+                    return 1;
+                }else{
+                    return 2;
+                }
+                
+            }
         }
         case 1:
         {
