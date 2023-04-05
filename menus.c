@@ -17,12 +17,12 @@
 // Primer menú al iniciar la app
 menuRegistro(sqlite3 *db)
 {
-
+    // Primer menú al iniciar la app
     char usuario[30];
     char email[40];
     char password[30];
     printf("==========================\n");
-    printf("MENU REGISTRO DEUSTOCINES\n");
+    printf("MENU PRINCIPAL DEUSTOCINES\n");
     printf("==========================\n");
     printf("\n");
 
@@ -40,11 +40,14 @@ menuRegistro(sqlite3 *db)
             printf("\n");
 
             printf("Introduzca el nombre de usuario:\n");
-            sscanf("%29s", usuario);
+            char linea[30];
+            fgets(linea, 30, stdin);
+            sscanf(linea, "%s", usuario);
             // getpass("Introduce tu contraseña: \n", password);
-            // IMPLEMENTAR COMPROBACION BBDD
-            User usuarioLogged = getUsuario(usuario,db);
-            menuPrincipal(db);
+            // IMPLEMENTAR COMPROBACION CONTRASEÑA
+            User usuarioLogged = getUsuario(usuario, db);
+            printf(usuarioLogged.nom_User);
+            return 1;
         }
         case 1:
         {
@@ -55,20 +58,23 @@ menuRegistro(sqlite3 *db)
             printf("\n");
 
             printf("Introduzca el nombre de usuario:\n");
-            sscanf("%29s", usuario);
+            char linea[30];
+            fgets(linea, 30, stdin);
+            sscanf(linea, "%s", usuario);
             printf("Introduzca el correo de usuario:\n");
-            sscanf("%39s", email);
-            //getpass("Introduce tu contraseña: \n", password);
+            char linea2[30];
+            fgets(linea2, 30, stdin);
+            sscanf(linea2, "%s", password);
+            // getpass("Introduce tu contraseña: \n", password);
             printf("\n");
-            //IMPLEMENTAR REGISTRO BBDD
-            addUsuario(usuario, password,1, db);
-            printf("Usuario creado correctamente, pulse cualquier tecla para continuar\n");
-            menuPrincipal(db);
+            // IMPLEMENTAR REGISTRO BBDD
+            addUsuario(usuario, password, 1, db);
+            return 1;
         }
         case 2:
         {
             printf("¡Hasta pronto!:\n");
-            break;
+            return 0;
         }
     }
 }
@@ -147,11 +153,6 @@ void menuCines(sqlite3 *db)
         }
         case 3:
         {
-            // CODIGO
-            break;
-        }
-        case 4:
-        {
             menuPrincipal(db);
             break;
         }
@@ -172,31 +173,26 @@ void menuPeliculas(sqlite3 *db) {
 
     switch (o)
     {
-    case 0:
-    {
+        case 0:
+        {
             // CODIGO
             break;
-    }
-    case 1:
-    {
+        }
+        case 1:
+        {   
             // CODIGO
             break;
-    }
-    case 2:
-    {
+        }
+        case 2:
+        {
             // CODIGO
             break;
-    }
-    case 3:
-    {
-            // CODIGO
-            break;
-    }
-    case 4:
-    {
+        }
+        case 3:
+        {
             menuPrincipal(db);
             break;
-    }
+        }
     }
 }
 

@@ -12,6 +12,7 @@
 #include "utilidades.h"
 #include "funcionesBD.h"
 #include "sqlite3.h"
+#include "menus.h"
 
 
 
@@ -21,65 +22,12 @@ int main(void){
     conectarBD("bbdd.db", &db);  
     crearTablas(db);
     printf("Funciono"); 
-
-    //Primer menú al iniciar la app
-    char usuario[30];
-    char email[40];
-    char password[30];
-    printf("==========================\n");
-    printf("MENU PRINCIPAL DEUSTOCINES\n");
-    printf("==========================\n");
-    printf("\n");
-
-    const char *opciones[] = {"Iniciar Sesion", "Registrar usuario", "Salir"};
-
-    int o = opcion("Bienvenido al programa de administracion de DeustoCines. Eliga una opcion", 3, opciones);
-
-    switch (o)
-    {
-        case 0:
-        {
-            printf("================\n");
-            printf("INICIO DE SESION\n");
-            printf("================\n");
-            printf("\n");
-
-            printf("Introduzca el nombre de usuario:\n");
-            char linea[30];
-            fgets(linea, 30, stdin);
-            sscanf(linea, "%s", usuario);
-            //getpass("Introduce tu contraseña: \n", password);
-            //IMPLEMENTAR COMPROBACION CONTRASEÑA
-            User usuarioLogged = getUsuario(usuario, db); 
-            printf(usuarioLogged.nom_User);
-        }
-        case 1:
-        {
-
-            printf("================\n");
-            printf("REGISTRO USUARIO\n");
-            printf("================\n");
-            printf("\n");
-
-            printf("Introduzca el nombre de usuario:\n");
-            char linea[30];
-            fgets(linea, 30, stdin);
-            sscanf(linea, "%s", usuario);
-            printf("Introduzca el correo de usuario:\n");
-            char linea2[30];
-            fgets(linea2, 30, stdin);
-            sscanf(linea2, "%s", password);
-            //getpass("Introduce tu contraseña: \n", password);
-            printf("\n");
-            //IMPLEMENTAR REGISTRO BBDD
-            addUsuario(usuario, password,1, db);
-        }
-         case 2:
-        {
-            printf("¡Hasta pronto!:\n");
-            break;
-        }
+    if (menuRegistro(db)) {
+        menuPrincipal(db);
+    } else {
+        printf("Adios");
     }
+
 
 /*
     //Pelis
