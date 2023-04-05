@@ -14,8 +14,11 @@
 #include "sqlite3.h"
 
 
+
+int menuPrincipal(sqlite3 *db);
+
 // Primer menú al iniciar la app
-menuRegistro(sqlite3 *db)
+ int menuRegistro(sqlite3 *db)
 {
     // Primer menú al iniciar la app
     char usuario[30];
@@ -79,46 +82,7 @@ menuRegistro(sqlite3 *db)
     }
 }
 
-menuPrincipal(sqlite3 *db)
-{
-    printf("==========================\n");
-    printf("MENU PRINCIPAL DEUSTOCINES\n");
-    printf("==========================\n");
-    printf("\n");
 
-    const char *opciones[] = {"Ver cines", "Ver peliculas", "Cambiar datos de la cuenta", "Cerrar Sesion", "Salir"};
-
-    int o = opcion("Bienvenido a Desutocines. Que desea hacer ahora?", 5, opciones);
-
-    switch (o)
-    {
-        case 0:
-        {
-            menuCines(db);
-            break;
-        }
-        case 1:
-        {
-            menuPeliculas(db);
-            break;
-        }
-        case 2:
-        {
-            // CODIGO
-            break;
-        }
-        case 3:
-        {
-            // CODIGO
-            break;
-        }
-        case 4:
-        {
-            printf("¡Hasta pronto!:\n");
-            break;
-        }
-    }
-}
 
 void menuCines(sqlite3 *db)
 {
@@ -198,4 +162,45 @@ void menuPeliculas(sqlite3 *db) {
 
 void menuOpciones() {
     // TODO
+}
+
+int menuPrincipal(sqlite3 *db)
+{
+    printf("==========================\n");
+    printf("MENU PRINCIPAL DEUSTOCINES\n");
+    printf("==========================\n");
+    printf("\n");
+
+    const char *opciones[] = {"Ver cines", "Ver peliculas", "Cambiar datos de la cuenta", "Cerrar Sesion", "Salir"};
+
+    int o = opcion("Bienvenido a Desutocines. Que desea hacer ahora?", 5, opciones);
+
+    switch (o)
+    {
+        case 0:
+        {
+            menuCines(db);
+            break;
+        }
+        case 1:
+        {
+            menuPeliculas(db);
+            break;
+        }
+        case 2:
+        {
+            // CODIGO
+            break;
+        }
+        case 3:
+        {
+            // CODIGO
+            break;
+        }
+        case 4:
+        {
+            printf("¡Hasta pronto!:\n");
+            break;
+        }
+    }
 }
