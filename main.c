@@ -27,11 +27,11 @@ int main(void){
         int i = menuRegistro(db);
         if (i == 1) {
             menuPrincipal(db);
-        }else if (i == 2 || i == 0){
+        }else if (i == 0){
             salir = 1;
         }
     }while (salir == 0);
-    printf("Adios");
+    //printf("Adios");
 
 
 /*

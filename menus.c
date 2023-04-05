@@ -25,7 +25,7 @@ int menuPrincipal(sqlite3 *db);
     char email[40];
     char password[30];
     User usuarioLogged;
-    printf("==========================\n");
+    printf("\n\n\n==========================\n");
     printf("MENU PRINCIPAL DEUSTOCINES\n");
     printf("==========================\n");
     printf("\n");
@@ -38,9 +38,8 @@ int menuPrincipal(sqlite3 *db);
     {
         case 0:
         {
-            printf("PRUEBA: \n");
             imprimirUser(usuarioLogged);
-            printf("================\n");
+            printf("\n\n\n================\n");
             printf("INICIO DE SESION\n");
             printf("================\n");
             printf("\n");
@@ -48,26 +47,27 @@ int menuPrincipal(sqlite3 *db);
             printf("Introduzca el nombre de usuario:\n");
             char linea[30];
             fgets(linea, 30, stdin);
-            sscanf(linea, "%s", usuario);
-            mascara(password);   
+            sscanf(linea, "%s", usuario); 
             // getpass("Introduce tu contraseña: \n", password);
             // IMPLEMENTAR COMPROBACION CONTRASEÑA
             usuarioLogged = getUsuario(usuario, db);
             if (usuarioLogged.id_User == -1){
                 return 2;
-            }else{
+            }else {
+                mascara(password);  
                 if (strcmp(usuarioLogged.password, password) == 0){
                     return 1;
-                }else{
+                }else if (strcmp(usuarioLogged.password, password) != 0){
+                    printf("\nLa contrasena introducida no es correcta\n");
                     return 2;
                 }
-                
             }
+            
         }
         case 1:
         {
 
-            printf("================\n");
+            printf("\n\n\n================\n");
             printf("REGISTRO USUARIO\n");
             printf("================\n");
             printf("\n");
@@ -88,7 +88,7 @@ int menuPrincipal(sqlite3 *db);
         }
         case 2:
         {
-            printf("¡Hasta pronto!:\n");
+            printf("\n¡Hasta pronto!:\n");
             return 0;
         }
     }
@@ -98,7 +98,7 @@ int menuPrincipal(sqlite3 *db);
 
 void menuCines(sqlite3 *db)
 {
-    printf("=============\n");
+    printf("\n\n\n=============\n");
     printf("MENU DE CINES\n");
     printf("=============\n");
     printf("\n");
@@ -136,7 +136,7 @@ void menuCines(sqlite3 *db)
 }
 
 void menuPeliculas(sqlite3 *db) {
-    printf("=================\n");
+    printf("\n\n\n=================\n");
     printf("MENU DE PELICULAS\n");
     printf("=================\n");
     printf("\n");
@@ -178,7 +178,7 @@ void menuOpciones() {
 
 int menuPrincipal(sqlite3 *db)
 {
-    printf("==========================\n");
+    printf("\n\n\n==========================\n");
     printf("MENU PRINCIPAL DEUSTOCINES\n");
     printf("==========================\n");
     printf("\n");

@@ -219,7 +219,7 @@ User getUsuario(char* nombre, sqlite3* db){
 	}
 	int i = sqlite3_step(stmt);
 	if(i != SQLITE_ROW){
-		printf("Este usuario no se encuentra registrado\n");
+		printf("\nEste usuario no se encuentra registrado\n");
 		return (User){-1,"USER_ERROR", "ERROR"};
 	}
 	usu.id_User = sqlite3_column_int(stmt, 0);
