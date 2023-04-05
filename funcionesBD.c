@@ -20,6 +20,7 @@ int crearTablas(sqlite3* db) {
 
 	char sql1[] = "CREATE TABLE IF NOT EXISTS CINE (\
 		ID INTEGER NOT NULL UNIQUE,\
+		NUMSALAS	INTEGER NOT NULL,\
 		NOM_CINE	TEXT NOT NULL,\
 		UBI_CINE	TEXT NOT NULL,\
 		PRIMARY KEY(ID_CINE)\
@@ -36,13 +37,15 @@ int crearTablas(sqlite3* db) {
 	char sql3[] = "CREATE TABLE IF NOT EXISTS SALA (\
 	ID INTEGER NOT NULL UNIQUE,\
 	CAPACIDAD_SALA	INTEGER NOT NULL,\
-	CINE_SALA	INTEGER NOT NULL,\
+	NUMSESIONES	INTEGER NOT NULL,\
+	ID_CINE	INTEGER NOT NULL,\
 	PRIMARY KEY(ID_SALA)\
 	);";
 
 	char sql4[] = "CREATE TABLE IF NOT EXISTS SESION (\
 	HORARIO	TEXT NOT NULL,\
 	ID_PELI	INTEGER NOT NULL,\
+	ID_SALA	INTEGER NOT NULL,\
 	PRECIO	INTEGER NOT NULL\
 	);";
 
@@ -254,19 +257,11 @@ User getUsuarioFromID(int id, sqlite3* db){
 void addUsuario(char* nombre, char* contrasena, int admin, sqlite3* db){
 	int cont = getUsuarioCount(db);
 	printf("no llego %i\n", cont);		
-		if (strcmp(getUsuario(nombre, db).nom_User,nombre) == 0){
-			printf("Usuario ya registrado\n");
-			printf("%s\n", sqlite3_errmsg(db)); //comprobar y sino comentar
-		}else{
-			char seq[200];
-			sprintf(seq, "INSERT INTO USUARIO(ID, NOM_USER, PASSWORD_USER, TIPO_USER) VALUES (%i, '%s', '%s', %i)",cont+1, nombre, contrasena, admin);
-			printf(seq);
-			update(seq, db);
-			if (update(seq, db) == SQLITE_OK){
-				printf("somo sbuenisimos");
-			}
-			printf("Usuario creado correctamente, pulse cualquier tecla para continuar\n");
-		}
+		char seq[200];
+		sprintf(seq, "INSERT INTO USUARIO(ID, NOM_USER, PASSWORD_USER, TIPO_USER) VALUES (%i, '%s', '%s', %i)",cont+1, nombre, contrasena, admin);
+		update(seq, db);
+
+		printf("Usuario creado correctamente, pulse cualquier tecla para continuar\n");
 }
 
 Peli getPelicula(char* titulo, sqlite3* db){
@@ -293,7 +288,7 @@ Peli getPelicula(char* titulo, sqlite3* db){
 
 void addPelicula(char* titulo, char* genero, int duracion , sqlite3* db){
 	char seq[200];
-	sprintf(seq, "INSERT INTO PELICULA(ID, TITULO_PELI, DURACION_PELI, GENERO_PELI) VALUES ('%s', '%s', %i, %d)",getUsuarioCount(db), titulo, duracion, genero);
+	sprintf(seq, "INSERT INTO PELICULA(ID, TITULO_PELI, DURACION_PELI, GENERO_PELI) VALUES (%i, '%s', %i, '%s')",getUsuarioCount(db), titulo, duracion, genero);
 	//update(seq);
 }
 

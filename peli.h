@@ -4,8 +4,8 @@
 typedef struct 
 {
     int id_Peli;
-    int duracion;
     char titulo[30];
+    int duracion;
     char genero[30];
 }Peli;
 

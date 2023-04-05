@@ -76,19 +76,24 @@ int menuPrincipal(sqlite3 *db);
             char linea[30];
             fgets(linea, 30, stdin);
             sscanf(linea, "%s", usuario);
-            printf("Introduzca el correo de usuario:\n");
-            char linea2[30];
-            fgets(linea2, 30, stdin);
-            sscanf(linea2, "%s", password);
-            // getpass("Introduce tu contraseña: \n", password);
-            printf("\n");
-            // IMPLEMENTAR REGISTRO BBDD
-            addUsuario(usuario, password, 1, db);
-            return 1;
+            if (getUsuario(usuario, db).id_User != -1){
+                printf("\nUsuario ya registrado, pruebe a iniciar sesion\n");
+                return 2;
+            }else{
+                printf("Introduzca la contrasena de usuario:\n");
+                char linea2[30];
+                fgets(linea2, 30, stdin);
+                sscanf(linea2, "%s", password);
+                // getpass("Introduce tu contraseña: \n", password);
+                printf("\n");
+                // IMPLEMENTAR REGISTRO BBDD
+                addUsuario(usuario, password, 1, db);
+                return 1;
+            }
         }
         case 2:
         {
-            printf("\n¡Hasta pronto!:\n");
+            printf("\nHasta pronto!:\n");
             return 0;
         }
     }
