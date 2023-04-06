@@ -8,11 +8,13 @@ void imprimirUser(User user)
     printf("ID: %i  Nombre: %s Tipo: %i\n", user.id_User, user.nom_User, user.id_User);
 }
 
-void escribirCopiaSeguridad(User user){
+
+//escribirCopiaSeguridad(cont+1, nombre, contrasena, admin);
+void escribirCopiaSeguridad(int id,char* nombre, char* contrasena, int admin){
 
     FILE* f;
     f = fopen("UserBackup.txt", "a");
-    fprintf(f,"%i;%s;%s;%i;",user.id_User,user.nom_User,user.password,user.tipo);
+    fprintf(f,"%i;%s;%s;%i;",id, nombre, contrasena, admin);
     fprintf(f,"\n");
     fclose(f);
 }

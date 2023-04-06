@@ -23,7 +23,7 @@ void imprimirTicket(Cine cine)
 {
     FILE* f;
     f = fopen("recibo.txt", "w");
-    fprintf(f, "Entrada para la pelicula %s para la sala %i (sesion de las: %s)\n Precio: %f", cine.salas->sesiones->peli.titulo, cine.salas->id_Sala, cine.salas->sesiones->horario, cine.salas->sesiones->precio);
+    fprintf(f, "%s \n Entrada para la pelicula: %s \n para la sala: %i (sesion de las: %s)\n Precio: %f €",cine.nom_Cine, cine.salas->sesiones->peli.titulo, cine.salas->id_Sala, cine.salas->sesiones->horario, cine.salas->sesiones->precio);
     fclose(f);
 }
 

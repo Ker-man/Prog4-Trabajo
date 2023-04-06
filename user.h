@@ -10,7 +10,7 @@ typedef struct
 }User;
 
 void imprimirUser(User user);
-void escribirCopiaSeguridad(User user);
+void escribirCopiaSeguridad(int id,char* nombre, char* contrasena, int admin);
 void leerCopiaSeguridad();
 
 #endif
