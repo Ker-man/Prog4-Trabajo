@@ -443,7 +443,6 @@ Sala getSalaFromID(int id, sqlite3* db){
     Sala sala;
 	char seq[100];
 	sprintf(seq, "SELECT * FROM SALA WHERE ID = %i", id);
-
 	if (sqlite3_prepare_v2(db, seq, -1, &stmt, NULL) != SQLITE_OK) {
 		printf("Error al cargar la sala\n");
 		printf("%s\n", sqlite3_errmsg(db));
@@ -462,12 +461,17 @@ Sala* getSalasCine( int idCine, sqlite3* db){
 	sqlite3_stmt *stmt;
 	char seq[100];
 	sprintf(seq, "SELECT * FROM SALA WHERE ID_CINE = %i", idCine);
-	Sala* salas = (Sala*)malloc(sizeof(Sala)* getSalasCountFromCine(idCine, db));
-	for (int i = 0; i<getSalasCountFromCine( idCine, db); i++){
+	if (sqlite3_prepare_v2(db, seq, -1, &stmt, NULL) != SQLITE_OK) {
+		printf("Error al cargar las salas\n");
+		printf("%s\n", sqlite3_errmsg(db));
+		return 0;
+	}
+	int cont = getSalasCountFromCine(idCine, db);
+	Sala* salas = (Sala*)malloc(sizeof(Sala)* cont);
+	for (int i = 0; i<cont && sqlite3_step(stmt) == SQLITE_ROW; i++){
 		salas[i].id_Sala = sqlite3_column_int(stmt, 0);
 		salas[i].capacidad = sqlite3_column_int(stmt, 1);
 		salas[i].numSesiones = sqlite3_column_int(stmt, 2);
-		update(seq, db);
 	}
 	return salas;
 }
@@ -500,7 +504,17 @@ int getSesionesCountFromSalaYPeli(int idSala, int idPeli, sqlite3* db){
 	sqlite3_stmt *stmt;
 	char seq[100];
 	sprintf(seq, "SELECT COUNT(*) FROM SESION WHERE ID_SALA = %i AND ID_PELI = %i", idSala, idPeli);
-	return sqlite3_column_int(stmt, 0);
+	if (sqlite3_prepare_v2(db, seq, -1, &stmt, NULL) != SQLITE_OK) {
+			printf("Error al cargar la sesion\n");
+			printf("%s\n", sqlite3_errmsg(db));
+			return 0;
+		}
+		int i =sqlite3_step(stmt);
+		if(i != SQLITE_ROW){
+			printf("Aún no hay datos generados\n");
+			return 0;
+		}
+		return sqlite3_column_int(stmt, 0);
 }
 
 Sesion getSesionFromID(int id, sqlite3* db){
@@ -526,13 +540,21 @@ Sesion getSesionFromID(int id, sqlite3* db){
 Sesion* getSesionFromSalaYPeli(int idSala, int idPeli, sqlite3* db){
 	sqlite3_stmt *stmt;
 	char seq[100];
-	sprintf(seq, "SELECT * FROM SESION WHERE ID_SALA = %i AND ID_PELI = %i", idSala, idPeli);
-	Sesion* sesiones = (Sesion*)malloc(sizeof(Sesion)* getSesionesCountFromSalaYPeli(idSala, idPeli, db));
-	for (int i = 0; i<getSesionesCountFromSalaYPeli(idSala, idPeli, db); i++){
-		strcpy(sesiones[i].horario, (char *) sqlite3_column_text(stmt, 1));
-		sesiones[i].peli = getPeliFromID(sqlite3_column_int(stmt, 2), db);
-		sesiones[i].precio = sqlite3_column_int(stmt, 3);
-		update(seq, db);
+	sprintf(seq, "SELECT * FROM SESION WHERE ID_SALA = %i AND ID_PELI = %i", idSala, idPeli); 
+	if (sqlite3_prepare_v2(db, seq, -1, &stmt, NULL) != SQLITE_OK) {
+			printf("Error al cargar las sesiones\n");
+			printf("%s\n", sqlite3_errmsg(db));
+			return 0;
+		}
+	int cont = getSesionesCountFromSalaYPeli(idSala, idPeli, db);
+	//printf("\nFunciono"); 
+	Sesion* sesiones = (Sesion*)malloc(sizeof(Sesion)* cont);
+	//printf("\nFunciono2");
+	for (int i = 0; i< cont && sqlite3_step(stmt) == SQLITE_ROW; i++){
+			//printf("\nFunciono3"); 
+			strcpy(sesiones[i].horario, (char *) sqlite3_column_text(stmt, 1));
+			sesiones[i].peli = getPeliFromID(sqlite3_column_int(stmt, 2), db);
+			sesiones[i].precio = sqlite3_column_int(stmt, 3);
 	}
 	return sesiones;
 }
