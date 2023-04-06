@@ -108,36 +108,39 @@ void menuCines(sqlite3 *db)
     printf("=============\n");
     printf("\n");
 
+    const char *opciones[] = {"Ver todos los cines", "Ver salas", "Crear ticket", "Volver al menu"};
 
-    //funcion de ver cines
-
-    const char *opciones[] = {"Ver mas cines", "Anadir cine?", "Eliminar cine?", "Volver al menu",};
-
-    int o = opcion("Estos son los cines ¿Que desea hacer?", 4, opciones);
+     int o;
+    do {
+        o = opcion("Estos son los cines ¿Que desea hacer?", 4, opciones);
 
         switch (o)
         {
-        case 0:
-        {
-            // CODIGO
-            break;
+            case 0:
+            {
+                printf("He aqui todos los cines");
+                //imprimirPelicula();            
+                break;
+            }
+            case 1:
+            {   
+                char genero[20];
+                printf("Que genero quieres explorar\n");
+                scanf("%s", genero);
+                //buscarGenero();
+                break;
+            }
+            case 2:
+            {
+                char titulo[20];
+                printf("Que genero quieres explorar\n");
+                scanf("%s", titulo);
+                //buscarTitulo();
+                break;
+            }
         }
-        case 1:
-        {
-            // CODIGO
-            break;
-        }
-        case 2:
-        {
-            // CODIGO
-            break;
-        }
-        case 3:
-        {
-            menuPrincipal(db);
-            break;
-        }
-    }
+    } while(o != 4);
+    menuPrincipal(db);
 }
 
 void menuPeliculas(sqlite3 *db) {
@@ -146,35 +149,48 @@ void menuPeliculas(sqlite3 *db) {
     printf("=================\n");
     printf("\n");
 
-    // funcion de ver cines
+    const char *opciones[] = {"Ver todas las peliculas", "Buscar por genero", "Buscar por titulo", "Pelicula mas larga", "Pelicula mas corta", "Volver al menu"};
+    int o;
+    do {
+        o = opcion("Bienvenido al menu peliculas Que desea hacer?", 6, opciones);
 
-    const char *opciones[] = {"Ver mas pelculas", "Anadir pelicula?", "Eliminar peliculas?", "Volver al menu"};
-
-    int o = opcion("Estos son los cines ¿Que desea hacer?", 4, opciones);
-
-    switch (o)
-    {
-        case 0:
+        switch (o)
         {
-            // CODIGO
-            break;
+            case 0:
+            {
+                printf("He aqui todas las peliculas");
+                //imprimirPelicula();            
+                break;
+            }
+            case 1:
+            {   
+                char genero[20];
+                printf("Que genero quieres explorar\n");
+                scanf("%s", genero);
+                //buscarGenero();
+                break;
+            }
+            case 2:
+            {
+                char titulo[20];
+                printf("Que genero quieres explorar\n");
+                scanf("%s", titulo);
+                //buscarTitulo();
+                break;
+            }
+            case 3:
+            {
+                //maxPelicula();
+                break;
+            }
+            case 4:
+            {
+                //minPelicula();
+                break;
+            }
         }
-        case 1:
-        {   
-            // CODIGO
-            break;
-        }
-        case 2:
-        {
-            // CODIGO
-            break;
-        }
-        case 3:
-        {
-            menuPrincipal(db);
-            break;
-        }
-    }
+    } while(o != 6);
+    menuPrincipal(db);
 }
 
 void menuOpciones() {
