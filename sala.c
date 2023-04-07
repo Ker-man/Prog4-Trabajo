@@ -9,6 +9,8 @@ void imprimirSala(Sala sala)
     printf("ID: %i  Capacidad: %i\n", sala.id_Sala, sala.capacidad);
 }
 
+/*
+
 void imprimirSesiones(Sala sala)
 {
     printf("eeeeee");
@@ -40,3 +42,5 @@ void anadirSala( int id_Sala, int capacidad, int numSesiones, Sesion* sesiones, 
     free(listaVieja);
 
 }
+
+*/

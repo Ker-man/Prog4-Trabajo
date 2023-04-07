@@ -11,6 +11,7 @@ void imprimirCine(Cine cine)
     printf("Salas:\n");
 }
 
+/*
 void imprimirSalas(Sala *salas, int numSalas)
 {
     for(int i = 0; i<numSalas; i++)
@@ -54,3 +55,4 @@ void anadirCine(int id_Cine, int numSalas, char nom_Cine[20], char ubi_Cine[30],
 	free(listaVieja);
 
 }
+*/

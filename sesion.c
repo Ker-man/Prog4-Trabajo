@@ -8,17 +8,17 @@ void imprimirSesion(Sesion sesion)
 {
     printf("Sesion con horario: %s\n", sesion.horario);
 }
-
+/*
 void imprimirPelis(Sesion sesion)
 {
     printf("aaaaaa");
 }
-/*
+
 void inicializarSesion(Sesion sesion)
 {
     sesion.peli = (Peli*)malloc(sizeof(Peli));
 }
-*/
+
 
 void anadirSesion(float precio, char horario[15], Peli peli, Sesion** listaSesiones, int tamSesiones)
 {
@@ -39,3 +39,5 @@ void anadirSesion(float precio, char horario[15], Peli peli, Sesion** listaSesio
 
     free(listaVieja);
 }
+
+*/

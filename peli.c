@@ -8,6 +8,7 @@ void imprimirPelicula(Peli peli)
     printf("ID: %i  Titulo: %s  Duracion: %i\n", peli.id_Peli, peli.titulo, peli.duracion);
 }
 
+/*
 
 void anadirPeli(int id, int duracion, char titulo[30], char genero[30], Peli* listaPelis, int tamPelis)
 {
@@ -116,3 +117,5 @@ Peli buscarTitulo(Peli *peliculas, int tamanyo, char* titulo)
     imprimirPelicula(result);
     return result;
 }
+
+*/

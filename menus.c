@@ -112,34 +112,47 @@ void menuCines(sqlite3 *db)
 
      int o;
     do {
-        o = opcion("Estos son los cines ¿Que desea hacer?", 4, opciones);
+        o = opcion("Esta usted ahora en el menu de cines. Que desea hacer?", 4, opciones);
 
         switch (o)
         {
             case 0:
             {
-                printf("He aqui todos los cines");
+                printf("Mostrando todos los cines disponibles actualmente...\n");
+                printf("\n");
+                printf("\n");
+                printf("\n");
                 //imprimirPelicula();            
                 break;
             }
             case 1:
             {   
+                /*
                 char genero[20];
                 printf("Que genero quieres explorar\n");
-                scanf("%s", genero);
+                fgets(genero,20,stdin);
+                printf("\n");
+                printf("\n");
+                printf("\n");
+                */
                 //buscarGenero();
                 break;
             }
             case 2:
             {
+                /*
                 char titulo[20];
                 printf("Que genero quieres explorar\n");
-                scanf("%s", titulo);
+                fgets(titulo,20,stdin);
+                printf("\n");
+                printf("\n");
+                printf("\n");
+                */
                 //buscarTitulo();
                 break;
             }
         }
-    } while(o != 4);
+    } while(o != 3);
     menuPrincipal(db);
 }
 
@@ -159,6 +172,9 @@ void menuPeliculas(sqlite3 *db) {
             case 0:
             {
                 printf("He aqui todas las peliculas");
+                printf("\n");
+                printf("\n");
+                printf("\n");                
                 //imprimirPelicula();            
                 break;
             }
@@ -166,15 +182,21 @@ void menuPeliculas(sqlite3 *db) {
             {   
                 char genero[20];
                 printf("Que genero quieres explorar\n");
-                scanf("%s", genero);
+                fgets(genero,20,stdin);
+                printf("\n");
+                printf("\n");
+                printf("\n");
                 //buscarGenero();
                 break;
             }
             case 2:
             {
                 char titulo[20];
-                printf("Que genero quieres explorar\n");
-                scanf("%s", titulo);
+                printf("Introduce el titulo de la pelicula que quieres buscar\n");
+                fgets(titulo,20,stdin);
+                printf("\n");
+                printf("\n");
+                printf("\n");
                 //buscarTitulo();
                 break;
             }
@@ -189,7 +211,7 @@ void menuPeliculas(sqlite3 *db) {
                 break;
             }
         }
-    } while(o != 6);
+    } while(o != 5);
     menuPrincipal(db);
 }
 
@@ -204,36 +226,36 @@ int menuPrincipal(sqlite3 *db)
     printf("==========================\n");
     printf("\n");
 
-    const char *opciones[] = {"Ver cines", "Ver peliculas", "Cambiar datos de la cuenta", "Cerrar Sesion", "Salir"};
-
-    int o = opcion("Bienvenido a Desutocines. Que desea hacer ahora?", 5, opciones);
+    const char *opciones[] = {"Menu cines", "Menu peliculas", "Cambiar datos de la cuenta", "Cerrar Sesion", "Salir"};
+    int o;
+     do {
+         o = opcion("Bienvenido a Desutocines. Que desea hacer ahora?", 5, opciones);
 
     switch (o)
-    {
-        case 0:
         {
-            menuCines(db);
-            break;
+            case 0:
+            {
+                menuCines(db);
+                break;
+            }
+            case 1:
+            {
+                menuPeliculas(db);
+                break;
+            }
+            case 2:
+            {
+                // CODIGO
+                break;
+            }
+            case 3:
+            {
+                // CODIGO
+                break;
+            }
         }
-        case 1:
-        {
-            menuPeliculas(db);
-            break;
-        }
-        case 2:
-        {
-            // CODIGO
-            break;
-        }
-        case 3:
-        {
-            // CODIGO
-            break;
-        }
-        case 4:
-        {
-            printf("¡Hasta pronto!:\n");
-            break;
-        }
-    }
+     }
+    while(o != 4);
+    printf("¡Hasta pronto!:\n");
+    menuRegistro(db);
 }
