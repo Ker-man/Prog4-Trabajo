@@ -215,47 +215,81 @@ void menuPeliculas(sqlite3 *db) {
     menuPrincipal(db);
 }
 
-void menuOpciones() {
-    // TODO
-}
-
 int menuPrincipal(sqlite3 *db)
 {
-    printf("\n\n\n==========================\n");
-    printf("MENU PRINCIPAL DEUSTOCINES\n");
-    printf("==========================\n");
-    printf("\n");
+    char usuario[30];
+    User usuarioLogged;
+    usuarioLogged = getUsuario(usuario, db);
+    if(usuarioLogged.tipo==1){
+        printf("\n\n\n==========================\n");
+        printf("MENU PRINCIPAL DEUSTOCINES\n");
+        printf("==========================\n");
+        printf("\n");
 
-    const char *opciones[] = {"Menu cines", "Menu peliculas", "Cambiar datos de la cuenta", "Cerrar Sesion", "Salir"};
-    int o;
-     do {
-         o = opcion("Bienvenido a Desutocines. Que desea hacer ahora?", 5, opciones);
+        const char *opciones[] = {"Menu cines", "Menu peliculas", "Cambiar datos de la cuenta", "Cerrar Sesion", "Salir"};
+        int o;
+        do {
+            o = opcion("Bienvenido a Desutocines. Que desea hacer ahora?", 5, opciones);
 
-    switch (o)
-        {
-            case 0:
+        switch (o)
             {
-                menuCines(db);
-                break;
-            }
-            case 1:
-            {
-                menuPeliculas(db);
-                break;
-            }
-            case 2:
-            {
-                // CODIGO
-                break;
-            }
-            case 3:
-            {
-                // CODIGO
-                break;
+                case 0:
+                {
+                    menuCines(db);
+                    break;
+                }
+                case 1:
+                {
+                    menuPeliculas(db);
+                    break;
+                }
+                case 2:
+                {
+                    // CODIGO
+                    break;
+                }
+                case 3:
+                {
+                    // CODIGO
+                    break;
+                }
             }
         }
-     }
-    while(o != 4);
-    printf("¡Hasta pronto!:\n");
-    menuRegistro(db);
+        while(o != 4);
+        printf("¡Hasta pronto!:\n");
+        menuRegistro(db);
+    }else{
+        printf("\n\n\n==========================\n");
+        printf("MENU DE USUARIO DEUSTOCINES\n");
+        printf("==========================\n");
+        printf("\n");
+
+        const char *opciones[] = {"Menu peliculas", "Cambiar datos de la cuenta", "Cerrar Sesion", "Salir"};
+        int o;
+        do {
+            o = opcion("Bienvenido a Desutocines. Que desea hacer ahora?", 4, opciones);
+
+        switch (o)
+            {
+                case 0:
+                {
+                    menuPeliculas(db);
+                    break;
+                }
+                case 1:
+                {
+                    // CODIGO
+                    break;
+                }
+                case 2:
+                {
+                    // CODIGO
+                    break;
+                }
+            }
+        }
+        while(o != 3);
+        printf("¡Hasta pronto!:\n");
+        menuRegistro(db);
+    }
 }
