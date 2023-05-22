@@ -16,6 +16,7 @@
 
 
 int menuPrincipal(sqlite3 *db);
+int menuUsuario(sqlite3 *db);
 
 // Primer menú al iniciar la app
  int menuRegistro(sqlite3 *db)
@@ -56,7 +57,12 @@ int menuPrincipal(sqlite3 *db);
             }else {
                 mascara(password);  
                 if (strcmp(usuarioLogged.password, password) == 0){
-                    return 1;
+                    if(usuarioLogged.tipo=1)
+                    {
+                        return 1;//admin
+                    }else{
+                        return 3;//usuario estandar
+                    }
                 }else if (strcmp(usuarioLogged.password, password) != 0){
                     printf("\nLa contrasena introducida no es correcta\n");
                     return 2;
@@ -217,10 +223,6 @@ void menuPeliculas(sqlite3 *db) {
 
 int menuPrincipal(sqlite3 *db)
 {
-    char usuario[30];
-    User usuarioLogged;
-    usuarioLogged = getUsuario(usuario, db);
-    if(usuarioLogged.tipo==1){
         printf("\n\n\n==========================\n");
         printf("MENU PRINCIPAL DEUSTOCINES\n");
         printf("==========================\n");
@@ -258,9 +260,14 @@ int menuPrincipal(sqlite3 *db)
         while(o != 4);
         printf("¡Hasta pronto!:\n");
         menuRegistro(db);
-    }else{
+    
+    
+}
+
+int menuUsuario(sqlite3 *db)
+{
         printf("\n\n\n==========================\n");
-        printf("MENU DE USUARIO DEUSTOCINES\n");
+        printf("MENU USUARIO DEUSTOCINES\n");
         printf("==========================\n");
         printf("\n");
 
@@ -291,5 +298,6 @@ int menuPrincipal(sqlite3 *db)
         while(o != 3);
         printf("¡Hasta pronto!:\n");
         menuRegistro(db);
-    }
+    
+    
 }

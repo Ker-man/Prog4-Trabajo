@@ -31,6 +31,8 @@ int main(void){
         int i = menuRegistro(db);
         if (i == 1) {
             menuPrincipal(db);
+        }else if (i == 3){
+            menuUsuario(db);
         }else if (i == 0){
             salir = 1;
         }
