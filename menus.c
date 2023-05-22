@@ -159,7 +159,7 @@ void menuCines(sqlite3 *db)
             }
         }
     } while(o != 3);
-    menuPrincipal(db);
+    //menuPrincipal(db);
 }
 
 void menuPeliculas(sqlite3 *db) {
@@ -218,7 +218,7 @@ void menuPeliculas(sqlite3 *db) {
             }
         }
     } while(o != 5);
-    menuPrincipal(db);
+    //menuPrincipal(db);
 }
 
 int menuPrincipal(sqlite3 *db)
@@ -259,7 +259,7 @@ int menuPrincipal(sqlite3 *db)
         }
         while(o != 4);
         printf("¡Hasta pronto!:\n");
-        menuRegistro(db);
+        //menuRegistro(db);
     
     
 }
@@ -297,7 +297,7 @@ int menuUsuario(sqlite3 *db)
         }
         while(o != 3);
         printf("¡Hasta pronto!:\n");
-        menuRegistro(db);
+        //menuRegistro(db);
     
     
 }
