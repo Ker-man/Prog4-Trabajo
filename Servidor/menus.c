@@ -125,6 +125,9 @@ void menuCines(sqlite3 *db)
     do {
         o = opcion("Esta usted ahora en el menu de cines. Que desea hacer?", 4, opciones);
 
+        int cont = getCinesCount(db);
+        Cine* cines  = getCines(db);
+
         switch (o)
         {
             case 0:
@@ -133,34 +136,26 @@ void menuCines(sqlite3 *db)
                 printf("\n");
                 printf("\n");
                 printf("\n");
-                //imprimirPelicula();            
+                for(int i=0; i<cont; i++){
+                    imprimirCine(cines[i]);
+                }           
                 break;
             }
             case 1:
             {   
-                /*
-                char genero[20];
-                printf("Que genero quieres explorar\n");
-                fgets(genero,20,stdin);
+                char linea2[30];
+                printf("Introduce el titulo de la pelicula que quieres buscar\n");
+                fgets(linea2,30,stdin);
+                sscanf(linea2, "%s", titulo);
                 printf("\n");
                 printf("\n");
                 printf("\n");
-                */
-                //buscarGenero();
+                getSalasCountFromCine();
                 break;
             }
             case 2:
             {
-                /*
-                char titulo[20];
-                printf("Que genero quieres explorar\n");
-                fgets(titulo,20,stdin);
-                printf("\n");
-                printf("\n");
-                printf("\n");
-                */
-                //buscarTitulo();
-                break;
+                
             }
         }
     } while(o != 3);
