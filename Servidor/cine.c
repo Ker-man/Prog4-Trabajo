@@ -1,6 +1,8 @@
 #include "cine.h"
 #include "funcionesBD.h"
 #include "peli.h"
+#include "user.h"
+#include "sesion.h"
 #include <stdio.h>
 #include <string.h>
 #include <stdlib.h>
@@ -95,10 +97,13 @@ void deleteCine(Cine c, sqlite3* db){
 }
 
 
-void imprimirTicket(Cine cineSeleccionado, Peli peliSeleccionada)
+void imprimirTicket(User usuarioLogged, Cine cineSeleccionado, Peli peliSeleccionada, Sesion sesionSeleccionada)
 {
     FILE* f;
     f = fopen("ticket.txt", "w");
-    fprintf(f, "Entrada para el cine: %s para la pelicula: %s (%i)", cineSeleccionado.nom_Cine, peliSeleccionada.titulo, peliSeleccionada.id_Peli);
+    fprintf(f, "Gracias por su compra %s!\n", usuarioLogged.nom_User);
+	fprintf(f, "Entrada para el cine: %s para la pelicula: %s (%i)", cineSeleccionado.nom_Cine, peliSeleccionada.titulo, peliSeleccionada.id_Peli);
+	fprintf(f, "Sesion: %s \n", sesionSeleccionada.horario);
+	fprintf(f, "Le esperamos!\n");
     fclose(f);
 }

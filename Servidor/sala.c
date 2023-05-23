@@ -70,6 +70,25 @@ Sala* getSalasFromCine( int idCine, sqlite3* db){
 	return salas;
 }
 
+Sala* getAllSalas(sqlite3* db){
+	sqlite3_stmt *stmt;
+	char seq[100];
+	sprintf(seq, "SELECT * FROM SALA ");
+	if (sqlite3_prepare_v2(db, seq, -1, &stmt, NULL) != SQLITE_OK) {
+		printf("Error al cargar las salas\n");
+		printf("%s\n", sqlite3_errmsg(db));
+		return 0;
+	}
+	int cont = getSalasCount(db);
+	Sala* salas = (Sala*)malloc(sizeof(Sala)* cont);
+	for (int i = 0; i<cont && sqlite3_step(stmt) == SQLITE_ROW; i++){
+		salas[i].id_Sala = sqlite3_column_int(stmt, 0);
+		salas[i].capacidad = sqlite3_column_int(stmt, 1);
+		salas[i].numSesiones = sqlite3_column_int(stmt, 2);
+	}
+	return salas;
+}
+
 void addSala(int capacidad, int numSesiones, int idCine, sqlite3* db){
 	int cont = getSalasCount(db);
 	char seq[200];

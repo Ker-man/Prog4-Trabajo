@@ -17,6 +17,7 @@
 
 int menuPrincipal(sqlite3 *db);
 int menuUsuario(sqlite3 *db);
+User usuarioLogged;
 
 // Primer menú al iniciar la app
  int menuRegistro(sqlite3 *db)
@@ -26,7 +27,7 @@ int menuUsuario(sqlite3 *db);
     char email[40];
     char password[30];
     int tipo;
-    User usuarioLogged;
+
     printf("\n\n\n==========================\n");
     printf("MENU PRINCIPAL DEUSTOCINES\n");
     printf("==========================\n");
@@ -142,6 +143,12 @@ void menuCines(sqlite3 *db)
         int cont2 = getPelisCount(db);
         Peli* peliculas  = getPeliculas(db);
 
+        int cont3 = getSesionesCount(db);
+        Sesion* sesiones = getAllSesiones;
+
+        int cont4 = getSalasCount(db);
+        Sala* salas = getAllSalas;
+
         int IDcine;
 
         switch (o)
@@ -171,10 +178,14 @@ void menuCines(sqlite3 *db)
             }
             case 2:
             {
+                printf("\n\t\t\t -----------------------------------");
+                printf("\n\t\t\t ------- Sistema de Reservas -------");
+                printf("\n\t\t\t -----------------------------------");
+
                 char linea1[30];
                 char cine[30];
                 Cine cineSeleccionado;
-                printf("Introduce el nombre del cine: \n");
+                printf("\n\t\t\t\tIntroduce el nombre del cine: ");
                 fgets(linea1,30,stdin);
                 sscanf(linea1, "%s", cine);
 
@@ -182,14 +193,14 @@ void menuCines(sqlite3 *db)
                     if(cines[i].nom_Cine==cine){
                         cineSeleccionado=cines[i];
                     }else{
-                        printf("ese cine no esta en nuestro registro");
+                        printf("\n\t\t\t\tese cine no esta en nuestro registro");
                     }
                 }
 
                 char linea2[30];
                 char peli[30];
                 Peli peliSeleccionada;
-                printf("Introduce el nombre de la peli: \n");
+                printf("\n\t\t\t\tIntroduce el nombre de la peli: ");
                 fgets(linea2,30,stdin);
                 sscanf(linea2, "%s", peli);
 
@@ -197,11 +208,30 @@ void menuCines(sqlite3 *db)
                     if(peliculas[i].titulo==peli){
                         peliSeleccionada=peliculas[i];
                     }else{
-                        printf("esa peli no esta en nuestro registro");
+                        printf("\n\t\t\t\tesa peli no esta en nuestro registro");
                     }
-                }                  
+                }                 
+                int x = 1;
+                Sesion* opciones;
+                    for (int i = 0; i < cont3 ; i++) {
+                        if (sesiones[i].peli.id_Peli == peliSeleccionada.id_Peli){
+                            for (int j = 0; j< cont4; j++){
+                                if (sesiones[i].id_Sesion == salas[j].id_Sala){
+                                    printf("\n\t\t\t\tSesion %i: Sala - %i Horario - %s", x, salas[j].id_Sala, sesiones[i].horario);
+                                    opciones[x-1] = sesiones[i];
+                                    x++;
+                                }
+                            }
+                        }
+                    }
+                char linea3[30];
+                int sesion;
+                printf("\n\t\t\t\tIntroduzca su eleccion: ");
+                fgets(linea3,30,stdin);
+                sscanf(linea3, "%i", sesion);
+                Sesion sesionSeleccionada = opciones[sesion-1];
                 
-                imprimirTicket(cineSeleccionado, peliSeleccionada);
+                imprimirTicket(usuarioLogged, cineSeleccionado, peliSeleccionada, sesionSeleccionada);
             }
         }
     } while(o != 3);

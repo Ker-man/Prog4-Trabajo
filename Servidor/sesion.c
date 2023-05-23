@@ -84,6 +84,28 @@ Sesion* getSesionFromSalaYPeli(int idSala, int idPeli, sqlite3* db){
 	return sesiones;
 }
 
+Sesion* getAllSesiones(sqlite3* db){
+	sqlite3_stmt *stmt;
+	char seq[100];
+	sprintf(seq, "SELECT * FROM SESION"); 
+	if (sqlite3_prepare_v2(db, seq, -1, &stmt, NULL) != SQLITE_OK) {
+			printf("Error al cargar las sesiones\n");
+			printf("%s\n", sqlite3_errmsg(db));
+			return 0;
+		}
+	int cont = getSesionesCount(db);
+	//printf("\nFunciono"); 
+	Sesion* sesiones = (Sesion*)malloc(sizeof(Sesion)* cont);
+	//printf("\nFunciono2");
+	for (int i = 0; i< cont && sqlite3_step(stmt) == SQLITE_ROW; i++){
+			//printf("\nFunciono3"); 
+			strcpy(sesiones[i].horario, (char *) sqlite3_column_text(stmt, 1));
+			sesiones[i].peli = getPeliFromID(sqlite3_column_int(stmt, 2), db);
+			sesiones[i].precio = sqlite3_column_int(stmt, 3);
+	}
+	return sesiones;
+}
+
 void addSesion(char* horario, int idPeli, int idSala, int precio, sqlite3* db){
 	int cont = getSesionesCount(db);
 	char seq[200];
