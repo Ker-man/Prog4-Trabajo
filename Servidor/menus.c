@@ -25,6 +25,7 @@ int menuUsuario(sqlite3 *db);
     char usuario[30];
     char email[40];
     char password[30];
+    int tipo;
     User usuarioLogged;
     printf("\n\n\n==========================\n");
     printf("MENU PRINCIPAL DEUSTOCINES\n");
@@ -92,8 +93,12 @@ int menuUsuario(sqlite3 *db);
                 sscanf(linea2, "%s", password);
                 // getpass("Introduce tu contraseña: \n", password);
                 printf("\n");
+                printf("Introduzca `3` si es de tipo cliente y introduzca `1` si es de tipo administrador ");
+                char linea3[30];
+                fgets(linea3, 30, stdin);
+                sscanf(linea3, "%i", tipo);
                 // IMPLEMENTAR REGISTRO BBDD
-                addUsuario(usuario, password, 1, db);
+                addUsuario(usuario, password, tipo, db);
                 return 1;
             }
         }
@@ -173,47 +178,61 @@ void menuPeliculas(sqlite3 *db) {
     do {
         o = opcion("Bienvenido al menu peliculas Que desea hacer?", 6, opciones);
 
+        int cont = getPelisCount(db);
+        Peli* pelis = getPeliculas(db);
+        char genero[30];
+        char titulo[30];
         switch (o)
         {
             case 0:
             {
-                printf("He aqui todas las peliculas");
+                printf("He aqui todas las peliculas:");
                 printf("\n");
                 printf("\n");
-                printf("\n");                
-                //imprimirPelicula();            
+                printf("\n");
+                for(int i=0; i<cont; i++){
+                    imprimirPelicula(pelis[i]);
+                }           
                 break;
             }
             case 1:
             {   
-                char genero[20];
+                char linea[30];
                 printf("Que genero quieres explorar\n");
-                fgets(genero,20,stdin);
+                fgets(linea, 30, stdin);
+                sscanf(linea, "%s", genero);
                 printf("\n");
                 printf("\n");
                 printf("\n");
-                //buscarGenero();
+                buscarGenero(pelis, cont, genero);
                 break;
             }
             case 2:
             {
-                char titulo[20];
+                char linea2[30];
                 printf("Introduce el titulo de la pelicula que quieres buscar\n");
-                fgets(titulo,20,stdin);
+                fgets(linea2,30,stdin);
+                sscanf(linea2, "%s", titulo);
                 printf("\n");
                 printf("\n");
                 printf("\n");
-                //buscarTitulo();
+                buscarTitulo(pelis, cont, titulo);
                 break;
             }
             case 3:
             {
-                //maxPelicula();
+                maxPelicula(pelis, cont);
+                printf("\n");
+                printf("\n");
+                printf("\n");
                 break;
             }
             case 4:
             {
-                //minPelicula();
+                minPelicula(pelis, cont);
+                printf("\n");
+                printf("\n");
+                printf("\n");
                 break;
             }
         }
@@ -263,7 +282,16 @@ int menuPrincipal(sqlite3 *db)
     
     
 }
+/*
+Menu peliculas
+    Ver todas las pelis
+    Ver la peli mas larga
+    Ticket
+Menu Sesiones
+    Ver sesiones
+    Ver las sesiones ma largas
 
+*/
 int menuUsuario(sqlite3 *db)
 {
         printf("\n\n\n==========================\n");

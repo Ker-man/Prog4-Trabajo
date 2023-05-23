@@ -126,7 +126,7 @@ void anadirPeli(int id, int duracion, char titulo[30], char genero[30], Peli* li
     listaPelis[tamPelis-1] = peli;
     free(listaVieja);
 }
-
+*/
 
 Peli maxPelicula(Peli *pelis, int tamanyo)
 {
@@ -217,4 +217,3 @@ Peli buscarTitulo(Peli *peliculas, int tamanyo, char* titulo)
     return result;
 }
 
-*/
