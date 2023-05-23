@@ -127,6 +127,7 @@ void menuCines(sqlite3 *db)
 
         int cont = getCinesCount(db);
         Cine* cines  = getCines(db);
+        int IDcine;
 
         switch (o)
         {
@@ -144,13 +145,13 @@ void menuCines(sqlite3 *db)
             case 1:
             {   
                 char linea2[30];
-                printf("Introduce el titulo de la pelicula que quieres buscar\n");
+                printf("Introduce el ID del cine cuyas salas quieres ver: \n");
                 fgets(linea2,30,stdin);
-                sscanf(linea2, "%s", titulo);
+                sscanf(linea2, "%i", IDcine);
                 printf("\n");
                 printf("\n");
                 printf("\n");
-                getSalasCountFromCine();
+                getSalasCountFromCine(IDcine, db);
                 break;
             }
             case 2:
