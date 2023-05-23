@@ -20,6 +20,7 @@ User* getAllUsers(sqlite3* db);
 User getUsuario(char* nombre, sqlite3* db);
 User getUsuarioFromID(int id, sqlite3* db);
 void addUsuario(char* nombre, char* contrasena, int admin, sqlite3* db);
+void deleteUsuario(User u, sqlite3* db);
 
 
 #endif

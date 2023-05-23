@@ -18,6 +18,7 @@ Peli getPeliFromID(int id, sqlite3* db);
 Peli* getPeliculas(sqlite3* db);
 Peli getPelicula(char* titulo, sqlite3* db);
 void addPelicula(char* titulo, char* genero, int duracion , sqlite3* db);
+void deletePeli(Peli p, sqlite3* db);
 
 
 

@@ -118,3 +118,12 @@ void addUsuario(char* nombre, char* contrasena, int admin, sqlite3* db){
 
 	printf("Usuario creado correctamente, pulse cualquier tecla para continuar\n");
 }
+
+void deleteUsuario(User u, sqlite3* db){
+	int cont = getUsuarioCount(db);
+	char seq[200];
+	sprintf(seq, "DELETE FROM USUARIO WHERE ID = %i", u.id_User);
+	update(seq, db);
+
+	printf("Usuario eliminado correctamente, pulse cualquier tecla para continuar\n");
+}

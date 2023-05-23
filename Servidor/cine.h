@@ -20,6 +20,7 @@ Cine getCineFromID(int id, sqlite3* db);
 Cine* getCines(sqlite3* db);
 Cine getCine(char* nombre, char* ubicacion, sqlite3* db);
 void addCine(int numSalas, char* nombre, char* ubicacion, sqlite3* db);
+void deleteCine(Cine c, sqlite3* db);
 
 
 #endif

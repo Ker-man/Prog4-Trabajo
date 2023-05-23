@@ -85,3 +85,10 @@ void addCine(int numSalas, char* nombre, char* ubicacion, sqlite3* db){
 	sprintf(seq, "INSERT INTO CINE(ID, NUMSALAS, NOM_CINE, UBI_CINE) VALUES (%i, %i, '%s', '%s')",cont+1, numSalas, nombre, ubicacion);
 	update(seq, db);
 }
+
+void deleteCine(Cine c, sqlite3* db){
+	int cont = getSalasCount(db);
+	char seq[200];
+	sprintf(seq, "DELETE FROM CINE WHERE ID = %i", c.id_Cine);
+	update(seq, db);
+}

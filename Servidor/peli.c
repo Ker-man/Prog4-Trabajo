@@ -84,6 +84,13 @@ void addPelicula(char* titulo, char* genero, int duracion , sqlite3* db){
 	update(seq, db);
 }
 
+void deletePeli(Peli p, sqlite3* db){
+	int cont = getSalasCount(db);
+	char seq[200];
+	sprintf(seq, "DELETE FROM PELICULA WHERE ID = %i", p.id_Peli);
+	update(seq, db);
+}
+
 
 
 
