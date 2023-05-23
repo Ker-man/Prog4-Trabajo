@@ -1,5 +1,6 @@
 #ifndef _PELI_H_
 #define _PELI_H_
+#include "sqlite3.h"
 
 typedef struct 
 {
@@ -10,6 +11,15 @@ typedef struct
 }Peli;
 
 void imprimirPelicula(Peli peli);
+
+
+int getPelisCount(sqlite3* db);
+Peli getPeliFromID(int id, sqlite3* db);
+Peli* getPeliculas(sqlite3* db);
+Peli getPelicula(char* titulo, sqlite3* db);
+void addPelicula(char* titulo, char* genero, int duracion , sqlite3* db);
+
+
 
 
 //void anadirPeli(int id, int duracion, char titulo[30], char genero[30], Peli* listaPelis, int tamPelis);
