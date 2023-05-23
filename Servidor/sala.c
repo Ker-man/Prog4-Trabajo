@@ -51,7 +51,7 @@ Sala getSalaFromID(int id, sqlite3* db){
 	sala.numSesiones = sqlite3_column_int(stmt, 2);
 	return sala;
 }
-Sala* getSalasCine( int idCine, sqlite3* db){
+Sala* getSalasFromCine( int idCine, sqlite3* db){
 	sqlite3_stmt *stmt;
 	char seq[100];
 	sprintf(seq, "SELECT * FROM SALA WHERE ID_CINE = %i", idCine);
