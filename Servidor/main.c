@@ -24,9 +24,6 @@ int main(void){
     int salir = 0;
     Sesion* listSesiones;
     listSesiones = getSesionFromSalaYPeli(1, 1, db);
-    for(int i = 0; i<getSesionesCountFromSalaYPeli(1, 1, db); i++){
-        imprimirSesion(listSesiones[i]);
-    }
     do{
         int i = menuRegistro(db);
         if (i == 1) {

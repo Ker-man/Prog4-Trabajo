@@ -92,11 +92,21 @@ int menuUsuario(sqlite3 *db);
                 fgets(linea2, 30, stdin);
                 sscanf(linea2, "%s", password);
                 // getpass("Introduce tu contraseña: \n", password);
+                int comp = 0;
+                while(comp < 1){
                 printf("\n");
-                printf("Introduzca `3` si es de tipo cliente y introduzca `1` si es de tipo administrador ");
+                printf("Introduzca `1` si es de tipo administador y introduzca `2` si es de tipo administrador \n");
+                printf("\n");
                 char linea3[30];
                 fgets(linea3, 30, stdin);
                 sscanf(linea3, "%i", tipo);
+                if(tipo == 1 || tipo == 2){
+                    printf("Tipo correcto");
+                    comp++;
+                }else{
+                    print("Tipo incorrecto");
+                }
+                }
                 // IMPLEMENTAR REGISTRO BBDD
                 addUsuario(usuario, password, tipo, db);
                 return 1;
@@ -110,7 +120,8 @@ int menuUsuario(sqlite3 *db);
     }
 }
 
-
+//Menu Sesiones
+//Menu Salas
 
 void menuCines(sqlite3 *db)
 {
@@ -236,7 +247,7 @@ void menuPeliculas(sqlite3 *db) {
     //menuPrincipal(db);
 }
 
-int menuPrincipal(sqlite3 *db)
+int menuPrincipal(sqlite3 *db) //Menu admin
 {
         printf("\n\n\n==========================\n");
         printf("MENU PRINCIPAL DEUSTOCINES\n");
@@ -244,7 +255,7 @@ int menuPrincipal(sqlite3 *db)
         printf("\n");
 
         const char *opciones[] = {"Menu cines", "Menu peliculas", "Cambiar datos de la cuenta", "Cerrar Sesion", "Salir"};
-        int o;
+        int o;                      //Crear Pelicula  //Borrar Pelicula //
         do {
             o = opcion("Bienvenido a Desutocines. Que desea hacer ahora?", 5, opciones);
 
@@ -295,10 +306,10 @@ int menuUsuario(sqlite3 *db)
         printf("==========================\n");
         printf("\n");
 
-        const char *opciones[] = {"Menu peliculas", "Cambiar datos de la cuenta", "Cerrar Sesion", "Salir"};
+        const char *opciones[] = {"Menu peliculas", "Menu Cines", "Salir"};
         int o;
         do {
-            o = opcion("Bienvenido a Desutocines. Que desea hacer ahora?", 4, opciones);
+            o = opcion("Bienvenido a Desutocines. Que desea hacer ahora?", 3, opciones);
 
         switch (o)
             {
@@ -309,17 +320,12 @@ int menuUsuario(sqlite3 *db)
                 }
                 case 1:
                 {
-                    // CODIGO
-                    break;
-                }
-                case 2:
-                {
-                    // CODIGO
+                    menuCines(db);
                     break;
                 }
             }
         }
-        while(o != 3);
+        while(o != 2);
         printf("¡Hasta pronto!:\n");
         //menuRegistro(db);
     
