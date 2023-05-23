@@ -1,6 +1,7 @@
 #ifndef _CINE_H_
 #define _CINE_H_
 #include "sala.h"
+#include "sqlite3.h"
 
 typedef struct 
 {
@@ -14,10 +15,10 @@ typedef struct
 
 void imprimirCine(Cine cine);
 
-//void imprimirSalas(Sala *salas, int numSalas);
-//void imprimirTicket(Cine cine);
-
-//void inicializarCine(Cine cine, int numSalas);
-//void anadirCine(int id_Cine, int numSalas, char nom_Cine[20], char ubi_Cine[30], Sala* salas, Cine** listaCines, int tamNewLista);
+int getCinesCount(sqlite3* db);
+Cine getCineFromID(int id, sqlite3* db);
+Cine* getCines(sqlite3* db);
+Cine getCine(char* nombre, char* ubicacion, sqlite3* db);
+void addCine(int numSalas, char* nombre, char* ubicacion, sqlite3* db);
 
 #endif

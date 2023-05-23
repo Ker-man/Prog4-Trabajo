@@ -3,7 +3,7 @@
 #include <string.h>
 #include <stdlib.h>
 
-//Metodos de IMPRIMIR
+
 void imprimirCine(Cine cine)
 {
     printf("Cine:\n");
@@ -11,48 +11,76 @@ void imprimirCine(Cine cine)
     printf("Salas:\n");
 }
 
-/*
-void imprimirSalas(Sala *salas, int numSalas)
-{
-    for(int i = 0; i<numSalas; i++)
-    {
-        printf("Sala %i- Codigo: %i    Capacidad: %i\n",i+1, salas[i].id_Sala, salas[i].capacidad);
-    }
+int getCinesCount(sqlite3* db){
+	sqlite3_stmt *stmt;
+		if (sqlite3_prepare_v2(db, "SELECT COUNT(*) FROM CINE", -1, &stmt, NULL) != SQLITE_OK) {
+			printf("Error al cargar el cine\n");
+			printf("%s\n", sqlite3_errmsg(db));
+			return 0;
+		}
+		int i =sqlite3_step(stmt);
+		if(i != SQLITE_ROW){
+			printf("Aún no hay datos generados\n");
+			return 0;
+		}
+		return sqlite3_column_int(stmt, 0);
 }
 
-void imprimirTicket(Cine cine)
-{
-    FILE* f;
-    f = fopen("recibo.txt", "w");
-    fprintf(f, "%s \n Entrada para la pelicula: %s \n para la sala: %i (sesion de las: %s)\n Precio: %f €",cine.nom_Cine, cine.salas->sesiones->peli.titulo, cine.salas->id_Sala, cine.salas->sesiones->horario, cine.salas->sesiones->precio);
-    fclose(f);
-}
-
-//Metodos de crear
-void inicializarCine(Cine cine, int numSalas)
-{
-    cine.salas = (Sala*)malloc(sizeof(Sala)*numSalas);
-}
-
-void anadirCine(int id_Cine, int numSalas, char nom_Cine[20], char ubi_Cine[30], Sala* salas, Cine** listaCines, int tamNewLista)
-{
+Cine getCineFromID(int id, sqlite3* db){
+	sqlite3_stmt *stmt;
     Cine cine;
-    cine.id_Cine = id_Cine;
-    cine.numSalas = numSalas;
-    strcpy(cine.nom_Cine, nom_Cine);
-    strcpy(cine.ubi_Cine, ubi_Cine);
-    cine.salas = (Sala*)malloc(sizeof(Sala)*numSalas);
-    cine.salas = salas;
-    Cine* listaVieja = *listaCines;
-    *listaCines = (Cine*)malloc(sizeof(Cine) * tamNewLista);
+	char seq[100];
+	sprintf(seq, "SELECT * FROM CINE WHERE ID = %i", id);
 
-    for(int i=0; i<tamNewLista-1;i++)
-	{
-		listaCines[0][i] = listaVieja[i];
+	if (sqlite3_prepare_v2(db, seq, -1, &stmt, NULL) != SQLITE_OK) {
+		printf("Error al cargar el cine\n");
+		printf("%s\n", sqlite3_errmsg(db));
+		return (Cine){'\0', 0, 0};
 	}
-	listaCines[0][tamNewLista-1] = cine;
-
-	free(listaVieja);
-
+	int i =sqlite3_step(stmt);
+	if(i != SQLITE_ROW){
+		return (Cine){'\0', 0, 0};
+	}
+	cine.id_Cine = sqlite3_column_int(stmt, 0);
+	cine.numSalas = sqlite3_column_int(stmt, 1);
+	strcpy(cine.nom_Cine, (char *) sqlite3_column_text(stmt, 2));
+	strcpy(cine.ubi_Cine, (char *) sqlite3_column_text(stmt, 3));
+	return cine;
 }
-*/
+
+Cine* getCines(sqlite3* db){
+	Cine* cines = (Cine*)malloc(sizeof(Cine)* getCinesCount(db));
+	for (int i = 0; i<getCinesCount(db); i++){
+		cines[i] = getCineFromID(i, db);
+	}
+	return cines;
+}
+
+Cine getCine(char* nombre, char* ubicacion, sqlite3* db){
+	sqlite3_stmt *stmt;
+    Cine cine;
+	char seq[100];
+	sprintf(seq, "SELECT * FROM CINE WHERE NOM_CINE = '%s' AND UBI_CINE = '%s", nombre, ubicacion);
+
+	if (sqlite3_prepare_v2(db, seq, -1, &stmt, NULL) != SQLITE_OK) {
+		printf("Error al cargar el cine\n");
+		printf("%s\n", sqlite3_errmsg(db));
+		return (Cine){'\0', 0, 0};
+	}
+	int i =sqlite3_step(stmt);
+	if(i != SQLITE_ROW){
+		return (Cine){'\0', 0, 0};
+	}
+	cine.id_Cine = sqlite3_column_int(stmt, 0);
+	cine.numSalas = sqlite3_column_int(stmt, 1);
+	strcpy(cine.nom_Cine, (char *) sqlite3_column_text(stmt, 2));
+	strcpy(cine.ubi_Cine, (char *) sqlite3_column_text(stmt, 3));
+	return cine;
+}
+
+void addCine(int numSalas, char* nombre, char* ubicacion, sqlite3* db){
+	int cont = getCinesCount(db);
+	char seq[200];
+	sprintf(seq, "INSERT INTO CINE(ID, NUMSALAS, NOM_CINE, UBI_CINE) VALUES (%i, %i, '%s', '%s')",cont+1, numSalas, nombre, ubicacion);
+	update(seq, db);
+}
