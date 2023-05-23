@@ -13,8 +13,4 @@ typedef struct
 void imprimirSesion(Sesion sesion);
 
 
-//void imprimirPelis(Sesion sesion);
-//void inicializarSesion(Sesion sesion);
-//void anadirSesion(float precio, char horario[15], Peli peli, Sesion** listaSesiones, int tamSesiones);
-
 #endif
