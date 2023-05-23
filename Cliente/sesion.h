@@ -1,16 +1,17 @@
 #ifndef _SESION_H_
 #define _SESION_H_
+
 #include "peli.h"
 
-typedef struct 
+class Sesion
 {
+public:
     float precio;
     char horario[15];
     Peli peli;
-}Sesion;
+    int id_sesion;
 
-
-void imprimirSesion(Sesion sesion);
-
+    void imprimirSesion();
+};
 
 #endif
