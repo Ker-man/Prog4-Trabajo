@@ -95,7 +95,7 @@ int menuUsuario(sqlite3 *db);
                 int comp = 0;
                 while(comp < 1){
                 printf("\n");
-                printf("Introduzca `1` si es de tipo administador y introduzca `2` si es de tipo administrador \n");
+                printf("Introduzca `1` si es de tipo administador y introduzca `2` si es de tipo cliente \n");
                 printf("\n");
                 char linea3[30];
                 fgets(linea3, 30, stdin);
