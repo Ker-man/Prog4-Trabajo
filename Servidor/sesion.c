@@ -90,3 +90,10 @@ void addSesion(char* horario, int idPeli, int idSala, int precio, sqlite3* db){
 	sprintf(seq, "INSERT INTO SESION(ID, HORARIO, ID_PELI, ID_SALA, PRECIO) VALUES (%i,'%s', %i, %i, %i)",cont+1, horario, idPeli, idSala, precio);
 	update(seq, db);
 }
+
+void deleteSesion(Sesion s, sqlite3* db){
+	int cont = getSesionesCount(db);
+	char seq[200];
+	sprintf(seq, "DELETE FROM SESION WHERE ID = %i", s.id_Sesion);
+	update(seq, db);
+}

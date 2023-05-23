@@ -51,7 +51,7 @@ Sala getSalaFromID(int id, sqlite3* db){
 	sala.numSesiones = sqlite3_column_int(stmt, 2);
 	return sala;
 }
-Sala* getSalasCine( int idCine, sqlite3* db){
+Sala* getSalasFromCine( int idCine, sqlite3* db){
 	sqlite3_stmt *stmt;
 	char seq[100];
 	sprintf(seq, "SELECT * FROM SALA WHERE ID_CINE = %i", idCine);
@@ -74,5 +74,12 @@ void addSala(int capacidad, int numSesiones, int idCine, sqlite3* db){
 	int cont = getSalasCount(db);
 	char seq[200];
 	sprintf(seq, "INSERT INTO CINE(ID, NUMSALAS, NOM_CINE, UBI_CINE) VALUES (%i, %i, %i, %i)",cont+1, capacidad, numSesiones, idCine);
+	update(seq, db);
+}
+
+void deleteSala(Sala s, sqlite3* db){
+	int cont = getSalasCount(db);
+	char seq[200];
+	sprintf(seq, "DELETE FROM SALA WHERE ID = %i", s.id_Sala);
 	update(seq, db);
 }

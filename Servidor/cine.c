@@ -1,5 +1,6 @@
 #include "cine.h"
 #include "funcionesBD.h"
+#include "peli.h"
 #include <stdio.h>
 #include <string.h>
 #include <stdlib.h>
@@ -84,4 +85,20 @@ void addCine(int numSalas, char* nombre, char* ubicacion, sqlite3* db){
 	char seq[200];
 	sprintf(seq, "INSERT INTO CINE(ID, NUMSALAS, NOM_CINE, UBI_CINE) VALUES (%i, %i, '%s', '%s')",cont+1, numSalas, nombre, ubicacion);
 	update(seq, db);
+}
+
+void deleteCine(Cine c, sqlite3* db){
+	int cont = getSalasCount(db);
+	char seq[200];
+	sprintf(seq, "DELETE FROM CINE WHERE ID = %i", c.id_Cine);
+	update(seq, db);
+}
+
+
+void imprimirTicket(Cine cineSeleccionado, Peli peliSeleccionada)
+{
+    FILE* f;
+    f = fopen("ticket.txt", "w");
+    fprintf(f, "Entrada para el cine: %s para la pelicula: %s (%i)", cineSeleccionado.nom_Cine, peliSeleccionada.titulo, peliSeleccionada.id_Peli);
+    fclose(f);
 }

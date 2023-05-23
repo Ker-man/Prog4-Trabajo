@@ -95,7 +95,7 @@ int menuUsuario(sqlite3 *db);
                 int comp = 0;
                 while(comp < 1){
                 printf("\n");
-                printf("Introduzca `1` si es de tipo administador y introduzca `2` si es de tipo administrador \n");
+                printf("Introduzca `1` si es de tipo administador y introduzca `2` si es de tipo cliente \n");
                 printf("\n");
                 char linea3[30];
                 fgets(linea3, 30, stdin);
@@ -138,6 +138,10 @@ void menuCines(sqlite3 *db)
 
         int cont = getCinesCount(db);
         Cine* cines  = getCines(db);
+
+        int cont2 = getPelisCount(db);
+        Peli* peliculas  = getPeliculas(db);
+
         int IDcine;
 
         switch (o)
@@ -167,7 +171,37 @@ void menuCines(sqlite3 *db)
             }
             case 2:
             {
+                char linea1[30];
+                char cine[30];
+                Cine cineSeleccionado;
+                printf("Introduce el nombre del cine: \n");
+                fgets(linea1,30,stdin);
+                sscanf(linea1, "%s", cine);
+
+                for(int i=0; i<cont; i++){
+                    if(cines[i].nom_Cine==cine){
+                        cineSeleccionado=cines[i];
+                    }else{
+                        printf("ese cine no esta en nuestro registro");
+                    }
+                }
+
+                char linea2[30];
+                char peli[30];
+                Peli peliSeleccionada;
+                printf("Introduce el nombre de la peli: \n");
+                fgets(linea2,30,stdin);
+                sscanf(linea2, "%s", peli);
+
+                for(int i=0; i<cont2; i++){
+                    if(peliculas[i].titulo==peli){
+                        peliSeleccionada=peliculas[i];
+                    }else{
+                        printf("esa peli no esta en nuestro registro");
+                    }
+                }                  
                 
+                imprimirTicket(cineSeleccionado, peliSeleccionada);
             }
         }
     } while(o != 3);
