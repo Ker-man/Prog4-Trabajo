@@ -1,17 +1,15 @@
 #ifndef _SALA_H_
 #define _SALA_H_
-
 #include "sesion.h"
 
-class Sala
+typedef struct
 {
-public:
     int id_Sala;
     int capacidad;
     int numSesiones;
-    Sesion *sesiones;
+    Sesion* sesiones;
+} Sala;
 
-    void imprimirSala();
-};
+void imprimirSala(Sala sala);
 
 #endif

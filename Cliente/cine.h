@@ -3,16 +3,16 @@
 
 #include "sala.h"
 
-class Cine
-{
-public:
+typedef struct
     int id_Cine;
     int numSalas;
     char nom_Cine[20];
     char ubi_Cine[30];
-    Sala *salas;
+    Sala* salas;
+}
+Cine;
 
-    void imprimirCine();
+void imprimirCine(Cine cine);
 };
 
 #endif
