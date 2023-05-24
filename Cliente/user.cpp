@@ -2,6 +2,8 @@
 #include <cstdio>
 #include <cstdlib>
 
+using namespace std;
+
 void User::imprimirUser()
 {
     printf("ID: %i  Nombre: %s Tipo: %i\n", id_User, nom_User, tipo);
