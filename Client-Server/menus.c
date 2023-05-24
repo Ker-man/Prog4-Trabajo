@@ -41,7 +41,6 @@ User usuarioLogged;
     {
         case 0:
         {
-            imprimirUser(usuarioLogged);
             printf("\n\n\n================\n");
             printf("INICIO DE SESION\n");
             printf("================\n");
