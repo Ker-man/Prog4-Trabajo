@@ -4,6 +4,7 @@
 #include "user.h"
 #include "sesion.h"
 #include "sqlite3.h"
+#include "sala.h"
 
 typedef struct 
 {

@@ -105,7 +105,7 @@ User usuarioLogged;
                     printf("Tipo correcto");
                     comp++;
                 }else{
-                    print("Tipo incorrecto");
+                    printf("Tipo incorrecto");
                 }
                 }
                 // IMPLEMENTAR REGISTRO BBDD
@@ -144,10 +144,10 @@ void menuCines(sqlite3 *db)
         Peli* peliculas  = getPeliculas(db);
 
         int cont3 = getSesionesCount(db);
-        Sesion* sesiones = getAllSesiones;
+        Sesion* sesiones = getAllSesiones(db);
 
         int cont4 = getSalasCount(db);
-        Sala* salas = getAllSalas;
+        Sala* salas = getAllSalas(db);
 
         int IDcine;
 
