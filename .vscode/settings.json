@@ -39,6 +39,16 @@
         "stdexcept": "c",
         "streambuf": "c",
         "cinttypes": "c",
-        "typeinfo": "c"
+        "typeinfo": "c",
+        "stdlib.h": "c",
+        "funcionesbd.h": "c",
+        "stdio.h": "c",
+        "sqlite3.h": "c",
+        "utilidades.h": "c",
+        "user.h": "c",
+        "cine.h": "c",
+        "string.h": "c",
+        "sesion.h": "c",
+        "sala.h": "c"
     }
 }

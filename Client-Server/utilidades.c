@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <conio.h>
 #include "utilidades.h"
-#include "sesion.h"
+#include "../Empresa/sesion.h"
 
 /*
 int main(void) {

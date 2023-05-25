@@ -4,14 +4,14 @@
 #include <conio.h>
 //#include <unistd.h>
 //#include <io.h>
-#include "cine.h"
-#include "sala.h"
-#include "sesion.h"
-#include "peli.h"
-#include "user.h"
-#include "utilidades.h"
-#include "funcionesBD.h"
-#include "sqlite3.h"
+#include "../Empresa/cine.h"
+#include "../Empresa/sala.h"
+#include "../Empresa/sesion.h"
+#include "../Empresa/peli.h"
+#include "../Usuario/user.h"
+#include "../Client-Server/utilidades.h"
+#include "../BBDD/funcionesBD.h"
+#include "../BBDD/sqlite3.h"
 
 
 

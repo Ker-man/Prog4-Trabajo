@@ -1,5 +1,5 @@
 #include "peli.h"
-#include "funcionesBD.h"
+#include "../BBDD/funcionesBD.h"
 #include <stdio.h>
 #include <string.h>
 #include <stdlib.h>

@@ -1,7 +1,7 @@
 #ifndef _SALA_H_
 #define _SALA_H_
 #include "sesion.h"
-#include "sqlite3.h"
+#include "../BBDD/sqlite3.h"
 
 typedef struct 
 {

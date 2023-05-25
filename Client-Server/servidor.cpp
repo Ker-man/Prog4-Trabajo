@@ -2,11 +2,11 @@
 #include <winsock2.h>
 #include <string.h>
 
-#include "Usuario/user.h"
-#include "BBDD/funcionesBD.h"
-#include "BBDD/sqlite3.h"
-#include "Logger/logger.h"
-#include "Client-Server/utilidades.h"
+#include "../Usuario/user.h"
+#include "../BBDD/funcionesBD.h"
+#include "../BBDD/sqlite3.h"
+#include "../Logger/logger.h"
+#include "../Client-Server/utilidades.h"
 
 #define SERVER_IP "127.0.0.1"
 #define SERVER_PORT 9000

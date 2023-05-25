@@ -1,6 +1,6 @@
 #ifndef _MENUS_H_
 #define _MENUS_H_
-#include "sqlite3.h"
+#include "../BBDD/sqlite3.h"
 
 int menuRegistro(sqlite3 *db);
 void menuPrincipal(sqlite3 *db);

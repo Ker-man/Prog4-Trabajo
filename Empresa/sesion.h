@@ -1,7 +1,7 @@
 #ifndef _SESION_H_
 #define _SESION_H_
 #include "peli.h"
-#include "sqlite3.h"
+#include "../BBDD/sqlite3.h"
 
 typedef struct 
 {

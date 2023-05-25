@@ -2,7 +2,7 @@
 #include <stdio.h>
 #include <string.h>
 #include <stdlib.h>
-#include "sqlite3.h"
+#include "../BBDD/sqlite3.h"
 
 int conectarBD(char base[],sqlite3 **db){
 	printf(base);

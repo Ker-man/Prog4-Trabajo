@@ -1,6 +1,6 @@
 #ifndef _USER_H_
 #define _USER_H_
-#include "sqlite3.h"
+#include "../BBDD/sqlite3.h"
 
 typedef struct 
 {
