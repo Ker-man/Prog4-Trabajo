@@ -123,25 +123,32 @@ int main(void) {
 			loggear("Contrasenya Usuario recibida: ");
 			loggear(pass);
 			loggear("\n");
+			usuarioLogged = getUsuario(name, db);
 
 
-			mascara(pass);
-            if (strcmp(usuarioLogged.password, pass) == 0){
-				//send tipo
-				sprintf(sendBuff, "%c",'0');
-				send(comm_socket, sendBuff, sizeof(sendBuff), 0);
-				loggear("Iniciando Sesion\n");
-				printf("Iniciando Sesion...\n");
-
-
+            if (strcmp(usuarioLogged.password, pass) == 0){ //0=Admin 1=Cliente
+				//send tipo 
+				if(usuarioLogged.tipo == 0){
+					sprintf(sendBuff, "%c",'0');
+					send(comm_socket, sendBuff, sizeof(sendBuff), 0);
+					loggear("Iniciando Sesion como Administrador\n");
+					printf("Iniciando Sesion...\n");
+				}else if(usuarioLogged.tipo == 1)
+					sprintf(sendBuff, "%c",'1');
+					send(comm_socket, sendBuff, sizeof(sendBuff), 0);
+					loggear("Iniciando Sesion como Cliente\n");
+					printf("Iniciando Sesion...\n");
     		} else {
-				sprintf(sendBuff, "%c", '1');
+				sprintf(sendBuff, "%c", '2');
 				send(comm_socket, sendBuff, sizeof(sendBuff), 0);
 				loggear("Inicio Sesion Fallido\n");
 				continue;
 			}
 		}
 	}
+
+
+
 	loggear("Programa Finalizado\n\n");
 	printf("Programa Finalizado\n");
 	closesocket(comm_socket);
@@ -150,7 +157,7 @@ int main(void) {
 	return 0;
 }
 
-        //Menu admin
+        //Menu admin  (Cambiar cosas)
             //Menu Peliculas
                 //Crear Pelicula
                 //Borrar Pelicula
@@ -164,9 +171,15 @@ int main(void) {
                     //-Salir
                 //Menu Sesiones
                     //-Crar Sesion para un sala
-                    //-Crear Sesion para todas las salas
                     //-Borrar una sesion de una sala
                 //-Salir
         
         //Menu Usuario
-            //
+            //Menu Peliculas
+				//-Ver todas las pelis
+				//-Buscar por Nombre
+				//BUscar por genero
+			//Menu Cine
+				//-Ver cines
+				//Comprar ticket
+			//-Salir

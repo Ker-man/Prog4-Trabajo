@@ -3,6 +3,7 @@
 #include <iostream>
 #include <stdlib.h>
 #include <string.h>
+#include <utilidades.h>
 
 #define SERVER_IP "127.0.0.1"
 #define SERVER_PORT 9000
@@ -46,7 +47,6 @@ int main(void) {
 
     char str[10];
     char c;
-    int opcion;
 
     do{
         printf("\n\n=======================\n");
@@ -65,7 +65,7 @@ int main(void) {
             strcpy(recvBuff, "");
             recv(s, recvBuff, sizeof(recvBuff), 0);
             sscanf(recvBuff, "%c", &dev);
-            if(dev == 1){
+            if(dev == '1'){
                 char name[MAX_LINEAS];
                 char pass[MAX_LINEAS];
                 cout << "Nombre Usuario:\n";
@@ -78,13 +78,14 @@ int main(void) {
                 sprintf(sendBuff, "%s", pass);
                 send(s, sendBuff, sizeof(sendBuff), 0);
                 continue;
-            } else if(dev == 2){
+            } else if(dev == '2'){
                 char name[MAX_LINEAS];
                 char pass[MAX_LINEAS];
                 cout << "Nombre Usuario:\n";
                 cin >> name;
                 cout << "Contrasena Usuario:\n ";
                 cin >> pass;
+                mascara(pass); //puede dar error
                 cout << endl;
                 sprintf(sendBuff, "%s", name);
                 send(s, sendBuff, sizeof(sendBuff), 0);
@@ -94,41 +95,48 @@ int main(void) {
                 recv(s, recvBuff, sizeof(recvBuff), 0);
                 sscanf(recvBuff, "%c", &dev);
 
-                do{
-                    if ()
-                    {
-                        printf("\n\n\n==========================\n");
-                        printf("MENU PRINCIPAL DEUSTOCINES\n");
-                        printf("==========================\n");
-                        printf("\n");
-                        opcion = ' ';
-                        printf("1. Menu cines", "2. Menu peliculas", "3. salir");
-                        cin >> opcion;
+                if (dev == 0) //Menu admin
+                {
+                    do{
+                    char opcion;
+                    printf("\n\n\n==========================\n");
+                    printf("MENU ADMINISTRADOR DEUSTOCINES\n");
+                    printf("==========================\n");
+                    printf("\n");
+                    opcion = ' ';
+                    printf("1. Menu cines", "2. Menu peliculas", "3. salir");
+                    cin >> opcion;
+                    cout << endl;
+                    if(opcion==1){
+                        printf("Entrando en menu cines");
 
-                        if(opcion==1){
-                            cout << "Entrando en menu cines";
+                        if(){
 
-                        }else if(opcion==2){
-                            cout << "Entrando en menu peliculas";
                         }
-                    }else{
-                        printf("\n\n\n==========================\n");
-                        printf("MENU USUARIO DEUSTOCINES\n");
-                        printf("==========================\n");
-                        printf("\n");
-                        opcion = ' ';
-                        printf("1. Menu cines", "2. Menu peliculas", "3. salir");
-                        cin >> opcion;
 
-                        if(opcion==1){
-                            cout << "Entrando en menu cines";
-
-                        }else if(opcion==2){
-                            cout << "Entrando en menu peliculas";
-                        }
+                    }else if(opcion==2){
+                        cout << "Entrando en menu peliculas";
                     }
-                }while (opcion!=3);
-                printf("¡Hasta pronto!:\n");
+                    }while(opcion != 3);
+                }else if(dev == 1){ //Menu Cliente
+                    printf("\n\n\n==========================\n");
+                    printf("MENU USUARIO DEUSTOCINES\n");
+                    printf("==========================\n");
+                    printf("\n");
+                    opcion = ' ';
+                    printf("1. Menu cines", "2. Menu peliculas", "3. salir");
+                    cin >> opcion;
+
+                    if(opcion==1){
+                        cout << "Entrando en menu cines";
+
+                    }else if(opcion==2){
+                        cout << "Entrando en menu peliculas";
+                    }
+                }else if(dev == 2){
+                    printf("Usuario o contrasenya incorrecta.");
+                }
+            printf("¡Hasta pronto!:\n");
             
             }
         }
