@@ -125,6 +125,7 @@ int main(void) {
 			loggear("\n");
 			usuarioLogged = getUsuario(name, db);
 
+			char c;
 
             if (strcmp(usuarioLogged.password, pass) == 0){ //0=Admin 1=Cliente
 				//send tipo 
@@ -133,6 +134,42 @@ int main(void) {
 					send(comm_socket, sendBuff, sizeof(sendBuff), 0);
 					loggear("Iniciando Sesion como Administrador\n");
 					printf("Iniciando Sesion...\n");
+
+					recv(comm_socket, recvBuff, sizeof(recvBuff), 0);
+					sscanf(recvBuff, "%c", &c);
+					if (c == '1')
+					{
+						char nombre[MAX_LINEAS];
+						char ubicacion[MAX_LINEAS];
+						int numSalas;
+						loggear("Esperando la introducción de parametros de cine...");
+						
+						recv(comm_socket, recvBuff, sizeof(recvBuff), 0);
+						sscanf(recvBuff, "%s", nombre);
+						loggear("Nombre Cine recibido: ");
+						loggear(nombre);
+						loggear("\n");
+
+						recv(comm_socket, recvBuff, sizeof(recvBuff), 0);
+						sscanf(recvBuff, "%s", ubicacion);
+						loggear("Ubicacion Cine recibido: ");
+						loggear(ubicacion);
+						loggear("\n");
+
+						recv(comm_socket, recvBuff, sizeof(recvBuff), 0);
+						sscanf(recvBuff, "%i", numSalas);
+						loggear("Numero de Salas Cine recibido: ");
+						loggear((char*)numSalas);
+						loggear("\n");
+
+						addCine(numSalas,nombre,ubicacion,db);
+						loggear("Cine añadido a la base de datos");
+						continue;
+					}
+
+
+
+
 				}else if(usuarioLogged.tipo == 1)
 					sprintf(sendBuff, "%c",'1');
 					send(comm_socket, sendBuff, sizeof(sendBuff), 0);

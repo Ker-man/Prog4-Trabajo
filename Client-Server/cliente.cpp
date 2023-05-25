@@ -54,7 +54,7 @@ int main(void) {
         printf("=======================\n");
         printf("\n");
         c = ' ';
-        printf("1. Registrar Usuario", "2. Iniciar Sesion", "3. Salir");
+        printf("1. Registrar Usuario, 2. Iniciar Sesion, 3. Salir");
         cin >> c;
         if (c != '\n' && (c == '1' || c == '2' || c == '3')) {
             char dev;
@@ -97,34 +97,73 @@ int main(void) {
 
                 if (dev == 0) //Menu admin
                 {
-                    do{
                     char opcion;
-                    char opcion2;
-                    char opcion3;
-                    printf("\n\n\n==========================\n");
-                    printf("MENU ADMINISTRADOR DEUSTOCINES\n");
-                    printf("==========================\n");
-                    printf("\n");
-                    opcion = ' ';
-                    printf("1. Menu cines", "2. Menu peliculas", "3. salir");
-                    cin >> opcion;
-                    cout << endl;
-                    if(opcion==1){
-                        printf("Entrando en menu cines");
-                        opcion2 = ' ';
-                        printf("Opciones: 1. Anadir Cine 2. Borrar Cine 3.Gestionar Salas ")
+                    do{   
+                        printf("\n\n\n==========================\n");
+                        printf("MENU ADMINISTRADOR DEUSTOCINES\n");
+                        printf("==========================\n");
+                        printf("\n");
+                        opcion = ' ';
+                        printf("1. Anadir Cine 2. Borrar Cine 3.Gestionar Salas 4.Salir");
+                        cin >> opcion;
+                        cout << endl;
+                        sprintf(sendBuff, "%c", opcion);
+                        send(s, sendBuff, sizeof(sendBuff), 0);
 
-                        if(opcion2 == '1'){
+                        if(opcion == '1'){
+                            printf("Nombre: ");
+                            char nombre;
+                            cin >>nombre;
+                            cout <<endl;
 
-                        }else if(opcion2 == '2'){
+                            printf("Ubicacion: ");
+                            char ubicacion;
+                            cin >>ubicacion;
+                            cout <<endl;
 
-                        }else 
+                            printf("Numero de salas: ");
+                            int numSalas;
+                            cin >>numSalas;
+                            cout <<endl;
 
-                    }else if(opcion==2){
-                        cout << "Entrando en menu peliculas";
-                    }
-                    }while(opcion != 3);
-                }else if(dev == 1){ //Menu Cliente
+                            sprintf(sendBuff, "%s", nombre);
+                            send(s, sendBuff, sizeof(sendBuff), 0);
+                            sprintf(sendBuff, "%s", ubicacion);
+                            send(s, sendBuff, sizeof(sendBuff), 0);
+                            sprintf(sendBuff, "%s", numSalas);
+                            send(s, sendBuff, sizeof(sendBuff), 0);
+                            continue;
+
+                        }else if(opcion == '2'){
+
+                            
+
+                        }else if(opcion == '3'){
+                            
+                        }
+                    }while(opcion != '4');
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   
+
+                } else if(dev == 1){ //Menu Cliente
+                    char opcion;
                     printf("\n\n\n==========================\n");
                     printf("MENU USUARIO DEUSTOCINES\n");
                     printf("==========================\n");
@@ -146,7 +185,10 @@ int main(void) {
             
             }
         }
-    }while(c != '3');
+        
+    
+   }
+    while(c != '3');
 
     closesocket(s);
     WSACleanup();
