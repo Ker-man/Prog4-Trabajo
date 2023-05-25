@@ -3,7 +3,7 @@
 #include <iostream>
 #include <stdlib.h>
 #include <string.h>
-#include <../Client-Server/utilidades.h>
+#include "../Client-Server/utilidades.h"
 
 #define SERVER_IP "127.0.0.1"
 #define SERVER_PORT 9000
@@ -54,7 +54,7 @@ int main(void) {
         printf("=======================\n");
         printf("\n");
         c = ' ';
-        printf("1. Registrar Usuario, 2. Iniciar Sesion, 3. Salir");
+        printf("1. Registrar Usuario, 2. Iniciar Sesion, 3. Salir\n");
         cin >> c;
         if (c != '\n' && (c == '1' || c == '2' || c == '3')) {
             char dev;
@@ -85,7 +85,7 @@ int main(void) {
                 cin >> name;
                 cout << "Contrasena Usuario:\n ";
                 cin >> pass;
-                mascara(pass); //puede dar error
+                //mascara(pass); //puede dar error
                 cout << endl;
                 sprintf(sendBuff, "%s", name);
                 send(s, sendBuff, sizeof(sendBuff), 0);
@@ -95,7 +95,7 @@ int main(void) {
                 recv(s, recvBuff, sizeof(recvBuff), 0);
                 sscanf(recvBuff, "%c", &dev);
 
-                if (dev == 0) //Menu admin
+                if (dev == '0') //Menu admin
                 {
                     char opcion;
                     do{   
@@ -144,25 +144,7 @@ int main(void) {
                     }while(opcion != '4');
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-   
-
-                } else if(dev == 1){ //Menu Cliente
+                } else if(dev == '1'){ //Menu Cliente
                     char opcion;
                     printf("\n\n\n==========================\n");
                     printf("MENU USUARIO DEUSTOCINES\n");
@@ -183,13 +165,15 @@ int main(void) {
                 }
             printf("¡Hasta pronto!:\n");
             
+            }else{
+                printf("Else");
             }
         }
         
     
    }
     while(c != '3');
-
+    printf("Hola");
     closesocket(s);
     WSACleanup();
 

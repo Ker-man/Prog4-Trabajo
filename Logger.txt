@@ -1,0 +1,35 @@
+05/26/23 01:10:33
+Usuario Logueado
+Conexion realizada entre servidor y cliente
+Registrar Usuario
+Nombre Usuario recibido: a
+Contrasenya Usuario recibida: a
+Usuario Registrado
+Iniciar Sesion
+Nombre Usuario recibido: a
+Contrasenya Usuario recibida: a
+Iniciando Sesion como Cliente
+05/26/23 01:13:56
+Usuario Logueado
+Conexion realizada entre servidor y cliente
+Iniciar Sesion
+Nombre Usuario recibido: b
+Contrasenya Usuario recibida: b
+Inicio Sesion Fallido
+Iniciar Sesion
+Nombre Usuario recibido: a
+Contrasenya Usuario recibida: a
+Iniciando Sesion como Cliente
+05/26/23 01:36:16
+Usuario Logueado
+Conexion realizada entre servidor y cliente
+05/26/23 01:38:13
+Usuario Logueado
+Conexion realizada entre servidor y cliente
+05/26/23 01:45:35
+Usuario Logueado
+Conexion realizada entre servidor y cliente
+Registrar Usuario
+Nombre Usuario recibido: z
+Contrasenya Usuario recibida: z
+Usuario Registrado
