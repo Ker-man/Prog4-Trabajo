@@ -6,6 +6,7 @@
 #include "BBDD/funcionesBD.h"
 #include "BBDD/sqlite3.h"
 #include "Logger/logger.h"
+#include "Client-Server/utilidades.h"
 
 #define SERVER_IP "127.0.0.1"
 #define SERVER_PORT 9000
@@ -23,6 +24,7 @@ int main(void) {
     sqlite3 *db;
     conectarBD("bbdd.db", &db);  
     crearTablas(db);
+	User usuarioLogged;
 
 	printf("\nINICIALIZANDO EL WINSOCK...\n");
 	if (WSAStartup(MAKEWORD(2, 2), &wsaData) != 0) {
@@ -121,7 +123,28 @@ int main(void) {
 			loggear("Contrasenya Usuario recibida: ");
 			loggear(pass);
 			loggear("\n");
-            
-    }
 
+
+			mascara(pass);
+            if (strcmp(usuarioLogged.password, pass) == 0){
+				sprintf(sendBuff, "%c",'0');
+				send(comm_socket, sendBuff, sizeof(sendBuff), 0);
+				loggear("Iniciando Sesion\n");
+				printf("Iniciando Sesion...\n");
+				
+
+    		} else {
+				sprintf(sendBuff, "%c", '1');
+				send(comm_socket, sendBuff, sizeof(sendBuff), 0);
+				loggear("Inicio Sesion Fallido\n");
+				continue;
+			}
+		}
+	}
+	loggear("Programa Finalizado\n\n");
+	printf("Programa Finalizado\n");
+	closesocket(comm_socket);
+	WSACleanup();
+
+	return 0;
 }

@@ -46,11 +46,12 @@ int main(void) {
 
     char str[10];
     char c;
+    int opcion;
 
     do{
-        printf("\n\n==========================\n");
-        printf("MENU PRINCIPAL DEUSTOCINES\n");
-        printf("==========================\n");
+        printf("\n\n=======================\n");
+        printf("MENU INICIO DEUSTOCINES\n");
+        printf("=======================\n");
         printf("\n");
         c = ' ';
         printf("1. Registrar Usuario", "2. Iniciar Sesion", "3. Salir");
@@ -92,6 +93,16 @@ int main(void) {
 
                 recv(s, recvBuff, sizeof(recvBuff), 0);
                 sscanf(recvBuff, "%c", &dev);
+
+                printf("\n\n\n==========================\n");
+                printf("MENU PRINCIPAL DEUSTOCINES\n");
+                printf("==========================\n");
+                printf("\n");
+                opcion = ' ';
+                printf("1. Menu cines", "2. Menu peliculas", "3. Cambiar datos de la cuenta", "4. Cerrar Sesion", "Salir");
+                cin >> opcion;
+                
+
 
                 
             }
