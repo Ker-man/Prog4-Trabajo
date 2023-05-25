@@ -1,9 +1,9 @@
 #ifndef _CINE_H_
 #define _CINE_H_
 #include "peli.h"
-#include "user.h"
+#include "../Usuario/user.h"
 #include "sesion.h"
-#include "sqlite3.h"
+#include "../BBDD/sqlite3.h"
 #include "sala.h"
 
 typedef struct 

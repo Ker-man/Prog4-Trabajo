@@ -1,7 +1,7 @@
 #include "cine.h"
-#include "funcionesBD.h"
+#include "../BBDD/funcionesBD.h"
 #include "peli.h"
-#include "user.h"
+#include "../Usuario/user.h"
 #include "sesion.h"
 #include <stdio.h>
 #include <string.h>
