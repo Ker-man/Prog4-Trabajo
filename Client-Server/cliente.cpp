@@ -99,6 +99,8 @@ int main(void) {
                 {
                     do{
                     char opcion;
+                    char opcion2;
+                    char opcion3;
                     printf("\n\n\n==========================\n");
                     printf("MENU ADMINISTRADOR DEUSTOCINES\n");
                     printf("==========================\n");
@@ -109,10 +111,14 @@ int main(void) {
                     cout << endl;
                     if(opcion==1){
                         printf("Entrando en menu cines");
+                        opcion2 = ' ';
+                        printf("Opciones: 1. Anadir Cine 2. Borrar Cine 3.Gestionar Salas ")
 
-                        if(){
+                        if(opcion2 == '1'){
 
-                        }
+                        }else if(opcion2 == '2'){
+
+                        }else 
 
                     }else if(opcion==2){
                         cout << "Entrando en menu peliculas";
