@@ -1,7 +1,7 @@
 #include "cine.h"
-#include "../BBDD/funcionesBD.h"
+#include "funcionesBD.h"
 #include "peli.h"
-#include "../Usuario/user.h"
+#include "user.h"
 #include "sesion.h"
 #include <stdio.h>
 #include <string.h>
@@ -54,7 +54,7 @@ Cine getCineFromID(int id, sqlite3* db){
 
 Cine* getCines(sqlite3* db){
 	Cine* cines = (Cine*)malloc(sizeof(Cine)* getCinesCount(db));
-	for (int i = 0; i-1<getCinesCount(db); i++){
+	for (int i = 0; i<=getCinesCount(db); i++){
 		cines[i] = getCineFromID(i, db);
 	}
 	return cines;
@@ -97,13 +97,12 @@ void deleteCine(Cine c, sqlite3* db){
 }
 
 
-void imprimirTicket(User usuarioLogged, Cine cineSeleccionado, Peli peliSeleccionada, Sesion sesionSeleccionada)
+void imprimirTicket(User usuarioLogged, Cine cineSeleccionado, Peli peliSeleccionada)
 {
     FILE* f;
     f = fopen("ticket.txt", "w");
     fprintf(f, "Gracias por su compra %s!\n", usuarioLogged.nom_User);
 	fprintf(f, "Entrada para el cine: %s para la pelicula: %s (%i)", cineSeleccionado.nom_Cine, peliSeleccionada.titulo, peliSeleccionada.id_Peli);
-	fprintf(f, "Sesion: %s \n", sesionSeleccionada.horario);
 	fprintf(f, "Le esperamos!\n");
     fclose(f);
 }

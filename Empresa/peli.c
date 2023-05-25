@@ -1,5 +1,5 @@
 #include "peli.h"
-#include "../BBDD/funcionesBD.h"
+#include "funcionesBD.h"
 #include <stdio.h>
 #include <string.h>
 #include <stdlib.h>
@@ -48,7 +48,7 @@ Peli getPeliFromID(int id, sqlite3* db){
 
 Peli* getPeliculas(sqlite3* db){
 	Peli* peliculas = (Peli*)malloc(sizeof(Peli)* getPelisCount(db));
-	for (int i = 0; i-1<getPelisCount(db); i++){
+	for (int i = 0; i<=getPelisCount(db); i++){
 		peliculas[i] = getPeliFromID(i, db);
 	}
 	return peliculas;
@@ -143,12 +143,12 @@ Peli maxPelicula(Peli *pelis, int tamanyo)
         result.id_Peli = pelis[0].duracion;
         strcpy(result.titulo, pelis[0].titulo);
         strcpy(result.genero, pelis[0].genero);
-    for(int i = 0; i<tamanyo; i++)
+    for(int i = 1; i<=tamanyo; i++)
     {
         if(result.duracion < pelis[i].duracion)
         {
             result.id_Peli = pelis[i].id_Peli;
-            result.id_Peli = pelis[i].duracion;
+            result.duracion = pelis[i].duracion;
             strcpy(result.titulo, pelis[i].titulo);
             strcpy(result.genero, pelis[i].genero);
         }
@@ -161,11 +161,11 @@ Peli maxPelicula(Peli *pelis, int tamanyo)
 Peli minPelicula(Peli *pelis, int tamanyo)
 {
     Peli result;
-    result.id_Peli = pelis[0].id_Peli;
-    result.duracion = pelis[0].duracion;
-    strcpy(result.titulo, pelis[0].titulo);
-    strcpy(result.genero, pelis[0].genero);
-    for(int i = 0; i<tamanyo; i++)
+    result.id_Peli = pelis[1].id_Peli;
+    result.duracion = pelis[1].duracion;
+    strcpy(result.titulo, pelis[1].titulo);
+    strcpy(result.genero, pelis[1].genero);
+    for(int i = 1; i<=tamanyo; i++)
     {
         if(result.duracion > pelis[i].duracion)
         {
@@ -180,40 +180,32 @@ Peli minPelicula(Peli *pelis, int tamanyo)
     return result;
 }
 
-Peli* buscarGenero(Peli *peliculas, int tamanyo, char* genero)
+Peli buscarGenero(Peli *peliculas, int tamanyo, char* genero)
 {
-    Peli *resulPelis;
-    int cont = 0;
-    for(int i = 0; i<tamanyo; i++)
+    Peli resulPelis;
+    for(int i = 1; i<=tamanyo; i++)
     {
-        int com1 = strcmp(peliculas[i].genero, genero);
-        int com2 = 0;
-        if(com1 = com2)
-        {
-            resulPelis[cont].id_Peli = peliculas[i].id_Peli;
-            resulPelis[cont].duracion = peliculas[i].duracion;
-            strcpy(resulPelis[cont].titulo, peliculas[i].titulo);
-            strcpy(resulPelis[cont].genero, peliculas[i].genero);
-            cont++;
+        if(strcmp(peliculas[i].genero, genero)==0){
+           
+            resulPelis.id_Peli = peliculas[i].id_Peli;
+            resulPelis.duracion = peliculas[i].duracion;
+            strcpy(resulPelis.titulo, peliculas[i].titulo);
+            strcpy(resulPelis.genero, peliculas[i].genero);
+
         }
     }
-    for(int i = 0; i<cont; i++)
-    {
-        printf("Las pelis de ese genero son: \n");
-        imprimirPelicula(resulPelis[0]);
-    }
+    printf("Las pelis de ese genero son: \n");
+    imprimirPelicula(resulPelis);
     return resulPelis;
 }
 
 Peli buscarTitulo(Peli *peliculas, int tamanyo, char* titulo)
 {
     Peli result;
-    for(int i = 0; i<tamanyo; i++)
+    for(int i = 1; i<=tamanyo; i++)
     {
-        int com1 = strcmp(peliculas[i].titulo, titulo);
-        int com2 = 0;
-        if(com1 = com2)
-        {
+        if(strcmp(peliculas[i].titulo, titulo)==0){
+
             result.id_Peli = peliculas[i].id_Peli;
             result.duracion = peliculas[i].duracion;
             strcpy(result.titulo, peliculas[i].titulo);

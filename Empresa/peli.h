@@ -1,6 +1,6 @@
 #ifndef _PELI_H_
 #define _PELI_H_
-#include "../BBDD/sqlite3.h"
+#include "sqlite3.h"
 
 typedef struct 
 {
@@ -26,7 +26,7 @@ void deletePeli(Peli p, sqlite3* db);
 //void anadirPeli(int id, int duracion, char titulo[30], char genero[30], Peli* listaPelis, int tamPelis);
 Peli maxPelicula(Peli *pelis, int tamanyo);
 Peli minPelicula(Peli *pelis, int tamanyo);
-Peli* buscarGenero(Peli *peliculas, int tamanyo, char* genero);
+Peli buscarGenero(Peli *peliculas, int tamanyo, char* genero);
 Peli buscarTitulo(Peli *peliculas, int tamanyo, char* titulo);
 
 
