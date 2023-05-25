@@ -94,17 +94,24 @@ int main(void) {
                 recv(s, recvBuff, sizeof(recvBuff), 0);
                 sscanf(recvBuff, "%c", &dev);
 
-                printf("\n\n\n==========================\n");
-                printf("MENU PRINCIPAL DEUSTOCINES\n");
-                printf("==========================\n");
-                printf("\n");
-                opcion = ' ';
-                printf("1. Menu cines", "2. Menu peliculas", "3. Cambiar datos de la cuenta", "4. Cerrar Sesion", "Salir");
-                cin >> opcion;
-                
+                do{
+                    printf("\n\n\n==========================\n");
+                    printf("MENU PRINCIPAL DEUSTOCINES\n");
+                    printf("==========================\n");
+                    printf("\n");
+                    opcion = ' ';
+                    printf("1. Menu cines", "2. Menu peliculas", "3. salir");
+                    cin >> opcion;
 
+                    if(opcion==1){
+                        cout << "Entrando en menu cines";
 
-                
+                    }else if(opcion==2){
+                        cout << "Entrando en menu peliculas";
+                    }
+                }while (opcion!=3);
+                printf("¡Hasta pronto!:\n");
+            
             }
         }
     }while(c != '3');
