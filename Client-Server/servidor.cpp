@@ -183,3 +183,29 @@ int main(void) {
 				//-Ver cines
 				//Comprar ticket
 			//-Salir
+
+		
+		//Menu Admin
+				//Menu cine
+					//-Crear Sala
+					//-Borrar Sala
+					//Elige un cine (Menu Sesiones)
+						//-Crear sesion para una sala
+						//-Crear sesion para todas las salas
+						//-Borrar sesion para una sala
+						//-Salir
+					//-Salir
+				//Menu Peliculas
+					//Crear pelicula
+					//Borrar Pelicula
+				//-Salir
+
+
+			//Menu Usuario
+				//Ver peliculas(Menu peliculas)
+					//-Ver todas
+					//-Buscar por Nombre
+					//-Buscar por Genero
+				//Elegir Cine (Ver todos los cines)
+					//-Ver sesiones
+					//-Comprar ticket

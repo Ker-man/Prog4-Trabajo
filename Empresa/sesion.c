@@ -75,7 +75,7 @@ Sesion* getSesionFromSalaYPeli(int idSala, int idPeli, sqlite3* db){
 	//printf("\nFunciono"); 
 	Sesion* sesiones = (Sesion*)malloc(sizeof(Sesion)* cont);
 	//printf("\nFunciono2");
-	for (int i = 0; i< cont && sqlite3_step(stmt) == SQLITE_ROW; i++){
+	for (int i = 0; i-1< cont && sqlite3_step(stmt) == SQLITE_ROW; i++){
 			//printf("\nFunciono3"); 
 			strcpy(sesiones[i].horario, (char *) sqlite3_column_text(stmt, 1));
 			sesiones[i].peli = getPeliFromID(sqlite3_column_int(stmt, 2), db);
@@ -97,7 +97,7 @@ Sesion* getAllSesiones(sqlite3* db){
 	//printf("\nFunciono"); 
 	Sesion* sesiones = (Sesion*)malloc(sizeof(Sesion)* cont);
 	//printf("\nFunciono2");
-	for (int i = 0; i< cont && sqlite3_step(stmt) == SQLITE_ROW; i++){
+	for (int i = 0; i-1< cont && sqlite3_step(stmt) == SQLITE_ROW; i++){
 			//printf("\nFunciono3"); 
 			strcpy(sesiones[i].horario, (char *) sqlite3_column_text(stmt, 1));
 			sesiones[i].peli = getPeliFromID(sqlite3_column_int(stmt, 2), db);

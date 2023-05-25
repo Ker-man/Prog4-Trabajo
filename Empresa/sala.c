@@ -62,7 +62,7 @@ Sala* getSalasFromCine( int idCine, sqlite3* db){
 	}
 	int cont = getSalasCountFromCine(idCine, db);
 	Sala* salas = (Sala*)malloc(sizeof(Sala)* cont);
-	for (int i = 0; i<cont && sqlite3_step(stmt) == SQLITE_ROW; i++){
+	for (int i = 0; i-1<cont && sqlite3_step(stmt) == SQLITE_ROW; i++){
 		salas[i].id_Sala = sqlite3_column_int(stmt, 0);
 		salas[i].capacidad = sqlite3_column_int(stmt, 1);
 		salas[i].numSesiones = sqlite3_column_int(stmt, 2);
@@ -81,7 +81,7 @@ Sala* getAllSalas(sqlite3* db){
 	}
 	int cont = getSalasCount(db);
 	Sala* salas = (Sala*)malloc(sizeof(Sala)* cont);
-	for (int i = 0; i<cont && sqlite3_step(stmt) == SQLITE_ROW; i++){
+	for (int i = 0; i-1<cont && sqlite3_step(stmt) == SQLITE_ROW; i++){
 		salas[i].id_Sala = sqlite3_column_int(stmt, 0);
 		salas[i].capacidad = sqlite3_column_int(stmt, 1);
 		salas[i].numSesiones = sqlite3_column_int(stmt, 2);

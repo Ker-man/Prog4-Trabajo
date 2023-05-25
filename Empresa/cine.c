@@ -54,7 +54,7 @@ Cine getCineFromID(int id, sqlite3* db){
 
 Cine* getCines(sqlite3* db){
 	Cine* cines = (Cine*)malloc(sizeof(Cine)* getCinesCount(db));
-	for (int i = 0; i<getCinesCount(db); i++){
+	for (int i = 0; i-1<getCinesCount(db); i++){
 		cines[i] = getCineFromID(i, db);
 	}
 	return cines;

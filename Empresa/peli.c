@@ -48,7 +48,7 @@ Peli getPeliFromID(int id, sqlite3* db){
 
 Peli* getPeliculas(sqlite3* db){
 	Peli* peliculas = (Peli*)malloc(sizeof(Peli)* getPelisCount(db));
-	for (int i = 0; i<getPelisCount(db); i++){
+	for (int i = 0; i-1<getPelisCount(db); i++){
 		peliculas[i] = getPeliFromID(i, db);
 	}
 	return peliculas;
