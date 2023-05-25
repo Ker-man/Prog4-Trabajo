@@ -3,5 +3,5 @@
 
 int opcion(const char* pregunta, int num_opciones, const char** opciones);
 void mascara(char password[30]);
-//int solapar(sesion* sesiones, peli sesion);
+//int solapar(sesion* sesiones, peli sesion);  horas*60+minutos + duracion < horas*60 +minutos
 #endif
