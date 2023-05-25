@@ -149,3 +149,24 @@ int main(void) {
 
 	return 0;
 }
+
+        //Menu admin
+            //Menu Peliculas
+                //Crear Pelicula
+                //Borrar Pelicula
+                //-Salir
+            //Menu Cines
+                //Crear Cine
+                //Borrar cine
+                //Gestionar Cine
+                    //-Crear Sala
+                    //-Borrar Sala
+                    //-Salir
+                //Menu Sesiones
+                    //-Crar Sesion para un sala
+                    //-Crear Sesion para todas las salas
+                    //-Borrar una sesion de una sala
+                //-Salir
+        
+        //Menu Usuario
+            //
