@@ -127,11 +127,12 @@ int main(void) {
 
 			mascara(pass);
             if (strcmp(usuarioLogged.password, pass) == 0){
+				//send tipo
 				sprintf(sendBuff, "%c",'0');
 				send(comm_socket, sendBuff, sizeof(sendBuff), 0);
 				loggear("Iniciando Sesion\n");
 				printf("Iniciando Sesion...\n");
-				
+
 
     		} else {
 				sprintf(sendBuff, "%c", '1');

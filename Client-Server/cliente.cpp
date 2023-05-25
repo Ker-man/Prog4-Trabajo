@@ -95,19 +95,37 @@ int main(void) {
                 sscanf(recvBuff, "%c", &dev);
 
                 do{
-                    printf("\n\n\n==========================\n");
-                    printf("MENU PRINCIPAL DEUSTOCINES\n");
-                    printf("==========================\n");
-                    printf("\n");
-                    opcion = ' ';
-                    printf("1. Menu cines", "2. Menu peliculas", "3. salir");
-                    cin >> opcion;
+                    if ()
+                    {
+                        printf("\n\n\n==========================\n");
+                        printf("MENU PRINCIPAL DEUSTOCINES\n");
+                        printf("==========================\n");
+                        printf("\n");
+                        opcion = ' ';
+                        printf("1. Menu cines", "2. Menu peliculas", "3. salir");
+                        cin >> opcion;
 
-                    if(opcion==1){
-                        cout << "Entrando en menu cines";
+                        if(opcion==1){
+                            cout << "Entrando en menu cines";
 
-                    }else if(opcion==2){
-                        cout << "Entrando en menu peliculas";
+                        }else if(opcion==2){
+                            cout << "Entrando en menu peliculas";
+                        }
+                    }else{
+                        printf("\n\n\n==========================\n");
+                        printf("MENU USUARIO DEUSTOCINES\n");
+                        printf("==========================\n");
+                        printf("\n");
+                        opcion = ' ';
+                        printf("1. Menu cines", "2. Menu peliculas", "3. salir");
+                        cin >> opcion;
+
+                        if(opcion==1){
+                            cout << "Entrando en menu cines";
+
+                        }else if(opcion==2){
+                            cout << "Entrando en menu peliculas";
+                        }
                     }
                 }while (opcion!=3);
                 printf("¡Hasta pronto!:\n");
