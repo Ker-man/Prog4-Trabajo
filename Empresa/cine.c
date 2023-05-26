@@ -82,6 +82,26 @@ Cine getCine(char* nombre, char* ubicacion, sqlite3* db){
 	return cine;
 }
 
+Cine getCineN(char* nombre, sqlite3* db){
+	sqlite3_stmt *stmt;
+    Cine cine;
+	char seq[100];
+	sprintf(seq, "SELECT * FROM CINE WHERE NOM_CINE = '%s'", nombre);
+
+	if (sqlite3_prepare_v2(db, seq, -1, &stmt, NULL) != SQLITE_OK) {
+		printf("Error al cargar el cine\n");
+		printf("%s\n", sqlite3_errmsg(db));
+		return (Cine){'\0', 0, 0};
+	}
+	int i =sqlite3_step(stmt);
+	if(i != SQLITE_ROW){
+		return (Cine){'\0', 0, 0};
+	}
+	cine.id_Cine = sqlite3_column_int(stmt, 0);
+	strcpy(cine.nom_Cine, (char *) sqlite3_column_text(stmt, 2));
+	return cine;
+}
+
 void addCine(int numSalas, char* nombre, char* ubicacion, sqlite3* db){
 	int cont = getCinesCount(db);
 	char seq[200];

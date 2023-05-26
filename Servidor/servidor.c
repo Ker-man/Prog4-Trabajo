@@ -109,7 +109,7 @@ int main(void)
 			loggear("Contrasenya Usuario recibida: ");
 			loggear(pass);
 			loggear("\n");
-            addUsuario(name, pass, 2, db);
+            addUsuario(name, pass, 1, db);
 			loggear("Usuario Registrado\n");
 			printf("Usuario Registrado\n");
 			continue;
@@ -133,18 +133,20 @@ int main(void)
 			loggear(pass);
 			loggear("\n");
 			usuarioLogged = getUsuario(name, db);
-
+			printf("Aaaa");
 			char c;
 
             if (strcmp(usuarioLogged.password, pass) == 0)//0=Admin 1=Cliente
 			{ 
+				printf("bbb");
 				//send tipo 
 				if(usuarioLogged.tipo == 0)
 				{
+					printf("ccc");
 					sprintf(sendBuff, "%c",'0');
 					send(comm_socket, sendBuff, sizeof(sendBuff), 0);
 					loggear("Iniciando Sesion como Administrador\n");
-					printf("Iniciando Sesion...\n");
+					printf("Iniciando Sesion como Administrador...\n");
 
 					recv(comm_socket, recvBuff, sizeof(recvBuff), 0);
 					sscanf(recvBuff, "%c", &c);
@@ -177,16 +179,34 @@ int main(void)
 						loggear("Cine añadido a la base de datos");
 						continue;
 					}
+					if(c == '2'){
+						int cont = getCinesCount(db);
+						char cineBorrar [MAX_LINEAS] = ' ';
+						Cine cineA;
+						sprintf(sendBuff, "%s",cont);
+						send(comm_socket, sendBuff, sizeof(sendBuff), 0);
+						Cine* cines = getCines(db);
+						for(int i = 0; i<cont; i++){
+							sprintf(sendBuff, "%s",cines[i].nom_Cine);
+							send(comm_socket, sendBuff, sizeof(sendBuff), 0);
+						}
+						recv(comm_socket, recvBuff, sizeof(recvBuff), 0);
+						strcpy(cineBorrar, recvBuff);
+						cineA = getCineN(cineBorrar, db);
+						deleteCine(cineA, db);
+					}
 
 
 				}
-				else if(usuarioLogged.tipo == 1)
+				else if(usuarioLogged.tipo == 1){
+					printf("ddd");
 					sprintf(sendBuff, "%c",'1');
 					send(comm_socket, sendBuff, sizeof(sendBuff), 0);
 					loggear("Iniciando Sesion como Cliente\n");
-					printf("Iniciando Sesion...\n");
+					printf("Iniciando Sesion como Cliente...\n");
 					continue;
-				
+				}
+				printf("eee");
     		} 
 			else 
 			{
@@ -209,10 +229,6 @@ int main(void)
 }
 
         //Menu admin  (Cambiar cosas)
-            //Menu Peliculas
-                //Crear Pelicula
-                //Borrar Pelicula
-                //-Salir
             //Menu Cines
                 //Crear Cine
                 //Borrar cine

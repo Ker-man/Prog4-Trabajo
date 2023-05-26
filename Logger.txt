@@ -118,3 +118,46 @@ Conexion realizada entre servidor y cliente
 Iniciar Sesion
 Nombre Usuario recibido: a
 Contrasenya Usuario recibida: a
+05/26/23 13:15:12
+Usuario Logueado
+Conexion realizada entre servidor y cliente
+Iniciar Sesion
+Nombre Usuario recibido: a
+Contrasenya Usuario recibida: a
+Iniciando Sesion como Cliente
+05/26/23 13:18:30
+Usuario Logueado
+Conexion realizada entre servidor y cliente
+Iniciar Sesion
+Nombre Usuario recibido: a
+Contrasenya Usuario recibida: a
+05/26/23 13:20:05
+Usuario Logueado
+Conexion realizada entre servidor y cliente
+Iniciar Sesion
+Nombre Usuario recibido: a
+Contrasenya Usuario recibida: a
+05/26/23 13:22:19
+Usuario Logueado
+Conexion realizada entre servidor y cliente
+Iniciar Sesion
+Nombre Usuario recibido: a
+Contrasenya Usuario recibida: a
+05/26/23 13:25:04
+Usuario Logueado
+Conexion realizada entre servidor y cliente
+Registrar Usuario
+Nombre Usuario recibido: r
+Contrasenya Usuario recibida: r
+Usuario Registrado
+Iniciar Sesion
+Nombre Usuario recibido: r
+Contrasenya Usuario recibida: r
+Iniciando Sesion como Cliente
+05/26/23 13:28:06
+Usuario Logueado
+Conexion realizada entre servidor y cliente
+Iniciar Sesion
+Nombre Usuario recibido: r
+Contrasenya Usuario recibida: r
+Iniciando Sesion como Cliente

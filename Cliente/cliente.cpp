@@ -114,7 +114,7 @@ int main(void)
                         printf("==========================\n");
                         printf("\n");
                         opcion = ' ';
-                        printf("1. Anadir Cine 2. Borrar Cine 3.Gestionar Salas 4.Salir");
+                        printf("1. Anadir Cine 2. Borrar Cine 3.Gestionar Salas 4.Salir\n");
                         cin >> opcion;
                         cout << endl;
                         sprintf(sendBuff, "%c", opcion);
@@ -148,8 +148,21 @@ int main(void)
                         }
                         else if(opcion == '2')
                         {
-
-                            
+                            int n;
+                            char cine[MAX_LINEAS];
+                            recv(s, recvBuff, sizeof(recvBuff), 0);
+                            sscanf(recvBuff, "%i", n); //&
+                            printf("Cines en la base de Datos\n");
+                            for(int i = 0; i<n; i++){
+                                recv(s, recvBuff, sizeof(recvBuff), 0);
+                                strcpy(cine, recvBuff);
+                                printf("Cine: %s\n", cine);
+                            }
+                            printf("Cual quieres borrar, escribe el nombre:\n");
+                            cin >> cine;
+                            cout <<endl;
+                            sprintf(sendBuff, "%s", cine);
+                            send(s, sendBuff, sizeof(sendBuff), 0);
 
                         }
                         else if(opcion == '3')
@@ -169,7 +182,7 @@ int main(void)
                     printf("==========================\n");
                     printf("\n");
                     opcion = ' ';
-                    printf("1. Menu cines", "2. Menu peliculas", "3. salir");
+                    printf("1. Menu cines 2. Menu peliculas 3. salir\n");
                     cin >> opcion;
 
                     if(opcion==1)
