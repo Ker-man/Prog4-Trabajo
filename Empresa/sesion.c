@@ -57,7 +57,7 @@ Sesion getSesionFromID(int id, sqlite3* db){
 	if(i != SQLITE_ROW){
 		return (Sesion){'\0', 0, 0};
 	}
-	sesion.id_Sesion = id;
+	sesion.id_Sesion = sqlite3_column_int(stmt, 0);
 	strcpy(sesion.horario, (char *) sqlite3_column_text(stmt, 1));
 	sesion.peli = getPeliFromID(sqlite3_column_int(stmt, 2), db);
 	sesion.precio = sqlite3_column_int(stmt, 3);
@@ -78,6 +78,7 @@ Sesion* getSesionFromSalaYPeli(int idSala, int idPeli, sqlite3* db){
 	//printf("\nFunciono2");
 	for (int i = 0; i-1< cont && sqlite3_step(stmt) == SQLITE_ROW; i++){
 			//printf("\nFunciono3"); 
+			sesiones[i].id_Sesion = sqlite3_column_int(stmt, 0);
 			strcpy(sesiones[i].horario, (char *) sqlite3_column_text(stmt, 1));
 			sesiones[i].peli = getPeliFromID(sqlite3_column_int(stmt, 2), db);
 			sesiones[i].precio = sqlite3_column_int(stmt, 3);

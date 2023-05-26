@@ -159,3 +159,10 @@ Iniciar Sesion
 Nombre Usuario recibido: admin
 Contrasenya Usuario recibida: admin
 Iniciando Sesion como Administrador
+05/26/23 20:24:33
+Usuario Logueado
+Conexion realizada entre servidor y cliente
+Iniciar Sesion
+Nombre Usuario recibido: admin
+Contrasenya Usuario recibida: admin
+Iniciando Sesion como Administrador
