@@ -192,7 +192,7 @@ int main(void)
 						sprintf(sendBuff, "%i",cont);
 						send(comm_socket, sendBuff, sizeof(sendBuff), 0);
 						Cine* cines = getCines(db);
-						for(int i = 1; i<=cont; i++){
+						for(int i = 0; i<cont; i++){
 							sprintf(sendBuff, "%s",cines[i].nom_Cine);
 							send(comm_socket, sendBuff, sizeof(sendBuff), 0);
 							sprintf(sendBuff, "%s",cines[i].ubi_Cine);

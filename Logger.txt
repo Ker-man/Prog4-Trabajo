@@ -86791,3 +86791,10 @@ Inicio Sesion Fallido
 Iniciar Sesion
 Nombre Usuario recibido: 2
 Contrasenya Usuario recibida: 2
+05/26/23 16:45:43
+Usuario Logueado
+Conexion realizada entre servidor y cliente
+Iniciar Sesion
+Nombre Usuario recibido: admin
+Contrasenya Usuario recibida: admin
+Iniciando Sesion como Administrador
