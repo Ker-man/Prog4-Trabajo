@@ -172,20 +172,19 @@ int main(void)
 							loggear("\n");
 
 							recv(comm_socket, recvBuff, sizeof(recvBuff), 0);
-							printf(recvBuff);
+							//printf(recvBuff);
 							sscanf(recvBuff, "%d", &numSalas);					
 							loggear("Numero de Salas Cine recibido: ");
 							char numSalasL[MAX_LINEAS];
-							printf("%i", numSalas);
+							//printf("%i", numSalas);
 							sprintf(numSalasL, "%i", numSalas);
 							loggear(numSalasL);
 							loggear("\n");
 
 							addCine(numSalas,nombre,ubicacion,db);
 							loggear("Cine añadido a la base de datos");
-							continue;
 						}
-						if(c == '2'){
+						else if(c == '2'){
 							int cont = getCinesCount(db);
 							char cineBorrarNom[MAX_LINEAS];
 							char cineBorrarUbi[MAX_LINEAS];
@@ -206,7 +205,59 @@ int main(void)
 							cineA = getCine(cineBorrarNom, cineBorrarUbi, db);
 							deleteCine(cineA, db);
 						}
-					}while(c != '3');
+						else if(c == '3'){
+							char op = ' '; 
+							do{
+								recv(comm_socket, recvBuff, sizeof(recvBuff), 0);
+								sscanf(recvBuff, "%c", &op);
+								if(op == '1'){
+									char horario[MAX_LINEAS];
+									int precio;
+									int idSala;
+									int idPeli;
+
+									loggear("Esperando la introducción de parametros de sesion...");
+							
+									recv(comm_socket, recvBuff, sizeof(recvBuff), 0);
+									sscanf(recvBuff, "%s", horario);
+									loggear("Horario Sesion recibido: ");
+									loggear(horario);
+									loggear("\n");
+
+
+									recv(comm_socket, recvBuff, sizeof(recvBuff), 0);
+									sscanf(recvBuff, "%d", &precio);					
+									loggear("Precio de Sesion recibido: ");
+									char precioL[MAX_LINEAS];
+									sprintf(precioL, "%i", precio);
+									loggear(precioL);
+									loggear("\n");
+
+									recv(comm_socket, recvBuff, sizeof(recvBuff), 0);
+									sscanf(recvBuff, "%d", &idSala);					
+									loggear("idSala de Sesion recibido: ");
+									char idSalaL[MAX_LINEAS];
+									sprintf(idSalaL, "%i", idSala);
+									loggear(idSalaL);
+									loggear("\n");
+
+									recv(comm_socket, recvBuff, sizeof(recvBuff), 0);
+									sscanf(recvBuff, "%d", &idPeli);					
+									loggear("idPeli de Sesion recibido: ");
+									char idPeliL[MAX_LINEAS];
+									sprintf(idPeliL, "%i", idPeli);
+									loggear(idPeliL);
+									loggear("\n");
+
+									addSesion(horario, idPeli, idSala, precio, db);
+									
+								}
+								else if(op == '2'){
+
+								}
+							}while(op == '3');
+						}
+					}while(c != '4');
 
 				}
 				else if(usuarioLogged.tipo == 1){

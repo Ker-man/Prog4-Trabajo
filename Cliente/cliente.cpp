@@ -94,7 +94,7 @@ int main(void)
                 cin >> name;
                 cout << "Contrasena Usuario:\n ";
                 cin >> pass;
-                mascara(pass); //puede dar error
+                //mascara(pass); //puede dar error
                 cout << endl;
                 sprintf(sendBuff, "%s", name);
                 send(s, sendBuff, sizeof(sendBuff), 0);
@@ -212,11 +212,11 @@ int main(void)
 
                                     sprintf(sendBuff, "%s", horario);
                                     send(s, sendBuff, sizeof(sendBuff), 0);
-                                    sprintf(sendBuff, "%s", precio);
+                                    sprintf(sendBuff, "%i", precio);
                                     send(s, sendBuff, sizeof(sendBuff), 0);
-                                    sprintf(sendBuff, "%s",idSala);
+                                    sprintf(sendBuff, "%i",idSala);
                                     send(s, sendBuff, sizeof(sendBuff), 0);
-                                    sprintf(sendBuff, "%s", idPeli);
+                                    sprintf(sendBuff, "%i", idPeli);
                                     send(s, sendBuff, sizeof(sendBuff), 0);
                                     continue;
                                 }
