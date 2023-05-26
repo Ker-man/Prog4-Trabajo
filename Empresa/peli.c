@@ -217,3 +217,63 @@ Peli buscarTitulo(Peli *peliculas, int tamanyo, char* titulo)
     return result;
 }
 
+
+void escribirPeliculaFichero(Peli peli){
+
+    FILE* ficheroPelis;
+    ficheroPelis = fopen("UserBackup.txt", "a");
+    fprintf(ficheroPelis,"%i;%s;%s;%i;",peli.id_Peli, peli.titulo, peli.genero, peli.duracion);
+    //fprintf(ficheroPelis,"\n");
+    fclose(ficheroPelis);
+}
+
+Peli* leerPeliculaFichero() {
+    char c;
+    int numPelis=8;
+    int count = 0;
+    int index = 0;
+    char array[4][100];
+    Peli* p = malloc(sizeof(Peli)*numPelis);
+
+    FILE* f = fopen("UserBackup.txt", "r");
+    if (f == NULL) {
+        printf("El fichero está vacío o no se pudo abrir\n");
+        exit(1);
+    }
+
+    while ((c = fgetc(f)) != EOF) {
+        if (c == ';') {
+            count++;
+            if (count == 4) {
+                printf("%s\n", array[3]);
+                sscanf(array[0],"%i",&p[index].id_Peli);
+                printf("a");
+                strcpy(p[index].titulo, array[1]);
+                printf("b");
+                strcpy(p[index].genero, array[2]);
+                printf("c");
+                sscanf(array[3],"%i",&p[index].duracion);
+                printf("d");
+                for (int i = 0; i < 4; i++) {
+                    printf("%s\n", array[i]);
+                    array[i][0] = '\0';
+                }
+                index++;
+                count = 0;
+            }
+        }else if(c=='\n'){
+            continue;
+        } else {
+            printf("\n %c ",c);
+            strncat(array[count], &c, 1);
+            printf(array[count]);
+            
+        }
+    }
+    printf("\n");
+    fclose(f);
+    return p;
+}
+
+
+
