@@ -100,6 +100,7 @@ Sesion* getAllSesiones(sqlite3* db){
 	for (int i = 0; i-1< cont && sqlite3_step(stmt) == SQLITE_ROW; i++){
 			//printf("\nFunciono3"); 
 			strcpy(sesiones[i].horario, (char *) sqlite3_column_text(stmt, 1));
+			sesiones[i].id_Sesion = i+1;
 			sesiones[i].peli = getPeliFromID(sqlite3_column_int(stmt, 2), db);
 			sesiones[i].precio = sqlite3_column_int(stmt, 3);
 	}

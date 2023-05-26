@@ -1397,3 +1397,42 @@ Esperando la introducción de parametros de sesion...Horario Sesion recibido: 16
 Precio de Sesion recibido: 2
 idSala de Sesion recibido: 1
 idPeli de Sesion recibido: 1
+05/26/23 18:39:35
+Usuario Logueado
+Conexion realizada entre servidor y cliente
+Iniciar Sesion
+Nombre Usuario recibido: admin
+Contrasenya Usuario recibida: admin
+Iniciando Sesion como Administrador
+Esperando la introducción de parametros de sesion...Horario Sesion recibido: 00:00
+Precio de Sesion recibido: 1
+idSala de Sesion recibido: 33
+idPeli de Sesion recibido: 44
+05/26/23 18:47:19
+Usuario Logueado
+Conexion realizada entre servidor y cliente
+Iniciar Sesion
+Nombre Usuario recibido: admin
+Contrasenya Usuario recibida: admin
+Iniciando Sesion como Administrador
+05/26/23 18:49:34
+Usuario Logueado
+Conexion realizada entre servidor y cliente
+Iniciar Sesion
+Nombre Usuario recibido: admin
+Contrasenya Usuario recibida: admin
+Iniciando Sesion como Administrador
+05/26/23 18:55:34
+Usuario Logueado
+Conexion realizada entre servidor y cliente
+Iniciar Sesion
+Nombre Usuario recibido: admin
+Contrasenya Usuario recibida: admin
+Iniciando Sesion como Administrador
+05/26/23 18:58:32
+Usuario Logueado
+Conexion realizada entre servidor y cliente
+Iniciar Sesion
+Nombre Usuario recibido: admin
+Contrasenya Usuario recibida: admin
+Iniciando Sesion como Administrador
