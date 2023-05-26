@@ -253,7 +253,22 @@ int main(void)
 									
 								}
 								else if(op == '2'){
-
+									int cont = getSesionesCount(db);
+									int idSesion;
+									Sesion sesionA;
+									sprintf(sendBuff, "%i",cont);
+									send(comm_socket, sendBuff, sizeof(sendBuff), 0);
+									Sesion* sesiones = getAllSesiones(db);
+									for(int i = 0; i<cont; i++){
+										sprintf(sendBuff, "%s",sesiones[i].horario);
+										send(comm_socket, sendBuff, sizeof(sendBuff), 0);
+										sprintf(sendBuff, "%s",sesiones[i].id_Sesion);
+										send(comm_socket, sendBuff, sizeof(sendBuff), 0);
+									}
+									recv(comm_socket, recvBuff, sizeof(recvBuff), 0);
+									sscanf(recvBuff, "%i", &idSesion);
+									sesionA = getSesionFromID(idSesion, db);
+									deleteSesion(sesionA, db);
 								}
 							}while(op == '3');
 						}

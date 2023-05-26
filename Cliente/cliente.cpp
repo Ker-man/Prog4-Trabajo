@@ -221,7 +221,24 @@ int main(void)
                                     continue;
                                 }
                                 else if(eleccion == '2'){
-                                    
+                                    int n;
+                                    char horario[MAX_LINEAS];
+                                    int idSesion;
+                                    recv(s, recvBuff, sizeof(recvBuff), 0);
+                                    sscanf(recvBuff, "%i", &n); 
+                                    printf("Sesiones en la base de Datos\n");
+                                    for(int i = 0; i<n; i++){
+                                        recv(s, recvBuff, sizeof(recvBuff), 0);
+                                        strcpy(horario, recvBuff);
+                                        recv(s, recvBuff, sizeof(recvBuff), 0);
+                                        sscanf(recvBuff, "%i", &idSesion);
+                                        printf("Sesion: %i - %s\n", idSesion, horario);
+                                    }
+                                    printf("Cual quieres borrar, escribe el ID:\n");
+                                    cin >> idSesion;
+                                    cout <<endl;
+                                    sprintf(sendBuff, "%i", idSesion);
+                                    send(s, sendBuff, sizeof(sendBuff), 0);
                                 }
                             }while(eleccion != '3');
                         }
