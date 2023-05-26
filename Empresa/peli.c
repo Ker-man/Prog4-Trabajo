@@ -238,7 +238,7 @@ void escribirPeliculaFichero(Peli peli){
     fclose(ficheroPelis);
 }
 
-Peli* leerPeliculaFichero() {
+void leerPeliculaFichero(sqlite3* db) {
     char c;
     int numPelis=8;
     int count = 0;
@@ -283,7 +283,10 @@ Peli* leerPeliculaFichero() {
     }
     printf("\n");
     fclose(f);
-    return p;
+
+    for(int i=0; i<numPelis; i++){
+        addPelicula(p[i].titulo, p[i].genero, p[i].duracion, db);
+    }
 }
 
 

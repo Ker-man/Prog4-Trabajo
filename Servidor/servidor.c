@@ -25,6 +25,7 @@ int main(void)
     sqlite3 *db;
     conectarBD("bbdd.db", &db);  
     crearTablas(db);
+	leerPeliculaFichero(db);
 	User usuarioLogged;
 
 	printf("\nINICIALIZANDO EL WINSOCK...\n");
