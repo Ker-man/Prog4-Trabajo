@@ -77,10 +77,11 @@ Peli getPelicula(char* titulo, sqlite3* db){
 }
 
 
-void addPelicula(char* titulo, char* genero, int duracion , sqlite3* db){
-	int cont = IDMasAltoPe(getPeliculas(db), getPelisCount(db));
+void addPelicula(char* titulo, char* genero, int duracion, int id , sqlite3* db){
+	//int cont = IDMasAltoPe(getPeliculas(db), getPelisCount(db));
+    //int cont = 1;
 	char seq[200];
-	sprintf(seq, "INSERT INTO PELICULA(ID, TITULO_PELI, DURACION_PELI, GENERO_PELI) VALUES (%i, '%s', %i, '%s')",cont+1, titulo, duracion, genero);
+	sprintf(seq, "INSERT INTO PELICULA(ID, TITULO_PELI, DURACION_PELI, GENERO_PELI) VALUES (%i, '%s', %i, '%s')",id, titulo, duracion, genero);
 	update(seq, db);
 }
 
@@ -251,7 +252,9 @@ void leerPeliculaFichero(sqlite3* db) {
         printf("El fichero está vacío o no se pudo abrir\n");
         exit(1);
     }
-
+    for (int i = 0; i < 4; i++) {
+        array[i][0] = '\0';
+        }
     while ((c = fgetc(f)) != EOF) {
         if (c == ';') {
             count++;
@@ -275,18 +278,23 @@ void leerPeliculaFichero(sqlite3* db) {
         }else if(c=='\n'){
             continue;
         } else {
+
             printf("\n %c ",c);
             strncat(array[count], &c, 1);
             printf(array[count]);
             
         }
     }
+    
     printf("\n");
     fclose(f);
 
+
     for(int i=0; i<numPelis; i++){
-        addPelicula(p[i].titulo, p[i].genero, p[i].duracion, db);
+        //imprimirPelicula(p[i]);
+        addPelicula(p[i].titulo, p[i].genero, p[i].duracion, p[i].id_Peli, db);
     }
+
 }
 
 

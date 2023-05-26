@@ -17,7 +17,7 @@ int getPelisCount(sqlite3* db);
 Peli getPeliFromID(int id, sqlite3* db);
 Peli* getPeliculas(sqlite3* db);
 Peli getPelicula(char* titulo, sqlite3* db);
-void addPelicula(char* titulo, char* genero, int duracion , sqlite3* db);
+void addPelicula(char* titulo, char* genero, int duracion, int id, sqlite3* db);
 void deletePeli(Peli p, sqlite3* db);
 int IDMasAltoPe(Peli* pelis, int numPelis);
 
@@ -31,7 +31,7 @@ Peli buscarGenero(Peli *peliculas, int tamanyo, char* genero);
 Peli buscarTitulo(Peli *peliculas, int tamanyo, char* titulo);
 
 void escribirPeliculaFichero(Peli peli);
-Peli* leerPeliculaFichero();
+void leerPeliculaFichero(sqlite3* db);
 
 
 
