@@ -108,7 +108,7 @@ Sesion* getAllSesiones(sqlite3* db){
 }
 
 void addSesion(char* horario, int idPeli, int idSala, int precio, sqlite3* db){
-	int cont = getSesionesCount(db);
+	int cont = IDMasAltoSes(getAllSesiones(db), getSesionesCount(db));
 	char seq[200];
 	sprintf(seq, "INSERT INTO SESION(ID, HORARIO, ID_PELI, ID_SALA, PRECIO) VALUES (%i,'%s', %i, %i, %i)",cont+1, horario, idPeli, idSala, precio);
 	update(seq, db);
@@ -119,4 +119,14 @@ void deleteSesion(Sesion s, sqlite3* db){
 	char seq[200];
 	sprintf(seq, "DELETE FROM SESION WHERE ID = %i", s.id_Sesion);
 	update(seq, db);
+}
+
+int IDMasAltoSes(Sesion* sesiones, int numSesiones){
+    int idMA = sesiones[0].id_Sesion;
+    for (int i = 1; i<numSesiones;i++){
+        if (idMA>sesiones[i].id_Sesion){
+            idMA = sesiones[i].id_Sesion;
+        }
+    }
+    return idMA;
 }

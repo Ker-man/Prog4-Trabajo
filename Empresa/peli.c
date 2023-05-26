@@ -78,7 +78,7 @@ Peli getPelicula(char* titulo, sqlite3* db){
 
 
 void addPelicula(char* titulo, char* genero, int duracion , sqlite3* db){
-	int cont = getPelisCount(db);
+	int cont = IDMasAltoPe(getPeliculas(db), getPelisCount(db));
 	char seq[200];
 	sprintf(seq, "INSERT INTO PELICULA(ID, TITULO_PELI, DURACION_PELI, GENERO_PELI) VALUES (%i, '%s', %i, '%s')",cont+1, titulo, duracion, genero);
 	update(seq, db);
@@ -89,6 +89,17 @@ void deletePeli(Peli p, sqlite3* db){
 	char seq[200];
 	sprintf(seq, "DELETE FROM PELICULA WHERE ID = %i", p.id_Peli);
 	update(seq, db);
+}
+
+
+int IDMasAltoPe(Peli* pelis, int numPelis){
+    int idMA = pelis[0].id_Peli;
+    for (int i = 1; i<numPelis;i++){
+        if (idMA>pelis[i].id_Peli){
+            idMA = pelis[i].id_Peli;
+        }
+    }
+    return idMA;
 }
 
 

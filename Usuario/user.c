@@ -110,7 +110,7 @@ User getUsuarioFromID(int id, sqlite3* db){
 }
 
 void addUsuario(char* nombre, char* contrasena, int admin, sqlite3* db){
-	int cont = getUsuarioCount(db);
+	int cont = IDMasAltoUs(getAllUsers(db), getUsuarioCount(db));
 	char seq[200];
 	sprintf(seq, "INSERT INTO USUARIO(ID, NOM_USER, PASSWORD_USER, TIPO_USER) VALUES (%i, '%s', '%s', %i)",cont+1, nombre, contrasena, admin);
 	update(seq, db);
@@ -135,4 +135,14 @@ void cambiarUsuario(User u, char* nombre, char* pass, sqlite3* db){
 	update(seq, db);
 
 	printf("Usuario actualizado correctamente, pulse cualquier tecla para continuar\n");
+}
+
+int IDMasAltoUs(User* usuarios, int numUsuarios){
+	int idMA = usuarios[0].id_User;
+	for (int i = 1; i<numUsuarios;i++){
+		if (idMA>usuarios[i].id_User){
+			idMA = usuarios[i].id_User;
+		}
+	}
+	return idMA;
 }

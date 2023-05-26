@@ -22,5 +22,6 @@ Sesion* getAllSesiones(sqlite3* db);
 //Sala getSala(char* nombre, char* ubicacion, sqlite3* db);
 void addSesion(char* horario, int idPeli, int idSala, int precio, sqlite3* db);
 void deleteSesion(Sesion s, sqlite3* db);
+int IDMasAltoSes(Sesion* sesiones, int numSesiones);
 
 #endif

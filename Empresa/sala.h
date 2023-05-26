@@ -23,5 +23,6 @@ Sala* getAllSalas(sqlite3* db);
 //Sala getSala(char* nombre, char* ubicacion, sqlite3* db);
 void addSala(int capacidad, int numSesiones, int idCine, sqlite3* db);
 void deleteSala(Sala s, sqlite3* db);
+int IDMasAltoSa(Sala* salas, int numSalas);
 
 #endif

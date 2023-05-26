@@ -22,6 +22,7 @@ User getUsuarioFromID(int id, sqlite3* db);
 void addUsuario(char* nombre, char* contrasena, int admin, sqlite3* db);
 void deleteUsuario(User u, sqlite3* db);
 void cambiarUsuario(User u, char* nombre, char* pass, sqlite3* db);
+int IDMasAltoUs(User* usuarios, int numUsuarios);
 
 
 #endif

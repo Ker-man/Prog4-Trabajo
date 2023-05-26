@@ -132,7 +132,7 @@ Cine getCineN(char* nombre, sqlite3* db){
 }
 
 void addCine(int numSalas, char* nombre, char* ubicacion, sqlite3* db){
-	int cont = getCinesCount(db);
+	int cont = IDMasAltoCi(getCines(db), getCinesCount(db));
 	printf("empiezo\n");
 	char seq[200];
 	sprintf(seq, "INSERT INTO CINE(ID, NUMSALAS, NOM_CINE, UBI_CINE) VALUES (%i, %i, '%s', '%s')",cont+1, numSalas, nombre, ubicacion);
@@ -157,4 +157,15 @@ void imprimirTicket(User usuarioLogged, Cine cineSeleccionado, Peli peliSeleccio
 	fprintf(f, "Entrada para el cine: %s para la pelicula: %s (%i)", cineSeleccionado.nom_Cine, peliSeleccionada.titulo, peliSeleccionada.id_Peli);
 	fprintf(f, "Le esperamos!\n");
     fclose(f);
+}
+
+
+int IDMasAltoCi(Cine* cines, int numCines){
+    int idMA = cines[0].id_Cine;
+    for (int i = 1; i<numCines;i++){
+        if (idMA>cines[i].id_Cine){
+            idMA = cines[i].id_Cine;
+        }
+    }
+    return idMA;
 }
