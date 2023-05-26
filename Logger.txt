@@ -86798,3 +86798,34 @@ Iniciar Sesion
 Nombre Usuario recibido: admin
 Contrasenya Usuario recibida: admin
 Iniciando Sesion como Administrador
+05/26/23 16:51:28
+Usuario Logueado
+Conexion realizada entre servidor y cliente
+Iniciar Sesion
+Nombre Usuario recibido: admin
+Contrasenya Usuario recibida: admin
+Iniciando Sesion como Administrador
+05/26/23 17:11:40
+Usuario Logueado
+Conexion realizada entre servidor y cliente
+Iniciar Sesion
+Nombre Usuario recibido: admin
+Contrasenya Usuario recibida: admin
+Iniciando Sesion como Administrador
+Iniciar Sesion
+05/26/23 17:18:35
+Usuario Logueado
+Conexion realizada entre servidor y cliente
+Iniciar Sesion
+Nombre Usuario recibido: admin
+Contrasenya Usuario recibida: admin
+Iniciando Sesion como Administrador
+05/26/23 17:19:49
+Usuario Logueado
+Conexion realizada entre servidor y cliente
+Iniciar Sesion
+Nombre Usuario recibido: admin
+Contrasenya Usuario recibida: admin
+Iniciando Sesion como Administrador
+Programa Finalizado
+

@@ -94,7 +94,7 @@ int main(void)
                 cin >> name;
                 cout << "Contrasena Usuario:\n ";
                 cin >> pass;
-                //mascara(pass); //puede dar error
+                mascara(pass); //puede dar error
                 cout << endl;
                 sprintf(sendBuff, "%s", name);
                 send(s, sendBuff, sizeof(sendBuff), 0);
@@ -180,7 +180,7 @@ int main(void)
                             char eleccion;
                             do{
                                 printf("\n\n\n==========================\n");
-                                printf("MENU ADMINISTRADOR DEUSTOCINES\n");
+                                printf("MENU ADMINISTRADOR DE SESIONES DEUSTOCINES\n");
                                 printf("==========================\n");
                                 printf("\n");
                                 eleccion = ' ';

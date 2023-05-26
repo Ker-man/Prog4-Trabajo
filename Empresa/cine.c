@@ -75,7 +75,7 @@ Cine* getCines(sqlite3* db){
 		return &(Cine){'\0', 0, 0};
 	}
 	int var = 0;
-	Cine cines[getCinesCount(db)];
+	Cine* cines = (Cine*)malloc(sizeof(Cine)* getCinesCount(db));
 	while(sqlite3_step(stmt) == SQLITE_ROW)
 	{
 		cines[var].id_Cine = sqlite3_column_int(stmt, 0);

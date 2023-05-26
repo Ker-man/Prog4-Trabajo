@@ -148,64 +148,65 @@ int main(void)
 					send(comm_socket, sendBuff, sizeof(sendBuff), 0);
 					loggear("Iniciando Sesion como Administrador\n");
 					printf("Iniciando Sesion como Administrador...\n");
-
-					recv(comm_socket, recvBuff, sizeof(recvBuff), 0);
-					sscanf(recvBuff, "%c", &c);
-					if (c == '1')
+					do
 					{
-						char nombre[MAX_LINEAS];
-						char ubicacion[MAX_LINEAS];
-						int numSalas;
-						loggear("Esperando la introducción de parametros de cine...");
-						
 						recv(comm_socket, recvBuff, sizeof(recvBuff), 0);
-						sscanf(recvBuff, "%s", nombre);
-						loggear("Nombre Cine recibido: ");
-						loggear(nombre);
-						loggear("\n");
+						sscanf(recvBuff, "%c", &c);
+						if (c == '1')
+						{
+							char nombre[MAX_LINEAS];
+							char ubicacion[MAX_LINEAS];
+							int numSalas;
+							loggear("Esperando la introducción de parametros de cine...");
+							
+							recv(comm_socket, recvBuff, sizeof(recvBuff), 0);
+							sscanf(recvBuff, "%s", nombre);
+							loggear("Nombre Cine recibido: ");
+							loggear(nombre);
+							loggear("\n");
 
-						recv(comm_socket, recvBuff, sizeof(recvBuff), 0);
-						sscanf(recvBuff, "%s", ubicacion);
-						loggear("Ubicacion Cine recibido: ");
-						loggear(ubicacion);
-						loggear("\n");
+							recv(comm_socket, recvBuff, sizeof(recvBuff), 0);
+							sscanf(recvBuff, "%s", ubicacion);
+							loggear("Ubicacion Cine recibido: ");
+							loggear(ubicacion);
+							loggear("\n");
 
-						recv(comm_socket, recvBuff, sizeof(recvBuff), 0);
-						printf(recvBuff);
-						sscanf(recvBuff, "%d", &numSalas);					
-						loggear("Numero de Salas Cine recibido: ");
-						char numSalasL[MAX_LINEAS];
-						printf("%i", numSalas);
-						sprintf(numSalasL, "%i", numSalas);
-						loggear(numSalasL);
-						loggear("\n");
+							recv(comm_socket, recvBuff, sizeof(recvBuff), 0);
+							printf(recvBuff);
+							sscanf(recvBuff, "%d", &numSalas);					
+							loggear("Numero de Salas Cine recibido: ");
+							char numSalasL[MAX_LINEAS];
+							printf("%i", numSalas);
+							sprintf(numSalasL, "%i", numSalas);
+							loggear(numSalasL);
+							loggear("\n");
 
-						addCine(numSalas,nombre,ubicacion,db);
-						loggear("Cine añadido a la base de datos");
-						continue;
-					}
-					if(c == '2'){
-						int cont = getCinesCount(db);
-						char cineBorrarNom[MAX_LINEAS];
-						char cineBorrarUbi[MAX_LINEAS];
-						Cine cineA;
-						sprintf(sendBuff, "%i",cont);
-						send(comm_socket, sendBuff, sizeof(sendBuff), 0);
-						Cine* cines = getCines(db);
-						for(int i = 0; i<cont; i++){
-							sprintf(sendBuff, "%s",cines[i].nom_Cine);
-							send(comm_socket, sendBuff, sizeof(sendBuff), 0);
-							sprintf(sendBuff, "%s",cines[i].ubi_Cine);
-							send(comm_socket, sendBuff, sizeof(sendBuff), 0);
+							addCine(numSalas,nombre,ubicacion,db);
+							loggear("Cine añadido a la base de datos");
+							continue;
 						}
-						recv(comm_socket, recvBuff, sizeof(recvBuff), 0);
-						strcpy(cineBorrarNom, recvBuff);
-						recv(comm_socket, recvBuff, sizeof(recvBuff), 0);
-						strcpy(cineBorrarUbi, recvBuff);
-						cineA = getCine(cineBorrarNom, cineBorrarUbi, db);
-						deleteCine(cineA, db);
-					}
-
+						if(c == '2'){
+							int cont = getCinesCount(db);
+							char cineBorrarNom[MAX_LINEAS];
+							char cineBorrarUbi[MAX_LINEAS];
+							Cine cineA;
+							sprintf(sendBuff, "%i",cont);
+							send(comm_socket, sendBuff, sizeof(sendBuff), 0);
+							Cine* cines = getCines(db);
+							for(int i = 0; i<cont; i++){
+								sprintf(sendBuff, "%s",cines[i].nom_Cine);
+								send(comm_socket, sendBuff, sizeof(sendBuff), 0);
+								sprintf(sendBuff, "%s",cines[i].ubi_Cine);
+								send(comm_socket, sendBuff, sizeof(sendBuff), 0);
+							}
+							recv(comm_socket, recvBuff, sizeof(recvBuff), 0);
+							strcpy(cineBorrarNom, recvBuff);
+							recv(comm_socket, recvBuff, sizeof(recvBuff), 0);
+							strcpy(cineBorrarUbi, recvBuff);
+							cineA = getCine(cineBorrarNom, cineBorrarUbi, db);
+							deleteCine(cineA, db);
+						}
+					}while(c != '3');
 
 				}
 				else if(usuarioLogged.tipo == 1){
@@ -238,18 +239,19 @@ int main(void)
 	return 0;
 }
 
-        //Menu admin  (Cambiar cosas)
-            //Menu Cines
-                //Crear Cine
-                //Borrar cine
+        //Menu admin  (Cambiar cosas) 
+            //Menu Cines x
+                //Crear Cine x
+                //Borrar cine x
                 //Gestionar Cine
                     //-Crear Sala
                     //-Borrar Sala
                     //-Salir
-                //Menu Sesiones
+                //Menu Sesiones x
                     //-Crar Sesion para un sala
                     //-Borrar una sesion de una sala
-                //-Salir
+					//-Salir
+                //-Salir x
         
         //Menu Usuario
             //Menu Peliculas
