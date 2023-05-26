@@ -38,3 +38,83 @@ Usuario Logueado
 Conexion realizada entre servidor y cliente
 Programa Finalizado
 
+05/26/23 12:42:41
+Usuario Logueado
+Conexion realizada entre servidor y cliente
+Iniciar Sesion
+Nombre Usuario recibido: a
+Contrasenya Usuario recibida: a
+Iniciando Sesion como Cliente
+05/26/23 12:46:57
+Usuario Logueado
+Conexion realizada entre servidor y cliente
+Iniciar Sesion
+Nombre Usuario recibido: a
+Contrasenya Usuario recibida: a
+Iniciando Sesion como Cliente
+05/26/23 12:51:57
+Usuario Logueado
+Conexion realizada entre servidor y cliente
+Iniciar Sesion
+Nombre Usuario recibido: a
+Contrasenya Usuario recibida: a
+Iniciando Sesion como Cliente
+05/26/23 12:56:15
+Usuario Logueado
+Conexion realizada entre servidor y cliente
+Iniciar Sesion
+Nombre Usuario recibido: a
+Contrasenya Usuario recibida: a
+Iniciando Sesion como Cliente
+05/26/23 12:57:31
+Usuario Logueado
+Conexion realizada entre servidor y cliente
+Iniciar Sesion
+05/26/23 13:01:11
+Usuario Logueado
+Conexion realizada entre servidor y cliente
+Programa Finalizado
+
+05/26/23 13:01:38
+Usuario Logueado
+Conexion realizada entre servidor y cliente
+Iniciar Sesion
+Nombre Usuario recibido: a
+Contrasenya Usuario recibida: a
+Iniciando Sesion como Cliente
+05/26/23 13:02:13
+Usuario Logueado
+Conexion realizada entre servidor y cliente
+Programa Finalizado
+
+05/26/23 13:02:45
+Usuario Logueado
+Conexion realizada entre servidor y cliente
+Iniciar Sesion
+Nombre Usuario recibido: a
+Contrasenya Usuario recibida: a
+Iniciando Sesion como Cliente
+Iniciar Sesion
+Nombre Usuario recibido: a
+Contrasenya Usuario recibida: a
+Iniciando Sesion como Cliente
+05/26/23 13:04:06
+Usuario Logueado
+Conexion realizada entre servidor y cliente
+Iniciar Sesion
+Nombre Usuario recibido: a
+Contrasenya Usuario recibida: a
+Iniciando Sesion como Cliente
+05/26/23 13:05:10
+Usuario Logueado
+Conexion realizada entre servidor y cliente
+Iniciar Sesion
+Nombre Usuario recibido: a
+Contrasenya Usuario recibida: a
+Iniciando Sesion como Cliente
+05/26/23 13:07:36
+Usuario Logueado
+Conexion realizada entre servidor y cliente
+Iniciar Sesion
+Nombre Usuario recibido: a
+Contrasenya Usuario recibida: a

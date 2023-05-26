@@ -83,7 +83,7 @@ int main(void) {
 	char name[MAX_LINEAS];
 	char pass[MAX_LINEAS];
 
-    while (dev != 3){
+    while (dev != '3'){
         recv(comm_socket, recvBuff, sizeof(recvBuff), 0);
 		sscanf(recvBuff, "%c", &dev);
 		if (dev == '1') {
@@ -168,13 +168,13 @@ int main(void) {
 					}
 
 
-
-
 				}else if(usuarioLogged.tipo == 1)
 					sprintf(sendBuff, "%c",'1');
 					send(comm_socket, sendBuff, sizeof(sendBuff), 0);
 					loggear("Iniciando Sesion como Cliente\n");
 					printf("Iniciando Sesion...\n");
+					continue;
+				
     		} else {
 				sprintf(sendBuff, "%c", '2');
 				send(comm_socket, sendBuff, sizeof(sendBuff), 0);

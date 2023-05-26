@@ -47,7 +47,6 @@ int main(void) {
 
     char str[10];
     char c;
-
     do{
         printf("\n\n=======================\n");
         printf("MENU INICIO DEUSTOCINES\n");
@@ -56,6 +55,7 @@ int main(void) {
         c = ' ';
         printf("1. Registrar Usuario, 2. Iniciar Sesion, 3. Salir\n");
         cin >> c;
+
         if (c != '\n' && (c == '1' || c == '2' )) {
             char dev;
 
@@ -171,8 +171,7 @@ int main(void) {
         }
         
     
-   }
-    while(c != '3');
+   }while(c != '3');
     printf("\n");
     printf("Hasta Pronto");
     printf("\n");
