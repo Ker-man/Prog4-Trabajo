@@ -127,7 +127,9 @@ Cine getCineN(char* nombre, sqlite3* db){
 		return (Cine){'\0', 0, 0};
 	}
 	cine.id_Cine = sqlite3_column_int(stmt, 0);
+	cine.numSalas = sqlite3_column_int(stmt, 1);
 	strcpy(cine.nom_Cine, (char *) sqlite3_column_text(stmt, 2));
+	strcpy(cine.ubi_Cine, (char *) sqlite3_column_text(stmt, 3));
 	return cine;
 }
 
