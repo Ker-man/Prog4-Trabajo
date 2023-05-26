@@ -172,3 +172,105 @@ Iniciar Sesion
 Nombre Usuario recibido: admin
 Contrasenya Usuario recibida: admin
 Iniciando Sesion como Cliente
+05/26/23 14:39:34
+Usuario Logueado
+Conexion realizada entre servidor y cliente
+Registrar Usuario
+Nombre Usuario recibido: daniprueba
+Contrasenya Usuario recibida: patata
+Usuario Registrado
+Iniciar Sesion
+Nombre Usuario recibido: daniprueba
+Contrasenya Usuario recibida: patata
+Iniciando Sesion como Cliente
+05/26/23 14:42:51
+Usuario Logueado
+Conexion realizada entre servidor y cliente
+Registrar Usuario
+Nombre Usuario recibido: funsi
+Contrasenya Usuario recibida: ona
+Usuario Registrado
+05/26/23 14:43:40
+Usuario Logueado
+Conexion realizada entre servidor y cliente
+Registrar Usuario
+Nombre Usuario recibido: hola
+Contrasenya Usuario recibida: holaa
+Usuario Registrado
+05/26/23 14:44:25
+Usuario Logueado
+Conexion realizada entre servidor y cliente
+Registrar Usuario
+Nombre Usuario recibido: davidpirata
+Contrasenya Usuario recibida: somali
+Usuario Registrado
+05/26/23 14:47:24
+Usuario Logueado
+Conexion realizada entre servidor y cliente
+05/26/23 14:47:49
+Usuario Logueado
+Conexion realizada entre servidor y cliente
+Registrar Usuario
+Nombre Usuario recibido: pirata
+Contrasenya Usuario recibida: somali
+Usuario Registrado
+05/26/23 14:48:57
+Usuario Logueado
+Conexion realizada entre servidor y cliente
+Registrar Usuario
+Nombre Usuario recibido: pirata
+Contrasenya Usuario recibida: somali
+Usuario Registrado
+05/26/23 14:49:56
+Usuario Logueado
+Conexion realizada entre servidor y cliente
+Registrar Usuario
+Nombre Usuario recibido: prueba
+Contrasenya Usuario recibida: numero
+Usuario Registrado
+Registrar Usuario
+Nombre Usuario recibido: chincuechento
+Contrasenya Usuario recibida: mile
+Usuario Registrado
+05/26/23 14:52:36
+Usuario Logueado
+Conexion realizada entre servidor y cliente
+Registrar Usuario
+Nombre Usuario recibido: cuarentay
+Contrasenya Usuario recibida: chincue
+Usuario Registrado
+05/26/23 14:54:11
+Usuario Logueado
+Conexion realizada entre servidor y cliente
+Registrar Usuario
+Nombre Usuario recibido: nunca
+Contrasenya Usuario recibida: mas
+Usuario Registrado
+05/26/23 14:56:16
+Usuario Logueado
+Conexion realizada entre servidor y cliente
+Registrar Usuario
+Nombre Usuario recibido: debemos
+Contrasenya Usuario recibida: seguir
+Usuario Registrado
+05/26/23 14:58:49
+Usuario Logueado
+Conexion realizada entre servidor y cliente
+Registrar Usuario
+Nombre Usuario recibido: yanoaguanto
+Contrasenya Usuario recibida: yanoaguanto
+Usuario Registrado
+05/26/23 15:00:28
+Usuario Logueado
+Conexion realizada entre servidor y cliente
+Registrar Usuario
+Nombre Usuario recibido: germano
+Contrasenya Usuario recibida: surmano
+Usuario Registrado
+05/26/23 15:04:47
+Usuario Logueado
+Conexion realizada entre servidor y cliente
+Registrar Usuario
+Nombre Usuario recibido: casicuatro
+Contrasenya Usuario recibida: anitos
+Usuario Registrado

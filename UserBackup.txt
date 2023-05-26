@@ -3,3 +3,17 @@
 10;z;z;2;
 11;r;r;1;
 12;admin;admin;1;
+13;daniprueba;patata;1;
+14;funsi;ona;1;
+15;hola;holaa;1;
+16;davidpirata;somali;1;
+1;pirata;somali;1;
+13;pirata;somali;1;
+14;prueba;numero;1;
+14;chincuechento;mile;1;
+15;cuarentay;chincue;1;
+16;nunca;mas;1;
+17;debemos;seguir;1;
+18;yanoaguanto;yanoaguanto;1;
+19;germano;surmano;1;
+20;casicuatro;anitos;0;

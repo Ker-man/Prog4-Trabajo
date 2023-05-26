@@ -112,6 +112,7 @@ int main(void)
             addUsuario(name, pass, 0, db);
 			loggear("Usuario Registrado\n");
 			printf("Usuario Registrado\n");
+			
 			continue;
 		}
 		else if (dev == '2') 
@@ -181,7 +182,7 @@ int main(void)
 					}
 					if(c == '2'){
 						int cont = getCinesCount(db);
-						char cineBorrar [MAX_LINEAS] = ' ';
+						char cineBorrar[MAX_LINEAS];
 						Cine cineA;
 						sprintf(sendBuff, "%s",cont);
 						send(comm_socket, sendBuff, sizeof(sendBuff), 0);
