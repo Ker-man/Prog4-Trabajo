@@ -114,7 +114,7 @@ int main(void)
                         printf("==========================\n");
                         printf("\n");
                         opcion = ' ';
-                        printf("1. Anadir Cine 2. Borrar Cine 3.Gestionar Salas 4.Salir\n");
+                        printf("1. Anadir Cine 2. Borrar Cine 3.Gestionar Sesiones 4.Salir\n");
                         cin >> opcion;
                         cout << endl;
                         sprintf(sendBuff, "%c", opcion);
@@ -167,7 +167,53 @@ int main(void)
                         }
                         else if(opcion == '3')
                         {
-                            
+                            char eleccion;
+                            do{
+                                printf("\n\n\n==========================\n");
+                                printf("MENU ADMINISTRADOR DEUSTOCINES\n");
+                                printf("==========================\n");
+                                printf("\n");
+                                eleccion = ' ';
+                                printf("1. Anadir Sesion 2. Borrar Sesion 3.Salir\n");
+                                cin >> eleccion;
+                                cout << endl;
+                                sprintf(sendBuff, "%c", eleccion);
+                                send(s, sendBuff, sizeof(sendBuff), 0);
+                                if(eleccion == '1'){
+                                    printf("Horario: ");
+                                    char horario;
+                                    cin >>horario;
+                                    cout <<endl;
+
+                                    printf("Precio: ");
+                                    int precio;
+                                    cin >>precio;
+                                    cout <<endl;
+
+                                    printf("ID de la sala: ");
+                                    int idSala;
+                                    cin >>idSala;
+                                    cout <<endl;
+
+                                    printf("ID de la Peli: ");
+                                    int idPeli;
+                                    cin >>idPeli;
+                                    cout <<endl;
+
+                                    sprintf(sendBuff, "%s", horario);
+                                    send(s, sendBuff, sizeof(sendBuff), 0);
+                                    sprintf(sendBuff, "%s", precio);
+                                    send(s, sendBuff, sizeof(sendBuff), 0);
+                                    sprintf(sendBuff, "%s",idSala);
+                                    send(s, sendBuff, sizeof(sendBuff), 0);
+                                    sprintf(sendBuff, "%s", idPeli);
+                                    send(s, sendBuff, sizeof(sendBuff), 0);
+                                    continue;
+                                }
+                                else if(eleccion == '2'){
+                                    
+                                }
+                            }while(eleccion != '3');
                         }
                     }
                     while(opcion != '4');

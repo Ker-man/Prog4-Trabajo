@@ -6,7 +6,7 @@
 typedef struct 
 {
     int id_Sesion;
-    float precio;
+    int precio;
     char horario[15];
     Peli peli;
 }Sesion;

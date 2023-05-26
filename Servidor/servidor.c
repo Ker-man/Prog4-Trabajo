@@ -109,7 +109,7 @@ int main(void)
 			loggear("Contrasenya Usuario recibida: ");
 			loggear(pass);
 			loggear("\n");
-            addUsuario(name, pass, 1, db);
+            addUsuario(name, pass, 0, db);
 			loggear("Usuario Registrado\n");
 			printf("Usuario Registrado\n");
 			continue;

@@ -161,3 +161,14 @@ Iniciar Sesion
 Nombre Usuario recibido: r
 Contrasenya Usuario recibida: r
 Iniciando Sesion como Cliente
+05/26/23 14:22:35
+Usuario Logueado
+Conexion realizada entre servidor y cliente
+Registrar Usuario
+Nombre Usuario recibido: admin
+Contrasenya Usuario recibida: admin
+Usuario Registrado
+Iniciar Sesion
+Nombre Usuario recibido: admin
+Contrasenya Usuario recibida: admin
+Iniciando Sesion como Cliente
