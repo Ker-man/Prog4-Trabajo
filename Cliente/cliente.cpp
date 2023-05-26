@@ -56,7 +56,7 @@ int main(void) {
         c = ' ';
         printf("1. Registrar Usuario, 2. Iniciar Sesion, 3. Salir\n");
         cin >> c;
-        if (c != '\n' && (c == '1' || c == '2' || c == '3')) {
+        if (c != '\n' && (c == '1' || c == '2' )) {
             char dev;
 
             sprintf(sendBuff, "%c", c);
@@ -173,7 +173,9 @@ int main(void) {
     
    }
     while(c != '3');
-    printf("Hola");
+    printf("\n");
+    printf("Hasta Pronto");
+    printf("\n");
     closesocket(s);
     WSACleanup();
 
