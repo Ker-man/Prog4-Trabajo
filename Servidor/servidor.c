@@ -259,6 +259,7 @@ int main(void)
 									sprintf(sendBuff, "%i",cont);
 									send(comm_socket, sendBuff, sizeof(sendBuff), 0);
 									Sesion* sesiones = getAllSesiones(db);
+									printf("Aqui");
 									for(int i = 0; i<cont; i++){
 										sprintf(sendBuff, "%s",sesiones[i].horario);
 										send(comm_socket, sendBuff, sizeof(sendBuff), 0);
@@ -273,7 +274,7 @@ int main(void)
 									imprimirSesion(sesionA);
 									deleteSesion(sesionA, db);
 								}
-							}while(op == '3');
+							}while(op != '3');
 						}
 					}while(c != '4');
 

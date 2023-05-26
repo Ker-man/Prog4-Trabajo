@@ -229,7 +229,7 @@ int main(void)
                                     printf("Sesiones en la base de Datos\n");
                                     for(int i = 0; i<n; i++){
                                         recv(s, recvBuff, sizeof(recvBuff), 0);
-                                        strcpy(horario, recvBuff);
+                                        sscanf(recvBuff, "%s", horario);
                                         recv(s, recvBuff, sizeof(recvBuff), 0);
                                         sscanf(recvBuff, "%i", &idSesion);
                                         printf("Sesion: %i - %s\n", idSesion, horario);
