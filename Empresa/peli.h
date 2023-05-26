@@ -29,6 +29,9 @@ Peli minPelicula(Peli *pelis, int tamanyo);
 Peli buscarGenero(Peli *peliculas, int tamanyo, char* genero);
 Peli buscarTitulo(Peli *peliculas, int tamanyo, char* titulo);
 
+void escribirPeliculaFichero(Peli peli);
+Peli* leerPeliculaFichero();
+
 
 
 #endif
