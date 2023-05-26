@@ -254,25 +254,66 @@ int main(void)
                 else if(dev == '1')//Menu Cliente
                 { 
                     char opcion;
+                    do{
                     printf("\n\n\n==========================\n");
                     printf("MENU USUARIO DEUSTOCINES\n");
                     printf("==========================\n");
                     printf("\n");
                     opcion = ' ';
-                    printf("1. Menu cines 2. Menu peliculas 3. salir\n");
+                    printf("1. Menu Peliculas 2. Menu Cines 3. salir\n");
                     cin >> opcion;
-
-                    if(opcion==1)
+                    cout << endl;
+                    sprintf(sendBuff, "%c", opcion);
+                    send(s, sendBuff, sizeof(sendBuff), 0);
+                    if(opcion=='1')
                     {
-                        cout << "Entrando en menu cines";
+                        char op;
+                        do{
+                            printf("Entrando en menu Peliculas\n");
+                            printf("1. Ver todas las peliculas 2. Buscar pelicula por nombre 3. Buscar peliulas por genero 4. Salir\n");
+                            cin >> op;
+                            cout << endl;
+                            sprintf(sendBuff, "%c", op);
+                            send(s, sendBuff, sizeof(sendBuff), 0);
+                            if(op == '1'){
+                                int n;
+                                char nombre[MAX_LINEAS];
+                                char genero[MAX_LINEAS];
+                                recv(s, recvBuff, sizeof(recvBuff), 0);
+                                sscanf(recvBuff, "%i", &n); 
+                                printf("Pelis en la base de Datos\n");
+                                for(int i = 1; i<n; i++){
+                                    recv(s, recvBuff, sizeof(recvBuff), 0);
+                                    sscanf(recvBuff, "%s", nombre);
+                                    recv(s, recvBuff, sizeof(recvBuff), 0);
+                                    sscanf(recvBuff, "%s", genero);
+                                    printf("Pelicula: %s - %s\n", nombre, genero);
+                                }
+                            }else if(op == '2'){
 
+                            }else if(op == '3'){
+                                
+                            }
+                        }while(op != '4');
                     }
-                    else if(opcion==2)
+                    else if(opcion=='2')
                     {
-                        cout << "Entrando en menu peliculas";
+                        char op;
+                        do{
+                            printf("Entrando en menu Cines\n");
+                            printf("1. Ver cines 2. Comprar ticket 3. Salir\n");
+                            cin >> op;
+                            cout << endl;
+                            if(op == '1'){
+
+                            }else if(op == '2'){
+
+                            }
+                        }while(op != '3');
                     }
+                    }while(opcion != '3');
                 }
-                else if(dev == 2)
+                else if(dev == '2')
                 {
                     printf("Usuario o contrasenya incorrecta.");
                 }

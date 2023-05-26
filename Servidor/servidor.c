@@ -110,7 +110,7 @@ int main(void)
 			loggear("Contrasenya Usuario recibida: ");
 			loggear(pass);
 			loggear("\n");
-            addUsuario(name, pass, 0, db);
+            addUsuario(name, pass, 1, db);
 			loggear("Usuario Registrado\n");
 			printf("Usuario Registrado\n");
 			
@@ -260,7 +260,6 @@ int main(void)
 									sprintf(sendBuff, "%i",cont);
 									send(comm_socket, sendBuff, sizeof(sendBuff), 0);
 									Sesion* sesiones = getAllSesiones(db);
-									printf("Aqui");
 									for(int i = 0; i<cont; i++){
 										sprintf(sendBuff, "%s",sesiones[i].horario);
 										send(comm_socket, sendBuff, sizeof(sendBuff), 0);
@@ -286,7 +285,50 @@ int main(void)
 					send(comm_socket, sendBuff, sizeof(sendBuff), 0);
 					loggear("Iniciando Sesion como Cliente\n");
 					printf("Iniciando Sesion como Cliente...\n");
-					continue;
+					char o;
+					do{
+						recv(comm_socket, recvBuff, sizeof(recvBuff), 0);
+						sscanf(recvBuff, "%c", &o);
+						if(o == '1'){
+							printf("\n SI");
+							char op;
+							do{
+								recv(comm_socket, recvBuff, sizeof(recvBuff), 0);
+								sscanf(recvBuff, "%c", &op);
+								if(op == '1'){
+									printf("A");
+									int cont = getPelisCount(db);
+									sprintf(sendBuff, "%i",cont);
+									send(comm_socket, sendBuff, sizeof(sendBuff), 0);
+									Peli* pelis = getPeliculas(db);
+									for(int i = 0; i<cont; i++){
+										printf("B");
+										sprintf(sendBuff, "%s",pelis[i].titulo);
+										send(comm_socket, sendBuff, sizeof(sendBuff), 0);
+										sprintf(sendBuff, "%s",pelis[i].genero);
+										send(comm_socket, sendBuff, sizeof(sendBuff), 0);
+									}
+									printf("C");
+								}else if(op == '2'){
+
+								}else if(op == '3'){
+
+								}
+							}while(op != '4');
+						}else if(o == '2'){
+							char op;
+							do{
+								if(op == '1'){
+
+								}else if(op == '2'){
+
+								}
+
+							}while(op != '3');
+
+						}
+					}while(o != '3');
+
 				}
 				printf("eee");
     		} 
@@ -331,7 +373,8 @@ int main(void)
 				//BUscar por genero
 			//Menu Cine
 				//-Ver cines
-				//Comprar ticket
+				//-Comprar ticket
+				//-Salir
 			//-Salir
 
 		
