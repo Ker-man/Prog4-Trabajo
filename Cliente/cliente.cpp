@@ -235,10 +235,14 @@ int main(void)
                                         printf("Sesion: %i - %s\n", idSesion, horario);
                                     }
                                     printf("Cual quieres borrar, escribe el ID:\n");
-                                    cin >> idSesion;
+                                    char idSesionD[MAX_LINEAS];
+                                    cin >>idSesionD;
                                     cout <<endl;
-                                    sprintf(sendBuff, "%i", idSesion);
+
+                                    printf("\n\n%s",idSesionD);
+                                    sprintf(sendBuff, "%s", idSesionD);
                                     send(s, sendBuff, sizeof(sendBuff), 0);
+                                    
                                 }
                             }while(eleccion != '3');
                         }

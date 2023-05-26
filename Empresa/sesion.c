@@ -7,7 +7,7 @@
 
 void imprimirSesion(Sesion sesion)
 {
-    printf("Sesion con horario: %s\n", sesion.horario);
+    printf("\nSesion con ID: %i y horario: %s\n", sesion.id_Sesion, sesion.horario);
 }
 
 int getSesionesCount(sqlite3* db){
@@ -57,6 +57,7 @@ Sesion getSesionFromID(int id, sqlite3* db){
 	if(i != SQLITE_ROW){
 		return (Sesion){'\0', 0, 0};
 	}
+	sesion.id_Sesion = id;
 	strcpy(sesion.horario, (char *) sqlite3_column_text(stmt, 1));
 	sesion.peli = getPeliFromID(sqlite3_column_int(stmt, 2), db);
 	sesion.precio = sqlite3_column_int(stmt, 3);

@@ -267,8 +267,10 @@ int main(void)
 										send(comm_socket, sendBuff, sizeof(sendBuff), 0);
 									}
 									recv(comm_socket, recvBuff, sizeof(recvBuff), 0);
-									sscanf(recvBuff, "%i", &idSesion);
+									sscanf(recvBuff, "%d", &idSesion);
+									printf("\n---%i---",idSesion);
 									sesionA = getSesionFromID(idSesion, db);
+									imprimirSesion(sesionA);
 									deleteSesion(sesionA, db);
 								}
 							}while(op == '3');
