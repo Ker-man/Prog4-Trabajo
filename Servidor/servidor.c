@@ -303,20 +303,21 @@ int main(void)
 										sprintf(sendBuff, "%s",pelis[i].genero);
 										send(comm_socket, sendBuff, sizeof(sendBuff), 0);
 									}
-									free(pelis);
+									//free(pelis);
 								}else if(op == '2'){
 									char titulo[MAX_LINEAS];
 									Peli pelicula;
 									recv(comm_socket, recvBuff, sizeof(recvBuff), 0);
 									sscanf(recvBuff, "%s", titulo);
 									printf("%s", titulo);
-									for(int i=0; i<cont; i++){
+									for(int i=0; i<=cont; i++){
 										if(strcmp(pelis[i].titulo, titulo) == 0){
-											pelicula=pelis[i];
+											pelicula.id_Peli = pelis[i].id_Peli;
+											strcpy(pelicula.titulo, pelis[i].titulo);
+											pelicula.duracion=pelis[i].duracion;
+											strcpy(pelicula.genero, pelis[i].genero);
 											break;
-										}else{
-											printf("\n\t\t\t\tesa peli no esta en nuestro registro");
-                    					}
+										}
 									}
 									sprintf(sendBuff, "%i",pelicula.id_Peli);
 									send(comm_socket, sendBuff, sizeof(sendBuff), 0);
@@ -327,8 +328,26 @@ int main(void)
 									sprintf(sendBuff, "%s",pelicula.genero);
 									send(comm_socket, sendBuff, sizeof(sendBuff), 0);
 								}else if(op == '3'){
+                                    char genero[MAX_LINEAS];
+                                    int cont = getPelisCount(db);
+                                    int idPeli;
+                                    Peli peliA;
+                                    Peli* pelis = getPeliculas(db);
+                                    recv(comm_socket, recvBuff, sizeof(recvBuff), 0);
+                                    sscanf(recvBuff, "%s", genero);
 
-								}
+                                    sprintf(sendBuff, "%i",cont);
+                                    send(comm_socket, sendBuff, sizeof(sendBuff), 0);
+                                    for(int i = 0; i<cont; i++){
+                                        if (strcmp(pelis[i].genero, genero) == 0){
+                                            sprintf(sendBuff, "%i", pelis[i].id_Peli);
+                                            send(comm_socket, sendBuff, sizeof(sendBuff), 0);
+                                            sprintf(sendBuff, "%s", pelis[i].titulo);
+                                            send(comm_socket, sendBuff, sizeof(sendBuff), 0);
+                                        }
+                                    }
+                                  free(pelis);
+                                } 
 							}while(op != '4');
 						}else if(o == '2'){
 							char op;

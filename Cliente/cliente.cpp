@@ -295,8 +295,8 @@ int main(void)
                                 }
                             }else if(op == '2'){
                                 char titulo[MAX_LINEAS];
-                                int idPeli;
-                                int duracion;
+                                int idPeli = 0;
+                                int duracion = 0;
                                 char genero[MAX_LINEAS];
                                 printf("Peli a buscar (Titulo):\n");
                                 cin >> titulo;
@@ -312,10 +312,29 @@ int main(void)
                                 sscanf(recvBuff, "%i", &duracion);
                                 recv(s, recvBuff, sizeof(recvBuff), 0);
                                 sscanf(recvBuff, "%s", genero);
-                                printf("La pelicula que buscas es: ID: %i, Titulo: %s, Duracion: %i, Genero: %s\n", idPeli, titulo, duracion, genero);
-                                
+                                printf("La pelicula que buscas es: ID: %i, Titulo: %s, Duracion: %i, Genero: %s\n", idPeli, titulo, duracion, genero);                                
                             }else if(op == '3'){
-                                
+                                printf("Genero: ");
+                                char genero[MAX_LINEAS];
+                                cin >> genero;
+                                cout << endl;
+
+                                sprintf(sendBuff, "%s", genero);
+                                send(s, sendBuff, sizeof(sendBuff), 0);
+
+                                int n;
+                                char titulo[MAX_LINEAS];
+                                int idPeli;
+                                recv(s, recvBuff, sizeof(recvBuff), 0);
+                                sscanf(recvBuff, "%s", &n);
+                                printf("Peliculas con ese Genero\n");
+                                for (int i = 0; i<n; i++){
+                                    recv(s, recvBuff, sizeof(recvBuff), 0);
+                                    sscanf(recvBuff, "%i", &idPeli);
+                                    recv(s, recvBuff, sizeof(recvBuff), 0);
+                                    sscanf(recvBuff, "%s", titulo);
+                                    printf("Pelicula: %i - %s\n", idPeli, titulo);
+                                }
                             }
                         }while(op != '4');
                     }

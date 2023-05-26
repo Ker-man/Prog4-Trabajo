@@ -231,4 +231,120 @@ Iniciando Sesion como Administrador
 Esperando la introducción de parametros de cine...Nombre Cine recibido: t
 Ubicacion Cine recibido: t
 Numero de Salas Cine recibido: 3
-Cine añadido a la base de datos
+Cine añadido a la base de datos05/26/23 23:46:44
+Usuario Logueado
+Conexion realizada entre servidor y cliente
+Iniciar Sesion
+Nombre Usuario recibido: prueba
+Contrasenya Usuario recibida: prueba
+05/26/23 23:47:32
+Usuario Logueado
+Conexion realizada entre servidor y cliente
+Iniciar Sesion
+Nombre Usuario recibido: e
+Contrasenya Usuario recibida: e
+05/26/23 23:48:25
+Usuario Logueado
+Conexion realizada entre servidor y cliente
+Iniciar Sesion
+Nombre Usuario recibido: e
+Contrasenya Usuario recibida: e
+Iniciando Sesion como Cliente
+05/26/23 23:48:53
+Usuario Logueado
+Conexion realizada entre servidor y cliente
+Iniciar Sesion
+Nombre Usuario recibido: e
+Contrasenya Usuario recibida: e
+Iniciando Sesion como Cliente
+05/26/23 23:54:55
+Usuario Logueado
+Conexion realizada entre servidor y cliente
+Iniciar Sesion
+Nombre Usuario recibido: e
+Contrasenya Usuario recibida: e
+Iniciando Sesion como Cliente
+05/26/23 23:57:14
+Usuario Logueado
+Conexion realizada entre servidor y cliente
+Iniciar Sesion
+Nombre Usuario recibido: prueba
+Contrasenya Usuario recibida: prueba
+Iniciando Sesion como Cliente
+05/26/23 23:59:44
+Usuario Logueado
+Conexion realizada entre servidor y cliente
+Iniciar Sesion
+Nombre Usuario recibido: prueba
+Contrasenya Usuario recibida: prueba
+Iniciando Sesion como Cliente
+05/27/23 00:01:38
+Usuario Logueado
+Conexion realizada entre servidor y cliente
+Iniciar Sesion
+Nombre Usuario recibido: prueba
+Contrasenya Usuario recibida: prueba
+Iniciando Sesion como Cliente
+05/27/23 00:02:10
+Usuario Logueado
+Conexion realizada entre servidor y cliente
+Iniciar Sesion
+Nombre Usuario recibido: prueba
+Contrasenya Usuario recibida: prueba
+Iniciando Sesion como Cliente
+05/27/23 00:02:59
+Usuario Logueado
+Conexion realizada entre servidor y cliente
+Iniciar Sesion
+Nombre Usuario recibido: prueba
+Contrasenya Usuario recibida: prueba
+Iniciando Sesion como Cliente
+05/27/23 00:05:43
+Usuario Logueado
+Conexion realizada entre servidor y cliente
+Iniciar Sesion
+Nombre Usuario recibido: prueba
+Contrasenya Usuario recibida: prueba
+Iniciando Sesion como Cliente
+05/27/23 00:08:46
+Usuario Logueado
+Conexion realizada entre servidor y cliente
+Iniciar Sesion
+Nombre Usuario recibido: prueba
+Contrasenya Usuario recibida: prueba
+Iniciando Sesion como Cliente
+05/27/23 00:11:06
+Usuario Logueado
+Conexion realizada entre servidor y cliente
+Iniciar Sesion
+Nombre Usuario recibido: e
+Contrasenya Usuario recibida: e
+Iniciando Sesion como Cliente
+05/27/23 00:16:23
+Usuario Logueado
+Conexion realizada entre servidor y cliente
+Iniciar Sesion
+Nombre Usuario recibido: e
+Contrasenya Usuario recibida: e
+Iniciando Sesion como Cliente
+05/27/23 00:24:23
+Usuario Logueado
+Conexion realizada entre servidor y cliente
+Iniciar Sesion
+Nombre Usuario recibido: e
+Contrasenya Usuario recibida: e
+Iniciando Sesion como Cliente
+05/27/23 00:26:09
+Usuario Logueado
+Conexion realizada entre servidor y cliente
+Iniciar Sesion
+Nombre Usuario recibido: e
+Contrasenya Usuario recibida: e
+Iniciando Sesion como Cliente
+05/27/23 00:28:34
+Usuario Logueado
+Conexion realizada entre servidor y cliente
+Iniciar Sesion
+Nombre Usuario recibido: e
+Contrasenya Usuario recibida: e
+Iniciando Sesion como Cliente
