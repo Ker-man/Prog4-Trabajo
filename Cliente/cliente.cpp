@@ -151,18 +151,27 @@ int main(void)
                         {
                             int n;
                             char cine[MAX_LINEAS];
+                            char ubi[MAX_LINEAS];
                             recv(s, recvBuff, sizeof(recvBuff), 0);
-                            sscanf(recvBuff, "%i", n); //&
+                            sscanf(recvBuff, "%i", &n); 
                             printf("Cines en la base de Datos\n");
                             for(int i = 0; i<n; i++){
                                 recv(s, recvBuff, sizeof(recvBuff), 0);
                                 strcpy(cine, recvBuff);
-                                printf("Cine: %s\n", cine);
+                                recv(s, recvBuff, sizeof(recvBuff), 0);
+                                strcpy(ubi, recvBuff);
+                                printf("Cine: %s - %s\n", cine, ubi);
                             }
-                            printf("Cual quieres borrar, escribe el nombre:\n");
+                            printf("Cual quieres borrar, escribe el nombre y ubicacion separados por un espacio (NOMBRE UBICACION):\n");
                             cin >> cine;
                             cout <<endl;
+                            //printf("Escribe la ubicacion:\n");
+                            cin >> ubi;
+                            cout <<endl;
+                            printf(ubi);
                             sprintf(sendBuff, "%s", cine);
+                            send(s, sendBuff, sizeof(sendBuff), 0);
+                            sprintf(sendBuff, "%s", ubi);
                             send(s, sendBuff, sizeof(sendBuff), 0);
 
                         }

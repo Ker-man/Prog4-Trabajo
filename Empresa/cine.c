@@ -64,7 +64,7 @@ Cine getCine(char* nombre, char* ubicacion, sqlite3* db){
 	sqlite3_stmt *stmt;
     Cine cine;
 	char seq[100];
-	sprintf(seq, "SELECT * FROM CINE WHERE NOM_CINE = '%s' AND UBI_CINE = '%s", nombre, ubicacion);
+	sprintf(seq, "SELECT * FROM CINE WHERE NOM_CINE = '%s' AND UBI_CINE = '%s'", nombre, ubicacion);
 
 	if (sqlite3_prepare_v2(db, seq, -1, &stmt, NULL) != SQLITE_OK) {
 		printf("Error al cargar el cine\n");

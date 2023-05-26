@@ -186,18 +186,23 @@ int main(void)
 					}
 					if(c == '2'){
 						int cont = getCinesCount(db);
-						char cineBorrar[MAX_LINEAS];
+						char cineBorrarNom[MAX_LINEAS];
+						char cineBorrarUbi[MAX_LINEAS];
 						Cine cineA;
-						sprintf(sendBuff, "%s",cont);
+						sprintf(sendBuff, "%i",cont);
 						send(comm_socket, sendBuff, sizeof(sendBuff), 0);
 						Cine* cines = getCines(db);
-						for(int i = 0; i<cont; i++){
+						for(int i = 1; i<=cont; i++){
 							sprintf(sendBuff, "%s",cines[i].nom_Cine);
+							send(comm_socket, sendBuff, sizeof(sendBuff), 0);
+							sprintf(sendBuff, "%s",cines[i].ubi_Cine);
 							send(comm_socket, sendBuff, sizeof(sendBuff), 0);
 						}
 						recv(comm_socket, recvBuff, sizeof(recvBuff), 0);
-						strcpy(cineBorrar, recvBuff);
-						cineA = getCineN(cineBorrar, db);
+						strcpy(cineBorrarNom, recvBuff);
+						recv(comm_socket, recvBuff, sizeof(recvBuff), 0);
+						strcpy(cineBorrarUbi, recvBuff);
+						cineA = getCine(cineBorrarNom, cineBorrarUbi, db);
 						deleteCine(cineA, db);
 					}
 
