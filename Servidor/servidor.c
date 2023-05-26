@@ -13,7 +13,8 @@
 #define DATABASE 0
 #define MAX_LINEAS 15
 
-int main(void) {
+int main(void) 
+{
 	WSADATA wsaData;
 	SOCKET conn_socket; 
 	SOCKET comm_socket; 
@@ -27,14 +28,16 @@ int main(void) {
 	User usuarioLogged;
 
 	printf("\nINICIALIZANDO EL WINSOCK...\n");
-	if (WSAStartup(MAKEWORD(2, 2), &wsaData) != 0) {
+	if (WSAStartup(MAKEWORD(2, 2), &wsaData) != 0) 
+	{
 		printf("Failed. Error Code : %d", WSAGetLastError());
 		return -1;
 	}
 
 	printf("INICIALIZADO CON EXITO.\n");
 
-	if ((conn_socket = socket(AF_INET, SOCK_STREAM, 0)) == INVALID_SOCKET) {
+	if ((conn_socket = socket(AF_INET, SOCK_STREAM, 0)) == INVALID_SOCKET) 
+	{
 		printf("NO SE HA PODIDO CREAR EL SOCKET : %d", WSAGetLastError());
 		WSACleanup();
 		return -1;
@@ -47,7 +50,8 @@ int main(void) {
 	server.sin_port = htons(SERVER_PORT);
 
 	if (bind(conn_socket, (struct sockaddr*)&server,
-		sizeof(server)) == SOCKET_ERROR) {
+		sizeof(server)) == SOCKET_ERROR) 
+	{
 		printf("ERROR DE ENLACE CON CODIGO DE ERROR: %d", WSAGetLastError());
 		closesocket(conn_socket);
 		WSACleanup();
@@ -56,7 +60,8 @@ int main(void) {
 
 	printf("ENLACE HECHO.\n"); 
 
-	if (listen(conn_socket, 1) == SOCKET_ERROR) {
+	if (listen(conn_socket, 1) == SOCKET_ERROR) 
+	{
 		printf("Error de escucha con código de error: %d", WSAGetLastError());
 		closesocket(conn_socket);
 		WSACleanup();
@@ -67,7 +72,8 @@ int main(void) {
 	int stsize = sizeof(struct sockaddr);
 	comm_socket = accept(conn_socket, (struct sockaddr*)&client, &stsize);
 	
-	if (comm_socket == INVALID_SOCKET) {
+	if (comm_socket == INVALID_SOCKET) 
+	{
 		printf("ERROR DE ACEPTACION CON CODIGO : %d", WSAGetLastError());
 		closesocket(conn_socket);
 		WSACleanup();
@@ -83,10 +89,12 @@ int main(void) {
 	char name[MAX_LINEAS];
 	char pass[MAX_LINEAS];
 
-    while (dev != '3'){
+    while (dev != '3')
+	{
         recv(comm_socket, recvBuff, sizeof(recvBuff), 0);
 		sscanf(recvBuff, "%c", &dev);
-		if (dev == '1') {
+		if (dev == '1') 
+		{
 			loggear("Registrar Usuario\n");
 			printf("Registrar Usuario\n");
 			sprintf(sendBuff, "%c", dev);
@@ -106,7 +114,8 @@ int main(void) {
 			printf("Usuario Registrado\n");
 			continue;
 		}
-		else if (dev == '2') {
+		else if (dev == '2') 
+		{
         	strcpy(name, "");
 			strcpy(pass, "");
 			loggear("Iniciar Sesion\n");
@@ -127,9 +136,11 @@ int main(void) {
 
 			char c;
 
-            if (strcmp(usuarioLogged.password, pass) == 0){ //0=Admin 1=Cliente
+            if (strcmp(usuarioLogged.password, pass) == 0)//0=Admin 1=Cliente
+			{ 
 				//send tipo 
-				if(usuarioLogged.tipo == 0){
+				if(usuarioLogged.tipo == 0)
+				{
 					sprintf(sendBuff, "%c",'0');
 					send(comm_socket, sendBuff, sizeof(sendBuff), 0);
 					loggear("Iniciando Sesion como Administrador\n");
@@ -168,14 +179,17 @@ int main(void) {
 					}
 
 
-				}else if(usuarioLogged.tipo == 1)
+				}
+				else if(usuarioLogged.tipo == 1)
 					sprintf(sendBuff, "%c",'1');
 					send(comm_socket, sendBuff, sizeof(sendBuff), 0);
 					loggear("Iniciando Sesion como Cliente\n");
 					printf("Iniciando Sesion...\n");
 					continue;
 				
-    		} else {
+    		} 
+			else 
+			{
 				sprintf(sendBuff, "%c", '2');
 				send(comm_socket, sendBuff, sizeof(sendBuff), 0);
 				loggear("Inicio Sesion Fallido\n");

@@ -11,7 +11,8 @@
 
 using namespace std;
 
-int main(void) {
+int main(void) 
+{
     WSADATA wsaData;
     SOCKET s;
     struct sockaddr_in server;
@@ -19,13 +20,15 @@ int main(void) {
     char sendBuff[512], recvBuff[512];
     cout << "----- CREACION DEL SOCKET ------" << endl;
     printf("\nINICIALIZANDO EL WINSOCK...\n");
-    if (WSAStartup(MAKEWORD(2, 2), &wsaData) != 0) {
+    if (WSAStartup(MAKEWORD(2, 2), &wsaData) != 0) 
+    {
         printf("Failed. Error Code : %d", WSAGetLastError());
         return -1;
     }
     cout << "\nINICIALIZADO CON EXITO." << endl;
 
-    if ((s = socket(AF_INET, SOCK_STREAM, 0)) == INVALID_SOCKET) {
+    if ((s = socket(AF_INET, SOCK_STREAM, 0)) == INVALID_SOCKET) 
+    {
         printf("\nNO SE HA PODIDO CREAR EL SOCKET : %d", WSAGetLastError());
         WSACleanup();
         return -1;
@@ -36,7 +39,8 @@ int main(void) {
     server.sin_family = AF_INET;
     server.sin_port = htons(SERVER_PORT);
 
-    if (connect(s, (struct sockaddr*)&server, sizeof(server)) == SOCKET_ERROR) {
+    if (connect(s, (struct sockaddr*)&server, sizeof(server)) == SOCKET_ERROR) 
+    {
         printf("\nERROR DE CONEXION: %d", WSAGetLastError());
         closesocket(s);
         WSACleanup();
@@ -47,7 +51,8 @@ int main(void) {
 
     char str[10];
     char c;
-    do{
+    do
+    {
         printf("\n\n=======================\n");
         printf("MENU INICIO DEUSTOCINES\n");
         printf("=======================\n");
@@ -56,7 +61,8 @@ int main(void) {
         printf("1. Registrar Usuario, 2. Iniciar Sesion, 3. Salir\n");
         cin >> c;
 
-        if (c != '\n' && (c == '1' || c == '2' )) {
+        if (c != '\n' && (c == '1' || c == '2' )) 
+        {
             char dev;
 
             sprintf(sendBuff, "%c", c);
@@ -65,7 +71,8 @@ int main(void) {
             strcpy(recvBuff, "");
             recv(s, recvBuff, sizeof(recvBuff), 0);
             sscanf(recvBuff, "%c", &dev);
-            if(dev == '1'){
+            if(dev == '1')
+            {
                 char name[MAX_LINEAS];
                 char pass[MAX_LINEAS];
                 cout << "Nombre Usuario:\n";
@@ -78,7 +85,9 @@ int main(void) {
                 sprintf(sendBuff, "%s", pass);
                 send(s, sendBuff, sizeof(sendBuff), 0);
                 continue;
-            } else if(dev == '2'){
+            } 
+            else if(dev == '2')
+            {
                 char name[MAX_LINEAS];
                 char pass[MAX_LINEAS];
                 cout << "Nombre Usuario:\n";
@@ -98,7 +107,8 @@ int main(void) {
                 if (dev == '0') //Menu admin
                 {
                     char opcion;
-                    do{   
+                    do
+                    {   
                         printf("\n\n\n==========================\n");
                         printf("MENU ADMINISTRADOR DEUSTOCINES\n");
                         printf("==========================\n");
@@ -110,7 +120,8 @@ int main(void) {
                         sprintf(sendBuff, "%c", opcion);
                         send(s, sendBuff, sizeof(sendBuff), 0);
 
-                        if(opcion == '1'){
+                        if(opcion == '1')
+                        {
                             printf("Nombre: ");
                             char nombre;
                             cin >>nombre;
@@ -134,17 +145,24 @@ int main(void) {
                             send(s, sendBuff, sizeof(sendBuff), 0);
                             continue;
 
-                        }else if(opcion == '2'){
+                        }
+                        else if(opcion == '2')
+                        {
 
                             
 
-                        }else if(opcion == '3'){
+                        }
+                        else if(opcion == '3')
+                        {
                             
                         }
-                    }while(opcion != '4');
+                    }
+                    while(opcion != '4');
 
 
-                } else if(dev == '1'){ //Menu Cliente
+                } 
+                else if(dev == '1')//Menu Cliente
+                { 
                     char opcion;
                     printf("\n\n\n==========================\n");
                     printf("MENU USUARIO DEUSTOCINES\n");
@@ -154,24 +172,32 @@ int main(void) {
                     printf("1. Menu cines", "2. Menu peliculas", "3. salir");
                     cin >> opcion;
 
-                    if(opcion==1){
+                    if(opcion==1)
+                    {
                         cout << "Entrando en menu cines";
 
-                    }else if(opcion==2){
+                    }
+                    else if(opcion==2)
+                    {
                         cout << "Entrando en menu peliculas";
                     }
-                }else if(dev == 2){
+                }
+                else if(dev == 2)
+                {
                     printf("Usuario o contrasenya incorrecta.");
                 }
             printf("¡Hasta pronto!:\n");
             
-            }else{
+            }
+            else
+            {
                 printf("Else");
             }
         }
         
     
-   }while(c != '3');
+   }
+   while(c != '3');
     printf("\n");
     printf("Hasta Pronto");
     printf("\n");
