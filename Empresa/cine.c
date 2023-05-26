@@ -104,8 +104,11 @@ Cine getCineN(char* nombre, sqlite3* db){
 
 void addCine(int numSalas, char* nombre, char* ubicacion, sqlite3* db){
 	int cont = getCinesCount(db);
+	printf("empiezo\n");
 	char seq[200];
 	sprintf(seq, "INSERT INTO CINE(ID, NUMSALAS, NOM_CINE, UBI_CINE) VALUES (%i, %i, '%s', '%s')",cont+1, numSalas, nombre, ubicacion);
+	printf("acabo\n");
+	printf(seq);
 	update(seq, db);
 }
 

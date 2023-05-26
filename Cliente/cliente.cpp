@@ -123,25 +123,26 @@ int main(void)
                         if(opcion == '1')
                         {
                             printf("Nombre: ");
-                            char nombre;
+                            char nombre[MAX_LINEAS];
                             cin >>nombre;
                             cout <<endl;
 
                             printf("Ubicacion: ");
-                            char ubicacion;
+                            char ubicacion[MAX_LINEAS];
                             cin >>ubicacion;
                             cout <<endl;
 
                             printf("Numero de salas: ");
-                            int numSalas;
+                            char numSalas[MAX_LINEAS];
                             cin >>numSalas;
+                            printf("%s", numSalas);
                             cout <<endl;
 
                             sprintf(sendBuff, "%s", nombre);
                             send(s, sendBuff, sizeof(sendBuff), 0);
                             sprintf(sendBuff, "%s", ubicacion);
                             send(s, sendBuff, sizeof(sendBuff), 0);
-                            sprintf(sendBuff, "%s", numSalas);
+                            sprintf(sendBuff, "%s", numSalas);                          
                             send(s, sendBuff, sizeof(sendBuff), 0);
                             continue;
 
@@ -257,6 +258,8 @@ int main(void)
     
    }
    while(c != '3');
+    sprintf(sendBuff, "%c", '3');
+    send(s, sendBuff, sizeof(sendBuff), 0);
     printf("\n");
     printf("Hasta Pronto");
     printf("\n");

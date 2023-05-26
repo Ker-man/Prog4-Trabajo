@@ -171,9 +171,13 @@ int main(void)
 						loggear("\n");
 
 						recv(comm_socket, recvBuff, sizeof(recvBuff), 0);
-						sscanf(recvBuff, "%i", numSalas);
+						printf(recvBuff);
+						sscanf(recvBuff, "%d", &numSalas);					
 						loggear("Numero de Salas Cine recibido: ");
-						loggear((char*)numSalas);
+						char numSalasL[MAX_LINEAS];
+						printf("%i", numSalas);
+						sprintf(numSalasL, "%i", numSalas);
+						loggear(numSalasL);
 						loggear("\n");
 
 						addCine(numSalas,nombre,ubicacion,db);
