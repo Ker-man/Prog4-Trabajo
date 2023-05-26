@@ -262,7 +262,8 @@ int main(void)
 									for(int i = 0; i<cont; i++){
 										sprintf(sendBuff, "%s",sesiones[i].horario);
 										send(comm_socket, sendBuff, sizeof(sendBuff), 0);
-										sprintf(sendBuff, "%s",sesiones[i].id_Sesion);
+										sprintf(sendBuff, "%i",sesiones[i].id_Sesion);
+										printf("%i", sesiones[i].id_Sesion);
 										send(comm_socket, sendBuff, sizeof(sendBuff), 0);
 									}
 									recv(comm_socket, recvBuff, sizeof(recvBuff), 0);
