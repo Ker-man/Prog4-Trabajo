@@ -135,16 +135,13 @@ int main(void)
 			loggear(pass);
 			loggear("\n");
 			usuarioLogged = getUsuario(name, db);
-			printf("Aaaa");
 			char c;
 
             if (strcmp(usuarioLogged.password, pass) == 0)//0=Admin 1=Cliente
 			{ 
-				printf("bbb");
 				//send tipo 
 				if(usuarioLogged.tipo == 0)
 				{
-					printf("ccc");
 					sprintf(sendBuff, "%c",'0');
 					send(comm_socket, sendBuff, sizeof(sendBuff), 0);
 					loggear("Iniciando Sesion como Administrador\n");
@@ -199,6 +196,7 @@ int main(void)
 								sprintf(sendBuff, "%s",cines[i].ubi_Cine);
 								send(comm_socket, sendBuff, sizeof(sendBuff), 0);
 							}
+							free(cines);
 							recv(comm_socket, recvBuff, sizeof(recvBuff), 0);
 							strcpy(cineBorrarNom, recvBuff);
 							recv(comm_socket, recvBuff, sizeof(recvBuff), 0);
@@ -267,6 +265,7 @@ int main(void)
 										printf("%i", sesiones[i].id_Sesion);
 										send(comm_socket, sendBuff, sizeof(sendBuff), 0);
 									}
+									free(sesiones);
 									recv(comm_socket, recvBuff, sizeof(recvBuff), 0);
 									sscanf(recvBuff, "%d", &idSesion);
 									printf("\n---%i---",idSesion);
@@ -280,7 +279,6 @@ int main(void)
 
 				}
 				else if(usuarioLogged.tipo == 1){
-					printf("ddd");
 					sprintf(sendBuff, "%c",'1');
 					send(comm_socket, sendBuff, sizeof(sendBuff), 0);
 					loggear("Iniciando Sesion como Cliente\n");
@@ -290,27 +288,44 @@ int main(void)
 						recv(comm_socket, recvBuff, sizeof(recvBuff), 0);
 						sscanf(recvBuff, "%c", &o);
 						if(o == '1'){
-							printf("\n SI");
 							char op;
 							do{
+								Peli* pelis = getPeliculas(db);
+								int cont = getPelisCount(db);
 								recv(comm_socket, recvBuff, sizeof(recvBuff), 0);
 								sscanf(recvBuff, "%c", &op);
 								if(op == '1'){
-									printf("A");
-									int cont = getPelisCount(db);
 									sprintf(sendBuff, "%i",cont);
 									send(comm_socket, sendBuff, sizeof(sendBuff), 0);
-									Peli* pelis = getPeliculas(db);
-									for(int i = 0; i<cont; i++){
-										printf("B");
+									for(int i = 1; i<=cont; i++){
 										sprintf(sendBuff, "%s",pelis[i].titulo);
 										send(comm_socket, sendBuff, sizeof(sendBuff), 0);
 										sprintf(sendBuff, "%s",pelis[i].genero);
 										send(comm_socket, sendBuff, sizeof(sendBuff), 0);
 									}
-									printf("C");
+									free(pelis);
 								}else if(op == '2'){
-
+									char titulo[MAX_LINEAS];
+									Peli pelicula;
+									recv(comm_socket, recvBuff, sizeof(recvBuff), 0);
+									sscanf(recvBuff, "%s", titulo);
+									printf("%s", titulo);
+									for(int i=0; i<cont; i++){
+										if(strcmp(pelis[i].titulo, titulo) == 0){
+											pelicula=pelis[i];
+											break;
+										}else{
+											printf("\n\t\t\t\tesa peli no esta en nuestro registro");
+                    					}
+									}
+									sprintf(sendBuff, "%i",pelicula.id_Peli);
+									send(comm_socket, sendBuff, sizeof(sendBuff), 0);
+									sprintf(sendBuff, "%s",pelicula.titulo);
+									send(comm_socket, sendBuff, sizeof(sendBuff), 0);
+									sprintf(sendBuff, "%i",pelicula.duracion);
+									send(comm_socket, sendBuff, sizeof(sendBuff), 0);
+									sprintf(sendBuff, "%s",pelicula.genero);
+									send(comm_socket, sendBuff, sizeof(sendBuff), 0);
 								}else if(op == '3'){
 
 								}

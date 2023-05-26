@@ -259,17 +259,11 @@ void leerPeliculaFichero(sqlite3* db) {
         if (c == ';') {
             count++;
             if (count == 4) {
-                printf("%s\n", array[3]);
                 sscanf(array[0],"%i",&p[index].id_Peli);
-                printf("a");
                 strcpy(p[index].titulo, array[1]);
-                printf("b");
                 strcpy(p[index].genero, array[2]);
-                printf("c");
                 sscanf(array[3],"%i",&p[index].duracion);
-                printf("d");
                 for (int i = 0; i < 4; i++) {
-                    printf("%s\n", array[i]);
                     array[i][0] = '\0';
                 }
                 index++;
@@ -279,14 +273,11 @@ void leerPeliculaFichero(sqlite3* db) {
             continue;
         } else {
 
-            printf("\n %c ",c);
             strncat(array[count], &c, 1);
-            printf(array[count]);
             
         }
     }
     
-    printf("\n");
     fclose(f);
 
 
@@ -294,7 +285,7 @@ void leerPeliculaFichero(sqlite3* db) {
         //imprimirPelicula(p[i]);
         addPelicula(p[i].titulo, p[i].genero, p[i].duracion, p[i].id_Peli, db);
     }
-
+    free(p);
 }
 
 

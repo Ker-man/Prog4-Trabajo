@@ -47,39 +47,3 @@ void mascara(char password[30])
     }
     //printf("\nclave: %s",password);
 }
-int solapar(Sesion sesion, Sesion* sesiones, int cont){
-    int posible = 0;
-
-    char* horaini = sesion.horario[0] + sesion.horario[1];
-    char* minini = sesion.horario[3] + sesion.horario[4];
-    int finalTimeH;
-    int finalTimeM;
-    sscanf(horaini, "%d", &finalTimeH);
-    sscanf(minini, "%d", &finalTimeM);
-
-    do{
-        for (int i = 0; i<cont; i++){
-            char* horaini = sesiones[i].horario[0] + sesiones[i].horario[1];
-            char* minini = sesiones[i].horario[3] + sesiones[i].horario[4];
-            int h;
-            int m;
-            sscanf(horaini, "%d", &h);
-            sscanf(minini, "%d", &m);
-            
-            if (h < finalTimeH){
-                posible = 1;     
-            }else{
-                if (h == finalTimeH && m <= finalTimeM){
-                    posible = 1; 
-                }else{
-                    m = m + sesion.peli.duracion;
-                    finalTimeH = h + (m/60);
-                    finalTimeM = m%60;   
-                }
-            }
-        }
-        return posible; //If posible == 0 la sesion no solapa
-    }while (posible != 1); 
-    
-    return posible;//If posible == 1 la sesion solapa
-}

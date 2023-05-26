@@ -269,28 +269,51 @@ int main(void)
                     {
                         char op;
                         do{
-                            printf("Entrando en menu Peliculas\n");
+                            printf("\nEntrando en menu Peliculas\n");
                             printf("1. Ver todas las peliculas 2. Buscar pelicula por nombre 3. Buscar peliulas por genero 4. Salir\n");
                             cin >> op;
                             cout << endl;
                             sprintf(sendBuff, "%c", op);
                             send(s, sendBuff, sizeof(sendBuff), 0);
                             if(op == '1'){
-                                int n;
+                                int n = 0;
+                                int n2;
                                 char nombre[MAX_LINEAS];
                                 char genero[MAX_LINEAS];
                                 recv(s, recvBuff, sizeof(recvBuff), 0);
-                                sscanf(recvBuff, "%i", &n); 
+                                sscanf(recvBuff, "%i", &n);
+                                printf("%i ", n);
+                                n2 = n;
                                 printf("Pelis en la base de Datos\n");
-                                for(int i = 1; i<n; i++){
+                                for(int i = 0; i<n2; i++){
+                                    
                                     recv(s, recvBuff, sizeof(recvBuff), 0);
-                                    sscanf(recvBuff, "%s", nombre);
+                                    strcpy(nombre, recvBuff);
                                     recv(s, recvBuff, sizeof(recvBuff), 0);
-                                    sscanf(recvBuff, "%s", genero);
+                                    strcpy(genero, recvBuff);
                                     printf("Pelicula: %s - %s\n", nombre, genero);
                                 }
                             }else if(op == '2'){
+                                char titulo[MAX_LINEAS];
+                                int idPeli;
+                                int duracion;
+                                char genero[MAX_LINEAS];
+                                printf("Peli a buscar (Titulo):\n");
+                                cin >> titulo;
+                                cout << endl;
+                                sprintf(sendBuff, "%s", titulo);
+                                send(s, sendBuff, sizeof(sendBuff), 0);
 
+                                recv(s, recvBuff, sizeof(recvBuff), 0);
+                                sscanf(recvBuff, "%i", &idPeli);
+                                recv(s, recvBuff, sizeof(recvBuff), 0);
+                                sscanf(recvBuff, "%s", titulo);
+                                recv(s, recvBuff, sizeof(recvBuff), 0);
+                                sscanf(recvBuff, "%i", &duracion);
+                                recv(s, recvBuff, sizeof(recvBuff), 0);
+                                sscanf(recvBuff, "%s", genero);
+                                printf("La pelicula que buscas es: ID: %i, Titulo: %s, Duracion: %i, Genero: %s\n", idPeli, titulo, duracion, genero);
+                                
                             }else if(op == '3'){
                                 
                             }
