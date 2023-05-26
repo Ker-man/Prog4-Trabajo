@@ -191,24 +191,24 @@ int main(void)
                                 send(s, sendBuff, sizeof(sendBuff), 0);
                                 if(eleccion == '1'){
                                     printf("Horario: ");
-                                    char horario;
-                                    cin >>horario;
-                                    cout <<endl;
+                                    char horario[MAX_LINEAS];
+                                    cin >> horario;
+                                    cout << endl;
 
                                     printf("Precio: ");
                                     int precio;
-                                    cin >>precio;
-                                    cout <<endl;
+                                    cin >> precio;
+                                    cout << endl;
 
                                     printf("ID de la sala: ");
                                     int idSala;
-                                    cin >>idSala;
-                                    cout <<endl;
+                                    cin >> idSala;
+                                    cout << endl;
 
                                     printf("ID de la Peli: ");
                                     int idPeli;
-                                    cin >>idPeli;
-                                    cout <<endl;
+                                    cin >> idPeli;
+                                    cout << endl;
 
                                     sprintf(sendBuff, "%s", horario);
                                     send(s, sendBuff, sizeof(sendBuff), 0);

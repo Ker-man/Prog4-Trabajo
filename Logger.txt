@@ -1,0 +1,1399 @@
+05/26/23 17:53:54
+Usuario Logueado
+Conexion realizada entre servidor y cliente
+Iniciar Sesion
+Nombre Usuario recibido: admin
+Contrasenya Usuario recibida: admin
+Iniciando Sesion como Administrador
+Esperando la introducción de parametros de sesion...Horario Sesion recibido: 1
+Precio de Sesion recibido: 1
+idSala de Sesion recibido: 1
+idPeli de Sesion recibido: 1
+Esperando la introducción de parametros de cine...Nombre Cine recibido: 1
+Ubicacion Cine recibido: 1
+Numero de Salas Cine recibido: 1
+Cine añadido a la base de datosEsperando la introducción de parametros de cine...Nombre Cine recibido: 1
+Ubicacion Cine recibido: 1
+Numero de Salas Cine recibido: 1
+Cine añadido a la base de datosEsperando la introducción de parametros de cine...Nombre Cine recibido: 1
+Ubicacion Cine recibido: 1
+Numero de Salas Cine recibido: 1
+Cine añadido a la base de datosEsperando la introducción de parametros de cine...Nombre Cine recibido: 1
+Ubicacion Cine recibido: 1
+Numero de Salas Cine recibido: 1
+Cine añadido a la base de datosEsperando la introducción de parametros de cine...Nombre Cine recibido: 1
+Ubicacion Cine recibido: 1
+Numero de Salas Cine recibido: 1
+Cine añadido a la base de datosEsperando la introducción de parametros de cine...Nombre Cine recibido: 1
+Ubicacion Cine recibido: 1
+Numero de Salas Cine recibido: 1
+Cine añadido a la base de datosEsperando la introducción de parametros de cine...Nombre Cine recibido: 1
+Ubicacion Cine recibido: 1
+Numero de Salas Cine recibido: 1
+Cine añadido a la base de datosEsperando la introducción de parametros de cine...Nombre Cine recibido: 1
+Ubicacion Cine recibido: 1
+Numero de Salas Cine recibido: 1
+Cine añadido a la base de datosEsperando la introducción de parametros de cine...Nombre Cine recibido: 1
+Ubicacion Cine recibido: 1
+Numero de Salas Cine recibido: 1
+Cine añadido a la base de datosEsperando la introducción de parametros de cine...Nombre Cine recibido: 1
+Ubicacion Cine recibido: 1
+Numero de Salas Cine recibido: 1
+Cine añadido a la base de datosEsperando la introducción de parametros de cine...Nombre Cine recibido: 1
+Ubicacion Cine recibido: 1
+Numero de Salas Cine recibido: 1
+Cine añadido a la base de datosEsperando la introducción de parametros de cine...Nombre Cine recibido: 1
+Ubicacion Cine recibido: 1
+Numero de Salas Cine recibido: 1
+Cine añadido a la base de datosEsperando la introducción de parametros de cine...Nombre Cine recibido: 1
+Ubicacion Cine recibido: 1
+Numero de Salas Cine recibido: 1
+Cine añadido a la base de datosEsperando la introducción de parametros de cine...Nombre Cine recibido: 1
+Ubicacion Cine recibido: 1
+Numero de Salas Cine recibido: 1
+Cine añadido a la base de datosEsperando la introducción de parametros de cine...Nombre Cine recibido: 1
+Ubicacion Cine recibido: 1
+Numero de Salas Cine recibido: 1
+Cine añadido a la base de datosEsperando la introducción de parametros de cine...Nombre Cine recibido: 1
+Ubicacion Cine recibido: 1
+Numero de Salas Cine recibido: 1
+Cine añadido a la base de datosEsperando la introducción de parametros de cine...Nombre Cine recibido: 1
+Ubicacion Cine recibido: 1
+Numero de Salas Cine recibido: 1
+Cine añadido a la base de datosEsperando la introducción de parametros de cine...Nombre Cine recibido: 1
+Ubicacion Cine recibido: 1
+Numero de Salas Cine recibido: 1
+Cine añadido a la base de datosEsperando la introducción de parametros de cine...Nombre Cine recibido: 1
+Ubicacion Cine recibido: 1
+Numero de Salas Cine recibido: 1
+Cine añadido a la base de datosEsperando la introducción de parametros de cine...Nombre Cine recibido: 1
+Ubicacion Cine recibido: 1
+Numero de Salas Cine recibido: 1
+Cine añadido a la base de datosEsperando la introducción de parametros de cine...Nombre Cine recibido: 1
+Ubicacion Cine recibido: 1
+Numero de Salas Cine recibido: 1
+Cine añadido a la base de datosEsperando la introducción de parametros de cine...Nombre Cine recibido: 1
+Ubicacion Cine recibido: 1
+Numero de Salas Cine recibido: 1
+Cine añadido a la base de datosEsperando la introducción de parametros de cine...Nombre Cine recibido: 1
+Ubicacion Cine recibido: 1
+Numero de Salas Cine recibido: 1
+Cine añadido a la base de datosEsperando la introducción de parametros de cine...Nombre Cine recibido: 1
+Ubicacion Cine recibido: 1
+Numero de Salas Cine recibido: 1
+Cine añadido a la base de datosEsperando la introducción de parametros de cine...Nombre Cine recibido: 1
+Ubicacion Cine recibido: 1
+Numero de Salas Cine recibido: 1
+Cine añadido a la base de datosEsperando la introducción de parametros de cine...Nombre Cine recibido: 1
+Ubicacion Cine recibido: 1
+Numero de Salas Cine recibido: 1
+Cine añadido a la base de datosEsperando la introducción de parametros de cine...Nombre Cine recibido: 1
+Ubicacion Cine recibido: 1
+Numero de Salas Cine recibido: 1
+Cine añadido a la base de datosEsperando la introducción de parametros de cine...Nombre Cine recibido: 1
+Ubicacion Cine recibido: 1
+Numero de Salas Cine recibido: 1
+Cine añadido a la base de datosEsperando la introducción de parametros de cine...Nombre Cine recibido: 1
+Ubicacion Cine recibido: 1
+Numero de Salas Cine recibido: 1
+Cine añadido a la base de datosEsperando la introducción de parametros de cine...Nombre Cine recibido: 1
+Ubicacion Cine recibido: 1
+Numero de Salas Cine recibido: 1
+Cine añadido a la base de datosEsperando la introducción de parametros de cine...Nombre Cine recibido: 1
+Ubicacion Cine recibido: 1
+Numero de Salas Cine recibido: 1
+Cine añadido a la base de datosEsperando la introducción de parametros de cine...Nombre Cine recibido: 1
+Ubicacion Cine recibido: 1
+Numero de Salas Cine recibido: 1
+Cine añadido a la base de datosEsperando la introducción de parametros de cine...Nombre Cine recibido: 1
+Ubicacion Cine recibido: 1
+Numero de Salas Cine recibido: 1
+Cine añadido a la base de datosEsperando la introducción de parametros de cine...Nombre Cine recibido: 1
+Ubicacion Cine recibido: 1
+Numero de Salas Cine recibido: 1
+Cine añadido a la base de datosEsperando la introducción de parametros de cine...Nombre Cine recibido: 1
+Ubicacion Cine recibido: 1
+Numero de Salas Cine recibido: 1
+Cine añadido a la base de datosEsperando la introducción de parametros de cine...Nombre Cine recibido: 1
+Ubicacion Cine recibido: 1
+Numero de Salas Cine recibido: 1
+Cine añadido a la base de datosEsperando la introducción de parametros de cine...Nombre Cine recibido: 1
+Ubicacion Cine recibido: 1
+Numero de Salas Cine recibido: 1
+Cine añadido a la base de datosEsperando la introducción de parametros de cine...Nombre Cine recibido: 1
+Ubicacion Cine recibido: 1
+Numero de Salas Cine recibido: 1
+Cine añadido a la base de datosEsperando la introducción de parametros de cine...Nombre Cine recibido: 1
+Ubicacion Cine recibido: 1
+Numero de Salas Cine recibido: 1
+Cine añadido a la base de datosEsperando la introducción de parametros de cine...Nombre Cine recibido: 1
+Ubicacion Cine recibido: 1
+Numero de Salas Cine recibido: 1
+Cine añadido a la base de datosEsperando la introducción de parametros de cine...Nombre Cine recibido: 1
+Ubicacion Cine recibido: 1
+Numero de Salas Cine recibido: 1
+Cine añadido a la base de datosEsperando la introducción de parametros de cine...Nombre Cine recibido: 1
+Ubicacion Cine recibido: 1
+Numero de Salas Cine recibido: 1
+Cine añadido a la base de datosEsperando la introducción de parametros de cine...Nombre Cine recibido: 1
+Ubicacion Cine recibido: 1
+Numero de Salas Cine recibido: 1
+Cine añadido a la base de datosEsperando la introducción de parametros de cine...Nombre Cine recibido: 1
+Ubicacion Cine recibido: 1
+Numero de Salas Cine recibido: 1
+Cine añadido a la base de datosEsperando la introducción de parametros de cine...Nombre Cine recibido: 1
+Ubicacion Cine recibido: 1
+Numero de Salas Cine recibido: 1
+Cine añadido a la base de datosEsperando la introducción de parametros de cine...Nombre Cine recibido: 1
+Ubicacion Cine recibido: 1
+Numero de Salas Cine recibido: 1
+Cine añadido a la base de datosEsperando la introducción de parametros de cine...Nombre Cine recibido: 1
+Ubicacion Cine recibido: 1
+Numero de Salas Cine recibido: 1
+Cine añadido a la base de datosEsperando la introducción de parametros de cine...Nombre Cine recibido: 1
+Ubicacion Cine recibido: 1
+Numero de Salas Cine recibido: 1
+Cine añadido a la base de datosEsperando la introducción de parametros de cine...Nombre Cine recibido: 1
+Ubicacion Cine recibido: 1
+Numero de Salas Cine recibido: 1
+Cine añadido a la base de datosEsperando la introducción de parametros de cine...Nombre Cine recibido: 1
+Ubicacion Cine recibido: 1
+Numero de Salas Cine recibido: 1
+Cine añadido a la base de datosEsperando la introducción de parametros de cine...Nombre Cine recibido: 1
+Ubicacion Cine recibido: 1
+Numero de Salas Cine recibido: 1
+Cine añadido a la base de datosEsperando la introducción de parametros de cine...Nombre Cine recibido: 1
+Ubicacion Cine recibido: 1
+Numero de Salas Cine recibido: 1
+Cine añadido a la base de datosEsperando la introducción de parametros de cine...Nombre Cine recibido: 1
+Ubicacion Cine recibido: 1
+Numero de Salas Cine recibido: 1
+Cine añadido a la base de datosEsperando la introducción de parametros de cine...Nombre Cine recibido: 1
+Ubicacion Cine recibido: 1
+Numero de Salas Cine recibido: 1
+Cine añadido a la base de datosEsperando la introducción de parametros de cine...Nombre Cine recibido: 1
+Ubicacion Cine recibido: 1
+Numero de Salas Cine recibido: 1
+Cine añadido a la base de datosEsperando la introducción de parametros de cine...Nombre Cine recibido: 1
+Ubicacion Cine recibido: 1
+Numero de Salas Cine recibido: 1
+Cine añadido a la base de datosEsperando la introducción de parametros de cine...Nombre Cine recibido: 1
+Ubicacion Cine recibido: 1
+Numero de Salas Cine recibido: 1
+Cine añadido a la base de datosEsperando la introducción de parametros de cine...Nombre Cine recibido: 1
+Ubicacion Cine recibido: 1
+Numero de Salas Cine recibido: 1
+Cine añadido a la base de datosEsperando la introducción de parametros de cine...Nombre Cine recibido: 1
+Ubicacion Cine recibido: 1
+Numero de Salas Cine recibido: 1
+Cine añadido a la base de datosEsperando la introducción de parametros de cine...Nombre Cine recibido: 1
+Ubicacion Cine recibido: 1
+Numero de Salas Cine recibido: 1
+Cine añadido a la base de datosEsperando la introducción de parametros de cine...Nombre Cine recibido: 1
+Ubicacion Cine recibido: 1
+Numero de Salas Cine recibido: 1
+Cine añadido a la base de datosEsperando la introducción de parametros de cine...Nombre Cine recibido: 1
+Ubicacion Cine recibido: 1
+Numero de Salas Cine recibido: 1
+Cine añadido a la base de datosEsperando la introducción de parametros de cine...Nombre Cine recibido: 1
+Ubicacion Cine recibido: 1
+Numero de Salas Cine recibido: 1
+Cine añadido a la base de datosEsperando la introducción de parametros de cine...Nombre Cine recibido: 1
+Ubicacion Cine recibido: 1
+Numero de Salas Cine recibido: 1
+Cine añadido a la base de datosEsperando la introducción de parametros de cine...Nombre Cine recibido: 1
+Ubicacion Cine recibido: 1
+Numero de Salas Cine recibido: 1
+Cine añadido a la base de datosEsperando la introducción de parametros de cine...Nombre Cine recibido: 1
+Ubicacion Cine recibido: 1
+Numero de Salas Cine recibido: 1
+Cine añadido a la base de datosEsperando la introducción de parametros de cine...Nombre Cine recibido: 1
+Ubicacion Cine recibido: 1
+Numero de Salas Cine recibido: 1
+Cine añadido a la base de datosEsperando la introducción de parametros de cine...Nombre Cine recibido: 1
+Ubicacion Cine recibido: 1
+Numero de Salas Cine recibido: 1
+Cine añadido a la base de datosEsperando la introducción de parametros de cine...Nombre Cine recibido: 1
+Ubicacion Cine recibido: 1
+Numero de Salas Cine recibido: 1
+Cine añadido a la base de datosEsperando la introducción de parametros de cine...Nombre Cine recibido: 1
+Ubicacion Cine recibido: 1
+Numero de Salas Cine recibido: 1
+Cine añadido a la base de datosEsperando la introducción de parametros de cine...Nombre Cine recibido: 1
+Ubicacion Cine recibido: 1
+Numero de Salas Cine recibido: 1
+Cine añadido a la base de datosEsperando la introducción de parametros de cine...Nombre Cine recibido: 1
+Ubicacion Cine recibido: 1
+Numero de Salas Cine recibido: 1
+Cine añadido a la base de datosEsperando la introducción de parametros de cine...Nombre Cine recibido: 1
+Ubicacion Cine recibido: 1
+Numero de Salas Cine recibido: 1
+Cine añadido a la base de datosEsperando la introducción de parametros de cine...Nombre Cine recibido: 1
+Ubicacion Cine recibido: 1
+Numero de Salas Cine recibido: 1
+Cine añadido a la base de datosEsperando la introducción de parametros de cine...Nombre Cine recibido: 1
+Ubicacion Cine recibido: 1
+Numero de Salas Cine recibido: 1
+Cine añadido a la base de datosEsperando la introducción de parametros de cine...Nombre Cine recibido: 1
+Ubicacion Cine recibido: 1
+Numero de Salas Cine recibido: 1
+Cine añadido a la base de datosEsperando la introducción de parametros de cine...Nombre Cine recibido: 1
+Ubicacion Cine recibido: 1
+Numero de Salas Cine recibido: 1
+Cine añadido a la base de datosEsperando la introducción de parametros de cine...Nombre Cine recibido: 1
+Ubicacion Cine recibido: 1
+Numero de Salas Cine recibido: 1
+Cine añadido a la base de datosEsperando la introducción de parametros de cine...Nombre Cine recibido: 1
+Ubicacion Cine recibido: 1
+Numero de Salas Cine recibido: 1
+Cine añadido a la base de datosEsperando la introducción de parametros de cine...Nombre Cine recibido: 1
+Ubicacion Cine recibido: 1
+Numero de Salas Cine recibido: 1
+Cine añadido a la base de datosEsperando la introducción de parametros de cine...Nombre Cine recibido: 1
+Ubicacion Cine recibido: 1
+Numero de Salas Cine recibido: 1
+Cine añadido a la base de datosEsperando la introducción de parametros de cine...Nombre Cine recibido: 1
+Ubicacion Cine recibido: 1
+Numero de Salas Cine recibido: 1
+Cine añadido a la base de datosEsperando la introducción de parametros de cine...Nombre Cine recibido: 1
+Ubicacion Cine recibido: 1
+Numero de Salas Cine recibido: 1
+Cine añadido a la base de datosEsperando la introducción de parametros de cine...Nombre Cine recibido: 1
+Ubicacion Cine recibido: 1
+Numero de Salas Cine recibido: 1
+Cine añadido a la base de datosEsperando la introducción de parametros de cine...Nombre Cine recibido: 1
+Ubicacion Cine recibido: 1
+Numero de Salas Cine recibido: 1
+Cine añadido a la base de datosEsperando la introducción de parametros de cine...Nombre Cine recibido: 1
+Ubicacion Cine recibido: 1
+Numero de Salas Cine recibido: 1
+Cine añadido a la base de datosEsperando la introducción de parametros de cine...Nombre Cine recibido: 1
+Ubicacion Cine recibido: 1
+Numero de Salas Cine recibido: 1
+Cine añadido a la base de datosEsperando la introducción de parametros de cine...Nombre Cine recibido: 1
+Ubicacion Cine recibido: 1
+Numero de Salas Cine recibido: 1
+Cine añadido a la base de datosEsperando la introducción de parametros de cine...Nombre Cine recibido: 1
+Ubicacion Cine recibido: 1
+Numero de Salas Cine recibido: 1
+Cine añadido a la base de datosEsperando la introducción de parametros de cine...Nombre Cine recibido: 1
+Ubicacion Cine recibido: 1
+Numero de Salas Cine recibido: 1
+Cine añadido a la base de datosEsperando la introducción de parametros de cine...Nombre Cine recibido: 1
+Ubicacion Cine recibido: 1
+Numero de Salas Cine recibido: 1
+Cine añadido a la base de datosEsperando la introducción de parametros de cine...Nombre Cine recibido: 1
+Ubicacion Cine recibido: 1
+Numero de Salas Cine recibido: 1
+Cine añadido a la base de datosEsperando la introducción de parametros de cine...Nombre Cine recibido: 1
+Ubicacion Cine recibido: 1
+Numero de Salas Cine recibido: 1
+Cine añadido a la base de datosEsperando la introducción de parametros de cine...Nombre Cine recibido: 1
+Ubicacion Cine recibido: 1
+Numero de Salas Cine recibido: 1
+Cine añadido a la base de datosEsperando la introducción de parametros de cine...Nombre Cine recibido: 1
+Ubicacion Cine recibido: 1
+Numero de Salas Cine recibido: 1
+Cine añadido a la base de datosEsperando la introducción de parametros de cine...Nombre Cine recibido: 1
+Ubicacion Cine recibido: 1
+Numero de Salas Cine recibido: 1
+Cine añadido a la base de datosEsperando la introducción de parametros de cine...Nombre Cine recibido: 1
+Ubicacion Cine recibido: 1
+Numero de Salas Cine recibido: 1
+Cine añadido a la base de datosEsperando la introducción de parametros de cine...Nombre Cine recibido: 1
+Ubicacion Cine recibido: 1
+Numero de Salas Cine recibido: 1
+Cine añadido a la base de datosEsperando la introducción de parametros de cine...Nombre Cine recibido: 1
+Ubicacion Cine recibido: 1
+Numero de Salas Cine recibido: 1
+Cine añadido a la base de datosEsperando la introducción de parametros de cine...Nombre Cine recibido: 1
+Ubicacion Cine recibido: 1
+Numero de Salas Cine recibido: 1
+Cine añadido a la base de datosEsperando la introducción de parametros de cine...Nombre Cine recibido: 1
+Ubicacion Cine recibido: 1
+Numero de Salas Cine recibido: 1
+Cine añadido a la base de datosEsperando la introducción de parametros de cine...Nombre Cine recibido: 1
+Ubicacion Cine recibido: 1
+Numero de Salas Cine recibido: 1
+Cine añadido a la base de datosEsperando la introducción de parametros de cine...Nombre Cine recibido: 1
+Ubicacion Cine recibido: 1
+Numero de Salas Cine recibido: 1
+Cine añadido a la base de datosEsperando la introducción de parametros de cine...Nombre Cine recibido: 1
+Ubicacion Cine recibido: 1
+Numero de Salas Cine recibido: 1
+Cine añadido a la base de datosEsperando la introducción de parametros de cine...Nombre Cine recibido: 1
+Ubicacion Cine recibido: 1
+Numero de Salas Cine recibido: 1
+Cine añadido a la base de datosEsperando la introducción de parametros de cine...Nombre Cine recibido: 1
+Ubicacion Cine recibido: 1
+Numero de Salas Cine recibido: 1
+Cine añadido a la base de datosEsperando la introducción de parametros de cine...Nombre Cine recibido: 1
+Ubicacion Cine recibido: 1
+Numero de Salas Cine recibido: 1
+Cine añadido a la base de datosEsperando la introducción de parametros de cine...Nombre Cine recibido: 1
+Ubicacion Cine recibido: 1
+Numero de Salas Cine recibido: 1
+Cine añadido a la base de datosEsperando la introducción de parametros de cine...Nombre Cine recibido: 1
+Ubicacion Cine recibido: 1
+Numero de Salas Cine recibido: 1
+Cine añadido a la base de datosEsperando la introducción de parametros de cine...Nombre Cine recibido: 1
+Ubicacion Cine recibido: 1
+Numero de Salas Cine recibido: 1
+Cine añadido a la base de datosEsperando la introducción de parametros de cine...Nombre Cine recibido: 1
+Ubicacion Cine recibido: 1
+Numero de Salas Cine recibido: 1
+Cine añadido a la base de datosEsperando la introducción de parametros de cine...Nombre Cine recibido: 1
+Ubicacion Cine recibido: 1
+Numero de Salas Cine recibido: 1
+Cine añadido a la base de datosEsperando la introducción de parametros de cine...Nombre Cine recibido: 1
+Ubicacion Cine recibido: 1
+Numero de Salas Cine recibido: 1
+Cine añadido a la base de datosEsperando la introducción de parametros de cine...Nombre Cine recibido: 1
+Ubicacion Cine recibido: 1
+Numero de Salas Cine recibido: 1
+Cine añadido a la base de datosEsperando la introducción de parametros de cine...Nombre Cine recibido: 1
+Ubicacion Cine recibido: 1
+Numero de Salas Cine recibido: 1
+Cine añadido a la base de datosEsperando la introducción de parametros de cine...Nombre Cine recibido: 1
+Ubicacion Cine recibido: 1
+Numero de Salas Cine recibido: 1
+Cine añadido a la base de datosEsperando la introducción de parametros de cine...Nombre Cine recibido: 1
+Ubicacion Cine recibido: 1
+Numero de Salas Cine recibido: 1
+Cine añadido a la base de datosEsperando la introducción de parametros de cine...Nombre Cine recibido: 1
+Ubicacion Cine recibido: 1
+Numero de Salas Cine recibido: 1
+Cine añadido a la base de datosEsperando la introducción de parametros de cine...Nombre Cine recibido: 1
+Ubicacion Cine recibido: 1
+Numero de Salas Cine recibido: 1
+Cine añadido a la base de datosEsperando la introducción de parametros de cine...Nombre Cine recibido: 1
+Ubicacion Cine recibido: 1
+Numero de Salas Cine recibido: 1
+Cine añadido a la base de datosEsperando la introducción de parametros de cine...Nombre Cine recibido: 1
+Ubicacion Cine recibido: 1
+Numero de Salas Cine recibido: 1
+Cine añadido a la base de datosEsperando la introducción de parametros de cine...Nombre Cine recibido: 1
+Ubicacion Cine recibido: 1
+Numero de Salas Cine recibido: 1
+Cine añadido a la base de datosEsperando la introducción de parametros de cine...Nombre Cine recibido: 1
+Ubicacion Cine recibido: 1
+Numero de Salas Cine recibido: 1
+Cine añadido a la base de datosEsperando la introducción de parametros de cine...Nombre Cine recibido: 1
+Ubicacion Cine recibido: 1
+Numero de Salas Cine recibido: 1
+Cine añadido a la base de datosEsperando la introducción de parametros de cine...Nombre Cine recibido: 1
+Ubicacion Cine recibido: 1
+Numero de Salas Cine recibido: 1
+Cine añadido a la base de datosEsperando la introducción de parametros de cine...Nombre Cine recibido: 1
+Ubicacion Cine recibido: 1
+Numero de Salas Cine recibido: 1
+Cine añadido a la base de datosEsperando la introducción de parametros de cine...Nombre Cine recibido: 1
+Ubicacion Cine recibido: 1
+Numero de Salas Cine recibido: 1
+Cine añadido a la base de datosEsperando la introducción de parametros de cine...Nombre Cine recibido: 1
+Ubicacion Cine recibido: 1
+Numero de Salas Cine recibido: 1
+Cine añadido a la base de datosEsperando la introducción de parametros de cine...Nombre Cine recibido: 1
+Ubicacion Cine recibido: 1
+Numero de Salas Cine recibido: 1
+Cine añadido a la base de datosEsperando la introducción de parametros de cine...Nombre Cine recibido: 1
+Ubicacion Cine recibido: 1
+Numero de Salas Cine recibido: 1
+Cine añadido a la base de datosEsperando la introducción de parametros de cine...Nombre Cine recibido: 1
+Ubicacion Cine recibido: 1
+Numero de Salas Cine recibido: 1
+Cine añadido a la base de datosEsperando la introducción de parametros de cine...Nombre Cine recibido: 1
+Ubicacion Cine recibido: 1
+Numero de Salas Cine recibido: 1
+Cine añadido a la base de datosEsperando la introducción de parametros de cine...Nombre Cine recibido: 1
+Ubicacion Cine recibido: 1
+Numero de Salas Cine recibido: 1
+Cine añadido a la base de datosEsperando la introducción de parametros de cine...Nombre Cine recibido: 1
+Ubicacion Cine recibido: 1
+Numero de Salas Cine recibido: 1
+Cine añadido a la base de datosEsperando la introducción de parametros de cine...Nombre Cine recibido: 1
+Ubicacion Cine recibido: 1
+Numero de Salas Cine recibido: 1
+Cine añadido a la base de datosEsperando la introducción de parametros de cine...Nombre Cine recibido: 1
+Ubicacion Cine recibido: 1
+Numero de Salas Cine recibido: 1
+Cine añadido a la base de datosEsperando la introducción de parametros de cine...Nombre Cine recibido: 1
+Ubicacion Cine recibido: 1
+Numero de Salas Cine recibido: 1
+Cine añadido a la base de datosEsperando la introducción de parametros de cine...Nombre Cine recibido: 1
+Ubicacion Cine recibido: 1
+Numero de Salas Cine recibido: 1
+Cine añadido a la base de datosEsperando la introducción de parametros de cine...Nombre Cine recibido: 1
+Ubicacion Cine recibido: 1
+Numero de Salas Cine recibido: 1
+Cine añadido a la base de datosEsperando la introducción de parametros de cine...Nombre Cine recibido: 1
+Ubicacion Cine recibido: 1
+Numero de Salas Cine recibido: 1
+Cine añadido a la base de datosEsperando la introducción de parametros de cine...Nombre Cine recibido: 1
+Ubicacion Cine recibido: 1
+Numero de Salas Cine recibido: 1
+Cine añadido a la base de datosEsperando la introducción de parametros de cine...Nombre Cine recibido: 1
+Ubicacion Cine recibido: 1
+Numero de Salas Cine recibido: 1
+Cine añadido a la base de datosEsperando la introducción de parametros de cine...Nombre Cine recibido: 1
+Ubicacion Cine recibido: 1
+Numero de Salas Cine recibido: 1
+Cine añadido a la base de datosEsperando la introducción de parametros de cine...Nombre Cine recibido: 1
+Ubicacion Cine recibido: 1
+Numero de Salas Cine recibido: 1
+Cine añadido a la base de datosEsperando la introducción de parametros de cine...Nombre Cine recibido: 1
+Ubicacion Cine recibido: 1
+Numero de Salas Cine recibido: 1
+Cine añadido a la base de datosEsperando la introducción de parametros de cine...Nombre Cine recibido: 1
+Ubicacion Cine recibido: 1
+Numero de Salas Cine recibido: 1
+Cine añadido a la base de datosEsperando la introducción de parametros de cine...Nombre Cine recibido: 1
+Ubicacion Cine recibido: 1
+Numero de Salas Cine recibido: 1
+Cine añadido a la base de datosEsperando la introducción de parametros de cine...Nombre Cine recibido: 1
+Ubicacion Cine recibido: 1
+Numero de Salas Cine recibido: 1
+Cine añadido a la base de datosEsperando la introducción de parametros de cine...Nombre Cine recibido: 1
+Ubicacion Cine recibido: 1
+Numero de Salas Cine recibido: 1
+Cine añadido a la base de datosEsperando la introducción de parametros de cine...Nombre Cine recibido: 1
+Ubicacion Cine recibido: 1
+Numero de Salas Cine recibido: 1
+Cine añadido a la base de datosEsperando la introducción de parametros de cine...Nombre Cine recibido: 1
+Ubicacion Cine recibido: 1
+Numero de Salas Cine recibido: 1
+Cine añadido a la base de datosEsperando la introducción de parametros de cine...Nombre Cine recibido: 1
+Ubicacion Cine recibido: 1
+Numero de Salas Cine recibido: 1
+Cine añadido a la base de datosEsperando la introducción de parametros de cine...Nombre Cine recibido: 1
+Ubicacion Cine recibido: 1
+Numero de Salas Cine recibido: 1
+Cine añadido a la base de datosEsperando la introducción de parametros de cine...Nombre Cine recibido: 1
+Ubicacion Cine recibido: 1
+Numero de Salas Cine recibido: 1
+Cine añadido a la base de datosEsperando la introducción de parametros de cine...Nombre Cine recibido: 1
+Ubicacion Cine recibido: 1
+Numero de Salas Cine recibido: 1
+Cine añadido a la base de datosEsperando la introducción de parametros de cine...Nombre Cine recibido: 1
+Ubicacion Cine recibido: 1
+Numero de Salas Cine recibido: 1
+Cine añadido a la base de datosEsperando la introducción de parametros de cine...Nombre Cine recibido: 1
+Ubicacion Cine recibido: 1
+Numero de Salas Cine recibido: 1
+Cine añadido a la base de datosEsperando la introducción de parametros de cine...Nombre Cine recibido: 1
+Ubicacion Cine recibido: 1
+Numero de Salas Cine recibido: 1
+Cine añadido a la base de datosEsperando la introducción de parametros de cine...Nombre Cine recibido: 1
+Ubicacion Cine recibido: 1
+Numero de Salas Cine recibido: 1
+Cine añadido a la base de datosEsperando la introducción de parametros de cine...Nombre Cine recibido: 1
+Ubicacion Cine recibido: 1
+Numero de Salas Cine recibido: 1
+Cine añadido a la base de datosEsperando la introducción de parametros de cine...Nombre Cine recibido: 1
+Ubicacion Cine recibido: 1
+Numero de Salas Cine recibido: 1
+Cine añadido a la base de datosEsperando la introducción de parametros de cine...Nombre Cine recibido: 1
+Ubicacion Cine recibido: 1
+Numero de Salas Cine recibido: 1
+Cine añadido a la base de datosEsperando la introducción de parametros de cine...Nombre Cine recibido: 1
+Ubicacion Cine recibido: 1
+Numero de Salas Cine recibido: 1
+Cine añadido a la base de datosEsperando la introducción de parametros de cine...Nombre Cine recibido: 1
+Ubicacion Cine recibido: 1
+Numero de Salas Cine recibido: 1
+Cine añadido a la base de datosEsperando la introducción de parametros de cine...Nombre Cine recibido: 1
+Ubicacion Cine recibido: 1
+Numero de Salas Cine recibido: 1
+Cine añadido a la base de datosEsperando la introducción de parametros de cine...Nombre Cine recibido: 1
+Ubicacion Cine recibido: 1
+Numero de Salas Cine recibido: 1
+Cine añadido a la base de datosEsperando la introducción de parametros de cine...Nombre Cine recibido: 1
+Ubicacion Cine recibido: 1
+Numero de Salas Cine recibido: 1
+Cine añadido a la base de datosEsperando la introducción de parametros de cine...Nombre Cine recibido: 1
+Ubicacion Cine recibido: 1
+Numero de Salas Cine recibido: 1
+Cine añadido a la base de datosEsperando la introducción de parametros de cine...Nombre Cine recibido: 1
+Ubicacion Cine recibido: 1
+Numero de Salas Cine recibido: 1
+Cine añadido a la base de datosEsperando la introducción de parametros de cine...Nombre Cine recibido: 1
+Ubicacion Cine recibido: 1
+Numero de Salas Cine recibido: 1
+Cine añadido a la base de datosEsperando la introducción de parametros de cine...Nombre Cine recibido: 1
+Ubicacion Cine recibido: 1
+Numero de Salas Cine recibido: 1
+Cine añadido a la base de datosEsperando la introducción de parametros de cine...Nombre Cine recibido: 1
+Ubicacion Cine recibido: 1
+Numero de Salas Cine recibido: 1
+Cine añadido a la base de datosEsperando la introducción de parametros de cine...Nombre Cine recibido: 1
+Ubicacion Cine recibido: 1
+Numero de Salas Cine recibido: 1
+Cine añadido a la base de datosEsperando la introducción de parametros de cine...Nombre Cine recibido: 1
+Ubicacion Cine recibido: 1
+Numero de Salas Cine recibido: 1
+Cine añadido a la base de datosEsperando la introducción de parametros de cine...Nombre Cine recibido: 1
+Ubicacion Cine recibido: 1
+Numero de Salas Cine recibido: 1
+Cine añadido a la base de datosEsperando la introducción de parametros de cine...Nombre Cine recibido: 1
+Ubicacion Cine recibido: 1
+Numero de Salas Cine recibido: 1
+Cine añadido a la base de datosEsperando la introducción de parametros de cine...Nombre Cine recibido: 1
+Ubicacion Cine recibido: 1
+Numero de Salas Cine recibido: 1
+Cine añadido a la base de datosEsperando la introducción de parametros de cine...Nombre Cine recibido: 1
+Ubicacion Cine recibido: 1
+Numero de Salas Cine recibido: 1
+Cine añadido a la base de datosEsperando la introducción de parametros de cine...Nombre Cine recibido: 1
+Ubicacion Cine recibido: 1
+Numero de Salas Cine recibido: 1
+Cine añadido a la base de datosEsperando la introducción de parametros de cine...Nombre Cine recibido: 1
+Ubicacion Cine recibido: 1
+Numero de Salas Cine recibido: 1
+Cine añadido a la base de datosEsperando la introducción de parametros de cine...Nombre Cine recibido: 1
+Ubicacion Cine recibido: 1
+Numero de Salas Cine recibido: 1
+Cine añadido a la base de datosEsperando la introducción de parametros de cine...Nombre Cine recibido: 1
+Ubicacion Cine recibido: 1
+Numero de Salas Cine recibido: 1
+Cine añadido a la base de datosEsperando la introducción de parametros de cine...Nombre Cine recibido: 1
+Ubicacion Cine recibido: 1
+Numero de Salas Cine recibido: 1
+Cine añadido a la base de datosEsperando la introducción de parametros de cine...Nombre Cine recibido: 1
+Ubicacion Cine recibido: 1
+Numero de Salas Cine recibido: 1
+Cine añadido a la base de datosEsperando la introducción de parametros de cine...Nombre Cine recibido: 1
+Ubicacion Cine recibido: 1
+Numero de Salas Cine recibido: 1
+Cine añadido a la base de datosEsperando la introducción de parametros de cine...Nombre Cine recibido: 1
+Ubicacion Cine recibido: 1
+Numero de Salas Cine recibido: 1
+Cine añadido a la base de datosEsperando la introducción de parametros de cine...Nombre Cine recibido: 1
+Ubicacion Cine recibido: 1
+Numero de Salas Cine recibido: 1
+Cine añadido a la base de datosEsperando la introducción de parametros de cine...Nombre Cine recibido: 1
+Ubicacion Cine recibido: 1
+Numero de Salas Cine recibido: 1
+Cine añadido a la base de datosEsperando la introducción de parametros de cine...Nombre Cine recibido: 1
+Ubicacion Cine recibido: 1
+Numero de Salas Cine recibido: 1
+Cine añadido a la base de datosEsperando la introducción de parametros de cine...Nombre Cine recibido: 1
+Ubicacion Cine recibido: 1
+Numero de Salas Cine recibido: 1
+Cine añadido a la base de datosEsperando la introducción de parametros de cine...Nombre Cine recibido: 1
+Ubicacion Cine recibido: 1
+Numero de Salas Cine recibido: 1
+Cine añadido a la base de datosEsperando la introducción de parametros de cine...Nombre Cine recibido: 1
+Ubicacion Cine recibido: 1
+Numero de Salas Cine recibido: 1
+Cine añadido a la base de datosEsperando la introducción de parametros de cine...Nombre Cine recibido: 1
+Ubicacion Cine recibido: 1
+Numero de Salas Cine recibido: 1
+Cine añadido a la base de datosEsperando la introducción de parametros de cine...Nombre Cine recibido: 1
+Ubicacion Cine recibido: 1
+Numero de Salas Cine recibido: 1
+Cine añadido a la base de datosEsperando la introducción de parametros de cine...Nombre Cine recibido: 1
+Ubicacion Cine recibido: 1
+Numero de Salas Cine recibido: 1
+Cine añadido a la base de datosEsperando la introducción de parametros de cine...Nombre Cine recibido: 1
+Ubicacion Cine recibido: 1
+Numero de Salas Cine recibido: 1
+Cine añadido a la base de datosEsperando la introducción de parametros de cine...Nombre Cine recibido: 1
+Ubicacion Cine recibido: 1
+Numero de Salas Cine recibido: 1
+Cine añadido a la base de datosEsperando la introducción de parametros de cine...Nombre Cine recibido: 1
+Ubicacion Cine recibido: 1
+Numero de Salas Cine recibido: 1
+Cine añadido a la base de datosEsperando la introducción de parametros de cine...Nombre Cine recibido: 1
+Ubicacion Cine recibido: 1
+Numero de Salas Cine recibido: 1
+Cine añadido a la base de datosEsperando la introducción de parametros de cine...Nombre Cine recibido: 1
+Ubicacion Cine recibido: 1
+Numero de Salas Cine recibido: 1
+Cine añadido a la base de datosEsperando la introducción de parametros de cine...Nombre Cine recibido: 1
+Ubicacion Cine recibido: 1
+Numero de Salas Cine recibido: 1
+Cine añadido a la base de datosEsperando la introducción de parametros de cine...Nombre Cine recibido: 1
+Ubicacion Cine recibido: 1
+Numero de Salas Cine recibido: 1
+Cine añadido a la base de datosEsperando la introducción de parametros de cine...Nombre Cine recibido: 1
+Ubicacion Cine recibido: 1
+Numero de Salas Cine recibido: 1
+Cine añadido a la base de datosEsperando la introducción de parametros de cine...Nombre Cine recibido: 1
+Ubicacion Cine recibido: 1
+Numero de Salas Cine recibido: 1
+Cine añadido a la base de datosEsperando la introducción de parametros de cine...Nombre Cine recibido: 1
+Ubicacion Cine recibido: 1
+Numero de Salas Cine recibido: 1
+Cine añadido a la base de datosEsperando la introducción de parametros de cine...Nombre Cine recibido: 1
+Ubicacion Cine recibido: 1
+Numero de Salas Cine recibido: 1
+Cine añadido a la base de datosEsperando la introducción de parametros de cine...Nombre Cine recibido: 1
+Ubicacion Cine recibido: 1
+Numero de Salas Cine recibido: 1
+Cine añadido a la base de datosEsperando la introducción de parametros de cine...Nombre Cine recibido: 1
+Ubicacion Cine recibido: 1
+Numero de Salas Cine recibido: 1
+Cine añadido a la base de datosEsperando la introducción de parametros de cine...Nombre Cine recibido: 1
+Ubicacion Cine recibido: 1
+Numero de Salas Cine recibido: 1
+Cine añadido a la base de datosEsperando la introducción de parametros de cine...Nombre Cine recibido: 1
+Ubicacion Cine recibido: 1
+Numero de Salas Cine recibido: 1
+Cine añadido a la base de datosEsperando la introducción de parametros de cine...Nombre Cine recibido: 1
+Ubicacion Cine recibido: 1
+Numero de Salas Cine recibido: 1
+Cine añadido a la base de datosEsperando la introducción de parametros de cine...Nombre Cine recibido: 1
+Ubicacion Cine recibido: 1
+Numero de Salas Cine recibido: 1
+Cine añadido a la base de datosEsperando la introducción de parametros de cine...Nombre Cine recibido: 1
+Ubicacion Cine recibido: 1
+Numero de Salas Cine recibido: 1
+Cine añadido a la base de datosEsperando la introducción de parametros de cine...Nombre Cine recibido: 1
+Ubicacion Cine recibido: 1
+Numero de Salas Cine recibido: 1
+Cine añadido a la base de datosEsperando la introducción de parametros de cine...Nombre Cine recibido: 1
+Ubicacion Cine recibido: 1
+Numero de Salas Cine recibido: 1
+Cine añadido a la base de datosEsperando la introducción de parametros de cine...Nombre Cine recibido: 1
+Ubicacion Cine recibido: 1
+Numero de Salas Cine recibido: 1
+Cine añadido a la base de datosEsperando la introducción de parametros de cine...Nombre Cine recibido: 1
+Ubicacion Cine recibido: 1
+Numero de Salas Cine recibido: 1
+Cine añadido a la base de datosEsperando la introducción de parametros de cine...Nombre Cine recibido: 1
+Ubicacion Cine recibido: 1
+Numero de Salas Cine recibido: 1
+Cine añadido a la base de datosEsperando la introducción de parametros de cine...Nombre Cine recibido: 1
+Ubicacion Cine recibido: 1
+Numero de Salas Cine recibido: 1
+Cine añadido a la base de datosEsperando la introducción de parametros de cine...Nombre Cine recibido: 1
+Ubicacion Cine recibido: 1
+Numero de Salas Cine recibido: 1
+Cine añadido a la base de datosEsperando la introducción de parametros de cine...Nombre Cine recibido: 1
+Ubicacion Cine recibido: 1
+Numero de Salas Cine recibido: 1
+Cine añadido a la base de datosEsperando la introducción de parametros de cine...Nombre Cine recibido: 1
+Ubicacion Cine recibido: 1
+Numero de Salas Cine recibido: 1
+Cine añadido a la base de datosEsperando la introducción de parametros de cine...Nombre Cine recibido: 1
+Ubicacion Cine recibido: 1
+Numero de Salas Cine recibido: 1
+Cine añadido a la base de datosEsperando la introducción de parametros de cine...Nombre Cine recibido: 1
+Ubicacion Cine recibido: 1
+Numero de Salas Cine recibido: 1
+Cine añadido a la base de datosEsperando la introducción de parametros de cine...Nombre Cine recibido: 1
+Ubicacion Cine recibido: 1
+Numero de Salas Cine recibido: 1
+Cine añadido a la base de datosEsperando la introducción de parametros de cine...Nombre Cine recibido: 1
+Ubicacion Cine recibido: 1
+Numero de Salas Cine recibido: 1
+Cine añadido a la base de datosEsperando la introducción de parametros de cine...Nombre Cine recibido: 1
+Ubicacion Cine recibido: 1
+Numero de Salas Cine recibido: 1
+Cine añadido a la base de datosEsperando la introducción de parametros de cine...Nombre Cine recibido: 1
+Ubicacion Cine recibido: 1
+Numero de Salas Cine recibido: 1
+Cine añadido a la base de datosEsperando la introducción de parametros de cine...Nombre Cine recibido: 1
+Ubicacion Cine recibido: 1
+Numero de Salas Cine recibido: 1
+Cine añadido a la base de datosEsperando la introducción de parametros de cine...Nombre Cine recibido: 1
+Ubicacion Cine recibido: 1
+Numero de Salas Cine recibido: 1
+Cine añadido a la base de datosEsperando la introducción de parametros de cine...Nombre Cine recibido: 1
+Ubicacion Cine recibido: 1
+Numero de Salas Cine recibido: 1
+Cine añadido a la base de datosEsperando la introducción de parametros de cine...Nombre Cine recibido: 1
+Ubicacion Cine recibido: 1
+Numero de Salas Cine recibido: 1
+Cine añadido a la base de datosEsperando la introducción de parametros de cine...Nombre Cine recibido: 1
+Ubicacion Cine recibido: 1
+Numero de Salas Cine recibido: 1
+Cine añadido a la base de datosEsperando la introducción de parametros de cine...Nombre Cine recibido: 1
+Ubicacion Cine recibido: 1
+Numero de Salas Cine recibido: 1
+Cine añadido a la base de datosEsperando la introducción de parametros de cine...Nombre Cine recibido: 1
+Ubicacion Cine recibido: 1
+Numero de Salas Cine recibido: 1
+Cine añadido a la base de datosEsperando la introducción de parametros de cine...Nombre Cine recibido: 1
+Ubicacion Cine recibido: 1
+Numero de Salas Cine recibido: 1
+Cine añadido a la base de datosEsperando la introducción de parametros de cine...Nombre Cine recibido: 1
+Ubicacion Cine recibido: 1
+Numero de Salas Cine recibido: 1
+Cine añadido a la base de datosEsperando la introducción de parametros de cine...Nombre Cine recibido: 1
+Ubicacion Cine recibido: 1
+Numero de Salas Cine recibido: 1
+Cine añadido a la base de datosEsperando la introducción de parametros de cine...Nombre Cine recibido: 1
+Ubicacion Cine recibido: 1
+Numero de Salas Cine recibido: 1
+Cine añadido a la base de datosEsperando la introducción de parametros de cine...Nombre Cine recibido: 1
+Ubicacion Cine recibido: 1
+Numero de Salas Cine recibido: 1
+Cine añadido a la base de datosEsperando la introducción de parametros de cine...Nombre Cine recibido: 1
+Ubicacion Cine recibido: 1
+Numero de Salas Cine recibido: 1
+Cine añadido a la base de datosEsperando la introducción de parametros de cine...Nombre Cine recibido: 1
+Ubicacion Cine recibido: 1
+Numero de Salas Cine recibido: 1
+Cine añadido a la base de datosEsperando la introducción de parametros de cine...Nombre Cine recibido: 1
+Ubicacion Cine recibido: 1
+Numero de Salas Cine recibido: 1
+Cine añadido a la base de datosEsperando la introducción de parametros de cine...Nombre Cine recibido: 1
+Ubicacion Cine recibido: 1
+Numero de Salas Cine recibido: 1
+Cine añadido a la base de datosEsperando la introducción de parametros de cine...Nombre Cine recibido: 1
+Ubicacion Cine recibido: 1
+Numero de Salas Cine recibido: 1
+Cine añadido a la base de datosEsperando la introducción de parametros de cine...Nombre Cine recibido: 1
+Ubicacion Cine recibido: 1
+Numero de Salas Cine recibido: 1
+Cine añadido a la base de datosEsperando la introducción de parametros de cine...Nombre Cine recibido: 1
+Ubicacion Cine recibido: 1
+Numero de Salas Cine recibido: 1
+Cine añadido a la base de datosEsperando la introducción de parametros de cine...Nombre Cine recibido: 1
+Ubicacion Cine recibido: 1
+Numero de Salas Cine recibido: 1
+Cine añadido a la base de datosEsperando la introducción de parametros de cine...Nombre Cine recibido: 1
+Ubicacion Cine recibido: 1
+Numero de Salas Cine recibido: 1
+Cine añadido a la base de datosEsperando la introducción de parametros de cine...Nombre Cine recibido: 1
+Ubicacion Cine recibido: 1
+Numero de Salas Cine recibido: 1
+Cine añadido a la base de datosEsperando la introducción de parametros de cine...Nombre Cine recibido: 1
+Ubicacion Cine recibido: 1
+Numero de Salas Cine recibido: 1
+Cine añadido a la base de datosEsperando la introducción de parametros de cine...Nombre Cine recibido: 1
+Ubicacion Cine recibido: 1
+Numero de Salas Cine recibido: 1
+Cine añadido a la base de datosEsperando la introducción de parametros de cine...Nombre Cine recibido: 1
+Ubicacion Cine recibido: 1
+Numero de Salas Cine recibido: 1
+Cine añadido a la base de datosEsperando la introducción de parametros de cine...Nombre Cine recibido: 1
+Ubicacion Cine recibido: 1
+Numero de Salas Cine recibido: 1
+Cine añadido a la base de datosEsperando la introducción de parametros de cine...Nombre Cine recibido: 1
+Ubicacion Cine recibido: 1
+Numero de Salas Cine recibido: 1
+Cine añadido a la base de datosEsperando la introducción de parametros de cine...Nombre Cine recibido: 1
+Ubicacion Cine recibido: 1
+Numero de Salas Cine recibido: 1
+Cine añadido a la base de datosEsperando la introducción de parametros de cine...Nombre Cine recibido: 1
+Ubicacion Cine recibido: 1
+Numero de Salas Cine recibido: 1
+Cine añadido a la base de datosEsperando la introducción de parametros de cine...Nombre Cine recibido: 1
+Ubicacion Cine recibido: 1
+Numero de Salas Cine recibido: 1
+Cine añadido a la base de datosEsperando la introducción de parametros de cine...Nombre Cine recibido: 1
+Ubicacion Cine recibido: 1
+Numero de Salas Cine recibido: 1
+Cine añadido a la base de datosEsperando la introducción de parametros de cine...Nombre Cine recibido: 1
+Ubicacion Cine recibido: 1
+Numero de Salas Cine recibido: 1
+Cine añadido a la base de datosEsperando la introducción de parametros de cine...Nombre Cine recibido: 1
+Ubicacion Cine recibido: 1
+Numero de Salas Cine recibido: 1
+Cine añadido a la base de datosEsperando la introducción de parametros de cine...Nombre Cine recibido: 1
+Ubicacion Cine recibido: 1
+Numero de Salas Cine recibido: 1
+Cine añadido a la base de datosEsperando la introducción de parametros de cine...Nombre Cine recibido: 1
+Ubicacion Cine recibido: 1
+Numero de Salas Cine recibido: 1
+Cine añadido a la base de datosEsperando la introducción de parametros de cine...Nombre Cine recibido: 1
+Ubicacion Cine recibido: 1
+Numero de Salas Cine recibido: 1
+Cine añadido a la base de datosEsperando la introducción de parametros de cine...Nombre Cine recibido: 1
+Ubicacion Cine recibido: 1
+Numero de Salas Cine recibido: 1
+Cine añadido a la base de datosEsperando la introducción de parametros de cine...Nombre Cine recibido: 1
+Ubicacion Cine recibido: 1
+Numero de Salas Cine recibido: 1
+Cine añadido a la base de datosEsperando la introducción de parametros de cine...Nombre Cine recibido: 1
+Ubicacion Cine recibido: 1
+Numero de Salas Cine recibido: 1
+Cine añadido a la base de datosEsperando la introducción de parametros de cine...Nombre Cine recibido: 1
+Ubicacion Cine recibido: 1
+Numero de Salas Cine recibido: 1
+Cine añadido a la base de datosEsperando la introducción de parametros de cine...Nombre Cine recibido: 1
+Ubicacion Cine recibido: 1
+Numero de Salas Cine recibido: 1
+Cine añadido a la base de datosEsperando la introducción de parametros de cine...Nombre Cine recibido: 1
+Ubicacion Cine recibido: 1
+Numero de Salas Cine recibido: 1
+Cine añadido a la base de datosEsperando la introducción de parametros de cine...Nombre Cine recibido: 1
+Ubicacion Cine recibido: 1
+Numero de Salas Cine recibido: 1
+Cine añadido a la base de datosEsperando la introducción de parametros de cine...Nombre Cine recibido: 1
+Ubicacion Cine recibido: 1
+Numero de Salas Cine recibido: 1
+Cine añadido a la base de datosEsperando la introducción de parametros de cine...Nombre Cine recibido: 1
+Ubicacion Cine recibido: 1
+Numero de Salas Cine recibido: 1
+Cine añadido a la base de datosEsperando la introducción de parametros de cine...Nombre Cine recibido: 1
+Ubicacion Cine recibido: 1
+Numero de Salas Cine recibido: 1
+Cine añadido a la base de datosEsperando la introducción de parametros de cine...Nombre Cine recibido: 1
+Ubicacion Cine recibido: 1
+Numero de Salas Cine recibido: 1
+Cine añadido a la base de datosEsperando la introducción de parametros de cine...Nombre Cine recibido: 1
+Ubicacion Cine recibido: 1
+Numero de Salas Cine recibido: 1
+Cine añadido a la base de datosEsperando la introducción de parametros de cine...Nombre Cine recibido: 1
+Ubicacion Cine recibido: 1
+Numero de Salas Cine recibido: 1
+Cine añadido a la base de datosEsperando la introducción de parametros de cine...Nombre Cine recibido: 1
+Ubicacion Cine recibido: 1
+Numero de Salas Cine recibido: 1
+Cine añadido a la base de datosEsperando la introducción de parametros de cine...Nombre Cine recibido: 1
+Ubicacion Cine recibido: 1
+Numero de Salas Cine recibido: 1
+Cine añadido a la base de datosEsperando la introducción de parametros de cine...Nombre Cine recibido: 1
+Ubicacion Cine recibido: 1
+Numero de Salas Cine recibido: 1
+Cine añadido a la base de datosEsperando la introducción de parametros de cine...Nombre Cine recibido: 1
+Ubicacion Cine recibido: 1
+Numero de Salas Cine recibido: 1
+Cine añadido a la base de datosEsperando la introducción de parametros de cine...Nombre Cine recibido: 1
+Ubicacion Cine recibido: 1
+Numero de Salas Cine recibido: 1
+Cine añadido a la base de datosEsperando la introducción de parametros de cine...Nombre Cine recibido: 1
+Ubicacion Cine recibido: 1
+Numero de Salas Cine recibido: 1
+Cine añadido a la base de datosEsperando la introducción de parametros de cine...Nombre Cine recibido: 1
+Ubicacion Cine recibido: 1
+Numero de Salas Cine recibido: 1
+Cine añadido a la base de datosEsperando la introducción de parametros de cine...Nombre Cine recibido: 1
+Ubicacion Cine recibido: 1
+Numero de Salas Cine recibido: 1
+Cine añadido a la base de datosEsperando la introducción de parametros de cine...Nombre Cine recibido: 1
+Ubicacion Cine recibido: 1
+Numero de Salas Cine recibido: 1
+Cine añadido a la base de datosEsperando la introducción de parametros de cine...Nombre Cine recibido: 1
+Ubicacion Cine recibido: 1
+Numero de Salas Cine recibido: 1
+Cine añadido a la base de datosEsperando la introducción de parametros de cine...Nombre Cine recibido: 1
+Ubicacion Cine recibido: 1
+Numero de Salas Cine recibido: 1
+Cine añadido a la base de datosEsperando la introducción de parametros de cine...Nombre Cine recibido: 1
+Ubicacion Cine recibido: 1
+Numero de Salas Cine recibido: 1
+Cine añadido a la base de datosEsperando la introducción de parametros de cine...Nombre Cine recibido: 1
+Ubicacion Cine recibido: 1
+Numero de Salas Cine recibido: 1
+Cine añadido a la base de datosEsperando la introducción de parametros de cine...Nombre Cine recibido: 1
+Ubicacion Cine recibido: 1
+Numero de Salas Cine recibido: 1
+Cine añadido a la base de datosEsperando la introducción de parametros de cine...Nombre Cine recibido: 1
+Ubicacion Cine recibido: 1
+Numero de Salas Cine recibido: 1
+Cine añadido a la base de datosEsperando la introducción de parametros de cine...Nombre Cine recibido: 1
+Ubicacion Cine recibido: 1
+Numero de Salas Cine recibido: 1
+Cine añadido a la base de datosEsperando la introducción de parametros de cine...Nombre Cine recibido: 1
+Ubicacion Cine recibido: 1
+Numero de Salas Cine recibido: 1
+Cine añadido a la base de datosEsperando la introducción de parametros de cine...Nombre Cine recibido: 1
+Ubicacion Cine recibido: 1
+Numero de Salas Cine recibido: 1
+Cine añadido a la base de datosEsperando la introducción de parametros de cine...Nombre Cine recibido: 1
+Ubicacion Cine recibido: 1
+Numero de Salas Cine recibido: 1
+Cine añadido a la base de datosEsperando la introducción de parametros de cine...Nombre Cine recibido: 1
+Ubicacion Cine recibido: 1
+Numero de Salas Cine recibido: 1
+Cine añadido a la base de datosEsperando la introducción de parametros de cine...Nombre Cine recibido: 1
+Ubicacion Cine recibido: 1
+Numero de Salas Cine recibido: 1
+Cine añadido a la base de datosEsperando la introducción de parametros de cine...Nombre Cine recibido: 1
+Ubicacion Cine recibido: 1
+Numero de Salas Cine recibido: 1
+Cine añadido a la base de datosEsperando la introducción de parametros de cine...Nombre Cine recibido: 1
+Ubicacion Cine recibido: 1
+Numero de Salas Cine recibido: 1
+Cine añadido a la base de datosEsperando la introducción de parametros de cine...Nombre Cine recibido: 1
+Ubicacion Cine recibido: 1
+Numero de Salas Cine recibido: 1
+Cine añadido a la base de datosEsperando la introducción de parametros de cine...Nombre Cine recibido: 1
+Ubicacion Cine recibido: 1
+Numero de Salas Cine recibido: 1
+Cine añadido a la base de datosEsperando la introducción de parametros de cine...Nombre Cine recibido: 1
+Ubicacion Cine recibido: 1
+Numero de Salas Cine recibido: 1
+Cine añadido a la base de datosEsperando la introducción de parametros de cine...Nombre Cine recibido: 1
+Ubicacion Cine recibido: 1
+Numero de Salas Cine recibido: 1
+Cine añadido a la base de datosEsperando la introducción de parametros de cine...Nombre Cine recibido: 1
+Ubicacion Cine recibido: 1
+Numero de Salas Cine recibido: 1
+Cine añadido a la base de datosEsperando la introducción de parametros de cine...Nombre Cine recibido: 1
+Ubicacion Cine recibido: 1
+Numero de Salas Cine recibido: 1
+Cine añadido a la base de datosEsperando la introducción de parametros de cine...Nombre Cine recibido: 1
+Ubicacion Cine recibido: 1
+Numero de Salas Cine recibido: 1
+Cine añadido a la base de datosEsperando la introducción de parametros de cine...Nombre Cine recibido: 1
+Ubicacion Cine recibido: 1
+Numero de Salas Cine recibido: 1
+Cine añadido a la base de datosEsperando la introducción de parametros de cine...Nombre Cine recibido: 1
+Ubicacion Cine recibido: 1
+Numero de Salas Cine recibido: 1
+Cine añadido a la base de datosEsperando la introducción de parametros de cine...Nombre Cine recibido: 1
+Ubicacion Cine recibido: 1
+Numero de Salas Cine recibido: 1
+Cine añadido a la base de datosEsperando la introducción de parametros de cine...Nombre Cine recibido: 1
+Ubicacion Cine recibido: 1
+Numero de Salas Cine recibido: 1
+Cine añadido a la base de datosEsperando la introducción de parametros de cine...Nombre Cine recibido: 1
+Ubicacion Cine recibido: 1
+Numero de Salas Cine recibido: 1
+Cine añadido a la base de datosEsperando la introducción de parametros de cine...Nombre Cine recibido: 1
+Ubicacion Cine recibido: 1
+Numero de Salas Cine recibido: 1
+Cine añadido a la base de datosEsperando la introducción de parametros de cine...Nombre Cine recibido: 1
+Ubicacion Cine recibido: 1
+Numero de Salas Cine recibido: 1
+Cine añadido a la base de datosEsperando la introducción de parametros de cine...Nombre Cine recibido: 1
+Ubicacion Cine recibido: 1
+Numero de Salas Cine recibido: 1
+Cine añadido a la base de datosEsperando la introducción de parametros de cine...Nombre Cine recibido: 1
+Ubicacion Cine recibido: 1
+Numero de Salas Cine recibido: 1
+Cine añadido a la base de datosEsperando la introducción de parametros de cine...Nombre Cine recibido: 1
+Ubicacion Cine recibido: 1
+Numero de Salas Cine recibido: 1
+Cine añadido a la base de datosEsperando la introducción de parametros de cine...Nombre Cine recibido: 1
+Ubicacion Cine recibido: 1
+Numero de Salas Cine recibido: 1
+Cine añadido a la base de datosEsperando la introducción de parametros de cine...Nombre Cine recibido: 1
+Ubicacion Cine recibido: 1
+Numero de Salas Cine recibido: 1
+Cine añadido a la base de datosEsperando la introducción de parametros de cine...Nombre Cine recibido: 1
+Ubicacion Cine recibido: 1
+Numero de Salas Cine recibido: 1
+Cine añadido a la base de datosEsperando la introducción de parametros de cine...Nombre Cine recibido: 1
+Ubicacion Cine recibido: 1
+Numero de Salas Cine recibido: 1
+Cine añadido a la base de datosEsperando la introducción de parametros de cine...Nombre Cine recibido: 1
+Ubicacion Cine recibido: 1
+Numero de Salas Cine recibido: 1
+Cine añadido a la base de datosEsperando la introducción de parametros de cine...Nombre Cine recibido: 1
+Ubicacion Cine recibido: 1
+Numero de Salas Cine recibido: 1
+Cine añadido a la base de datosEsperando la introducción de parametros de cine...Nombre Cine recibido: 1
+Ubicacion Cine recibido: 1
+Numero de Salas Cine recibido: 1
+Cine añadido a la base de datosEsperando la introducción de parametros de cine...Nombre Cine recibido: 1
+Ubicacion Cine recibido: 1
+Numero de Salas Cine recibido: 1
+Cine añadido a la base de datosEsperando la introducción de parametros de cine...Nombre Cine recibido: 1
+Ubicacion Cine recibido: 1
+Numero de Salas Cine recibido: 1
+Cine añadido a la base de datosEsperando la introducción de parametros de cine...Nombre Cine recibido: 1
+Ubicacion Cine recibido: 1
+Numero de Salas Cine recibido: 1
+Cine añadido a la base de datosEsperando la introducción de parametros de cine...Nombre Cine recibido: 1
+Ubicacion Cine recibido: 1
+Numero de Salas Cine recibido: 1
+Cine añadido a la base de datosEsperando la introducción de parametros de cine...Nombre Cine recibido: 1
+Ubicacion Cine recibido: 1
+Numero de Salas Cine recibido: 1
+Cine añadido a la base de datosEsperando la introducción de parametros de cine...Nombre Cine recibido: 1
+Ubicacion Cine recibido: 1
+Numero de Salas Cine recibido: 1
+Cine añadido a la base de datosEsperando la introducción de parametros de cine...Nombre Cine recibido: 1
+Ubicacion Cine recibido: 1
+Numero de Salas Cine recibido: 1
+Cine añadido a la base de datosEsperando la introducción de parametros de cine...Nombre Cine recibido: 1
+Ubicacion Cine recibido: 1
+Numero de Salas Cine recibido: 1
+Cine añadido a la base de datosEsperando la introducción de parametros de cine...Nombre Cine recibido: 1
+Ubicacion Cine recibido: 1
+Numero de Salas Cine recibido: 1
+Cine añadido a la base de datosEsperando la introducción de parametros de cine...Nombre Cine recibido: 1
+Ubicacion Cine recibido: 1
+Numero de Salas Cine recibido: 1
+Cine añadido a la base de datosEsperando la introducción de parametros de cine...Nombre Cine recibido: 1
+Ubicacion Cine recibido: 1
+Numero de Salas Cine recibido: 1
+Cine añadido a la base de datosEsperando la introducción de parametros de cine...Nombre Cine recibido: 1
+Ubicacion Cine recibido: 1
+Numero de Salas Cine recibido: 1
+Cine añadido a la base de datosEsperando la introducción de parametros de cine...Nombre Cine recibido: 1
+Ubicacion Cine recibido: 1
+Numero de Salas Cine recibido: 1
+Cine añadido a la base de datosEsperando la introducción de parametros de cine...Nombre Cine recibido: 1
+Ubicacion Cine recibido: 1
+Numero de Salas Cine recibido: 1
+Cine añadido a la base de datosEsperando la introducción de parametros de cine...Nombre Cine recibido: 1
+Ubicacion Cine recibido: 1
+Numero de Salas Cine recibido: 1
+Cine añadido a la base de datosEsperando la introducción de parametros de cine...Nombre Cine recibido: 1
+Ubicacion Cine recibido: 1
+Numero de Salas Cine recibido: 1
+Cine añadido a la base de datosEsperando la introducción de parametros de cine...Nombre Cine recibido: 1
+Ubicacion Cine recibido: 1
+Numero de Salas Cine recibido: 1
+Cine añadido a la base de datosEsperando la introducción de parametros de cine...Nombre Cine recibido: 1
+Ubicacion Cine recibido: 1
+Numero de Salas Cine recibido: 1
+Cine añadido a la base de datosEsperando la introducción de parametros de cine...Nombre Cine recibido: 1
+Ubicacion Cine recibido: 1
+Numero de Salas Cine recibido: 1
+Cine añadido a la base de datosEsperando la introducción de parametros de cine...Nombre Cine recibido: 1
+Ubicacion Cine recibido: 1
+Numero de Salas Cine recibido: 1
+Cine añadido a la base de datosEsperando la introducción de parametros de cine...Nombre Cine recibido: 1
+Ubicacion Cine recibido: 1
+Numero de Salas Cine recibido: 1
+Cine añadido a la base de datosEsperando la introducción de parametros de cine...Nombre Cine recibido: 1
+Ubicacion Cine recibido: 1
+Numero de Salas Cine recibido: 1
+Cine añadido a la base de datosEsperando la introducción de parametros de cine...Nombre Cine recibido: 1
+Ubicacion Cine recibido: 1
+Numero de Salas Cine recibido: 1
+Cine añadido a la base de datosEsperando la introducción de parametros de cine...Nombre Cine recibido: 1
+Ubicacion Cine recibido: 1
+Numero de Salas Cine recibido: 1
+Cine añadido a la base de datosEsperando la introducción de parametros de cine...Nombre Cine recibido: 1
+Ubicacion Cine recibido: 1
+Numero de Salas Cine recibido: 1
+Cine añadido a la base de datosEsperando la introducción de parametros de cine...Nombre Cine recibido: 1
+Ubicacion Cine recibido: 1
+Numero de Salas Cine recibido: 1
+Cine añadido a la base de datosEsperando la introducción de parametros de cine...Nombre Cine recibido: 1
+Ubicacion Cine recibido: 1
+Numero de Salas Cine recibido: 1
+Cine añadido a la base de datosEsperando la introducción de parametros de cine...Nombre Cine recibido: 1
+Ubicacion Cine recibido: 1
+Numero de Salas Cine recibido: 1
+Cine añadido a la base de datosEsperando la introducción de parametros de cine...Nombre Cine recibido: 1
+Ubicacion Cine recibido: 1
+Numero de Salas Cine recibido: 1
+Cine añadido a la base de datosEsperando la introducción de parametros de cine...Nombre Cine recibido: 1
+Ubicacion Cine recibido: 1
+Numero de Salas Cine recibido: 1
+Cine añadido a la base de datosEsperando la introducción de parametros de cine...Nombre Cine recibido: 1
+Ubicacion Cine recibido: 1
+Numero de Salas Cine recibido: 1
+Cine añadido a la base de datosEsperando la introducción de parametros de cine...Nombre Cine recibido: 1
+Ubicacion Cine recibido: 1
+Numero de Salas Cine recibido: 1
+Cine añadido a la base de datosEsperando la introducción de parametros de cine...Nombre Cine recibido: 1
+Ubicacion Cine recibido: 1
+Numero de Salas Cine recibido: 1
+Cine añadido a la base de datosEsperando la introducción de parametros de cine...Nombre Cine recibido: 1
+Ubicacion Cine recibido: 1
+Numero de Salas Cine recibido: 1
+Cine añadido a la base de datosEsperando la introducción de parametros de cine...Nombre Cine recibido: 1
+Ubicacion Cine recibido: 1
+Numero de Salas Cine recibido: 1
+Cine añadido a la base de datosEsperando la introducción de parametros de cine...Nombre Cine recibido: 1
+Ubicacion Cine recibido: 1
+Numero de Salas Cine recibido: 1
+Cine añadido a la base de datosEsperando la introducción de parametros de cine...Nombre Cine recibido: 1
+Ubicacion Cine recibido: 1
+Numero de Salas Cine recibido: 1
+Cine añadido a la base de datosEsperando la introducción de parametros de cine...Nombre Cine recibido: 1
+Ubicacion Cine recibido: 1
+Numero de Salas Cine recibido: 1
+Cine añadido a la base de datosEsperando la introducción de parametros de cine...Nombre Cine recibido: 1
+Ubicacion Cine recibido: 1
+Numero de Salas Cine recibido: 1
+Cine añadido a la base de datosEsperando la introducción de parametros de cine...Nombre Cine recibido: 1
+Ubicacion Cine recibido: 1
+Numero de Salas Cine recibido: 1
+Cine añadido a la base de datosEsperando la introducción de parametros de cine...Nombre Cine recibido: 1
+Ubicacion Cine recibido: 1
+Numero de Salas Cine recibido: 1
+Cine añadido a la base de datosEsperando la introducción de parametros de cine...Nombre Cine recibido: 1
+Ubicacion Cine recibido: 1
+Numero de Salas Cine recibido: 1
+Cine añadido a la base de datosEsperando la introducción de parametros de cine...Nombre Cine recibido: 1
+Ubicacion Cine recibido: 1
+Numero de Salas Cine recibido: 1
+Cine añadido a la base de datosEsperando la introducción de parametros de cine...Nombre Cine recibido: 1
+Ubicacion Cine recibido: 1
+Numero de Salas Cine recibido: 1
+Cine añadido a la base de datosEsperando la introducción de parametros de cine...Nombre Cine recibido: 1
+Ubicacion Cine recibido: 1
+Numero de Salas Cine recibido: 1
+Cine añadido a la base de datosEsperando la introducción de parametros de cine...Nombre Cine recibido: 1
+Ubicacion Cine recibido: 1
+Numero de Salas Cine recibido: 1
+Cine añadido a la base de datosEsperando la introducción de parametros de cine...Nombre Cine recibido: 1
+Ubicacion Cine recibido: 1
+Numero de Salas Cine recibido: 1
+Cine añadido a la base de datosEsperando la introducción de parametros de cine...Nombre Cine recibido: 1
+Ubicacion Cine recibido: 1
+Numero de Salas Cine recibido: 1
+Cine añadido a la base de datosEsperando la introducción de parametros de cine...Nombre Cine recibido: 1
+Ubicacion Cine recibido: 1
+Numero de Salas Cine recibido: 1
+Cine añadido a la base de datosEsperando la introducción de parametros de cine...Nombre Cine recibido: 1
+Ubicacion Cine recibido: 1
+Numero de Salas Cine recibido: 1
+Cine añadido a la base de datosEsperando la introducción de parametros de cine...Nombre Cine recibido: 1
+Ubicacion Cine recibido: 1
+Numero de Salas Cine recibido: 1
+Cine añadido a la base de datosEsperando la introducción de parametros de cine...Nombre Cine recibido: 1
+Ubicacion Cine recibido: 1
+Numero de Salas Cine recibido: 1
+Cine añadido a la base de datosEsperando la introducción de parametros de cine...Nombre Cine recibido: 1
+Ubicacion Cine recibido: 1
+Numero de Salas Cine recibido: 1
+Cine añadido a la base de datosEsperando la introducción de parametros de cine...Nombre Cine recibido: 1
+Ubicacion Cine recibido: 1
+Numero de Salas Cine recibido: 1
+Cine añadido a la base de datosEsperando la introducción de parametros de cine...Nombre Cine recibido: 1
+Ubicacion Cine recibido: 1
+Numero de Salas Cine recibido: 1
+Cine añadido a la base de datosEsperando la introducción de parametros de cine...Nombre Cine recibido: 1
+Ubicacion Cine recibido: 1
+Numero de Salas Cine recibido: 1
+Cine añadido a la base de datosEsperando la introducción de parametros de cine...Nombre Cine recibido: 1
+Ubicacion Cine recibido: 1
+Numero de Salas Cine recibido: 1
+Cine añadido a la base de datosEsperando la introducción de parametros de cine...Nombre Cine recibido: 1
+Ubicacion Cine recibido: 1
+Numero de Salas Cine recibido: 1
+Cine añadido a la base de datosEsperando la introducción de parametros de cine...Nombre Cine recibido: 1
+Ubicacion Cine recibido: 1
+Numero de Salas Cine recibido: 1
+Cine añadido a la base de datosEsperando la introducción de parametros de cine...Nombre Cine recibido: 1
+Ubicacion Cine recibido: 1
+Numero de Salas Cine recibido: 1
+Cine añadido a la base de datosEsperando la introducción de parametros de cine...Nombre Cine recibido: 1
+Ubicacion Cine recibido: 1
+Numero de Salas Cine recibido: 1
+Cine añadido a la base de datosEsperando la introducción de parametros de cine...Nombre Cine recibido: 1
+Ubicacion Cine recibido: 1
+Numero de Salas Cine recibido: 1
+Cine añadido a la base de datosEsperando la introducción de parametros de cine...Nombre Cine recibido: 1
+Ubicacion Cine recibido: 1
+Numero de Salas Cine recibido: 1
+Cine añadido a la base de datosEsperando la introducción de parametros de cine...Nombre Cine recibido: 1
+Ubicacion Cine recibido: 1
+Numero de Salas Cine recibido: 1
+Cine añadido a la base de datosEsperando la introducción de parametros de cine...Nombre Cine recibido: 1
+Ubicacion Cine recibido: 1
+Numero de Salas Cine recibido: 1
+Cine añadido a la base de datosEsperando la introducción de parametros de cine...Nombre Cine recibido: 1
+Ubicacion Cine recibido: 1
+Numero de Salas Cine recibido: 1
+Cine añadido a la base de datosEsperando la introducción de parametros de cine...Nombre Cine recibido: 1
+Ubicacion Cine recibido: 1
+Numero de Salas Cine recibido: 1
+Cine añadido a la base de datosEsperando la introducción de parametros de cine...Nombre Cine recibido: 1
+Ubicacion Cine recibido: 1
+Numero de Salas Cine recibido: 1
+Cine añadido a la base de datosEsperando la introducción de parametros de cine...Nombre Cine recibido: 1
+Ubicacion Cine recibido: 1
+Numero de Salas Cine recibido: 1
+Cine añadido a la base de datosEsperando la introducción de parametros de cine...Nombre Cine recibido: 1
+Ubicacion Cine recibido: 1
+Numero de Salas Cine recibido: 1
+Cine añadido a la base de datosEsperando la introducción de parametros de cine...Nombre Cine recibido: 1
+Ubicacion Cine recibido: 1
+Numero de Salas Cine recibido: 1
+Cine añadido a la base de datosEsperando la introducción de parametros de cine...Nombre Cine recibido: 1
+Ubicacion Cine recibido: 1
+Numero de Salas Cine recibido: 1
+Cine añadido a la base de datosEsperando la introducción de parametros de cine...Nombre Cine recibido: 1
+Ubicacion Cine recibido: 1
+Numero de Salas Cine recibido: 1
+Cine añadido a la base de datosEsperando la introducción de parametros de cine...Nombre Cine recibido: 1
+Ubicacion Cine recibido: 1
+Numero de Salas Cine recibido: 1
+Cine añadido a la base de datosEsperando la introducción de parametros de cine...Nombre Cine recibido: 1
+Ubicacion Cine recibido: 1
+Numero de Salas Cine recibido: 1
+Cine añadido a la base de datosEsperando la introducción de parametros de cine...Nombre Cine recibido: 1
+Ubicacion Cine recibido: 1
+Numero de Salas Cine recibido: 1
+Cine añadido a la base de datosEsperando la introducción de parametros de cine...Nombre Cine recibido: 1
+Ubicacion Cine recibido: 1
+Numero de Salas Cine recibido: 1
+Cine añadido a la base de datosEsperando la introducción de parametros de cine...Nombre Cine recibido: 1
+Ubicacion Cine recibido: 1
+Numero de Salas Cine recibido: 1
+Cine añadido a la base de datosEsperando la introducción de parametros de cine...Nombre Cine recibido: 1
+Ubicacion Cine recibido: 1
+Numero de Salas Cine recibido: 1
+Cine añadido a la base de datosEsperando la introducción de parametros de cine...Nombre Cine recibido: 1
+Ubicacion Cine recibido: 1
+Numero de Salas Cine recibido: 1
+Cine añadido a la base de datosEsperando la introducción de parametros de cine...Nombre Cine recibido: 1
+Ubicacion Cine recibido: 1
+Numero de Salas Cine recibido: 1
+Cine añadido a la base de datosEsperando la introducción de parametros de cine...Nombre Cine recibido: 1
+Ubicacion Cine recibido: 1
+Numero de Salas Cine recibido: 1
+Cine añadido a la base de datosEsperando la introducción de parametros de cine...Nombre Cine recibido: 1
+Ubicacion Cine recibido: 1
+Numero de Salas Cine recibido: 1
+Cine añadido a la base de datosEsperando la introducción de parametros de cine...Nombre Cine recibido: 1
+Ubicacion Cine recibido: 1
+Numero de Salas Cine recibido: 1
+Cine añadido a la base de datosEsperando la introducción de parametros de cine...Nombre Cine recibido: 1
+Ubicacion Cine recibido: 1
+Numero de Salas Cine recibido: 1
+Cine añadido a la base de datosEsperando la introducción de parametros de cine...Nombre Cine recibido: 1
+Ubicacion Cine recibido: 1
+Numero de Salas Cine recibido: 1
+Cine añadido a la base de datosEsperando la introducción de parametros de cine...Nombre Cine recibido: 1
+Ubicacion Cine recibido: 1
+Numero de Salas Cine recibido: 1
+Cine añadido a la base de datosEsperando la introducción de parametros de cine...Nombre Cine recibido: 1
+Ubicacion Cine recibido: 1
+Numero de Salas Cine recibido: 1
+Cine añadido a la base de datosEsperando la introducción de parametros de cine...Nombre Cine recibido: 1
+Ubicacion Cine recibido: 1
+Numero de Salas Cine recibido: 1
+Cine añadido a la base de datosEsperando la introducción de parametros de cine...Nombre Cine recibido: 1
+Ubicacion Cine recibido: 1
+Numero de Salas Cine recibido: 1
+Cine añadido a la base de datosEsperando la introducción de parametros de cine...Nombre Cine recibido: 1
+Ubicacion Cine recibido: 1
+Numero de Salas Cine recibido: 1
+Cine añadido a la base de datosEsperando la introducción de parametros de cine...Nombre Cine recibido: 1
+Ubicacion Cine recibido: 1
+Numero de Salas Cine recibido: 1
+Cine añadido a la base de datosEsperando la introducción de parametros de cine...Nombre Cine recibido: 1
+Ubicacion Cine recibido: 1
+Numero de Salas Cine recibido: 1
+Cine añadido a la base de datosEsperando la introducción de parametros de cine...Nombre Cine recibido: 1
+Ubicacion Cine recibido: 1
+Numero de Salas Cine recibido: 1
+Cine añadido a la base de datosEsperando la introducción de parametros de cine...Nombre Cine recibido: 1
+Ubicacion Cine recibido: 1
+Numero de Salas Cine recibido: 1
+Cine añadido a la base de datosEsperando la introducción de parametros de cine...Nombre Cine recibido: 1
+Ubicacion Cine recibido: 1
+Numero de Salas Cine recibido: 1
+Cine añadido a la base de datosEsperando la introducción de parametros de cine...Nombre Cine recibido: 1
+Ubicacion Cine recibido: 1
+Numero de Salas Cine recibido: 1
+Cine añadido a la base de datosEsperando la introducción de parametros de cine...Nombre Cine recibido: 1
+Ubicacion Cine recibido: 1
+Numero de Salas Cine recibido: 1
+Cine añadido a la base de datosEsperando la introducción de parametros de cine...Nombre Cine recibido: 1
+Ubicacion Cine recibido: 1
+Numero de Salas Cine recibido: 1
+Cine añadido a la base de datosEsperando la introducción de parametros de cine...Nombre Cine recibido: 1
+Ubicacion Cine recibido: 1
+Numero de Salas Cine recibido: 1
+Cine añadido a la base de datosEsperando la introducción de parametros de cine...Nombre Cine recibido: 1
+Ubicacion Cine recibido: 1
+Numero de Salas Cine recibido: 1
+Cine añadido a la base de datosEsperando la introducción de parametros de cine...Nombre Cine recibido: 1
+Ubicacion Cine recibido: 1
+Numero de Salas Cine recibido: 1
+Cine añadido a la base de datosEsperando la introducción de parametros de cine...Nombre Cine recibido: 1
+Ubicacion Cine recibido: 1
+Numero de Salas Cine recibido: 1
+Cine añadido a la base de datosEsperando la introducción de parametros de cine...Nombre Cine recibido: 1
+Ubicacion Cine recibido: 1
+Numero de Salas Cine recibido: 1
+Cine añadido a la base de datosEsperando la introducción de parametros de cine...Nombre Cine recibido: 1
+Ubicacion Cine recibido: 1
+Numero de Salas Cine recibido: 1
+Cine añadido a la base de datosEsperando la introducción de parametros de cine...Nombre Cine recibido: 1
+Ubicacion Cine recibido: 1
+Numero de Salas Cine recibido: 1
+Cine añadido a la base de datosEsperando la introducción de parametros de cine...Nombre Cine recibido: 1
+Ubicacion Cine recibido: 1
+Numero de Salas Cine recibido: 1
+Cine añadido a la base de datosEsperando la introducción de parametros de cine...Nombre Cine recibido: 1
+Ubicacion Cine recibido: 1
+Numero de Salas Cine recibido: 1
+Cine añadido a la base de datosEsperando la introducción de parametros de cine...Nombre Cine recibido: 1
+Ubicacion Cine recibido: 1
+Numero de Salas Cine recibido: 1
+Cine añadido a la base de datosEsperando la introducción de parametros de cine...Nombre Cine recibido: 1
+Ubicacion Cine recibido: 1
+Numero de Salas Cine recibido: 1
+Cine añadido a la base de datosEsperando la introducción de parametros de cine...Nombre Cine recibido: 1
+Ubicacion Cine recibido: 1
+Numero de Salas Cine recibido: 1
+Cine añadido a la base de datosEsperando la introducción de parametros de cine...Nombre Cine recibido: 1
+Ubicacion Cine recibido: 1
+Numero de Salas Cine recibido: 1
+Cine añadido a la base de datosEsperando la introducción de parametros de cine...Nombre Cine recibido: 1
+Ubicacion Cine recibido: 1
+Numero de Salas Cine recibido: 1
+Cine añadido a la base de datosEsperando la introducción de parametros de cine...Nombre Cine recibido: 1
+Ubicacion Cine recibido: 1
+Numero de Salas Cine recibido: 1
+Cine añadido a la base de datosEsperando la introducción de parametros de cine...Nombre Cine recibido: 1
+Ubicacion Cine recibido: 1
+Numero de Salas Cine recibido: 1
+Cine añadido a la base de datosEsperando la introducción de parametros de cine...Nombre Cine recibido: 1
+Ubicacion Cine recibido: 1
+Numero de Salas Cine recibido: 1
+Cine añadido a la base de datosEsperando la introducción de parametros de cine...Nombre Cine recibido: 1
+Ubicacion Cine recibido: 1
+Numero de Salas Cine recibido: 1
+Cine añadido a la base de datosEsperando la introducción de parametros de cine...Nombre Cine recibido: 1
+Ubicacion Cine recibido: 1
+Numero de Salas Cine recibido: 1
+Cine añadido a la base de datosEsperando la introducción de parametros de cine...Nombre Cine recibido: 1
+Ubicacion Cine recibido: 1
+Numero de Salas Cine recibido: 1
+Cine añadido a la base de datosEsperando la introducción de parametros de cine...Nombre Cine recibido: 1
+Ubicacion Cine recibido: 1
+Numero de Salas Cine recibido: 1
+Cine añadido a la base de datosEsperando la introducción de parametros de cine...Nombre Cine recibido: 1
+Ubicacion Cine recibido: 1
+Numero de Salas Cine recibido: 1
+Cine añadido a la base de datosEsperando la introducción de parametros de cine...Nombre Cine recibido: 1
+Ubicacion Cine recibido: 1
+Numero de Salas Cine recibido: 1
+Cine añadido a la base de datosEsperando la introducción de parametros de cine...Nombre Cine recibido: 1
+Ubicacion Cine recibido: 1
+Numero de Salas Cine recibido: 1
+Cine añadido a la base de datosEsperando la introducción de parametros de cine...Nombre Cine recibido: 1
+Ubicacion Cine recibido: 1
+Numero de Salas Cine recibido: 1
+Cine añadido a la base de datosEsperando la introducción de parametros de cine...Nombre Cine recibido: 1
+Ubicacion Cine recibido: 1
+Numero de Salas Cine recibido: 1
+Cine añadido a la base de datosEsperando la introducción de parametros de cine...Nombre Cine recibido: 1
+Ubicacion Cine recibido: 1
+Numero de Salas Cine recibido: 1
+Cine añadido a la base de datosEsperando la introducción de parametros de cine...Nombre Cine recibido: 1
+Ubicacion Cine recibido: 1
+Numero de Salas Cine recibido: 1
+Cine añadido a la base de datosEsperando la introducción de parametros de cine...Nombre Cine recibido: 1
+Ubicacion Cine recibido: 1
+Numero de Salas Cine recibido: 1
+Cine añadido a la base de datosEsperando la introducción de parametros de cine...Nombre Cine recibido: 1
+Ubicacion Cine recibido: 1
+Numero de Salas Cine recibido: 1
+Cine añadido a la base de datosEsperando la introducción de parametros de cine...Nombre Cine recibido: 1
+Ubicacion Cine recibido: 1
+Numero de Salas Cine recibido: 1
+Cine añadido a la base de datosEsperando la introducción de parametros de cine...Nombre Cine recibido: 1
+Ubicacion Cine recibido: 1
+Numero de Salas Cine recibido: 1
+Cine añadido a la base de datosEsperando la introducción de parametros de cine...Nombre Cine recibido: 1
+Ubicacion Cine recibido: 1
+Numero de Salas Cine recibido: 1
+Cine añadido a la base de datosEsperando la introducción de parametros de cine...Nombre Cine recibido: 1
+Ubicacion Cine recibido: 1
+Numero de Salas Cine recibido: 1
+Cine añadido a la base de datosEsperando la introducción de parametros de cine...Nombre Cine recibido: 1
+Ubicacion Cine recibido: 1
+Numero de Salas Cine recibido: 1
+Cine añadido a la base de datosEsperando la introducción de parametros de cine...Nombre Cine recibido: 1
+Ubicacion Cine recibido: 1
+Numero de Salas Cine recibido: 1
+Cine añadido a la base de datosEsperando la introducción de parametros de cine...Nombre Cine recibido: 05/26/23 17:57:06
+Usuario Logueado
+Conexion realizada entre servidor y cliente
+Iniciar Sesion
+Nombre Usuario recibido: admin
+Contrasenya Usuario recibida: admin
+Iniciando Sesion como Administrador
+Esperando la introducción de parametros de sesion...Horario Sesion recibido: 16:30
+Precio de Sesion recibido: 2
+idSala de Sesion recibido: 1
+idPeli de Sesion recibido: 1
