@@ -96,7 +96,7 @@ void deletePeli(Peli p, sqlite3* db){
 int IDMasAltoPe(Peli* pelis, int numPelis){
     int idMA = pelis[0].id_Peli;
     for (int i = 1; i<numPelis;i++){
-        if (idMA>pelis[i].id_Peli){
+        if (idMA<pelis[i].id_Peli){
             idMA = pelis[i].id_Peli;
         }
     }

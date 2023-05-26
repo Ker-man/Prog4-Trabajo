@@ -106,7 +106,7 @@ void deleteSala(Sala s, sqlite3* db){
 int IDMasAltoSa(Sala* salas, int numSalas){
     int idMA = salas[0].id_Sala;
     for (int i = 1; i<numSalas;i++){
-        if (idMA>salas[i].id_Sala){
+        if (idMA<salas[i].id_Sala){
             idMA = salas[i].id_Sala;
         }
     }

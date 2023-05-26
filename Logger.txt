@@ -169,3 +169,66 @@ Iniciando Sesion como Administrador
 05/26/23 20:46:03
 Usuario Logueado
 Conexion realizada entre servidor y cliente
+05/26/23 22:05:51
+Usuario Logueado
+Conexion realizada entre servidor y cliente
+Registrar Usuario
+Nombre Usuario recibido: r
+Contrasenya Usuario recibida: r
+Usuario Registrado
+05/26/23 22:08:34
+Usuario Logueado
+Conexion realizada entre servidor y cliente
+Registrar Usuario
+Nombre Usuario recibido: r
+Contrasenya Usuario recibida: r
+Usuario Registrado
+Iniciar Sesion
+Nombre Usuario recibido: r
+Contrasenya Usuario recibida: r
+Iniciando Sesion como Administrador
+Esperando la introducción de parametros de cine...Nombre Cine recibido: a
+Ubicacion Cine recibido: a
+Numero de Salas Cine recibido: 2
+Cine añadido a la base de datos05/26/23 22:12:00
+Usuario Logueado
+Conexion realizada entre servidor y cliente
+Iniciar Sesion
+Nombre Usuario recibido: r
+Contrasenya Usuario recibida: r
+Iniciando Sesion como Administrador
+05/26/23 22:12:49
+Usuario Logueado
+Conexion realizada entre servidor y cliente
+Iniciar Sesion
+Nombre Usuario recibido: r
+Contrasenya Usuario recibida: r
+Iniciando Sesion como Administrador
+Esperando la introducción de parametros de cine...Nombre Cine recibido: a
+Ubicacion Cine recibido: a
+Numero de Salas Cine recibido: 3
+Cine añadido a la base de datos05/26/23 22:13:32
+Usuario Logueado
+Conexion realizada entre servidor y cliente
+Iniciar Sesion
+Nombre Usuario recibido: r
+Contrasenya Usuario recibida: r
+Iniciando Sesion como Administrador
+Esperando la introducción de parametros de cine...Nombre Cine recibido: b
+Ubicacion Cine recibido: b
+Numero de Salas Cine recibido: 4
+Cine añadido a la base de datos05/26/23 22:15:32
+Usuario Logueado
+Conexion realizada entre servidor y cliente
+Iniciar Sesion
+Nombre Usuario recibido: R
+Contrasenya Usuario recibida: R
+Inicio Sesion Fallido
+Iniciar Sesion
+Nombre Usuario recibido: r
+Contrasenya Usuario recibida: r
+Iniciando Sesion como Administrador
+Esperando la introducción de parametros de cine...Nombre Cine recibido: t
+Ubicacion Cine recibido: t
+Numero de Salas Cine recibido: 3
+Cine añadido a la base de datos

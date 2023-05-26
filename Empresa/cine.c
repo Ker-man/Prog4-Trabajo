@@ -165,7 +165,7 @@ void imprimirTicket(User usuarioLogged, Cine cineSeleccionado, Peli peliSeleccio
 int IDMasAltoCi(Cine* cines, int numCines){
     int idMA = cines[0].id_Cine;
     for (int i = 1; i<numCines;i++){
-        if (idMA>cines[i].id_Cine){
+        if (idMA<cines[i].id_Cine){
             idMA = cines[i].id_Cine;
         }
     }

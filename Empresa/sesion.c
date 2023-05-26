@@ -126,7 +126,7 @@ void deleteSesion(Sesion s, sqlite3* db){
 int IDMasAltoSes(Sesion* sesiones, int numSesiones){
     int idMA = sesiones[0].id_Sesion;
     for (int i = 1; i<numSesiones;i++){
-        if (idMA>sesiones[i].id_Sesion){
+        if (idMA<sesiones[i].id_Sesion){
             idMA = sesiones[i].id_Sesion;
         }
     }
