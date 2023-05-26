@@ -1,9 +1,8 @@
-
-1;a;a;70;
-2;b;a;70;
-3;c;a;70;
-4;d;a;70;
-5;e;a;70;
-6;f;a;70;
-7;g;a;70;
-8;h;a;70;
+1;WestSideStory;Drama;152;
+2;DjangoUnchained;Accion;165;
+3;ElPadrino;Drama;175;
+4;PulpFiction;Policiaca;154;
+5;Joker;Thriller;121;
+6;MalditosBastardos;Accion;152;
+7;ElLoboDeWallStreet;DramaComedia;179;
+8;VDeVendetta;Accion;132;
