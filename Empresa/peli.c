@@ -47,11 +47,28 @@ Peli getPeliFromID(int id, sqlite3* db){
 }
 
 Peli* getPeliculas(sqlite3* db){
-	Peli* peliculas = (Peli*)malloc(sizeof(Peli)* getPelisCount(db));
-	for (int i = 0; i<=getPelisCount(db); i++){
-		peliculas[i] = getPeliFromID(i, db);
-	}
-	return peliculas;
+    sqlite3_stmt *stmt;
+    Peli peli;
+    char seq[100];
+    sprintf(seq, "SELECT * FROM PELICULA");
+
+    if (sqlite3_prepare_v2(db, seq, -1, &stmt, NULL) != SQLITE_OK) {
+        printf("Error al cargar la pelicula\n");
+        printf("%s\n", sqlite3_errmsg(db));
+        return &(Peli){'\0', 0, 0};
+    }
+    int var = 0;
+    Peli* pelis = (Peli*)malloc(sizeof(Peli)* getPelisCount(db));
+    while(sqlite3_step(stmt) == SQLITE_ROW)
+    {
+        pelis[var].id_Peli = sqlite3_column_int(stmt, 0);
+        strcpy(pelis[var].titulo, (char *) sqlite3_column_text(stmt, 1));
+        pelis[var].duracion = sqlite3_column_int(stmt, 2);
+        strcpy(pelis[var].genero, (char *) sqlite3_column_text(stmt, 3));
+        var++;
+    }
+
+    return pelis;
     
 }
 

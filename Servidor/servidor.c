@@ -291,15 +291,16 @@ int main(void)
 						if(o == '1'){
 							char op = ' ';
 							do{
-								int cont = getPelisCount(db);
+								
 								recv(comm_socket, recvBuff, sizeof(recvBuff), 0);
 								sscanf(recvBuff, "%c", &op);
 								
 								if(op == '1'){
-									Peli* pelis = getPeliculas(db);
+									int cont = 8;
 									sprintf(sendBuff, "%i",cont);
 									send(comm_socket, sendBuff, sizeof(sendBuff), 0);
-									for(int i = 1; i<=cont; i++){
+									Peli* pelis = getPeliculas(db);
+									for(int i = 0; i<cont; i++){
 										sprintf(sendBuff, "%s",pelis[i].titulo);
 										send(comm_socket, sendBuff, sizeof(sendBuff), 0);
 										sprintf(sendBuff, "%s",pelis[i].genero);
@@ -307,13 +308,14 @@ int main(void)
 									}
 									free(pelis);
 								}else if(op == '2'){
+									int cont = 8;
 									char titulo[MAX_LINEAS];
 									Peli* pelis = getPeliculas(db);
 									Peli pelicula;
 									recv(comm_socket, recvBuff, sizeof(recvBuff), 0);
 									sscanf(recvBuff, "%s", titulo);
 									printf("%s", titulo);
-									for(int i=0; i<=cont; i++){
+									for(int i=0; i<cont; i++){
 										if(strcmp(pelis[i].titulo, titulo) == 0){
 											pelicula.id_Peli = pelis[i].id_Peli;
 											strcpy(pelicula.titulo, pelis[i].titulo);
