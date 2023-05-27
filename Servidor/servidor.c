@@ -107,8 +107,7 @@ int main(void)
 			loggear("\n");
 			recv(comm_socket, recvBuff, sizeof(recvBuff), 0);
 			sscanf(recvBuff, "%s", pass);
-			loggear("Contrasenya Usuario recibida: ");
-			loggear(pass);
+			loggear("Contrasenya Usuario recibida ");
 			loggear("\n");
             addUsuario(name, pass, 1, db);
 			loggear("Usuario Registrado\n");
@@ -131,8 +130,7 @@ int main(void)
 			loggear("\n");
 			recv(comm_socket, recvBuff, sizeof(recvBuff), 0);
 			sscanf(recvBuff, "%s", pass);
-			loggear("Contrasenya Usuario recibida: ");
-			loggear(pass);
+			loggear("Contrasenya Usuario recibida ");
 			loggear("\n");
 			usuarioLogged = getUsuario(name, db);
 			char c;
