@@ -271,7 +271,7 @@ int main(void)
                         do{
                             op = ' ';
                             printf("\nEntrando en menu Peliculas\n");
-                            printf("1. Ver todas las peliculas 2. Buscar pelicula por nombre 3. Buscar pelicula por genero 4. Salir\n");
+                            printf("1. Ver todas las peliculas 2. Buscar pelicula por nombre 3. Salir\n");
                             cin >> op;
                             cout << endl;
                             sprintf(sendBuff, "%c", op);
@@ -319,30 +319,8 @@ int main(void)
                                 sscanf(recvBuff, "%s", genero);
                                 printf("La pelicula que buscas es: ID: %i, Titulo: %s, Duracion: %i, Genero: %s\n", idPeli, titulo, duracion, genero);                                
                                 
-                           }else if(op == '3'){
-                                printf("Genero: ");
-                                char genero[MAX_LINEAS];
-                                cin >> genero;
-                                cout << endl;
-
-                                sprintf(sendBuff, "%s", genero);
-                                send(s, sendBuff, sizeof(sendBuff), 0);
-
-                                int n;
-                                char titulo[MAX_LINEAS];
-                                int idPeli;
-                                recv(s, recvBuff, sizeof(recvBuff), 0);
-                                sscanf(recvBuff, "%s", &n);
-                                printf("Peliculas con ese Genero\n");
-                                for (int i = 0; i<n; i++){
-                                    recv(s, recvBuff, sizeof(recvBuff), 0);
-                                    sscanf(recvBuff, "%i", &idPeli);
-                                    recv(s, recvBuff, sizeof(recvBuff), 0);
-                                    sscanf(recvBuff, "%s", titulo);
-                                    printf("Pelicula: %i - %s\n", idPeli, titulo);
-                                }
-                            }
-                        }while(op != '4');
+                           }
+                        }while(op != '3');
                     }
                     else if(opcion=='2')
                     {
@@ -352,10 +330,30 @@ int main(void)
                             printf("1. Ver cines 2. Comprar ticket 3. Salir\n");
                             cin >> op;
                             cout << endl;
+                            sprintf(sendBuff, "%c", op);
+                            send(s, sendBuff, sizeof(sendBuff), 0);
                             if(op == '1'){
-
+                                //Cine cine;
+                                int cont;
+                                int idCine;
+                                int numSalas;
+                                char nombre[MAX_LINEAS];
+                                char ubicacion[MAX_LINEAS];
+                                recv(s, recvBuff, sizeof(recvBuff), 0);
+                                sscanf(recvBuff, "%i", &cont);
+                                for(int i = 0; i<cont; i++){
+                                    recv(s, recvBuff, sizeof(recvBuff), 0);
+                                    sscanf(recvBuff, "%i", &idCine);
+                                    recv(s, recvBuff, sizeof(recvBuff), 0);
+                                    sscanf(recvBuff, "%i", &numSalas);
+                                    recv(s, recvBuff, sizeof(recvBuff), 0);
+                                    strcpy(nombre, recvBuff);
+                                    recv(s, recvBuff, sizeof(recvBuff), 0);
+                                    strcpy(ubicacion, recvBuff);
+                                    printf("Cine - ID:%i , Numero de Salas: %i , Nombre: %s , Ubicacion: %s\n", idCine, numSalas, nombre, ubicacion);
+                                }
                             }else if(op == '2'){
-
+                                
                             }
                         }while(op != '3');
                     }

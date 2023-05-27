@@ -331,44 +331,30 @@ int main(void)
 									sprintf(sendBuff, "%s",pelicula.genero);
 									send(comm_socket, sendBuff, sizeof(sendBuff), 0);
 									free(pelis);
-								}else if(op == '3'){
-
-									//ATENCIÓN WARNING!!!! USAR ESTA OPCIÓN BAJO VUESTRA PROPIA RESPONSABILIDAD. ANDONI Y YO NO NOS HACEMOS CARGO DE LO QUE OCURRA.
-                                    char genero[MAX_LINEAS];
-                                    int cont = getPelisCount(db);
-                                    int idPeli;
-                                    Peli peliA;
-                                    Peli* pelis = getPeliculas(db);
-                                    recv(comm_socket, recvBuff, sizeof(recvBuff), 0);
-                                    sscanf(recvBuff, "%s", genero);
-
-                                    sprintf(sendBuff, "%i",cont);
-                                    send(comm_socket, sendBuff, sizeof(sendBuff), 0);
-                                    for(int i = 0; i<cont; i++){
-                                        if (strcmp(pelis[i].genero, genero) == 0){
-                                            sprintf(sendBuff, "%i", pelis[i].id_Peli);
-                                            send(comm_socket, sendBuff, sizeof(sendBuff), 0);
-                                            sprintf(sendBuff, "%s", pelis[i].titulo);
-                                            send(comm_socket, sendBuff, sizeof(sendBuff), 0);
-                                        }
-										/*
-										else 
-										{
-											sprintf(sendBuff, "%i", 0);
-											send(comm_socket, sendBuff, sizeof(sendBuff), 0);
-											sprintf(sendBuff, "%s", "");
-											send(comm_socket, sendBuff, sizeof(sendBuff), 0);
-										}
-										*/
-                                    }
-                                  free(pelis);
                                 } 
-							}while(op != '4');
+							}while(op != '3');
 						}else if(o == '2'){
 							char op;
 							do{
+								recv(comm_socket, recvBuff, sizeof(recvBuff), 0);
+								sscanf(recvBuff, "%s", op);
 								if(op == '1'){
-
+									Cine* cines;
+									int cont = getCinesCount(db);
+									cines = getCines(db);
+									sprintf(sendBuff, "%i", cont);
+									send(comm_socket, sendBuff, sizeof(sendBuff), 0);
+									for(int i = 0; i<cont; i++){
+										sprintf(sendBuff, "%s",cines[i].id_Cine);
+										send(comm_socket, sendBuff, sizeof(sendBuff), 0);
+										sprintf(sendBuff, "%s",cines[i].numSalas);
+										send(comm_socket, sendBuff, sizeof(sendBuff), 0);
+										sprintf(sendBuff, "%s",cines[i].nom_Cine);
+										send(comm_socket, sendBuff, sizeof(sendBuff), 0);
+										sprintf(sendBuff, "%s",cines[i].ubi_Cine);
+										send(comm_socket, sendBuff, sizeof(sendBuff), 0);
+									}
+									free(cines);
 								}else if(op == '2'){
 
 								}
