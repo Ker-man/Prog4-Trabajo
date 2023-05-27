@@ -348,3 +348,451 @@ Iniciar Sesion
 Nombre Usuario recibido: e
 Contrasenya Usuario recibida: e
 Iniciando Sesion como Cliente
+05/27/23 01:17:17
+Usuario Logueado
+Conexion realizada entre servidor y cliente
+Registrar Usuario
+Nombre Usuario recibido: a
+Contrasenya Usuario recibida: a
+Usuario Registrado
+Iniciar Sesion
+Nombre Usuario recibido: a
+Contrasenya Usuario recibida: a
+Iniciando Sesion como Cliente
+05/27/23 01:18:00
+Usuario Logueado
+Conexion realizada entre servidor y cliente
+Iniciar Sesion
+Nombre Usuario recibido: a
+Contrasenya Usuario recibida: a
+Iniciando Sesion como Cliente
+05/27/23 01:18:43
+Usuario Logueado
+Conexion realizada entre servidor y cliente
+Iniciar Sesion
+Nombre Usuario recibido: a
+Contrasenya Usuario recibida: a
+Iniciando Sesion como Cliente
+05/27/23 01:19:09
+Usuario Logueado
+Conexion realizada entre servidor y cliente
+Iniciar Sesion
+Nombre Usuario recibido: a
+Contrasenya Usuario recibida: a
+Iniciando Sesion como Cliente
+05/27/23 01:21:26
+Usuario Logueado
+Conexion realizada entre servidor y cliente
+Iniciar Sesion
+Nombre Usuario recibido: a
+Contrasenya Usuario recibida: a
+Iniciando Sesion como Cliente
+05/27/23 01:22:22
+Usuario Logueado
+Conexion realizada entre servidor y cliente
+Iniciar Sesion
+Nombre Usuario recibido: a
+Contrasenya Usuario recibida: a
+Iniciando Sesion como Cliente
+05/27/23 01:24:54
+Usuario Logueado
+Conexion realizada entre servidor y cliente
+Iniciar Sesion
+Nombre Usuario recibido: a
+Contrasenya Usuario recibida: a
+Iniciando Sesion como Cliente
+05/27/23 01:27:24
+Usuario Logueado
+Conexion realizada entre servidor y cliente
+Iniciar Sesion
+Nombre Usuario recibido: a
+Contrasenya Usuario recibida: a
+Iniciando Sesion como Cliente
+05/27/23 01:28:03
+Usuario Logueado
+Conexion realizada entre servidor y cliente
+Iniciar Sesion
+Nombre Usuario recibido: a
+Contrasenya Usuario recibida: a
+Iniciando Sesion como Cliente
+05/27/23 01:29:33
+Usuario Logueado
+Conexion realizada entre servidor y cliente
+Iniciar Sesion
+Nombre Usuario recibido: a
+Contrasenya Usuario recibida: a
+Iniciando Sesion como Cliente
+05/27/23 01:31:32
+Usuario Logueado
+Conexion realizada entre servidor y cliente
+Iniciar Sesion
+Nombre Usuario recibido: a
+Contrasenya Usuario recibida: a
+Iniciando Sesion como Cliente
+05/27/23 01:33:57
+Usuario Logueado
+Conexion realizada entre servidor y cliente
+Registrar Usuario
+Nombre Usuario recibido: bla
+Contrasenya Usuario recibida: bla
+Usuario Registrado
+Iniciar Sesion
+Nombre Usuario recibido: bla
+Contrasenya Usuario recibida: bla
+Iniciando Sesion como Cliente
+05/27/23 01:35:49
+Usuario Logueado
+Conexion realizada entre servidor y cliente
+Registrar Usuario
+Nombre Usuario recibido: bla2
+Contrasenya Usuario recibida: bla2
+Usuario Registrado
+Iniciar Sesion
+Nombre Usuario recibido: bla2
+Contrasenya Usuario recibida: bla2
+Iniciando Sesion como Cliente
+Programa Finalizado
+
+05/27/23 01:38:13
+Usuario Logueado
+Conexion realizada entre servidor y cliente
+Registrar Usuario
+Nombre Usuario recibido: gla2
+Contrasenya Usuario recibida: gla2
+Usuario Registrado
+Iniciar Sesion
+Nombre Usuario recibido: gla2
+Contrasenya Usuario recibida: gla2
+Iniciando Sesion como Cliente
+05/27/23 01:39:34
+Usuario Logueado
+Conexion realizada entre servidor y cliente
+Iniciar Sesion
+Nombre Usuario recibido: gla2
+Contrasenya Usuario recibida: gla2
+Iniciando Sesion como Cliente
+05/27/23 01:40:18
+Usuario Logueado
+Conexion realizada entre servidor y cliente
+Iniciar Sesion
+Nombre Usuario recibido: gla2
+Contrasenya Usuario recibida: gla2
+Iniciando Sesion como Cliente
+05/27/23 01:41:29
+Usuario Logueado
+Conexion realizada entre servidor y cliente
+Iniciar Sesion
+Nombre Usuario recibido: gla2
+Contrasenya Usuario recibida: gla2
+Iniciando Sesion como Cliente
+05/27/23 01:42:07
+Usuario Logueado
+Conexion realizada entre servidor y cliente
+Iniciar Sesion
+Nombre Usuario recibido: gla2
+Contrasenya Usuario recibida: gla2
+Iniciando Sesion como Cliente
+05/27/23 01:44:27
+Usuario Logueado
+Conexion realizada entre servidor y cliente
+Iniciar Sesion
+Nombre Usuario recibido: admin
+Contrasenya Usuario recibida: admin
+Iniciando Sesion como Administrador
+05/27/23 01:51:17
+Usuario Logueado
+Conexion realizada entre servidor y cliente
+Iniciar Sesion
+Nombre Usuario recibido: admin
+Contrasenya Usuario recibida: admin
+Iniciando Sesion como Administrador
+Iniciar Sesion
+Nombre Usuario recibido: gla2
+Contrasenya Usuario recibida: gla2
+Iniciando Sesion como Cliente
+05/27/23 01:52:45
+Usuario Logueado
+Conexion realizada entre servidor y cliente
+Iniciar Sesion
+Nombre Usuario recibido: admin
+Contrasenya Usuario recibida: admin
+Iniciando Sesion como Administrador
+Iniciar Sesion
+Nombre Usuario recibido: gla2
+Contrasenya Usuario recibida: gla2
+Iniciando Sesion como Cliente
+05/27/23 01:54:23
+Usuario Logueado
+Conexion realizada entre servidor y cliente
+Iniciar Sesion
+Nombre Usuario recibido: admin
+Contrasenya Usuario recibida: admin
+Iniciando Sesion como Administrador
+Esperando la introducción de parametros de cine...Nombre Cine recibido: patata
+Ubicacion Cine recibido: patata
+Numero de Salas Cine recibido: 2
+Cine añadido a la base de datosEsperando la introducción de parametros de cine...Nombre Cine recibido: patata2
+Ubicacion Cine recibido: patata2
+Numero de Salas Cine recibido: 5
+Cine añadido a la base de datosIniciar Sesion
+Nombre Usuario recibido: gla2
+Contrasenya Usuario recibida: gla2
+Iniciando Sesion como Cliente
+05/27/23 01:57:05
+Usuario Logueado
+Conexion realizada entre servidor y cliente
+Iniciar Sesion
+Nombre Usuario recibido: gla2
+Contrasenya Usuario recibida: gla2
+Iniciando Sesion como Cliente
+Iniciar Sesion
+Nombre Usuario recibido: admin
+Contrasenya Usuario recibida: admin
+Iniciando Sesion como Administrador
+Esperando la introducción de parametros de cine...Nombre Cine recibido: patata3
+Ubicacion Cine recibido: patata3
+Numero de Salas Cine recibido: 7
+Cine añadido a la base de datosEsperando la introducción de parametros de sesion...Horario Sesion recibido: 19:00
+Precio de Sesion recibido: 7
+idSala de Sesion recibido: 2
+idPeli de Sesion recibido: 2
+05/27/23 02:10:39
+Usuario Logueado
+Conexion realizada entre servidor y cliente
+Iniciar Sesion
+Nombre Usuario recibido: gla2
+Contrasenya Usuario recibida: gla2
+Iniciando Sesion como Cliente
+05/27/23 02:11:52
+Usuario Logueado
+Conexion realizada entre servidor y cliente
+Iniciar Sesion
+Nombre Usuario recibido: gla2
+Contrasenya Usuario recibida: gla2
+Iniciando Sesion como Cliente
+05/27/23 02:12:34
+Usuario Logueado
+Conexion realizada entre servidor y cliente
+Iniciar Sesion
+Nombre Usuario recibido: gla2
+Contrasenya Usuario recibida: gla2
+Iniciando Sesion como Cliente
+05/27/23 02:13:21
+Usuario Logueado
+Conexion realizada entre servidor y cliente
+Registrar Usuario
+Nombre Usuario recibido: gla3
+Contrasenya Usuario recibida: gla3
+Usuario Registrado
+Iniciar Sesion
+Nombre Usuario recibido: gla3
+Contrasenya Usuario recibida: gla3
+Iniciando Sesion como Cliente
+05/27/23 02:16:55
+Usuario Logueado
+Conexion realizada entre servidor y cliente
+Iniciar Sesion
+Nombre Usuario recibido: gla2
+Contrasenya Usuario recibida: gla2
+Iniciando Sesion como Cliente
+05/27/23 02:17:50
+Usuario Logueado
+Conexion realizada entre servidor y cliente
+Iniciar Sesion
+Nombre Usuario recibido: gla2
+Contrasenya Usuario recibida: gla2
+Iniciando Sesion como Cliente
+Programa Finalizado
+
+05/27/23 02:21:21
+Usuario Logueado
+Conexion realizada entre servidor y cliente
+Iniciar Sesion
+Nombre Usuario recibido: gla2
+Contrasenya Usuario recibida: gla2
+Iniciando Sesion como Cliente
+Iniciar Sesion
+Nombre Usuario recibido: admin
+Contrasenya Usuario recibida: admin
+Iniciando Sesion como Administrador
+Iniciar Sesion
+Nombre Usuario recibido: gla2
+Contrasenya Usuario recibida: gla2
+Iniciando Sesion como Cliente
+Programa Finalizado
+
+05/27/23 02:27:31
+Usuario Logueado
+Conexion realizada entre servidor y cliente
+Iniciar Sesion
+Nombre Usuario recibido: gla2
+Contrasenya Usuario recibida: gla2
+Iniciando Sesion como Cliente
+Programa Finalizado
+
+05/27/23 02:31:10
+Usuario Logueado
+Conexion realizada entre servidor y cliente
+Iniciar Sesion
+Nombre Usuario recibido: gla2
+Contrasenya Usuario recibida: gla2
+Iniciando Sesion como Cliente
+05/27/23 02:31:42
+Usuario Logueado
+Conexion realizada entre servidor y cliente
+Iniciar Sesion
+Nombre Usuario recibido: gla2
+Contrasenya Usuario recibida: gla2
+Iniciando Sesion como Cliente
+05/27/23 02:32:10
+Usuario Logueado
+Conexion realizada entre servidor y cliente
+Iniciar Sesion
+Nombre Usuario recibido: gla2
+Contrasenya Usuario recibida: gla2
+Iniciando Sesion como Cliente
+05/27/23 02:34:26
+Usuario Logueado
+Conexion realizada entre servidor y cliente
+Iniciar Sesion
+Nombre Usuario recibido: gla2
+Contrasenya Usuario recibida: gla2
+Iniciando Sesion como Cliente
+Programa Finalizado
+
+05/27/23 02:36:58
+Usuario Logueado
+Conexion realizada entre servidor y cliente
+Iniciar Sesion
+Nombre Usuario recibido: gla2
+Contrasenya Usuario recibida: gla2
+Iniciando Sesion como Cliente
+05/27/23 02:38:23
+Usuario Logueado
+Conexion realizada entre servidor y cliente
+Iniciar Sesion
+Nombre Usuario recibido: gla2
+Contrasenya Usuario recibida: gla2
+Iniciando Sesion como Cliente
+Iniciar Sesion
+Nombre Usuario recibido: admin
+Contrasenya Usuario recibida: admin
+Iniciando Sesion como Administrador
+Esperando la introducción de parametros de cine...Nombre Cine recibido: DockCine
+Ubicacion Cine recibido: Portugalete
+Numero de Salas Cine recibido: 6
+Cine añadido a la base de datosIniciar Sesion
+Nombre Usuario recibido: gla2
+Contrasenya Usuario recibida: gla2
+Iniciando Sesion como Cliente
+Programa Finalizado
+
+05/27/23 02:40:27
+Usuario Logueado
+Conexion realizada entre servidor y cliente
+Iniciar Sesion
+Nombre Usuario recibido: gla2
+Contrasenya Usuario recibida: gla2
+Iniciando Sesion como Cliente
+Programa Finalizado
+
+05/27/23 02:46:32
+Usuario Logueado
+Conexion realizada entre servidor y cliente
+Iniciar Sesion
+Nombre Usuario recibido: gla2
+Contrasenya Usuario recibida: gla2
+Iniciando Sesion como Cliente
+05/27/23 02:48:17
+Usuario Logueado
+Conexion realizada entre servidor y cliente
+Iniciar Sesion
+Nombre Usuario recibido: gla2
+Contrasenya Usuario recibida: gla2
+Iniciando Sesion como Cliente
+05/27/23 03:04:11
+Usuario Logueado
+Conexion realizada entre servidor y cliente
+Iniciar Sesion
+Nombre Usuario recibido: gla2
+Contrasenya Usuario recibida: gla2
+Iniciando Sesion como Cliente
+05/27/23 03:05:10
+Usuario Logueado
+Conexion realizada entre servidor y cliente
+Iniciar Sesion
+Nombre Usuario recibido: gla2
+Contrasenya Usuario recibida: gla2
+Iniciando Sesion como Cliente
+05/27/23 03:05:57
+Usuario Logueado
+Conexion realizada entre servidor y cliente
+Iniciar Sesion
+Nombre Usuario recibido: gla2
+Contrasenya Usuario recibida: gla2
+Iniciando Sesion como Cliente
+Programa Finalizado
+
+05/27/23 03:07:32
+Usuario Logueado
+Conexion realizada entre servidor y cliente
+Iniciar Sesion
+Nombre Usuario recibido: gla2
+Contrasenya Usuario recibida: gla2
+Iniciando Sesion como Cliente
+05/27/23 03:08:32
+Usuario Logueado
+Conexion realizada entre servidor y cliente
+Iniciar Sesion
+Nombre Usuario recibido: gla2
+Contrasenya Usuario recibida: gla2
+Iniciando Sesion como Cliente
+05/27/23 03:10:49
+Usuario Logueado
+Conexion realizada entre servidor y cliente
+Iniciar Sesion
+Nombre Usuario recibido: gla2
+Contrasenya Usuario recibida: gla2
+Iniciando Sesion como Cliente
+05/27/23 03:11:28
+Usuario Logueado
+Conexion realizada entre servidor y cliente
+Iniciar Sesion
+Nombre Usuario recibido: gla2
+Contrasenya Usuario recibida: gla2
+Iniciando Sesion como Cliente
+05/27/23 03:12:58
+Usuario Logueado
+Conexion realizada entre servidor y cliente
+Iniciar Sesion
+Nombre Usuario recibido: gla2
+Contrasenya Usuario recibida: gla2
+Iniciando Sesion como Cliente
+05/27/23 03:14:17
+Usuario Logueado
+Conexion realizada entre servidor y cliente
+Iniciar Sesion
+Nombre Usuario recibido: gla2
+Contrasenya Usuario recibida: gla2
+Iniciando Sesion como Cliente
+05/27/23 03:15:45
+Usuario Logueado
+Conexion realizada entre servidor y cliente
+Iniciar Sesion
+Nombre Usuario recibido: gla2
+Contrasenya Usuario recibida: gla2
+Iniciando Sesion como Cliente
+05/27/23 03:16:35
+Usuario Logueado
+Conexion realizada entre servidor y cliente
+Iniciar Sesion
+Nombre Usuario recibido: gla2
+Contrasenya Usuario recibida: gla2
+Iniciando Sesion como Cliente
+05/27/23 03:17:33
+Usuario Logueado
+Conexion realizada entre servidor y cliente
+Iniciar Sesion
+Nombre Usuario recibido: gla2
+Contrasenya Usuario recibida: gla2
+Iniciando Sesion como Cliente

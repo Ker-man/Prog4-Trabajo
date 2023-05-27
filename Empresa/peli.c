@@ -52,6 +52,7 @@ Peli* getPeliculas(sqlite3* db){
 		peliculas[i] = getPeliFromID(i, db);
 	}
 	return peliculas;
+    
 }
 
 Peli getPelicula(char* titulo, sqlite3* db){

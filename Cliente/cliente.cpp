@@ -269,8 +269,9 @@ int main(void)
                     {
                         char op;
                         do{
+                            op = ' ';
                             printf("\nEntrando en menu Peliculas\n");
-                            printf("1. Ver todas las peliculas 2. Buscar pelicula por nombre 3. Buscar peliulas por genero 4. Salir\n");
+                            printf("1. Ver todas las peliculas 2. Buscar pelicula por nombre 3. Buscar pelicula por genero 4. Salir\n");
                             cin >> op;
                             cout << endl;
                             sprintf(sendBuff, "%c", op);
@@ -292,11 +293,15 @@ int main(void)
                                     recv(s, recvBuff, sizeof(recvBuff), 0);
                                     strcpy(genero, recvBuff);
                                     printf("Pelicula: %s - %s\n", nombre, genero);
+
+                                    
                                 }
+                                continue;
+                                
                             }else if(op == '2'){
                                 char titulo[MAX_LINEAS];
-                                int idPeli = 0;
-                                int duracion = 0;
+                                int idPeli;
+                                int duracion;
                                 char genero[MAX_LINEAS];
                                 printf("Peli a buscar (Titulo):\n");
                                 cin >> titulo;
@@ -313,7 +318,8 @@ int main(void)
                                 recv(s, recvBuff, sizeof(recvBuff), 0);
                                 sscanf(recvBuff, "%s", genero);
                                 printf("La pelicula que buscas es: ID: %i, Titulo: %s, Duracion: %i, Genero: %s\n", idPeli, titulo, duracion, genero);                                
-                            }else if(op == '3'){
+                                
+                           }else if(op == '3'){
                                 printf("Genero: ");
                                 char genero[MAX_LINEAS];
                                 cin >> genero;

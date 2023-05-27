@@ -285,16 +285,18 @@ int main(void)
 					printf("Iniciando Sesion como Cliente...\n");
 					char o;
 					do{
+						o = ' ';
 						recv(comm_socket, recvBuff, sizeof(recvBuff), 0);
 						sscanf(recvBuff, "%c", &o);
 						if(o == '1'){
-							char op;
+							char op = ' ';
 							do{
-								Peli* pelis = getPeliculas(db);
 								int cont = getPelisCount(db);
 								recv(comm_socket, recvBuff, sizeof(recvBuff), 0);
 								sscanf(recvBuff, "%c", &op);
+								
 								if(op == '1'){
+									Peli* pelis = getPeliculas(db);
 									sprintf(sendBuff, "%i",cont);
 									send(comm_socket, sendBuff, sizeof(sendBuff), 0);
 									for(int i = 1; i<=cont; i++){
@@ -303,9 +305,10 @@ int main(void)
 										sprintf(sendBuff, "%s",pelis[i].genero);
 										send(comm_socket, sendBuff, sizeof(sendBuff), 0);
 									}
-									//free(pelis);
+									free(pelis);
 								}else if(op == '2'){
 									char titulo[MAX_LINEAS];
+									Peli* pelis = getPeliculas(db);
 									Peli pelicula;
 									recv(comm_socket, recvBuff, sizeof(recvBuff), 0);
 									sscanf(recvBuff, "%s", titulo);
@@ -327,7 +330,10 @@ int main(void)
 									send(comm_socket, sendBuff, sizeof(sendBuff), 0);
 									sprintf(sendBuff, "%s",pelicula.genero);
 									send(comm_socket, sendBuff, sizeof(sendBuff), 0);
+									free(pelis);
 								}else if(op == '3'){
+
+									//ATENCIÓN WARNING!!!! USAR ESTA OPCIÓN BAJO VUESTRA PROPIA RESPONSABILIDAD. ANDONI Y YO NO NOS HACEMOS CARGO DE LO QUE OCURRA.
                                     char genero[MAX_LINEAS];
                                     int cont = getPelisCount(db);
                                     int idPeli;
@@ -345,6 +351,15 @@ int main(void)
                                             sprintf(sendBuff, "%s", pelis[i].titulo);
                                             send(comm_socket, sendBuff, sizeof(sendBuff), 0);
                                         }
+										/*
+										else 
+										{
+											sprintf(sendBuff, "%i", 0);
+											send(comm_socket, sendBuff, sizeof(sendBuff), 0);
+											sprintf(sendBuff, "%s", "");
+											send(comm_socket, sendBuff, sizeof(sendBuff), 0);
+										}
+										*/
                                     }
                                   free(pelis);
                                 } 
