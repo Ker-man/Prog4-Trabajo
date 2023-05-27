@@ -170,11 +170,9 @@ int main(void)
 							loggear("\n");
 
 							recv(comm_socket, recvBuff, sizeof(recvBuff), 0);
-							//printf(recvBuff);
 							sscanf(recvBuff, "%d", &numSalas);					
 							loggear("Numero de Salas Cine recibido: ");
 							char numSalasL[MAX_LINEAS];
-							//printf("%i", numSalas);
 							sprintf(numSalasL, "%i", numSalas);
 							loggear(numSalasL);
 							loggear("\n");
@@ -183,6 +181,7 @@ int main(void)
 							loggear("Cine añadido a la base de datos");
 						}
 						else if(c == '2'){
+							loggear("Mostrando todos los cines de la base de datos...\n");
 							int cont = getCinesCount(db);
 							char cineBorrarNom[MAX_LINEAS];
 							char cineBorrarUbi[MAX_LINEAS];
@@ -197,10 +196,15 @@ int main(void)
 								send(comm_socket, sendBuff, sizeof(sendBuff), 0);
 							}
 							free(cines);
+							loggear("Esperando a recibir el cine a borrar... \n");
 							recv(comm_socket, recvBuff, sizeof(recvBuff), 0);
 							strcpy(cineBorrarNom, recvBuff);
+							loggear("Nombre del cine a borrar: \n");
+							loggear(cineBorrarNom);
 							recv(comm_socket, recvBuff, sizeof(recvBuff), 0);
 							strcpy(cineBorrarUbi, recvBuff);
+							loggear("Ubicacion del cine a borrar: \n");
+							loggear(cineBorrarUbi);
 							cineA = getCine(cineBorrarNom, cineBorrarUbi, db);
 							deleteCine(cineA, db);
 						}
@@ -252,6 +256,7 @@ int main(void)
 									
 								}
 								else if(op == '2'){
+									loggear("Mostrando todas las sesiones de la base de datos...\n");
 									int cont = getSesionesCount(db);
 									int idSesion;
 									Sesion sesionA;
@@ -262,13 +267,15 @@ int main(void)
 										sprintf(sendBuff, "%s",sesiones[i].horario);
 										send(comm_socket, sendBuff, sizeof(sendBuff), 0);
 										sprintf(sendBuff, "%i",sesiones[i].id_Sesion);
-										printf("%i", sesiones[i].id_Sesion);
 										send(comm_socket, sendBuff, sizeof(sendBuff), 0);
 									}
 									free(sesiones);
 									recv(comm_socket, recvBuff, sizeof(recvBuff), 0);
 									sscanf(recvBuff, "%d", &idSesion);
-									printf("\n---%i---",idSesion);
+									loggear("idSesion de la sesion recibido");
+									char idSesionL[MAX_LINEAS];
+									sprintf(idSesionL, "%i", idSesion);
+									loggear(idSesionL);
 									sesionA = getSesionFromID(idSesion, db);
 									imprimirSesion(sesionA);
 									deleteSesion(sesionA, db);
@@ -296,6 +303,7 @@ int main(void)
 								sscanf(recvBuff, "%c", &op);
 								
 								if(op == '1'){
+									loggear("Mostrando todas las peliculas de la base de datos... \n");
 									int cont = 8;
 									sprintf(sendBuff, "%i",cont);
 									send(comm_socket, sendBuff, sizeof(sendBuff), 0);
@@ -314,7 +322,8 @@ int main(void)
 									Peli pelicula;
 									recv(comm_socket, recvBuff, sizeof(recvBuff), 0);
 									sscanf(recvBuff, "%s", titulo);
-									printf("%s", titulo);
+									loggear("Titulo de la pelicula a buscar: \n");
+									loggear(titulo);
 									for(int i=0; i<cont; i++){
 										if(strcmp(pelis[i].titulo, titulo) == 0){
 											pelicula.id_Peli = pelis[i].id_Peli;
@@ -341,6 +350,7 @@ int main(void)
 								recv(comm_socket, recvBuff, sizeof(recvBuff), 0);
 								sscanf(recvBuff, "%s", &op);
 								if(op == '1'){
+									loggear("Mostrando todos los cines de la base de datos... \n");
 									int cont = getCinesCount(db);
 									Cine cineA;
 									sprintf(sendBuff, "%i",cont);
@@ -363,7 +373,7 @@ int main(void)
 					}while(o != '3');
 
 				}
-				printf("eee");
+				
     		} 
 			else 
 			{
@@ -390,13 +400,13 @@ int main(void)
                 //Crear Cine x
                 //Borrar cine x
                 //Gestionar Cine
-                    //-Crear Sala
+                    //-Crear Sala 
                     //-Borrar Sala
                     //-Salir
                 //Menu Sesiones x
-                    //-Crar Sesion para un sala
-                    //-Borrar una sesion de una sala
-					//-Salir
+                    //-Crar Sesion para un sala x
+                    //-Borrar una sesion de una sala x
+					//-Salir x
                 //-Salir x
         
         //Menu Usuario
@@ -409,29 +419,3 @@ int main(void)
 				//-Comprar ticket
 				//-Salir
 			//-Salir
-
-		
-		//Menu Admin
-				//Menu cine
-					//-Crear Sala
-					//-Borrar Sala
-					//Elige un cine (Menu Sesiones)
-						//-Crear sesion para una sala
-						//-Crear sesion para todas las salas
-						//-Borrar sesion para una sala
-						//-Salir
-					//-Salir
-				//Menu Peliculas
-					//Crear pelicula
-					//Borrar Pelicula
-				//-Salir
-
-
-			//Menu Usuario
-				//Ver peliculas(Menu peliculas)
-					//-Ver todas
-					//-Buscar por Nombre
-					//-Buscar por Genero
-				//Elegir Cine (Ver todos los cines)
-					//-Ver sesiones
-					//-Comprar ticket

@@ -53,7 +53,8 @@ int main(void)
     char c;
     do
     {
-        printf("\n\n=======================\n");
+        printf("\n\n");
+        printf("=======================\n");
         printf("MENU INICIO DEUSTOCINES\n");
         printf("=======================\n");
         printf("\n");
@@ -94,7 +95,6 @@ int main(void)
                 cin >> name;
                 cout << "Contrasena Usuario:\n ";
                 cin >> pass;
-                //mascara(pass); //puede dar error
                 cout << endl;
                 sprintf(sendBuff, "%s", name);
                 send(s, sendBuff, sizeof(sendBuff), 0);
@@ -109,9 +109,10 @@ int main(void)
                     char opcion;
                     do
                     {   
-                        printf("\n\n\n==========================\n");
+                        printf("\n\n\n");
+                        printf("==============================\n");
                         printf("MENU ADMINISTRADOR DEUSTOCINES\n");
-                        printf("==========================\n");
+                        printf("==============================\n");
                         printf("\n");
                         opcion = ' ';
                         printf("1. Anadir Cine 2. Borrar Cine 3.Gestionar Sesiones 4.Salir\n");
@@ -165,10 +166,8 @@ int main(void)
                             printf("Cual quieres borrar, escribe el nombre y ubicacion separados por un espacio (NOMBRE UBICACION):\n");
                             cin >> cine;
                             cout <<endl;
-                            //printf("Escribe la ubicacion:\n");
                             cin >> ubi;
                             cout <<endl;
-                            printf(ubi);
                             sprintf(sendBuff, "%s", cine);
                             send(s, sendBuff, sizeof(sendBuff), 0);
                             sprintf(sendBuff, "%s", ubi);
@@ -179,9 +178,10 @@ int main(void)
                         {
                             char eleccion;
                             do{
-                                printf("\n\n\n==========================\n");
+                                printf("\n\n\n");
+                                printf("==========================================\n");
                                 printf("MENU ADMINISTRADOR DE SESIONES DEUSTOCINES\n");
-                                printf("==========================\n");
+                                printf("==========================================\n");
                                 printf("\n");
                                 eleccion = ' ';
                                 printf("1. Anadir Sesion 2. Borrar Sesion 3.Salir\n");
@@ -255,17 +255,18 @@ int main(void)
                 { 
                     char opcion;
                     do{
-                    printf("\n\n\n==========================\n");
-                    printf("MENU USUARIO DEUSTOCINES\n");
-                    printf("==========================\n");
-                    printf("\n");
-                    opcion = ' ';
-                    printf("1. Menu Peliculas 2. Menu Cines 3. salir\n");
-                    cin >> opcion;
-                    cout << endl;
-                    sprintf(sendBuff, "%c", opcion);
-                    send(s, sendBuff, sizeof(sendBuff), 0);
-                    if(opcion=='1')
+                        printf("\n\n\n");
+                        printf("========================\n");
+                        printf("MENU USUARIO DEUSTOCINES\n");
+                        printf("========================\n");
+                        printf("\n");
+                        opcion = ' ';
+                        printf("1. Menu Peliculas 2. Menu Cines 3. salir\n");
+                        cin >> opcion;
+                        cout << endl;
+                        sprintf(sendBuff, "%c", opcion);
+                        send(s, sendBuff, sizeof(sendBuff), 0);
+                        if(opcion=='1')
                     {
                         char op;
                         do{
@@ -283,7 +284,6 @@ int main(void)
                                 char genero[MAX_LINEAS];
                                 recv(s, recvBuff, sizeof(recvBuff), 0);
                                 sscanf(recvBuff, "%i", &n);
-                                printf("%i ", n);
                                 n2 = n;
                                 printf("Pelis en la base de Datos\n");
                                 for(int i = 0; i<n2; i++){
