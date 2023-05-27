@@ -334,23 +334,18 @@ int main(void)
                             send(s, sendBuff, sizeof(sendBuff), 0);
                             if(op == '1'){
                                 //Cine cine;
-                                int cont;
-                                int idCine;
-                                int numSalas;
-                                char nombre[MAX_LINEAS];
-                                char ubicacion[MAX_LINEAS];
+                                int n;
+                                char cine[MAX_LINEAS];
+                                char ubi[MAX_LINEAS];
                                 recv(s, recvBuff, sizeof(recvBuff), 0);
-                                sscanf(recvBuff, "%i", &cont);
-                                for(int i = 0; i<cont; i++){
+                                sscanf(recvBuff, "%i", &n); 
+                                printf("Cines en la base de Datos\n");
+                                for(int i = 0; i<n; i++){
                                     recv(s, recvBuff, sizeof(recvBuff), 0);
-                                    sscanf(recvBuff, "%i", &idCine);
+                                    strcpy(cine, recvBuff);
                                     recv(s, recvBuff, sizeof(recvBuff), 0);
-                                    sscanf(recvBuff, "%i", &numSalas);
-                                    recv(s, recvBuff, sizeof(recvBuff), 0);
-                                    strcpy(nombre, recvBuff);
-                                    recv(s, recvBuff, sizeof(recvBuff), 0);
-                                    strcpy(ubicacion, recvBuff);
-                                    printf("Cine - ID:%i , Numero de Salas: %i , Nombre: %s , Ubicacion: %s\n", idCine, numSalas, nombre, ubicacion);
+                                    strcpy(ubi, recvBuff);
+                                    printf("Cine: %s - %s\n", cine, ubi);
                                 }
                             }else if(op == '2'){
                                 

@@ -337,18 +337,14 @@ int main(void)
 							char op;
 							do{
 								recv(comm_socket, recvBuff, sizeof(recvBuff), 0);
-								sscanf(recvBuff, "%s", op);
+								sscanf(recvBuff, "%s", &op);
 								if(op == '1'){
-									Cine* cines;
 									int cont = getCinesCount(db);
-									cines = getCines(db);
-									sprintf(sendBuff, "%i", cont);
+									Cine cineA;
+									sprintf(sendBuff, "%i",cont);
 									send(comm_socket, sendBuff, sizeof(sendBuff), 0);
+									Cine* cines = getCines(db);
 									for(int i = 0; i<cont; i++){
-										sprintf(sendBuff, "%s",cines[i].id_Cine);
-										send(comm_socket, sendBuff, sizeof(sendBuff), 0);
-										sprintf(sendBuff, "%s",cines[i].numSalas);
-										send(comm_socket, sendBuff, sizeof(sendBuff), 0);
 										sprintf(sendBuff, "%s",cines[i].nom_Cine);
 										send(comm_socket, sendBuff, sizeof(sendBuff), 0);
 										sprintf(sendBuff, "%s",cines[i].ubi_Cine);
