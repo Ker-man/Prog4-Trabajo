@@ -25,7 +25,7 @@ Cine getCine(char* nombre, char* ubicacion, sqlite3* db);
 Cine getCineN(char* nombre, sqlite3* db);
 void addCine(int numSalas, char* nombre, char* ubicacion, sqlite3* db);
 void deleteCine(Cine c, sqlite3* db);
-void imprimirTicket(User usuarioLogged, Cine cineSeleccionado, Peli peliSeleccionada);
+void imprimirTicket(User usuarioLogged, Cine cineSeleccionado, Peli peliSeleccionada, Sesion sesionSeleccionada);
 int IDMasAltoCi(Cine* cines, int numCines);
 
 

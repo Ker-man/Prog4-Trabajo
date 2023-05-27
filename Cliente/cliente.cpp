@@ -348,6 +348,44 @@ int main(void)
                                     printf("Cine: %s - %s\n", cine, ubi);
                                 }
                             }else if(op == '2'){
+                                printf("\n\t\t\t -----------------------------------");
+                                printf("\n\t\t\t ------- Sistema de Reservas -------");
+                                printf("\n\t\t\t -----------------------------------");
+
+                                char cine[MAX_LINEAS];
+                                printf("\n\t\t\t\tIntroduce el nombre del cine: ");
+                                cin >> cine;
+                                cout << endl;
+                                sprintf(sendBuff, "%s", cine);
+                                send(s, sendBuff, sizeof(sendBuff), 0);
+                               
+                                char peli[MAX_LINEAS];
+                                printf("\n\t\t\t\tIntroduce el nombre de la peli: ");
+                                cin >> peli;
+                                cout << endl;
+                                sprintf(sendBuff, "%s", peli);
+                                send(s, sendBuff, sizeof(sendBuff), 0);
+
+                                char sesion[MAX_LINEAS];
+                                printf("\n\t\t\t\tIntroduce la hora de la sesion (ej. 16:00): ");
+                                cin >> sesion;
+                                cout << endl;
+                                sprintf(sendBuff, "%s", sesion);
+                                send(s, sendBuff, sizeof(sendBuff), 0);
+
+                                int validador;
+                                recv(s, recvBuff, sizeof(recvBuff), 0);
+                                sscanf(recvBuff, "%i", &validador); 
+
+                                if(validador == 1)
+                                {
+                                    printf("Ticket creado con exito\n");
+                                }
+                                else
+                                {
+                                    printf("Algun dato introducido no era correcto, intentelo de nuevo\n");
+                                }
+                                
                                 
                             }
                         }while(op != '3');

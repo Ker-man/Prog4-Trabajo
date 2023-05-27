@@ -364,16 +364,81 @@ int main(void)
 									}
 									free(cines);
 								}else if(op == '2'){
+									int CineCorrecto = 0;
+									int PeliCorrecta = 0;
+									int HoraCorrecta = 0;
+									char cine[MAX_LINEAS];
+									Cine cineSeleccionado;
+									int cont = getCinesCount(db);
+									recv(comm_socket, recvBuff, sizeof(recvBuff), 0);
+									sscanf(recvBuff, "%s", cine);
+									loggear("Nombre del cine a añadir al ticket: \n");
+									loggear(cine);
+									Cine* cines = getCines(db);
+									for(int i = 0; i<cont; i++)
+									{
+										if(strcmp(cines[i].nom_Cine, cine) == 0) {
+											cineSeleccionado = cines[i];
+											CineCorrecto = 1;
+										}
+									}
 
+
+
+									char peli[MAX_LINEAS];
+									Peli peliSeleccionada;
+									int cont1 = getPelisCount(db);
+									recv(comm_socket, recvBuff, sizeof(recvBuff), 0);
+									sscanf(recvBuff, "%s", peli);
+									loggear("Nombre de la peli a añadir al ticket: \n");
+									loggear(peli);
+									Peli* pelis = getPeliculas(db);
+									for(int i = 0; i<cont1; i++)
+									{
+										if(strcmp(pelis[i].titulo, peli) == 0) {
+											peliSeleccionada = pelis[i];
+											PeliCorrecta = 1;
+										}
+									}
+
+
+									char sesion[MAX_LINEAS];
+									Sesion sesionSeleccionada;
+									int cont2 = getSesionesCount(db);
+									recv(comm_socket, recvBuff, sizeof(recvBuff), 0);
+									sscanf(recvBuff, "%s", sesion);
+									loggear("Horario de la sesion a añadir al ticket: \n");
+									loggear(sesion);
+									Sesion* sesiones = getAllSesiones(db);
+									for(int i = 0; i<cont2; i++)
+									{
+										if(strcmp(sesiones[i].horario, sesion) == 0) {
+											sesionSeleccionada = sesiones[i];
+											HoraCorrecta = 1;
+										}
+									}
+									int validador = 0;
+									if(CineCorrecto == 1 && PeliCorrecta == 1 && HoraCorrecta == 1)
+									{	
+										imprimirTicket(usuarioLogged, cineSeleccionado, peliSeleccionada, sesionSeleccionada);
+										loggear("Ticket imprimido con exito!\n");
+										validador = 1;
+										sprintf(sendBuff, "%i", validador);
+                                		send(comm_socket, sendBuff, sizeof(sendBuff), 0);
+									}
+									else
+									{
+										loggear("Algun dato introducido no se encuentra en la base de datos, intentelo de nuevo");
+										validador = 0;
+										sprintf(sendBuff, "%i", validador);
+                                		send(comm_socket, sendBuff, sizeof(sendBuff), 0);
+									}
 								}
 
 							}while(op != '3');
-
 						}
 					}while(o != '3');
-
-				}
-				
+				}			
     		} 
 			else 
 			{
@@ -394,28 +459,3 @@ int main(void)
 
 	return 0;
 }
-
-        //Menu admin  (Cambiar cosas) 
-            //Menu Cines x
-                //Crear Cine x
-                //Borrar cine x
-                //Gestionar Cine
-                    //-Crear Sala 
-                    //-Borrar Sala
-                    //-Salir
-                //Menu Sesiones x
-                    //-Crar Sesion para un sala x
-                    //-Borrar una sesion de una sala x
-					//-Salir x
-                //-Salir x
-        
-        //Menu Usuario
-            //Menu Peliculas
-				//-Ver todas las pelis
-				//-Buscar por Nombre
-				//BUscar por genero
-			//Menu Cine
-				//-Ver cines
-				//-Comprar ticket
-				//-Salir
-			//-Salir

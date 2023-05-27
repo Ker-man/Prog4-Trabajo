@@ -151,13 +151,12 @@ void deleteCine(Cine c, sqlite3* db){
 }
 
 
-void imprimirTicket(User usuarioLogged, Cine cineSeleccionado, Peli peliSeleccionada)
+void imprimirTicket(User usuarioLogged, Cine cineSeleccionado, Peli peliSeleccionada, Sesion sesionSeleccionada)
 {
     FILE* f;
     f = fopen("ticket.txt", "w");
     fprintf(f, "Gracias por su compra %s!\n", usuarioLogged.nom_User);
-	fprintf(f, "Entrada para el cine: %s para la pelicula: %s (%i)\n", cineSeleccionado.nom_Cine, peliSeleccionada.titulo, peliSeleccionada.id_Peli);
-	fprintf(f, "Información a tener en cuenta: ");
+	fprintf(f, "Entrada para el cine: %s para la pelicula: %s (%s)\n\n", cineSeleccionado.nom_Cine, peliSeleccionada.titulo, sesionSeleccionada.horario);
 	fprintf(f, "Le esperamos!\n");
     fclose(f);
 }
